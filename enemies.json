@@ -1,0 +1,193 @@
+{
+  "rustbound_pilgrim": {
+    "display_name": "Rustbound Pilgrim",
+    "tier": "normal",
+    "affinity": "ash",
+    "role": "slow_bruiser",
+    "stat_profile": {
+      "hp": "medium",
+      "guard": "low",
+      "speed": "low",
+      "break": "medium"
+    },
+    "gimmick": "charges a delayed overhead hit that inflicts scorch",
+    "counterplay": "guard the charge, then punish with break",
+    "action_tags": {
+      "charged_overhead_start": [
+        "channel",
+        "heavy",
+        "burst_start"
+      ],
+      "charged_overhead_release": [
+        "heavy"
+      ]
+    }
+  },
+  "ivy_strangler": {
+    "display_name": "Ivy Strangler",
+    "tier": "normal",
+    "affinity": "bloom",
+    "role": "controller",
+    "stat_profile": {
+      "hp": "low",
+      "guard": "medium",
+      "speed": "medium",
+      "break": "low"
+    },
+    "gimmick": "applies snare and punishes attacking the same target repeatedly",
+    "counterplay": "swap targets or burst it with ash"
+  },
+  "flood_acolyte": {
+    "display_name": "Flood Acolyte",
+    "tier": "normal",
+    "affinity": "tide",
+    "role": "setup_caster",
+    "stat_profile": {
+      "hp": "low",
+      "guard": "low",
+      "speed": "medium",
+      "break": "low"
+    },
+    "gimmick": "spreads soak to enable ally combos",
+    "counterplay": "focus it early or punish with spark"
+  },
+  "switchblade_drone": {
+    "display_name": "Switchblade Drone",
+    "tier": "normal",
+    "affinity": "spark",
+    "role": "fast_skirmisher",
+    "stat_profile": {
+      "hp": "low",
+      "guard": "low",
+      "speed": "high",
+      "break": "low"
+    },
+    "gimmick": "multi-hit attacks gain damage against soaked targets",
+    "counterplay": "bastion and parry punish",
+    "action_tags": {
+      "flurry": [
+        "burst_start"
+      ]
+    }
+  },
+  "veil_leech": {
+    "display_name": "Veil Leech",
+    "tier": "normal",
+    "affinity": "shade",
+    "role": "guard_drain_parasite",
+    "stat_profile": {
+      "hp": "low",
+      "guard": "medium",
+      "speed": "medium",
+      "break": "low"
+    },
+    "gimmick": "drains guard and hides behind a small barrier",
+    "counterplay": "use halo reveal and burst it"
+  },
+  "lamp_witness": {
+    "display_name": "Lamp Witness",
+    "tier": "normal",
+    "affinity": "halo",
+    "role": "support_cleanser",
+    "stat_profile": {
+      "hp": "low",
+      "guard": "medium",
+      "speed": "low",
+      "break": "low"
+    },
+    "gimmick": "cleanses ally statuses and applies reveal to the party",
+    "counterplay": "focus it with shade damage"
+  },
+  "toll_knight": {
+    "display_name": "Toll Knight",
+    "tier": "elite",
+    "affinity": "ash",
+    "role": "armored_tank",
+    "stat_profile": {
+      "hp": "high",
+      "guard": "high",
+      "speed": "low",
+      "break": "high"
+    },
+    "gimmick": "large delayed bell swings; gains guard if chipped too lightly",
+    "counterplay": "use heavy break and punish after the full swing",
+    "action_tags": {
+      "halberd_swing": [
+        "heavy"
+      ],
+      "brace": [
+        "defensive"
+      ]
+    }
+  },
+  "root_jury": {
+    "display_name": "Root Jury",
+    "tier": "elite",
+    "affinity": "bloom",
+    "role": "defender_controller",
+    "stat_profile": {
+      "hp": "high",
+      "guard": "medium",
+      "speed": "low",
+      "break": "low"
+    },
+    "gimmick": "taunts and locks one ally with bramble roots",
+    "counterplay": "ash damage removes roots and opens the team"
+  },
+  "canal_seraph": {
+    "display_name": "Canal Seraph",
+    "tier": "elite",
+    "affinity": "tide",
+    "role": "flying_caster",
+    "stat_profile": {
+      "hp": "medium",
+      "guard": "high",
+      "speed": "medium",
+      "break": "low"
+    },
+    "gimmick": "stays airborne and becomes vulnerable only after spark hits or parries",
+    "counterplay": "bring ranger or spark damage"
+  },
+  "static_chorister": {
+    "display_name": "Static Chorister",
+    "tier": "elite",
+    "affinity": "spark",
+    "role": "burst_caster",
+    "stat_profile": {
+      "hp": "medium",
+      "guard": "low",
+      "speed": "medium",
+      "break": "medium"
+    },
+    "gimmick": "chains jolt through the whole party if multiple allies are soaked",
+    "counterplay": "cleanse soak or burst it before it sings"
+  },
+  "archive_shade": {
+    "display_name": "Archive Shade",
+    "tier": "elite",
+    "affinity": "shade",
+    "role": "mimic",
+    "stat_profile": {
+      "hp": "medium",
+      "guard": "medium",
+      "speed": "medium",
+      "break": "medium"
+    },
+    "gimmick": "copies the last player posture and gains a related buff",
+    "counterplay": "bait a weak posture, then burst"
+  },
+  "glass_hound": {
+    "display_name": "Glass Hound",
+    "tier": "elite",
+    "affinity": "halo",
+    "role": "predator",
+    "stat_profile": {
+      "hp": "medium",
+      "guard": "low",
+      "speed": "high",
+      "break": "low"
+    },
+    "gimmick": "marks the lowest_guard ally and gains bonus crit on pounce",
+    "counterplay": "protect weak allies and parry the leap"
+  }
+}

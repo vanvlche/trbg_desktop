@@ -1,0 +1,310 @@
+{
+  "iron_vow": {
+    "display_name": "Iron Vow",
+    "rarity": "common",
+    "tags": [
+      "power",
+      "break"
+    ],
+    "effect": "Power counts one band higher on break-tagged skills; Composure counts one band lower.",
+    "effect_id": "iron_vow",
+    "summary": "Power counts one band higher on break-tagged skills; Composure counts one band lower."
+  },
+  "glass_lens": {
+    "display_name": "Glass Lens",
+    "rarity": "common",
+    "tags": [
+      "precision",
+      "weakness"
+    ],
+    "effect": "Precision gains extra weakness damage, but Guard starts lower.",
+    "effect_id": "glass_lens",
+    "summary": "Precision gains extra weakness damage, but Guard starts lower."
+  },
+  "witness_thread": {
+    "display_name": "Witness Thread",
+    "rarity": "common",
+    "tags": [
+      "flow",
+      "spotlight"
+    ],
+    "effect": "Entering Flow grants +1 Spotlight once per battle.",
+    "effect_id": "witness_thread",
+    "summary": "Entering Flow grants +1 Spotlight once per battle."
+  },
+  "black_salt_charm": {
+    "display_name": "Black Salt Charm",
+    "rarity": "uncommon",
+    "tags": [
+      "parry",
+      "status"
+    ],
+    "effect": "Parry counters also apply the wielder's affinity status.",
+    "effect_id": "black_salt_charm",
+    "summary": "Parry counters also apply the wielder's affinity status."
+  },
+  "flood_seal": {
+    "display_name": "Flood Seal",
+    "rarity": "uncommon",
+    "tags": [
+      "guard",
+      "cleanse"
+    ],
+    "effect": "First Tide or Halo skill each battle cleanses one debuff from the user.",
+    "effect_id": "flood_seal",
+    "summary": "First Tide or Halo skill each battle cleanses one debuff from the user."
+  },
+  "red_wire_crown": {
+    "display_name": "Red Wire Crown",
+    "rarity": "uncommon",
+    "tags": [
+      "crit",
+      "risk"
+    ],
+    "effect": "Crit chance rises while below 50% HP, but incoming crit damage also rises.",
+    "effect_id": "red_wire_crown",
+    "summary": "Crit chance rises while below 50% HP, but incoming crit damage also rises."
+  },
+  "toll_ledger": {
+    "display_name": "Toll Ledger",
+    "rarity": "rare",
+    "tags": [
+      "boss",
+      "break"
+    ],
+    "effect": "Deal extra Break damage to bosses above 50% HP.",
+    "effect_id": "toll_ledger",
+    "summary": "Deal extra Break damage to bosses above 50% HP."
+  },
+  "hollow_badge": {
+    "display_name": "Hollow Badge",
+    "rarity": "rare",
+    "tags": [
+      "guard",
+      "bastion"
+    ],
+    "effect": "Entering Bastion restores extra Guard and slightly widens the next parry window.",
+    "effect_id": "hollow_badge",
+    "summary": "Entering Bastion restores extra Guard and slightly widens the next parry window."
+  },
+  "green_fuse": {
+    "display_name": "Green Fuse",
+    "rarity": "rare",
+    "tags": [
+      "status",
+      "combo"
+    ],
+    "effect": "Triggering a status combo grants 1 Spotlight. Once per round.",
+    "effect_id": "green_fuse",
+    "summary": "Triggering a status combo grants 1 Spotlight. Once per round."
+  },
+  "penitent_nail": {
+    "display_name": "Penitent Nail",
+    "rarity": "rare",
+    "tags": [
+      "finisher",
+      "low_hp"
+    ],
+    "effect": "Finishers deal extra damage below 50% HP but cost 5% current HP.",
+    "effect_id": "penitent_nail",
+    "summary": "Finishers deal extra damage below 50% HP but cost 5% current HP."
+  },
+  "bellglass_notch": {
+    "display_name": "Bellglass Notch",
+    "rarity": "uncommon",
+    "tags": [
+      "parry",
+      "converter"
+    ],
+    "effect": "First successful parry each battle against heavy/channel pressure reveals the attacker and grants Spotlight.",
+    "effect_id": "bellglass_notch",
+    "summary": "First successful parry vs heavy/channel reveals the attacker and grants +1 Spotlight.",
+    "trigger_rules": [
+      {
+        "trigger": "reaction_success",
+        "reaction": "parry",
+        "incoming_tags_any": [
+          "heavy",
+          "channel"
+        ],
+        "once_per_battle": true,
+        "effects": [
+          {
+            "type": "apply_status_to_attacker",
+            "status": "reveal",
+            "duration": 1
+          },
+          {
+            "type": "gain_spotlight",
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "floodgate_loop": {
+    "display_name": "Floodgate Loop",
+    "rarity": "uncommon",
+    "tags": [
+      "dodge",
+      "converter"
+    ],
+    "effect": "Successful dodges against burst-start or heavy pressure soak the attacker and rinse one minor debuff.",
+    "effect_id": "floodgate_loop",
+    "summary": "Dodge vs burst-start/heavy applies Soak to the attacker and cleanses one minor debuff.",
+    "trigger_rules": [
+      {
+        "trigger": "reaction_success",
+        "reaction": "dodge",
+        "incoming_tags_any": [
+          "burst_start",
+          "heavy"
+        ],
+        "effects": [
+          {
+            "type": "apply_status_to_attacker",
+            "status": "soak",
+            "duration": 1
+          },
+          {
+            "type": "cleanse_minor_self"
+          }
+        ]
+      }
+    ]
+  },
+  "maintenance_harness": {
+    "display_name": "Maintenance Harness",
+    "rarity": "common",
+    "tags": [
+      "guard",
+      "stability"
+    ],
+    "effect": "Successful guard restores guard and grants barrier. Bastion posture strengthens both.",
+    "effect_id": "maintenance_harness",
+    "summary": "On successful guard: restore guard and gain barrier, stronger in Bastion.",
+    "trigger_rules": [
+      {
+        "trigger": "reaction_success",
+        "reaction": "guard",
+        "effects": [
+          {
+            "type": "restore_guard_self",
+            "amount": 10,
+            "posture_bonus": {
+              "bastion": 4
+            }
+          },
+          {
+            "type": "gain_barrier_self",
+            "amount": 6,
+            "posture_bonus": {
+              "bastion": 4
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "slip_ledger": {
+    "display_name": "Slip Ledger",
+    "rarity": "common",
+    "tags": [
+      "dodge",
+      "tempo"
+    ],
+    "effect": "Successful dodge grants Spotlight and softens the next offensive self-risk, stronger in Flow.",
+    "effect_id": "slip_ledger",
+    "summary": "On successful dodge: gain Spotlight and reduce self-risk on the next offensive action.",
+    "trigger_rules": [
+      {
+        "trigger": "reaction_success",
+        "reaction": "dodge",
+        "effects": [
+          {
+            "type": "gain_spotlight",
+            "amount": 1,
+            "posture_bonus": {
+              "flow": 1
+            }
+          },
+          {
+            "type": "set_next_self_risk_reduction",
+            "amount": 0.5,
+            "posture_bonus": {
+              "flow": 0.1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "choir_hook": {
+    "display_name": "Choir Hook",
+    "rarity": "rare",
+    "tags": [
+      "parry",
+      "punish"
+    ],
+    "effect": "Successful parry reveals the attacker and drives extra break pressure. Focus posture sharpens the break hit.",
+    "effect_id": "choir_hook",
+    "summary": "On successful parry: reveal attacker and add break pressure, stronger in Focus.",
+    "trigger_rules": [
+      {
+        "trigger": "reaction_success",
+        "reaction": "parry",
+        "effects": [
+          {
+            "type": "apply_status_to_attacker",
+            "status": "reveal",
+            "duration": 1
+          },
+          {
+            "type": "apply_break_to_attacker",
+            "amount": 10,
+            "posture_bonus": {
+              "focus": 6
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "applause_knot": {
+    "display_name": "Applause Knot",
+    "rarity": "rare",
+    "tags": [
+      "parry",
+      "commitment"
+    ],
+    "effect": "Successful parry stores a charge. The next offensive action consumes it for bonus damage and break.",
+    "effect_id": "applause_knot",
+    "summary": "Parry stores a charge that is consumed by the next offensive action for bonus damage and break.",
+    "trigger_rules": [
+      {
+        "trigger": "reaction_success",
+        "reaction": "parry",
+        "effects": [
+          {
+            "type": "store_charge_bonus",
+            "charge_id": "applause_knot_charge",
+            "label": "Applause Knot",
+            "damage_bonus_mult": 1.35,
+            "break_bonus_mult": 1.35
+          }
+        ]
+      },
+      {
+        "trigger": "before_offense",
+        "requires_charge_id": "applause_knot_charge",
+        "offensive_only": true,
+        "effects": [
+          {
+            "type": "consume_stored_charge_bonus",
+            "charge_id": "applause_knot_charge"
+          }
+        ]
+      }
+    ]
+  }
+}

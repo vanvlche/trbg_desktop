@@ -1,0 +1,600 @@
+{
+  "default_district_id": "district_03_rain_toll_corridor",
+  "districts": {
+    "district_03_rain_toll_corridor": {
+      "display_name": "District 03: Rain Toll Corridor",
+      "hub_event_id": "hub_ops_base_intro",
+      "start_node_id": "overpass_watch",
+      "node_order": [
+        "overpass_watch",
+        "flooded_arcade",
+        "service_niche",
+        "sluice_jury",
+        "drainage_switchback",
+        "witness_chapel",
+        "signal_vestry",
+        "archive_balcony",
+        "glass_choir_loft",
+        "toll_plaza",
+        "undertone_landing",
+        "tollgate_surge",
+        "bell_tower"
+      ],
+      "encounter_pools": {
+        "overpass_watch_pool": [
+          {
+            "variant_id": "pilgrim_ivy_watch",
+            "encounter_ids": [
+              "rustbound_pilgrim",
+              "ivy_strangler"
+            ],
+            "weight": 4,
+            "route_families_any": [
+              "shared"
+            ],
+            "risk_tiers_any": [
+              "medium"
+            ],
+            "flavor_tags": [
+              "guard",
+              "snare"
+            ]
+          },
+          {
+            "variant_id": "pilgrim_flood_watch",
+            "encounter_ids": [
+              "rustbound_pilgrim",
+              "flood_acolyte"
+            ],
+            "weight": 2,
+            "route_families_any": [
+              "shared"
+            ],
+            "risk_tiers_any": [
+              "medium"
+            ],
+            "flavor_tags": [
+              "guard",
+              "soak"
+            ]
+          },
+          {
+            "variant_id": "ivy_drone_watch",
+            "encounter_ids": [
+              "ivy_strangler",
+              "switchblade_drone"
+            ],
+            "weight": 2,
+            "route_families_any": [
+              "shared"
+            ],
+            "risk_tiers_any": [
+              "medium"
+            ],
+            "flavor_tags": [
+              "tempo",
+              "snare"
+            ]
+          },
+          {
+            "variant_id": "pilgrim_veil_watch",
+            "encounter_ids": [
+              "rustbound_pilgrim",
+              "veil_leech"
+            ],
+            "weight": 1,
+            "route_families_any": [
+              "shared"
+            ],
+            "risk_tiers_any": [
+              "medium"
+            ],
+            "flavor_tags": [
+              "guard",
+              "drain"
+            ]
+          }
+        ],
+        "drainage_switchback_pool": [
+          {
+            "variant_id": "flood_veil_siphon",
+            "encounter_ids": [
+              "flood_acolyte",
+              "veil_leech"
+            ],
+            "weight": 4,
+            "route_families_any": [
+              "maintenance"
+            ],
+            "risk_tiers_any": [
+              "low"
+            ],
+            "flavor_tags": [
+              "sustain",
+              "guard"
+            ]
+          },
+          {
+            "variant_id": "flood_lamp_ward",
+            "encounter_ids": [
+              "flood_acolyte",
+              "lamp_witness"
+            ],
+            "weight": 2,
+            "route_families_any": [
+              "maintenance"
+            ],
+            "risk_tiers_any": [
+              "low"
+            ],
+            "flavor_tags": [
+              "recovery",
+              "cleanse"
+            ]
+          },
+          {
+            "variant_id": "ivy_veil_drain",
+            "encounter_ids": [
+              "ivy_strangler",
+              "veil_leech"
+            ],
+            "weight": 2,
+            "route_families_any": [
+              "maintenance"
+            ],
+            "risk_tiers_any": [
+              "low"
+            ],
+            "flavor_tags": [
+              "guard",
+              "control"
+            ]
+          }
+        ],
+        "glass_choir_loft_pool": [
+          {
+            "variant_id": "lamp_drone_cadence",
+            "encounter_ids": [
+              "lamp_witness",
+              "switchblade_drone"
+            ],
+            "weight": 4,
+            "route_families_any": [
+              "chapel"
+            ],
+            "risk_tiers_any": [
+              "medium"
+            ],
+            "flavor_tags": [
+              "parry",
+              "tempo"
+            ]
+          },
+          {
+            "variant_id": "lamp_hound_punish",
+            "encounter_ids": [
+              "lamp_witness",
+              "glass_hound"
+            ],
+            "weight": 2,
+            "route_families_any": [
+              "chapel"
+            ],
+            "risk_tiers_any": [
+              "medium"
+            ],
+            "flavor_tags": [
+              "parry",
+              "predator"
+            ]
+          },
+          {
+            "variant_id": "veil_drone_misdirect",
+            "encounter_ids": [
+              "veil_leech",
+              "switchblade_drone"
+            ],
+            "weight": 2,
+            "route_families_any": [
+              "chapel"
+            ],
+            "risk_tiers_any": [
+              "medium"
+            ],
+            "flavor_tags": [
+              "tempo",
+              "drain"
+            ]
+          },
+          {
+            "variant_id": "archive_lamp_read",
+            "encounter_ids": [
+              "archive_shade",
+              "lamp_witness"
+            ],
+            "weight": 1,
+            "route_families_any": [
+              "chapel"
+            ],
+            "risk_tiers_any": [
+              "medium"
+            ],
+            "flavor_tags": [
+              "reveal",
+              "punish"
+            ]
+          }
+        ],
+        "toll_plaza_pressure_pool": [
+          {
+            "variant_id": "toll_knight_checkpoint",
+            "encounter_ids": [
+              "toll_knight"
+            ],
+            "weight": 5,
+            "route_families_any": [
+              "shared"
+            ],
+            "risk_tiers_any": [
+              "high"
+            ],
+            "flavor_tags": [
+              "break",
+              "cadence"
+            ]
+          },
+          {
+            "variant_id": "toll_flood_lock",
+            "encounter_ids": [
+              "toll_knight",
+              "flood_acolyte"
+            ],
+            "weight": 2,
+            "route_families_any": [
+              "shared"
+            ],
+            "risk_tiers_any": [
+              "high"
+            ],
+            "route_bias_any": [
+              "maintenance"
+            ],
+            "flavor_tags": [
+              "sustain",
+              "soak"
+            ]
+          },
+          {
+            "variant_id": "toll_lamp_sentence",
+            "encounter_ids": [
+              "toll_knight",
+              "lamp_witness"
+            ],
+            "weight": 2,
+            "route_families_any": [
+              "shared"
+            ],
+            "risk_tiers_any": [
+              "high"
+            ],
+            "route_bias_any": [
+              "chapel"
+            ],
+            "flavor_tags": [
+              "parry",
+              "reveal"
+            ]
+          },
+          {
+            "variant_id": "toll_static_pressure",
+            "encounter_ids": [
+              "toll_knight",
+              "static_chorister"
+            ],
+            "weight": 1,
+            "route_families_any": [
+              "shared"
+            ],
+            "risk_tiers_any": [
+              "high"
+            ],
+            "flavor_tags": [
+              "jolt",
+              "pressure"
+            ]
+          }
+        ]
+      },
+      "nodes": {
+        "overpass_watch": {
+          "title": "Overpass Watch",
+          "kind": "battle",
+          "event_id": "overpass_watch_intro",
+          "encounter_ids": [
+            "rustbound_pilgrim",
+            "ivy_strangler"
+          ],
+          "encounter_pool_id": "overpass_watch_pool",
+          "reward_table_id": "overpass_watch_rewards",
+          "shards": 1,
+          "next_node_ids": [
+            "flooded_arcade",
+            "witness_chapel"
+          ],
+          "route_family": "shared",
+          "risk_tier": "medium",
+          "pacing_stage": "opener",
+          "preview_tags": [
+            "guard",
+            "spotlight",
+            "recovery"
+          ],
+          "preview_text": "Opening fight that sets up the maintenance or chapel route choice."
+        },
+        "flooded_arcade": {
+          "title": "Flooded Arcade",
+          "kind": "boss",
+          "event_id": "flooded_arcade_intro",
+          "encounter_ids": [
+            "moraine_bailiff"
+          ],
+          "reward_table_id": "flooded_arcade_rewards",
+          "shards": 1,
+          "next_node_ids": [
+            "service_niche",
+            "sluice_jury"
+          ],
+          "route_family": "maintenance",
+          "risk_tier": "low",
+          "pacing_stage": "build",
+          "preview_tags": [
+            "sustain",
+            "barrier",
+            "dodge"
+          ],
+          "preview_text": "Safer maintenance route with recovery and guard rewards."
+        },
+        "service_niche": {
+          "title": "Service Niche",
+          "kind": "event",
+          "event_id": "service_niche_intro",
+          "encounter_ids": [],
+          "reward_table_id": "service_niche_rewards",
+          "shards": 0,
+          "next_node_ids": [
+            "drainage_switchback"
+          ],
+          "route_family": "maintenance",
+          "risk_tier": "low",
+          "pacing_stage": "build",
+          "preview_tags": [
+            "shop",
+            "recovery",
+            "sustain"
+          ],
+          "preview_text": "Spend shards to stabilize before the maintenance follow-through."
+        },
+        "sluice_jury": {
+          "title": "Sluice Jury",
+          "kind": "battle",
+          "event_id": "sluice_jury_intro",
+          "encounter_ids": [
+            "root_jury"
+          ],
+          "reward_table_id": "sluice_jury_rewards",
+          "shards": 2,
+          "next_node_ids": [
+            "drainage_switchback"
+          ],
+          "route_family": "maintenance",
+          "risk_tier": "high",
+          "pacing_stage": "pressure",
+          "preview_tags": [
+            "elite",
+            "shards",
+            "break"
+          ],
+          "preview_text": "Detour into an elite fight for extra shards and stronger break prep."
+        },
+        "drainage_switchback": {
+          "title": "Drainage Switchback",
+          "kind": "battle",
+          "event_id": "drainage_switchback_intro",
+          "encounter_ids": [
+            "flood_acolyte",
+            "veil_leech"
+          ],
+          "encounter_pool_id": "drainage_switchback_pool",
+          "reward_table_id": "drainage_switchback_rewards",
+          "shards": 1,
+          "next_node_ids": [
+            "toll_plaza"
+          ],
+          "route_family": "maintenance",
+          "risk_tier": "low",
+          "pacing_stage": "pressure",
+          "preview_tags": [
+            "sustain",
+            "guard",
+            "recovery"
+          ],
+          "preview_text": "Low-risk fight that turns maintenance prep into guard momentum."
+        },
+        "witness_chapel": {
+          "title": "Witness Chapel",
+          "kind": "boss",
+          "event_id": "witness_chapel_intro",
+          "encounter_ids": [
+            "bellglass_precentor"
+          ],
+          "reward_table_id": "witness_chapel_rewards",
+          "shards": 1,
+          "next_node_ids": [
+            "signal_vestry",
+            "archive_balcony"
+          ],
+          "route_family": "chapel",
+          "risk_tier": "medium",
+          "pacing_stage": "pressure",
+          "preview_tags": [
+            "parry",
+            "reveal",
+            "break"
+          ],
+          "preview_text": "Sharper chapel route with parry tempo and reveal rewards."
+        },
+        "signal_vestry": {
+          "title": "Signal Vestry",
+          "kind": "event",
+          "event_id": "signal_vestry_intro",
+          "encounter_ids": [],
+          "reward_table_id": "signal_vestry_rewards",
+          "shards": 0,
+          "next_node_ids": [
+            "glass_choir_loft"
+          ],
+          "route_family": "chapel",
+          "risk_tier": "low",
+          "pacing_stage": "build",
+          "preview_tags": [
+            "shop",
+            "parry",
+            "tempo"
+          ],
+          "preview_text": "Spend shards to tune parry tempo before the chapel follow-through."
+        },
+        "archive_balcony": {
+          "title": "Archive Balcony",
+          "kind": "battle",
+          "event_id": "archive_balcony_intro",
+          "encounter_ids": [
+            "archive_shade"
+          ],
+          "reward_table_id": "archive_balcony_rewards",
+          "shards": 2,
+          "next_node_ids": [
+            "glass_choir_loft"
+          ],
+          "route_family": "chapel",
+          "risk_tier": "high",
+          "pacing_stage": "pressure",
+          "preview_tags": [
+            "elite",
+            "shards",
+            "parry"
+          ],
+          "preview_text": "Fight an elite mimic for extra shards and sharper boss-facing tools."
+        },
+        "glass_choir_loft": {
+          "title": "Glass Choir Loft",
+          "kind": "battle",
+          "event_id": "glass_choir_loft_intro",
+          "encounter_ids": [
+            "lamp_witness",
+            "switchblade_drone"
+          ],
+          "encounter_pool_id": "glass_choir_loft_pool",
+          "reward_table_id": "glass_choir_loft_rewards",
+          "shards": 1,
+          "next_node_ids": [
+            "toll_plaza"
+          ],
+          "route_family": "chapel",
+          "risk_tier": "medium",
+          "pacing_stage": "pressure",
+          "preview_tags": [
+            "parry",
+            "tempo",
+            "break"
+          ],
+          "preview_text": "Sharper fight that turns chapel reads into punish tempo."
+        },
+        "toll_plaza": {
+          "title": "Toll Plaza",
+          "kind": "battle",
+          "event_id": "toll_plaza_intro",
+          "encounter_ids": [
+            "toll_knight"
+          ],
+          "encounter_pool_id": "toll_plaza_pressure_pool",
+          "reward_table_id": "toll_plaza_rewards",
+          "shards": 2,
+          "next_node_ids": [
+            "undertone_landing",
+            "tollgate_surge"
+          ],
+          "route_family": "shared",
+          "risk_tier": "high",
+          "pacing_stage": "pressure",
+          "preview_tags": [
+            "break",
+            "recovery",
+            "cadence"
+          ],
+          "preview_text": "Shared checkpoint before choosing safe prep or one last risky payoff."
+        },
+        "undertone_landing": {
+          "title": "Undertone Landing",
+          "kind": "event",
+          "event_id": "undertone_landing_intro",
+          "encounter_ids": [],
+          "reward_table_id": "undertone_landing_rewards",
+          "shards": 0,
+          "next_node_ids": [
+            "bell_tower"
+          ],
+          "route_family": "shared",
+          "risk_tier": "low",
+          "pacing_stage": "boss_prep",
+          "preview_tags": [
+            "recovery",
+            "break",
+            "boss_prep"
+          ],
+          "preview_text": "Shared boss-prep stop with two final preparations."
+        },
+        "tollgate_surge": {
+          "title": "Tollgate Surge",
+          "kind": "battle",
+          "event_id": "tollgate_surge_intro",
+          "encounter_ids": [
+            "static_chorister"
+          ],
+          "reward_table_id": "tollgate_surge_rewards",
+          "shards": 2,
+          "next_node_ids": [
+            "bell_tower"
+          ],
+          "route_family": "shared",
+          "risk_tier": "high",
+          "pacing_stage": "boss_prep",
+          "preview_tags": [
+            "risk",
+            "shards",
+            "boss_prep"
+          ],
+          "preview_text": "Skip the safe landing for a final elite payoff before Orison."
+        },
+        "bell_tower": {
+          "title": "Bell Tower Threshold",
+          "kind": "boss",
+          "event_id": "bell_tower_intro",
+          "encounter_ids": [
+            "orison_last_toll"
+          ],
+          "shards": 4,
+          "next_node_ids": [],
+          "route_family": "shared",
+          "risk_tier": "high",
+          "pacing_stage": "finale",
+          "preview_tags": [
+            "boss",
+            "break",
+            "parry"
+          ],
+          "preview_text": "Final boss exam for posture reads and reaction choices."
+        }
+      }
+    }
+  }
+}

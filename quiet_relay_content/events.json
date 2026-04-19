@@ -1,0 +1,60 @@
+{
+  "events": {
+    "hub_ops_base_intro": {
+      "title": "Operations Base",
+      "text": "Late 2026. Rain ticks against emergency floodlights while the expedition team regroups in a ruined signal base. Beyond the shutters waits the Rain Toll Corridor, a short but hostile district warped by bells, transit steel, and ash."
+    },
+    "overpass_watch_intro": {
+      "title": "Overpass Watch",
+      "text": "An elevated roadway buckles under cathedral stone. A Rustbound Pilgrim drags its bell-metal blade through the rain while ivy crawls across the guardrail."
+    },
+    "flooded_arcade_intro": {
+      "title": "Flooded Arcade",
+      "text": "Neon signage flickers beneath rising water as Moraine, Bailiff of the Sluice, locks a flood-key into place. Bell-marked channels throb under the tiles, warning that one mistimed read will drag someone under."
+    },
+    "service_niche_intro": {
+      "title": "Service Niche",
+      "text": "You find a dry maintenance recess behind a humming panel. The team can patch wounds, rewire defenses, or prepare for the toll plaza ahead."
+    },
+    "sluice_jury_intro": {
+      "title": "Sluice Jury",
+      "text": "A root-bound jury has grown through the flood controls, each verdict tugging the sluice chains tighter. The detour promises more Echo Shards if the team can break the bramble court before it pins someone in place."
+    },
+    "drainage_switchback_intro": {
+      "title": "Drainage Switchback",
+      "text": "A service stair drops into a pump channel where the waterline rises and falls by bell pulse. A Flood Acolyte tries to soak the lane while a Veil Leech chews at exposed guard, turning the maintenance route into a practical test of staying patched together."
+    },
+    "witness_chapel_intro": {
+      "title": "Witness Chapel",
+      "text": "A pale choir light bars the chapel aisle where the Bellglass Precentor waits with blade raised. One clear bell rings, then a second note answers late, daring you to read the true cadence."
+    },
+    "signal_vestry_intro": {
+      "title": "Signal Vestry",
+      "text": "Behind the altar, relay cabinets pulse under rain drip and bell static. You can tune the drowned signal lattice for tempo, steadier break posture, or warded entry before the plaza."
+    },
+    "archive_balcony_intro": {
+      "title": "Archive Balcony",
+      "text": "A shade waits above the chapel stacks, copying every posture it sees and filing the mistake under your name. Beating it costs tempo, but the recovered ledgers point toward stronger bell-tower preparations."
+    },
+    "glass_choir_loft_intro": {
+      "title": "Glass Choir Loft",
+      "text": "Above the chapel, a Lamp Witness keeps a clean choir light on the party while a Switchblade Drone darts through the rafters. The path asks for sharper reactions now: reveal the true beat, parry the opening burst, and carry tempo into the merge."
+    },
+    "toll_plaza_intro": {
+      "title": "Toll Plaza",
+      "text": "The lanes narrow into a dead checkpoint under immense bells. A Toll Knight waits motionless among cracked barriers and drowned ticket booths."
+    },
+    "undertone_landing_intro": {
+      "title": "Undertone Landing",
+      "text": "A landing below the bell tower hums with three debts braided into one undertone. The route behind you colors the echo: sluice-weight and guard on one side, chapel aim and late chimes on the other. There is time for two final preparations before Orison answers."
+    },
+    "tollgate_surge_intro": {
+      "title": "Tollgate Surge",
+      "text": "The last gate refuses to stay quiet. A Static Chorister gathers the tower current into one unstable hymn, daring the team to win a louder payoff instead of taking the safe landing."
+    },
+    "bell_tower_intro": {
+      "title": "Bell Tower Threshold",
+      "text": "At the district heart, Orison, Vicar of the Last Toll, steps from the tower shadow and names three debts: force, aim, and nerve. The first bellflash is clear, but the second toll waits after the breath."
+    }
+  }
+}

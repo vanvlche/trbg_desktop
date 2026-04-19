@@ -1,0 +1,97 @@
+{
+  "save_version": 1,
+  "players": [
+    {
+      "entity_id": "vanguard",
+      "affinity": "ash",
+      "max_hp": 160,
+      "hp": 152,
+      "max_guard": 72,
+      "guard": 72,
+      "max_break": 90,
+      "break_meter": 90,
+      "speed": 8,
+      "skills": [
+        "standard_strike",
+        "brace",
+        "read_opening",
+        "anchor_cleave",
+        "ward_bell",
+        "execution_drop"
+      ],
+      "role": "frontline_tank_break",
+      "posture": "flow",
+      "barrier": 0,
+      "conditions": {}
+    },
+    {
+      "entity_id": "duelist",
+      "affinity": "halo",
+      "max_hp": 120,
+      "hp": 120,
+      "max_guard": 46,
+      "guard": 46,
+      "max_break": 42,
+      "break_meter": 42,
+      "speed": 16,
+      "skills": [
+        "standard_strike",
+        "brace",
+        "read_opening",
+        "mark_lunge",
+        "feint_circuit",
+        "glass_reprise"
+      ],
+      "role": "fast_crit_counter",
+      "posture": "flow",
+      "barrier": 0,
+      "conditions": {}
+    },
+    {
+      "entity_id": "cantor",
+      "affinity": "shade",
+      "max_hp": 120,
+      "hp": 120,
+      "max_guard": 46,
+      "guard": 46,
+      "max_break": 64,
+      "break_meter": 64,
+      "speed": 12,
+      "skills": [
+        "standard_strike",
+        "brace",
+        "read_opening",
+        "salt_psalm",
+        "undertow_litany",
+        "hex_burst"
+      ],
+      "role": "status_barrier_support",
+      "posture": "flow",
+      "barrier": 0,
+      "conditions": {}
+    }
+  ],
+  "rng_state": "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",
+  "expedition_active": true,
+  "current_node_index": 1,
+  "recovery_charges": 3,
+  "max_recovery_charges": 3,
+  "starting_spotlight": 1,
+  "prebattle_barrier": 0,
+  "boss_guard_penalty": 0,
+  "run_shards": 1,
+  "boons": [
+    "stage_light"
+  ],
+  "best_nodes_cleared": 1,
+  "wins": 0,
+  "losses": 0,
+  "last_result": "No expeditions yet.",
+  "report_lines": [
+    "Created new campaign with seed 2026.",
+    "Started a new expedition.",
+    "Battle at Overpass Watch: player. Log: /users/junhyeok/tbrg/quiet_relay_vertical_slice_logs/01_overpass_watch.txt",
+    "Cleared Overpass Watch. Shards total: 1.",
+    "Reward chosen: Stage Light."
+  ]
+}

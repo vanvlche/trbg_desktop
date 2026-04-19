@@ -1,0 +1,96 @@
+{
+  "default_district_id": "district_03_rain_toll_corridor",
+  "districts": {
+    "district_03_rain_toll_corridor": {
+      "display_name": "District 03: Rain Toll Corridor",
+      "hub_event_id": "hub_ops_base_intro",
+      "start_node_id": "overpass_watch",
+      "node_order": [
+        "overpass_watch",
+        "flooded_arcade",
+        "service_niche",
+        "witness_chapel",
+        "toll_plaza",
+        "bell_tower"
+      ],
+      "nodes": {
+        "overpass_watch": {
+          "title": "Overpass Watch",
+          "kind": "battle",
+          "event_id": "overpass_watch_intro",
+          "encounter_ids": [
+            "rustbound_pilgrim",
+            "ivy_strangler"
+          ],
+          "reward_table_id": "overpass_watch_rewards",
+          "shards": 1,
+          "next_node_ids": [
+            "flooded_arcade"
+          ]
+        },
+        "flooded_arcade": {
+          "title": "Flooded Arcade",
+          "kind": "battle",
+          "event_id": "flooded_arcade_intro",
+          "encounter_ids": [
+            "flood_acolyte",
+            "switchblade_drone"
+          ],
+          "reward_table_id": "flooded_arcade_rewards",
+          "shards": 1,
+          "next_node_ids": [
+            "service_niche"
+          ]
+        },
+        "service_niche": {
+          "title": "Service Niche",
+          "kind": "event",
+          "event_id": "service_niche_intro",
+          "encounter_ids": [],
+          "reward_table_id": "service_niche_rewards",
+          "shards": 0,
+          "next_node_ids": [
+            "witness_chapel"
+          ]
+        },
+        "witness_chapel": {
+          "title": "Witness Chapel",
+          "kind": "battle",
+          "event_id": "witness_chapel_intro",
+          "encounter_ids": [
+            "veil_leech",
+            "lamp_witness"
+          ],
+          "reward_table_id": "witness_chapel_rewards",
+          "shards": 1,
+          "next_node_ids": [
+            "toll_plaza"
+          ]
+        },
+        "toll_plaza": {
+          "title": "Toll Plaza",
+          "kind": "battle",
+          "event_id": "toll_plaza_intro",
+          "encounter_ids": [
+            "toll_knight"
+          ],
+          "reward_table_id": "toll_plaza_rewards",
+          "shards": 2,
+          "next_node_ids": [
+            "bell_tower"
+          ]
+        },
+        "bell_tower": {
+          "title": "Bell Tower Threshold",
+          "kind": "boss",
+          "event_id": "bell_tower_intro",
+          "encounter_ids": [
+            "bell_warden"
+          ],
+          "shards": 4,
+          "next_node_ids": []
+        }
+      }
+    }
+  }
+}

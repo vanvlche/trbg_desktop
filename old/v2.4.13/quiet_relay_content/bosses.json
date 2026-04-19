@@ -1,0 +1,74 @@
+{
+  "bell_warden": {
+    "display_name": "Bell Warden",
+    "primary_affinity": "ash",
+    "secondary_affinity": "halo",
+    "role": "boss_guard_break",
+    "base_stats": {
+      "hp": 430,
+      "guard": 120,
+      "break": 130,
+      "speed": 10
+    },
+    "core_lesson": "learn Guard, Break, and safe punishment windows",
+    "phase_1": "slow bell swings, guard-heavy body, simple punish windows",
+    "phase_2": "faster multi-hit toll chains and larger scorch pressure",
+    "signature_move": "cathedral_toll",
+    "break_window": "after the full toll chain or after a clean parry on the final hit",
+    "desperation_below_35_percent": "burns its own guard to gain damage and acts more aggressively"
+  },
+  "flood_archivist": {
+    "display_name": "Flood Archivist",
+    "primary_affinity": "tide",
+    "secondary_affinity": "shade",
+    "role": "boss_affinity_rotate",
+    "base_stats": {
+      "hp": 390,
+      "guard": 80,
+      "break": 110,
+      "speed": 12
+    },
+    "core_lesson": "swap around affinity changes and manage Soak safely",
+    "phase_1": "casts tide spells and archives player weaknesses",
+    "phase_2": "rotates its active affinity and rewrites matchup rules each cycle",
+    "signature_move": "redacted_surge",
+    "break_window": "during its affinity rewrite channel",
+    "desperation_below_35_percent": "floods the field with Soak and alternates tide/spark burst turns"
+  },
+  "glass_hound_matriarch": {
+    "display_name": "Glass Hound Matriarch",
+    "primary_affinity": "halo",
+    "secondary_affinity": "bloom",
+    "role": "boss_pack_hunter",
+    "base_stats": {
+      "hp": 410,
+      "guard": 75,
+      "break": 100,
+      "speed": 14
+    },
+    "core_lesson": "protect the backline, react to adds, and punish leap timings",
+    "phase_1": "fast pounces, pack marks, and single-target pressure",
+    "phase_2": "summons glass_hound adds and gains extra turns if an exposed ally falls",
+    "signature_move": "kennel_of_mirrors",
+    "break_window": "after a parried leap or after both adds are removed",
+    "desperation_below_35_percent": "chain-pounces every other turn and ignores taunt once"
+  },
+  "quiet_magistrate": {
+    "display_name": "Quiet Magistrate",
+    "primary_affinity": "shade",
+    "secondary_affinity": "halo",
+    "role": "boss_pattern_punisher",
+    "base_stats": {
+      "hp": 400,
+      "guard": 95,
+      "break": 115,
+      "speed": 13
+    },
+    "core_lesson": "vary postures and avoid repeating the same patterns",
+    "phase_1": "reads repeated skill use and punishes predictable posture loops",
+    "phase_2": "silences one posture each cycle and rewards flexible play",
+    "signature_move": "sentence_of_repetition",
+    "break_window": "after the party uses 3 different postures within 2 rounds",
+    "desperation_below_35_percent": "locks the last repeated pattern and gains huge damage against it"
+  }
+}

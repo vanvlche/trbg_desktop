@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.npz
+*.log

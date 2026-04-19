@@ -1,0 +1,117 @@
+{
+  "options": {
+    "iron_mesh": {
+      "display_name": "Iron Mesh",
+      "description": "+12 max guard to all allies, and restore 12 guard.",
+      "effect_type": "party_stat_boost",
+      "stat": "max_guard",
+      "amount": 12,
+      "restore_current_on_gain": true
+    },
+    "stage_light": {
+      "display_name": "Stage Light",
+      "description": "+1 starting Spotlight for future battles this run (max 3).",
+      "effect_type": "campaign_counter_boost",
+      "counter": "starting_spotlight",
+      "amount": 1,
+      "max_value": 3
+    },
+    "field_dressing": {
+      "display_name": "Field Dressing",
+      "description": "Heal all allies for 18 HP.",
+      "effect_type": "party_heal",
+      "amount": 18
+    },
+    "supply_cache": {
+      "display_name": "Supply Cache",
+      "description": "+1 recovery charge, up to 5.",
+      "effect_type": "recovery_charge_boost",
+      "amount": 1,
+      "max_cap": 5
+    },
+    "keen_wires": {
+      "display_name": "Keen Wires",
+      "description": "+2 speed to all allies.",
+      "effect_type": "party_stat_boost",
+      "stat": "speed",
+      "amount": 2
+    },
+    "red_salt": {
+      "display_name": "Red Salt Tonics",
+      "description": "+12 max HP to all allies and heal 12 HP.",
+      "effect_type": "party_stat_boost",
+      "stat": "max_hp",
+      "amount": 12,
+      "heal_amount": 12
+    },
+    "ward_flares": {
+      "display_name": "Ward Flares",
+      "description": "All allies start future battles with 10 barrier.",
+      "effect_type": "campaign_counter_boost",
+      "counter": "prebattle_barrier",
+      "amount": 10
+    },
+    "bellbreaker_oil": {
+      "display_name": "Bellbreaker Oil",
+      "description": "Bosses start with 25 less guard.",
+      "effect_type": "campaign_counter_boost",
+      "counter": "boss_guard_penalty",
+      "amount": 25
+    },
+    "steady_chimes": {
+      "display_name": "Steady Chimes",
+      "description": "+10 max break to all allies.",
+      "effect_type": "party_stat_boost",
+      "stat": "max_break",
+      "amount": 10,
+      "refill_to_max": true
+    }
+  },
+  "tables": {
+    "overpass_watch_rewards": {
+      "display_name": "Overpass Watch Rewards",
+      "pick_count": 1,
+      "options": [
+        "iron_mesh",
+        "stage_light",
+        "field_dressing"
+      ]
+    },
+    "flooded_arcade_rewards": {
+      "display_name": "Flooded Arcade Rewards",
+      "pick_count": 1,
+      "options": [
+        "supply_cache",
+        "keen_wires",
+        "steady_chimes"
+      ]
+    },
+    "service_niche_rewards": {
+      "display_name": "Service Niche Options",
+      "pick_count": 1,
+      "options": [
+        "field_dressing",
+        "ward_flares",
+        "stage_light"
+      ]
+    },
+    "witness_chapel_rewards": {
+      "display_name": "Witness Chapel Rewards",
+      "pick_count": 1,
+      "options": [
+        "red_salt",
+        "bellbreaker_oil",
+        "field_dressing"
+      ]
+    },
+    "toll_plaza_rewards": {
+      "display_name": "Toll Plaza Rewards",
+      "pick_count": 1,
+      "options": [
+        "field_dressing",
+        "stage_light",
+        "bellbreaker_oil"
+      ]
+    }
+  }
+}

@@ -1,0 +1,369 @@
+{
+  "standard_strike": {
+    "display_name": "Standard Strike",
+    "owner": "shared",
+    "kind": "attack",
+    "affinity": "neutral",
+    "target": "single_enemy",
+    "spotlight_cost": 0,
+    "scale": {
+      "primary": "power",
+      "secondary": "precision"
+    },
+    "output": {
+      "damage": "medium",
+      "break": "low"
+    },
+    "effect_id": "none",
+    "effect": "no extra effect"
+  },
+  "brace": {
+    "display_name": "Brace",
+    "owner": "shared",
+    "kind": "defense",
+    "affinity": "neutral",
+    "target": "self",
+    "spotlight_cost": 0,
+    "scale": {
+      "primary": "composure",
+      "secondary": "power"
+    },
+    "output": {
+      "damage": "none",
+      "break": "none"
+    },
+    "effect_id": "brace",
+    "effect": "restore 35% max_guard; next Guard reaction this round reduces HP damage by 20%"
+  },
+  "read_opening": {
+    "display_name": "Read Opening",
+    "owner": "shared",
+    "kind": "utility",
+    "affinity": "halo",
+    "target": "single_enemy",
+    "spotlight_cost": 0,
+    "scale": {
+      "primary": "precision",
+      "secondary": "composure"
+    },
+    "output": {
+      "damage": "low",
+      "break": "low"
+    },
+    "effect_id": "read_opening",
+    "effect": "apply reveal for 1 turn; gain 1 spotlight on affinity-advantage hit"
+  },
+  "anchor_cleave": {
+    "display_name": "Anchor Cleave",
+    "owner": "vanguard",
+    "kind": "attack",
+    "affinity": "ash",
+    "target": "single_enemy",
+    "spotlight_cost": 0,
+    "scale": {
+      "primary": "power",
+      "secondary": "composure"
+    },
+    "output": {
+      "damage": "high",
+      "break": "high"
+    },
+    "effect_id": "anchor_cleave",
+    "effect": "self loses 10% current_guard"
+  },
+  "ward_bell": {
+    "display_name": "Ward Bell",
+    "owner": "vanguard",
+    "kind": "support",
+    "affinity": "halo",
+    "target": "all_allies",
+    "spotlight_cost": 0,
+    "scale": {
+      "primary": "composure",
+      "secondary": "power"
+    },
+    "output": {
+      "damage": "none",
+      "break": "none"
+    },
+    "effect_id": "ward_bell",
+    "effect": "restore 20% max_guard to all allies; self gains taunt for 1 turn"
+  },
+  "execution_drop": {
+    "display_name": "Execution Drop",
+    "owner": "vanguard",
+    "kind": "finisher",
+    "affinity": "ash",
+    "target": "single_enemy",
+    "spotlight_cost": 2,
+    "scale": {
+      "primary": "power",
+      "secondary": "precision"
+    },
+    "output": {
+      "damage": "very_high",
+      "break": "medium"
+    },
+    "effect_id": "execution_drop",
+    "effect": "deal +50% damage to staggered targets"
+  },
+  "mark_lunge": {
+    "display_name": "Mark Lunge",
+    "owner": "duelist",
+    "kind": "attack",
+    "affinity": "halo",
+    "target": "single_enemy",
+    "spotlight_cost": 0,
+    "scale": {
+      "primary": "precision",
+      "secondary": "power"
+    },
+    "output": {
+      "damage": "medium",
+      "break": "low"
+    },
+    "effect_id": "mark_lunge",
+    "effect": "apply reveal for 2 turns; bonus crit against revealed targets"
+  },
+  "feint_circuit": {
+    "display_name": "Feint Circuit",
+    "owner": "duelist",
+    "kind": "stance",
+    "affinity": "neutral",
+    "target": "self",
+    "spotlight_cost": 0,
+    "scale": {
+      "primary": "composure",
+      "secondary": "precision"
+    },
+    "output": {
+      "damage": "none",
+      "break": "none"
+    },
+    "effect_id": "feint_circuit",
+    "effect": "until next turn, first successful parry triggers a counter hit and grants 1 spotlight"
+  },
+  "glass_reprise": {
+    "display_name": "Glass Reprise",
+    "owner": "duelist",
+    "kind": "finisher",
+    "affinity": "halo",
+    "target": "single_enemy",
+    "spotlight_cost": 2,
+    "scale": {
+      "primary": "precision",
+      "secondary": "composure"
+    },
+    "output": {
+      "damage": "high",
+      "break": "low"
+    },
+    "effect_id": "glass_reprise",
+    "effect": "3 hits; each hit gains bonus crit against revealed or staggered targets"
+  },
+  "salt_psalm": {
+    "display_name": "Salt Psalm",
+    "owner": "cantor",
+    "kind": "spell",
+    "affinity": "shade",
+    "target": "single_enemy",
+    "spotlight_cost": 0,
+    "scale": {
+      "primary": "precision",
+      "secondary": "composure"
+    },
+    "output": {
+      "damage": "low",
+      "break": "low"
+    },
+    "effect_id": "salt_psalm",
+    "effect": "apply hex for 2 turns; lowest_guard ally gains a small barrier"
+  },
+  "undertow_litany": {
+    "display_name": "Undertow Litany",
+    "owner": "cantor",
+    "kind": "support",
+    "affinity": "tide",
+    "target": "all_allies",
+    "spotlight_cost": 1,
+    "scale": {
+      "primary": "composure",
+      "secondary": "precision"
+    },
+    "output": {
+      "damage": "none",
+      "break": "none"
+    },
+    "effect_id": "undertow_litany",
+    "effect": "cleanse 1 debuff from all allies and grant a small barrier"
+  },
+  "hex_burst": {
+    "display_name": "Hex Burst",
+    "owner": "cantor",
+    "kind": "spell",
+    "affinity": "shade",
+    "target": "single_enemy",
+    "spotlight_cost": 1,
+    "scale": {
+      "primary": "precision",
+      "secondary": "composure"
+    },
+    "output": {
+      "damage": "medium",
+      "break": "medium"
+    },
+    "effect_id": "hex_burst",
+    "effect": "consume 1 status from target for bonus damage and splash low break to all enemies"
+  },
+  "tuning_fork_cut": {
+    "display_name": "Tuning Fork Cut",
+    "owner": "cantor",
+    "kind": "spell",
+    "affinity": "shade",
+    "target": "single_enemy",
+    "spotlight_cost": 0,
+    "scale": {
+      "primary": "precision",
+      "secondary": "composure"
+    },
+    "output": {
+      "damage": "medium",
+      "break": "medium"
+    },
+    "effect_id": "tuning_fork_cut",
+    "tags": [
+      "counter_expression"
+    ],
+    "effect": "if the target is revealed, recently channeled, or the user just reacted successfully, gain bonus break and stronger hex reliability"
+  },
+  "final_verse": {
+    "display_name": "Final Verse",
+    "owner": "cantor",
+    "kind": "finisher",
+    "affinity": "shade",
+    "target": "single_enemy",
+    "spotlight_cost": 2,
+    "scale": {
+      "primary": "precision",
+      "secondary": "power"
+    },
+    "output": {
+      "damage": "high",
+      "break": "medium"
+    },
+    "effect_id": "final_verse",
+    "tags": [
+      "commitment_payoff"
+    ],
+    "effect": "deals much higher payoff against revealed or staggered targets"
+  },
+  "pinning_round": {
+    "display_name": "Pinning Round",
+    "owner": "ranger",
+    "kind": "ranged_attack",
+    "affinity": "bloom",
+    "target": "single_enemy",
+    "spotlight_cost": 0,
+    "scale": {
+      "primary": "precision",
+      "secondary": "power"
+    },
+    "output": {
+      "damage": "medium",
+      "break": "low"
+    },
+    "effect_id": "pinning_round",
+    "effect": "apply snare for 2 turns"
+  },
+  "linebreaker_shot": {
+    "display_name": "Linebreaker Shot",
+    "owner": "ranger",
+    "kind": "ranged_attack",
+    "affinity": "spark",
+    "target": "single_enemy",
+    "spotlight_cost": 0,
+    "scale": {
+      "primary": "power",
+      "secondary": "precision"
+    },
+    "output": {
+      "damage": "high",
+      "break": "high"
+    },
+    "effect_id": "linebreaker_shot",
+    "effect": "deal bonus break to guarded or flying targets"
+  },
+  "relay_beacon": {
+    "display_name": "Relay Beacon",
+    "owner": "ranger",
+    "kind": "utility",
+    "affinity": "halo",
+    "target": "single_enemy",
+    "spotlight_cost": 1,
+    "scale": {
+      "primary": "composure",
+      "secondary": "precision"
+    },
+    "output": {
+      "damage": "low",
+      "break": "none"
+    },
+    "effect_id": "relay_beacon",
+    "effect": "apply reveal for 1 turn; next ally swap gains free guard and an assist shot"
+  },
+  "blood_oath": {
+    "display_name": "Blood Oath",
+    "owner": "penitent",
+    "kind": "self_buff",
+    "affinity": "shade",
+    "target": "self",
+    "spotlight_cost": 0,
+    "scale": {
+      "primary": "power",
+      "secondary": "composure"
+    },
+    "output": {
+      "damage": "none",
+      "break": "none"
+    },
+    "effect_id": "blood_oath",
+    "hp_cost_percent": 10,
+    "effect": "gain 1 spotlight; next attack treats power as 1 band higher; self takes +15% damage until next turn"
+  },
+  "thorn_spiral": {
+    "display_name": "Thorn Spiral",
+    "owner": "penitent",
+    "kind": "attack",
+    "affinity": "bloom",
+    "target": "single_enemy",
+    "spotlight_cost": 0,
+    "scale": {
+      "primary": "power",
+      "secondary": "precision"
+    },
+    "output": {
+      "damage": "medium",
+      "break": "medium"
+    },
+    "effect_id": "thorn_spiral",
+    "effect": "2 hits; if user HP < 50%, gain +25% damage and apply snare"
+  },
+  "last_rite": {
+    "display_name": "Last Rite",
+    "owner": "penitent",
+    "kind": "finisher",
+    "affinity": "shade",
+    "target": "single_enemy",
+    "spotlight_cost": 2,
+    "scale": {
+      "primary": "power",
+      "secondary": "precision"
+    },
+    "output": {
+      "damage": "very_high",
+      "break": "low"
+    },
+    "effect_id": "last_rite",
+    "effect": "deal bonus damage to staggered or hexed targets; extra bonus if user HP < 50%"
+  }
+}

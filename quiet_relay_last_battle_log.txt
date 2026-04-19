@@ -1,0 +1,102 @@
+[Round 01] Battle begins.
+[Round 01] Turn order: Duelist, Glass Hound Matriarch, Cantor, Vanguard
+[Round 01] Duelist enters flow posture (balanced spread).
+[Round 01] Spotlight +1 (Duelist entered Flow) -> 1/5
+[Round 01] Duelist uses Mark Lunge [P:57/keen, R:71/fierce, C:65/fierce]
+[Round 01] Glass Hound Matriarch loses 15 break.
+[Round 01] Duelist hits Glass Hound Matriarch for 23 guard.
+[Round 01] Glass Hound Matriarch gains reveal (2).
+[Round 01] Glass Hound Matriarch recovers 3 guard.
+[Round 01] Glass Hound Matriarch enters focus posture (precision dominant).
+[Round 01] Glass Hound Matriarch pounces on the weakest guard: Duelist.
+[Round 01] Duelist loses 8 break.
+[Round 01] Glass Hound Matriarch hits Duelist for 20 guard.
+[Round 01] Spotlight -1 (Cantor used Hex Burst) -> 0/5
+[Round 01] Cantor enters focus posture (precision dominant).
+[Round 01] Cantor uses Hex Burst [P:55/keen, R:81/exalted, C:76/fierce]
+[Round 01] Hex Burst consumes reveal for bonus damage.
+[Round 01] Glass Hound Matriarch loses 37 break.
+[Round 01] Cantor hits Glass Hound Matriarch for 47 guard.
+[Round 01] Spotlight +1 (Cantor exploited affinity) -> 1/5
+[Round 01] Vanguard enters ravage posture (power dominant).
+[Round 01] Vanguard uses Anchor Cleave [P:92/exalted, R:53/keen, C:82/exalted]
+[Round 01] Glass Hound Matriarch loses 48 break.
+[Round 01] Glass Hound Matriarch is staggered!
+[Round 01] Vanguard hits Glass Hound Matriarch for 8 guard, 33 hp.
+[Round 01] Vanguard loses 8 guard from Anchor Cleave.
+[Round 02] ------------------------------------------------------------
+[Round 02] Turn order: Duelist, Glass Hound Matriarch, Cantor, Vanguard
+[Round 02] Duelist is no longer affected by reveal.
+[Round 02] Duelist recovers 4 guard.
+[Round 02] Duelist enters flow posture (balanced spread).
+[Round 02] Spotlight +1 (Duelist entered Flow) -> 2/5
+[Round 02] Duelist uses Mark Lunge [P:52/keen, R:77/fierce, C:61/fierce]
+[Round 02] Duelist hits Glass Hound Matriarch for 45 hp. CRIT!
+[Round 02] Spotlight +1 (Duelist passive crit) -> 3/5
+[Round 02] Glass Hound Matriarch gains reveal (2).
+[Round 02] Glass Hound Matriarch is staggered and loses the turn.
+[Round 02] Spotlight -1 (Cantor used Hex Burst) -> 2/5
+[Round 02] Cantor enters focus posture (precision dominant).
+[Round 02] Cantor uses Hex Burst [P:48/keen, R:83/exalted, C:79/fierce]
+[Round 02] Hex Burst consumes reveal for bonus damage.
+[Round 02] Glass Hound Matriarch loses 41 break.
+[Round 02] Cantor hits Glass Hound Matriarch for 71 hp. CRIT!
+[Round 02] Spotlight +1 (Cantor exploited affinity) -> 3/5
+[Round 02] Vanguard recovers 4 guard.
+[Round 02] Vanguard enters ravage posture (power dominant).
+[Round 02] Vanguard restores 4 guard from passive.
+[Round 02] Vanguard uses Anchor Cleave [P:80/exalted, R:49/keen, C:66/fierce]
+[Round 02] Glass Hound Matriarch loses 59 break.
+[Round 02] Glass Hound Matriarch is staggered!
+[Round 02] Vanguard hits Glass Hound Matriarch for 40 hp.
+[Round 02] Vanguard loses 8 guard from Anchor Cleave.
+[Round 03] ------------------------------------------------------------
+[Round 03] Turn order: Duelist, Glass Hound Matriarch, Cantor, Vanguard
+[Round 03] Duelist recovers 4 guard.
+[Round 03] Spotlight -2 (Duelist used Glass Reprise) -> 1/5
+[Round 03] Duelist enters flow posture (balanced spread).
+[Round 03] Spotlight +1 (Duelist entered Flow) -> 2/5
+[Round 03] Duelist uses Glass Reprise [P:55/keen, R:78/fierce, C:60/fierce]
+[Round 03] Duelist hits Glass Hound Matriarch for 26 hp.
+[Round 03] Glass Reprise hit 1/3 lands.
+[Round 03] Duelist hits Glass Hound Matriarch for 26 hp.
+[Round 03] Glass Reprise hit 2/3 lands.
+[Round 03] Duelist hits Glass Hound Matriarch for 26 hp.
+[Round 03] Glass Reprise hit 3/3 lands.
+[Round 03] Glass Hound Matriarch is staggered and loses the turn.
+[Round 03] Cantor enters focus posture (precision dominant).
+[Round 03] Cantor uses Salt Psalm [P:58/keen, R:82/exalted, C:62/fierce]
+[Round 03] Glass Hound Matriarch loses 17 break.
+[Round 03] Cantor hits Glass Hound Matriarch for 22 hp.
+[Round 03] Glass Hound Matriarch gains hex (2).
+[Round 03] Duelist gains 8 barrier from Cantor's passive.
+[Round 03] Spotlight +1 (Cantor exploited affinity) -> 3/5
+[Round 03] Vanguard recovers 4 guard.
+[Round 03] Vanguard enters ravage posture (power dominant).
+[Round 03] Vanguard restores 4 guard from passive.
+[Round 03] Vanguard uses Anchor Cleave [P:86/exalted, R:38/set, C:67/fierce]
+[Round 03] Glass Hound Matriarch loses 62 break.
+[Round 03] Vanguard hits Glass Hound Matriarch for 44 hp.
+[Round 03] Vanguard loses 8 guard from Anchor Cleave.
+[Round 04] ------------------------------------------------------------
+[Round 04] Turn order: Duelist, Glass Hound Matriarch, Cantor, Vanguard
+[Round 04] Duelist recovers 4 guard.
+[Round 04] Duelist enters focus posture (precision dominant).
+[Round 04] Duelist uses Mark Lunge [P:41/keen, R:85/exalted, C:73/fierce]
+[Round 04] Glass Hound Matriarch loses 14 break.
+[Round 04] Duelist hits Glass Hound Matriarch for 29 hp.
+[Round 04] Glass Hound Matriarch gains reveal (2).
+[Round 04] Glass Hound Matriarch recovers 3 guard.
+[Round 04] Glass Hound Matriarch enters focus posture (precision dominant).
+[Round 04] Glass Hound Matriarch pounces on the weakest guard: Duelist.
+[Round 04] Duelist's barrier absorbs 8 damage.
+[Round 04] Duelist loses 8 break.
+[Round 04] Glass Hound Matriarch hits Duelist for 12 guard.
+[Round 04] Spotlight -1 (Cantor used Hex Burst) -> 2/5
+[Round 04] Cantor enters focus posture (precision dominant).
+[Round 04] Cantor uses Hex Burst [P:53/keen, R:92/exalted, C:77/fierce]
+[Round 04] Hex Burst consumes hex for bonus damage.
+[Round 04] Cantor hits Glass Hound Matriarch for 3 guard, 52 hp.
+[Round 04] Glass Hound Matriarch falls.
+[Round 04] Spotlight +1 (Cantor exploited affinity) -> 3/5
+[Round 04] Players win the battle.

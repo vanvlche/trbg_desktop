@@ -1,0 +1,102 @@
+[Round 01] Battle begins.
+[Round 01] Turn order: Duelist, Cantor, Bell Warden, Vanguard
+[Round 01] Duelist enters flow posture (balanced spread).
+[Round 01] Spotlight +1 (Duelist entered Flow) -> 3/5
+[Round 01] Duelist uses Mark Lunge [P:64/fierce, R:70/fierce, C:59/keen]
+[Round 01] Bell Warden loses 17 break.
+[Round 01] Duelist hits Bell Warden for 30 guard.
+[Round 01] Bell Warden gains reveal (2).
+[Round 01] Spotlight +1 (Duelist exploited affinity) -> 4/5
+[Round 01] Spotlight -1 (Cantor used Hex Burst) -> 3/5
+[Round 01] Cantor enters bastion posture (composure dominant).
+[Round 01] Cantor uses Hex Burst [P:38/set, R:79/fierce, C:82/exalted]
+[Round 01] Hex Burst consumes reveal for bonus damage.
+[Round 01] Bell Warden loses 39 break.
+[Round 01] Cantor hits Bell Warden for 40 guard, 13 hp. CRIT!
+[Round 01] Bell Warden recovers 3 guard.
+[Round 01] Bell Warden enters ravage posture (power dominant).
+[Round 01] Bell Warden gathers itself and restores 20 guard.
+[Round 01] Vanguard enters ravage posture (power dominant).
+[Round 01] Vanguard uses Anchor Cleave [P:84/exalted, R:48/keen, C:73/fierce]
+[Round 01] Bell Warden loses 62 break.
+[Round 01] Vanguard hits Bell Warden for 23 guard, 27 hp.
+[Round 01] Vanguard loses 8 guard from Anchor Cleave.
+[Round 02] ------------------------------------------------------------
+[Round 02] Turn order: Duelist, Cantor, Bell Warden, Vanguard
+[Round 02] Duelist enters flow posture (balanced spread).
+[Round 02] Spotlight +1 (Duelist entered Flow) -> 4/5
+[Round 02] Duelist uses Mark Lunge [P:63/fierce, R:86/exalted, C:77/fierce]
+[Round 02] Bell Warden loses 12 break.
+[Round 02] Bell Warden is staggered!
+[Round 02] Duelist hits Bell Warden for 51 hp. CRIT!
+[Round 02] Spotlight +1 (Duelist passive crit) -> 5/5
+[Round 02] Bell Warden gains reveal (2).
+[Round 02] Spotlight -1 (Cantor used Hex Burst) -> 4/5
+[Round 02] Cantor enters focus posture (precision dominant).
+[Round 02] Cantor uses Hex Burst [P:44/keen, R:86/exalted, C:74/fierce]
+[Round 02] Hex Burst consumes reveal for bonus damage.
+[Round 02] Cantor hits Bell Warden for 49 hp.
+[Round 02] Bell Warden is staggered and loses the turn.
+[Round 02] Vanguard recovers 4 guard.
+[Round 02] Vanguard enters ravage posture (power dominant).
+[Round 02] Vanguard restores 4 guard from passive.
+[Round 02] Vanguard uses Anchor Cleave [P:87/exalted, R:52/keen, C:68/fierce]
+[Round 02] Bell Warden loses 62 break.
+[Round 02] Vanguard hits Bell Warden for 50 hp.
+[Round 02] Vanguard loses 8 guard from Anchor Cleave.
+[Round 03] ------------------------------------------------------------
+[Round 03] Turn order: Duelist, Cantor, Bell Warden, Vanguard
+[Round 03] Duelist enters focus posture (precision dominant).
+[Round 03] Duelist uses Mark Lunge [P:39/set, R:88/exalted, C:63/fierce]
+[Round 03] Bell Warden loses 16 break.
+[Round 03] Duelist hits Bell Warden for 32 hp.
+[Round 03] Bell Warden gains reveal (2).
+[Round 03] Spotlight +1 (Duelist exploited affinity) -> 5/5
+[Round 03] Spotlight -1 (Cantor used Hex Burst) -> 4/5
+[Round 03] Cantor enters flow posture (balanced spread).
+[Round 03] Spotlight +1 (Cantor entered Flow) -> 5/5
+[Round 03] Cantor uses Hex Burst [P:62/fierce, R:69/fierce, C:72/fierce]
+[Round 03] Hex Burst consumes reveal for bonus damage.
+[Round 03] Bell Warden loses 33 break.
+[Round 03] Cantor hits Bell Warden for 33 hp.
+[Round 03] Bell Warden recovers 3 guard.
+[Round 03] Bell Warden enters ravage posture (power dominant).
+[Round 03] Bell Warden unleashes Cathedral Toll on Vanguard!
+[Round 03] Vanguard loses 16 break.
+[Round 03] Bell Warden hits Vanguard for 17 guard.
+[Round 03] Vanguard gains scorch (2).
+[Round 03] Cathedral Toll hit 1/3 lands.
+[Round 03] Vanguard loses 16 break.
+[Round 03] Bell Warden hits Vanguard for 17 guard.
+[Round 03] Cathedral Toll hit 2/3 lands.
+[Round 03] Vanguard loses 24 break.
+[Round 03] Bell Warden hits Vanguard for 17 guard.
+[Round 03] Cathedral Toll hit 3/3 lands.
+[Round 03] Vanguard is scorched for 8 damage.
+[Round 03] Vanguard loses 8 HP (scorch).
+[Round 03] Vanguard recovers 4 guard.
+[Round 03] Vanguard enters ravage posture (power dominant).
+[Round 03] Vanguard restores 7 guard from passive.
+[Round 03] Vanguard uses Anchor Cleave [P:89/exalted, R:42/keen, C:58/keen]
+[Round 03] Bell Warden loses 19 break.
+[Round 03] Bell Warden is staggered!
+[Round 03] Vanguard hits Bell Warden for 3 guard, 44 hp.
+[Round 03] Vanguard loses 3 guard from Anchor Cleave.
+[Round 04] ------------------------------------------------------------
+[Round 04] Turn order: Duelist, Cantor, Bell Warden, Vanguard
+[Round 04] Spotlight -2 (Duelist used Glass Reprise) -> 3/5
+[Round 04] Duelist enters flow posture (balanced spread).
+[Round 04] Spotlight +1 (Duelist entered Flow) -> 4/5
+[Round 04] Duelist uses Glass Reprise [P:43/keen, R:73/fierce, C:79/fierce]
+[Round 04] Duelist hits Bell Warden for 33 hp.
+[Round 04] Spotlight +1 (Duelist exploited affinity) -> 5/5
+[Round 04] Glass Reprise hit 1/3 lands.
+[Round 04] Duelist hits Bell Warden for 50 hp. CRIT!
+[Round 04] Glass Reprise hit 2/3 lands.
+[Round 04] Duelist hits Bell Warden for 33 hp.
+[Round 04] Glass Reprise hit 3/3 lands.
+[Round 04] Cantor enters focus posture (precision dominant).
+[Round 04] Cantor uses Salt Psalm [P:40/keen, R:85/exalted, C:71/fierce]
+[Round 04] Cantor hits Bell Warden for 23 hp.
+[Round 04] Bell Warden falls.
+[Round 04] Players win the battle.

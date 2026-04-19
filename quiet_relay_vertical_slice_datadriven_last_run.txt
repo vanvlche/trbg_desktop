@@ -1,0 +1,34 @@
+Quiet Relay: 2026 - Vertical Slice Run Report
+========================================================================
+District: District 03: Rain Toll Corridor
+Last result: Defeat at Bell Tower Threshold after clearing 6 nodes.
+Wins/Losses: 0/1
+Best nodes cleared: 6
+
+Recent events:
+- Created new campaign with seed 2026 in district district_03_rain_toll_corridor.
+- Started a new expedition in District 03: Rain Toll Corridor.
+- Battle at Overpass Watch: player. Log: C:\Users\kim50\projects\trbg_desktop\quiet_relay_vertical_slice_datadriven_logs\01_overpass_watch.txt
+- Cleared Overpass Watch. Echo Shards balance: 1.
+- Reward chosen: Field Dressing.
+- Route chosen: Flooded Arcade -- Boss -- Maintenance route -- Low risk -- [sustain, barrier, dodge] | Safer maintenance route with recovery and guard rewards. Likely rewards: sustain, barrier, dodge.
+- Battle at Flooded Arcade: player. Log: C:\Users\kim50\projects\trbg_desktop\quiet_relay_vertical_slice_datadriven_logs\02_flooded_arcade.txt
+- Cleared Flooded Arcade. Echo Shards balance: 2.
+- Reward chosen: Maintenance Harness.
+- Route chosen: Service Niche -- Event -- Maintenance route -- Low risk -- [shop, recovery, sustain] | Spend shards to stabilize before the maintenance follow-through. Likely rewards: sustain, barrier, recovery.
+- Used a recovery charge on Vanguard, restoring HP, Guard, and Break.
+- Shop purchase: Slip Ledger for 2 Echo Shards. Balance: 0.
+- Resolved event node: Service Niche.
+- Battle at Drainage Switchback: player. Log: C:\Users\kim50\projects\trbg_desktop\quiet_relay_vertical_slice_datadriven_logs\05_drainage_switchback.txt
+- Cleared Drainage Switchback. Echo Shards balance: 1.
+- Reward chosen: Floodgate Loop.
+- Battle at Toll Plaza: player. Log: C:\Users\kim50\projects\trbg_desktop\quiet_relay_vertical_slice_datadriven_logs\10_toll_plaza.txt
+- Cleared Toll Plaza. Echo Shards balance: 3.
+- Shop purchase: Field Dressing for 1 Echo Shards. Balance: 2.
+- Shop purchase: Bellbreaker Oil for 2 Echo Shards. Balance: 0.
+- Route chosen: Undertone Landing -- Event -- Shared route -- Low risk -- [recovery, break, boss_prep] | Shared boss-prep stop with two final preparations. Likely rewards: recovery, break, boss_prep.
+- Reward chosen: Field Dressing.
+- Reward chosen: Bellbreaker Oil.
+- Resolved event node: Undertone Landing.
+- Battle at Bell Tower Threshold: enemy. Log: C:\Users\kim50\projects\trbg_desktop\quiet_relay_vertical_slice_datadriven_logs\13_bell_tower.txt
+- Defeat at Bell Tower Threshold after clearing 6 nodes.

@@ -1,0 +1,196 @@
+{
+  "bell_warden": {
+    "display_name": "Bell Warden",
+    "primary_affinity": "ash",
+    "secondary_affinity": "halo",
+    "role": "boss_guard_break",
+    "base_stats": {
+      "hp": 430,
+      "guard": 120,
+      "break": 130,
+      "speed": 10
+    },
+    "core_lesson": "learn Guard, Break, and safe punishment windows",
+    "phase_1": "slow bell swings, guard-heavy body, simple punish windows",
+    "phase_2": "faster multi-hit toll chains and larger scorch pressure",
+    "signature_move": "cathedral_toll",
+    "break_window": "after the full toll chain or after a clean parry on the final hit",
+    "desperation_below_35_percent": "burns its own guard to gain damage and acts more aggressively",
+    "action_tags": {
+      "cathedral_toll": [
+        "heavy",
+        "channel",
+        "burst_start"
+      ],
+      "bell_swing": [
+        "heavy"
+      ],
+      "guard_regain": [
+        "defensive"
+      ],
+      "desperation_burn": [
+        "mode_shift"
+      ]
+    }
+  },
+  "flood_archivist": {
+    "display_name": "Flood Archivist",
+    "primary_affinity": "tide",
+    "secondary_affinity": "shade",
+    "role": "boss_affinity_rotate",
+    "base_stats": {
+      "hp": 390,
+      "guard": 80,
+      "break": 110,
+      "speed": 12
+    },
+    "core_lesson": "swap around affinity changes and manage Soak safely",
+    "phase_1": "casts tide spells and archives player weaknesses",
+    "phase_2": "rotates its active affinity and rewrites matchup rules each cycle",
+    "signature_move": "redacted_surge",
+    "break_window": "during its affinity rewrite channel",
+    "desperation_below_35_percent": "floods the field with Soak and alternates tide/spark burst turns",
+    "action_tags": {
+      "rewrite_surge": [
+        "mode_shift",
+        "channel"
+      ]
+    }
+  },
+  "glass_hound_matriarch": {
+    "display_name": "Glass Hound Matriarch",
+    "primary_affinity": "halo",
+    "secondary_affinity": "bloom",
+    "role": "boss_pack_hunter",
+    "base_stats": {
+      "hp": 410,
+      "guard": 75,
+      "break": 100,
+      "speed": 14
+    },
+    "core_lesson": "protect the backline, react to adds, and punish leap timings",
+    "phase_1": "fast pounces, pack marks, and single-target pressure",
+    "phase_2": "summons glass_hound adds and gains extra turns if an exposed ally falls",
+    "signature_move": "kennel_of_mirrors",
+    "break_window": "after a parried leap or after both adds are removed",
+    "desperation_below_35_percent": "chain-pounces every other turn and ignores taunt once"
+  },
+  "quiet_magistrate": {
+    "display_name": "Quiet Magistrate",
+    "primary_affinity": "shade",
+    "secondary_affinity": "halo",
+    "role": "boss_pattern_punisher",
+    "base_stats": {
+      "hp": 400,
+      "guard": 95,
+      "break": 115,
+      "speed": 13
+    },
+    "core_lesson": "vary postures and avoid repeating the same patterns",
+    "phase_1": "reads repeated skill use and punishes predictable posture loops",
+    "phase_2": "silences one posture each cycle and rewards flexible play",
+    "signature_move": "sentence_of_repetition",
+    "break_window": "after the party uses 3 different postures within 2 rounds",
+    "desperation_below_35_percent": "locks the last repeated pattern and gains huge damage against it"
+  },
+  "moraine_bailiff": {
+    "display_name": "Moraine, Bailiff of the Sluice",
+    "primary_affinity": "tide",
+    "secondary_affinity": "ash",
+    "role": "boss_sluice_pressure",
+    "base_stats": {
+      "hp": 360,
+      "guard": 85,
+      "break": 105,
+      "speed": 11
+    },
+    "core_lesson": "answer delayed flood marks before the spillway opens",
+    "phase_1": "marks a weak lane and releases delayed tide pressure",
+    "phase_2": "moves faster and spreads soak through side lanes",
+    "signature_move": "spillway_release",
+    "break_window": "after a clean answer to the flood-key mark",
+    "desperation_below_35_percent": "leans into faster spillway releases",
+    "action_tags": {
+      "undertow_writ": [
+        "channel",
+        "burst_start"
+      ],
+      "spillway_release": [
+        "heavy"
+      ],
+      "breakwater_sweep": [
+        "heavy"
+      ],
+      "gate_stamp": [
+        "heavy"
+      ]
+    }
+  },
+  "bellglass_precentor": {
+    "display_name": "Bellglass Precentor",
+    "primary_affinity": "halo",
+    "secondary_affinity": "shade",
+    "role": "boss_reaction_cadence",
+    "base_stats": {
+      "hp": 340,
+      "guard": 75,
+      "break": 100,
+      "speed": 13
+    },
+    "core_lesson": "read the true cadence and punish late notes",
+    "phase_1": "marks a target with a clear bell before the late strike",
+    "phase_2": "adds echo cuts to punish sloppy timing",
+    "signature_move": "final_cadence",
+    "break_window": "after a clean answer to the marked cadence",
+    "desperation_below_35_percent": "threads echo hits into the final cadence",
+    "action_tags": {
+      "witness_beam": [
+        "channel",
+        "burst_start"
+      ],
+      "sentence_of_glass": [
+        "burst_start"
+      ],
+      "amen_cut": [
+        "heavy"
+      ],
+      "final_cadence": [
+        "heavy",
+        "burst_start"
+      ],
+      "glass_cut": [
+        "heavy"
+      ]
+    }
+  },
+  "orison_last_toll": {
+    "display_name": "Orison, Vicar of the Last Toll",
+    "primary_affinity": "ash",
+    "secondary_affinity": "halo",
+    "role": "boss_route_exam",
+    "base_stats": {
+      "hp": 460,
+      "guard": 125,
+      "break": 140,
+      "speed": 12
+    },
+    "core_lesson": "answer force, aim, and nerve debts under route-biased pressure",
+    "phase_1": "rotates three tolls shaped by the route taken",
+    "phase_2": "chains tolls into Quiet Relay cadence",
+    "signature_move": "quiet_relay",
+    "break_window": "after a clean relay read or exhausted toll chain",
+    "desperation_below_35_percent": "chains two tolls and shreds careless barriers",
+    "action_tags": {
+      "debt_of_force": [
+        "heavy"
+      ],
+      "debt_of_aim": [
+        "burst_start"
+      ],
+      "debt_of_nerve": [
+        "channel",
+        "heavy"
+      ]
+    }
+  }
+}

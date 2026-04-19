@@ -1,0 +1,32 @@
+{
+  "events": {
+    "hub_ops_base_intro": {
+      "title": "Operations Base",
+      "text": "Late 2026. Rain ticks against emergency floodlights while the expedition team regroups in a ruined signal base. Beyond the shutters waits the Rain Toll Corridor, a short but hostile district warped by bells, transit steel, and ash."
+    },
+    "overpass_watch_intro": {
+      "title": "Overpass Watch",
+      "text": "An elevated roadway buckles under cathedral stone. A Rustbound Pilgrim drags its bell-metal blade through the rain while ivy crawls across the guardrail."
+    },
+    "flooded_arcade_intro": {
+      "title": "Flooded Arcade",
+      "text": "Neon signage flickers beneath rising water. A Flood Acolyte chants in the puddles while a Switchblade Drone skates between broken kiosks."
+    },
+    "service_niche_intro": {
+      "title": "Service Niche",
+      "text": "You find a dry maintenance recess behind a humming panel. The team can patch wounds, rewire defenses, or prepare for the toll plaza ahead."
+    },
+    "witness_chapel_intro": {
+      "title": "Witness Chapel",
+      "text": "A transit chapel flickers with cheap halos. A Veil Leech hangs in the rafters while a Lamp Witness raises its glass lantern toward your party."
+    },
+    "toll_plaza_intro": {
+      "title": "Toll Plaza",
+      "text": "The lanes narrow into a dead checkpoint under immense bells. A Toll Knight waits motionless among cracked barriers and drowned ticket booths."
+    },
+    "bell_tower_intro": {
+      "title": "Bell Tower Threshold",
+      "text": "At the district heart, a tilted bell tower grows out of the overpass itself. The Bell Warden steps forward, pulling heat and ash from every toll the city forgot."
+    }
+  }
+}

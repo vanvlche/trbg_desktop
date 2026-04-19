@@ -1,0 +1,153 @@
+{
+  "bands": [
+    {
+      "index": 0,
+      "max": 19,
+      "min": 0,
+      "name": "frayed"
+    },
+    {
+      "index": 1,
+      "max": 39,
+      "min": 20,
+      "name": "set"
+    },
+    {
+      "index": 2,
+      "max": 59,
+      "min": 40,
+      "name": "keen"
+    },
+    {
+      "index": 3,
+      "max": 79,
+      "min": 60,
+      "name": "fierce"
+    },
+    {
+      "index": 4,
+      "max": 100,
+      "min": 80,
+      "name": "exalted"
+    }
+  ],
+  "break_tiers": {
+    "high": 28,
+    "low": 10,
+    "medium": 18,
+    "none": 0,
+    "very_high": 36
+  },
+  "damage_tiers": {
+    "high": 24,
+    "low": 10,
+    "medium": 16,
+    "none": 0,
+    "very_high": 34
+  },
+  "input_dimensions": [
+    "power",
+    "precision",
+    "composure"
+  ],
+  "defensive_reads": {
+    "profile_resolution": "first_matching_incoming_tag",
+    "profiles": {
+      "heavy": {
+        "primary": "composure",
+        "secondary": "precision",
+        "preferred_reactions": [
+          "guard",
+          "parry"
+        ]
+      },
+      "channel": {
+        "primary": "precision",
+        "secondary": "power",
+        "preferred_reactions": [
+          "parry",
+          "dodge"
+        ]
+      },
+      "burst_start": {
+        "primary": "composure",
+        "secondary": "precision",
+        "preferred_reactions": [
+          "parry",
+          "guard"
+        ]
+      }
+    }
+  },
+  "position_system": {
+    "default": "set",
+    "recent_channel_break_mult": {
+      "pressing": 1.2,
+      "set": 1.1,
+      "withdrawn": 1.0
+    },
+    "states": {
+      "pressing": {
+        "counterphrase_break_mult": 1.15,
+        "counterphrase_damage_mult": 1.15,
+        "dodge_bonus": -8,
+        "guard_break_mult": 1.1,
+        "guard_hp_spill_mult": 1.15,
+        "outgoing_break_mult": 1.15,
+        "outgoing_damage_mult": 1.1,
+        "parry_bonus": 8,
+        "parry_break_bonus": 4
+      },
+      "set": {
+        "counterphrase_break_mult": 1.0,
+        "counterphrase_damage_mult": 1.0,
+        "dodge_bonus": 0,
+        "guard_break_mult": 1.0,
+        "guard_hp_spill_mult": 1.0,
+        "outgoing_break_mult": 1.0,
+        "outgoing_damage_mult": 1.0,
+        "parry_bonus": 0,
+        "parry_break_bonus": 0
+      },
+      "withdrawn": {
+        "counterphrase_break_mult": 0.9,
+        "counterphrase_damage_mult": 0.9,
+        "dodge_bonus": 10,
+        "guard_break_mult": 0.9,
+        "guard_hp_spill_mult": 0.85,
+        "outgoing_break_mult": 0.9,
+        "outgoing_damage_mult": 0.92,
+        "parry_bonus": -5,
+        "parry_break_bonus": -4
+      }
+    }
+  },
+  "shared_start_skills": [
+    "standard_strike",
+    "brace",
+    "read_opening"
+  ],
+  "stat_profiles": {
+    "break": {
+      "high": 90,
+      "low": 42,
+      "medium": 64
+    },
+    "guard": {
+      "high": 72,
+      "low": 28,
+      "medium": 46
+    },
+    "hp": {
+      "high": 160,
+      "low": 90,
+      "medium": 120
+    },
+    "speed": {
+      "high": 16,
+      "low": 8,
+      "medium": 12
+    }
+  },
+  "version": "0.2"
+}

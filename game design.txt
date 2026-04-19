@@ -1,0 +1,440 @@
+quiet_relay_2026:
+  version: 0.1
+  input_dimensions: [power, precision, composure]
+  all_characters_start_with_shared_skills: [standard_strike, brace, read_opening]
+
+  band_thresholds:
+    frayed:  {index: 0, min: 0,  max: 19}
+    set:     {index: 1, min: 20, max: 39}
+    keen:    {index: 2, min: 40, max: 59}
+    fierce:  {index: 3, min: 60, max: 79}
+    exalted: {index: 4, min: 80, max: 100}
+
+  posture_rules:
+    resolution:
+      flow_condition: "if max_band_index - min_band_index <= 1, posture = flow"
+      dominant_condition: "otherwise posture = dimension with highest band index"
+      tie_breaks:
+        - "higher raw value wins"
+        - "if still tied, use skill.primary_scale if it is part of the tie"
+        - "if still tied, priority = power > precision > composure"
+    postures:
+      ravage:
+        trigger: power_dominant
+        bonuses:
+          damage_mult: 1.20
+          break_mult: 1.30
+        drawback:
+          guard_recovery_mult: 0.70
+      focus:
+        trigger: precision_dominant
+        bonuses:
+          crit_chance_bonus: 15
+          weak_point_mult: 1.25
+          status_accuracy_bonus: 20
+        drawback:
+          break_mult: 0.85
+      bastion:
+        trigger: composure_dominant
+        bonuses:
+          parry_window_bonus_ms: 120
+          guard_recovery_mult: 1.30
+          reaction_damage_taken_mult: 0.90
+        drawback:
+          damage_mult: 0.95
+      flow:
+        trigger: balanced_inputs
+        bonuses:
+          spotlight_gain_on_action: 1
+          self_risk_mult: 0.50
+          cleanse_minor_debuffs: 1
+        drawback: none
+
+  affinity_wheel:
+    note: "neutral is outside the wheel and has no weakness or strength"
+    order: [ash, bloom, tide, spark, shade, halo]
+    advantage_rules:
+      damage_mult: 1.25
+      status_accuracy_bonus: 15
+      first_advantage_hit_spotlight: 1
+    disadvantage_rules:
+      damage_mult: 0.80
+      status_accuracy_penalty: 15
+    affinities:
+      ash:   {strong_vs: bloom, weak_vs: halo, status: scorch}
+      bloom: {strong_vs: tide,  weak_vs: ash,  status: snare}
+      tide:  {strong_vs: spark, weak_vs: bloom, status: soak}
+      spark: {strong_vs: shade, weak_vs: tide,  status: jolt}
+      shade: {strong_vs: halo,  weak_vs: spark, status: hex}
+      halo:  {strong_vs: ash,   weak_vs: shade, status: reveal}
+    combo_rules:
+      - "spark hitting soaked targets chains bonus damage to another enemy"
+      - "ash hitting snared targets triggers burst damage and removes snare"
+      - "halo cleansing or barriering allies removes hex"
+      - "shade hitting barriered targets corrupts barrier and deals bonus break"
+
+  characters:
+    vanguard:
+      role: frontline_tank_break
+      weapon: greatblade
+      default_affinity: ash
+      preferred_inputs: [power, composure]
+      stat_profile: {hp: high, guard: high, speed: low, break_power: high}
+      passive: "entering bastion or ravage restores 10% max_guard"
+      unique_start_skills: [anchor_cleave, ward_bell, execution_drop]
+
+    duelist:
+      role: fast_crit_counter
+      weapon: rapier
+      default_affinity: halo
+      preferred_inputs: [precision, composure]
+      stat_profile: {hp: medium, guard: medium, speed: high, break_power: low}
+      passive: "first crit each turn grants 1 spotlight"
+      unique_start_skills: [mark_lunge, feint_circuit, glass_reprise]
+
+    cantor:
+      role: status_barrier_support
+      weapon: chime_staff
+      default_affinity: shade
+      preferred_inputs: [precision, composure]
+      stat_profile: {hp: medium, guard: medium, speed: medium, break_power: medium}
+      passive: "when this unit applies a status, the lowest_guard ally gains a small barrier"
+      unique_start_skills: [salt_psalm, undertow_litany, hex_burst]
+
+    ranger:
+      role: ranged_control_swap_enabler
+      weapon: signal_rifle
+      default_affinity: spark
+      preferred_inputs: [precision, power]
+      stat_profile: {hp: medium, guard: low, speed: high, break_power: medium}
+      passive: "swapping in with affinity advantage applies reveal to the target"
+      unique_start_skills: [pinning_round, linebreaker_shot, relay_beacon]
+
+    penitent:
+      role: risk_reward_finisher
+      weapon: chain_blade
+      default_affinity: shade
+      preferred_inputs: [power, precision]
+      stat_profile: {hp: medium, guard: low, speed: medium, break_power: high}
+      passive: "when below 50% hp, finishing skills gain +1 effective power band"
+      unique_start_skills: [blood_oath, thorn_spiral, last_rite]
+
+  skills:
+    standard_strike:
+      owner: shared
+      kind: attack
+      affinity: neutral
+      target: single_enemy
+      spotlight_cost: 0
+      scale: {primary: power, secondary: precision}
+      output: {damage: medium, break: low}
+      effect: "no extra effect"
+
+    brace:
+      owner: shared
+      kind: defense
+      affinity: neutral
+      target: self
+      spotlight_cost: 0
+      scale: {primary: composure, secondary: power}
+      output: {damage: none, break: none}
+      effect: "restore 35% max_guard; next Guard reaction this round reduces HP damage by 20%"
+
+    read_opening:
+      owner: shared
+      kind: utility
+      affinity: halo
+      target: single_enemy
+      spotlight_cost: 0
+      scale: {primary: precision, secondary: composure}
+      output: {damage: low, break: low}
+      effect: "apply reveal for 1 turn; gain 1 spotlight on affinity-advantage hit"
+
+    anchor_cleave:
+      owner: vanguard
+      kind: attack
+      affinity: ash
+      target: single_enemy
+      spotlight_cost: 0
+      scale: {primary: power, secondary: composure}
+      output: {damage: high, break: high}
+      effect: "self loses 10% current_guard"
+
+    ward_bell:
+      owner: vanguard
+      kind: support
+      affinity: halo
+      target: all_allies
+      spotlight_cost: 0
+      scale: {primary: composure, secondary: power}
+      output: {damage: none, break: none}
+      effect: "restore 20% max_guard to all allies; self gains taunt for 1 turn"
+
+    execution_drop:
+      owner: vanguard
+      kind: finisher
+      affinity: ash
+      target: single_enemy
+      spotlight_cost: 2
+      scale: {primary: power, secondary: precision}
+      output: {damage: very_high, break: medium}
+      effect: "deal +50% damage to staggered targets"
+
+    mark_lunge:
+      owner: duelist
+      kind: attack
+      affinity: halo
+      target: single_enemy
+      spotlight_cost: 0
+      scale: {primary: precision, secondary: power}
+      output: {damage: medium, break: low}
+      effect: "apply reveal for 2 turns; bonus crit against revealed targets"
+
+    feint_circuit:
+      owner: duelist
+      kind: stance
+      affinity: neutral
+      target: self
+      spotlight_cost: 0
+      scale: {primary: composure, secondary: precision}
+      output: {damage: none, break: none}
+      effect: "until next turn, first successful parry triggers a counter hit and grants 1 spotlight"
+
+    glass_reprise:
+      owner: duelist
+      kind: finisher
+      affinity: halo
+      target: single_enemy
+      spotlight_cost: 2
+      scale: {primary: precision, secondary: composure}
+      output: {damage: high, break: low}
+      effect: "3 hits; each hit gains bonus crit against revealed or staggered targets"
+
+    salt_psalm:
+      owner: cantor
+      kind: spell
+      affinity: shade
+      target: single_enemy
+      spotlight_cost: 0
+      scale: {primary: precision, secondary: composure}
+      output: {damage: low, break: low}
+      effect: "apply hex for 2 turns; lowest_guard ally gains a small barrier"
+
+    undertow_litany:
+      owner: cantor
+      kind: support
+      affinity: tide
+      target: all_allies
+      spotlight_cost: 1
+      scale: {primary: composure, secondary: precision}
+      output: {damage: none, break: none}
+      effect: "cleanse 1 debuff from all allies and grant a small barrier"
+
+    hex_burst:
+      owner: cantor
+      kind: spell
+      affinity: shade
+      target: single_enemy
+      spotlight_cost: 1
+      scale: {primary: precision, secondary: composure}
+      output: {damage: medium, break: medium}
+      effect: "consume 1 status from target for bonus damage and splash low break to all enemies"
+
+    pinning_round:
+      owner: ranger
+      kind: ranged_attack
+      affinity: bloom
+      target: single_enemy
+      spotlight_cost: 0
+      scale: {primary: precision, secondary: power}
+      output: {damage: medium, break: low}
+      effect: "apply snare for 2 turns"
+
+    linebreaker_shot:
+      owner: ranger
+      kind: ranged_attack
+      affinity: spark
+      target: single_enemy
+      spotlight_cost: 0
+      scale: {primary: power, secondary: precision}
+      output: {damage: high, break: high}
+      effect: "deal bonus break to guarded or flying targets"
+
+    relay_beacon:
+      owner: ranger
+      kind: utility
+      affinity: halo
+      target: single_enemy
+      spotlight_cost: 1
+      scale: {primary: composure, secondary: precision}
+      output: {damage: low, break: none}
+      effect: "apply reveal for 1 turn; next ally swap gains free guard and an assist shot"
+
+    blood_oath:
+      owner: penitent
+      kind: self_buff
+      affinity: shade
+      target: self
+      spotlight_cost: 0
+      hp_cost_percent: 10
+      scale: {primary: power, secondary: composure}
+      output: {damage: none, break: none}
+      effect: "gain 1 spotlight; next attack treats power as 1 band higher; self takes +15% damage until next turn"
+
+    thorn_spiral:
+      owner: penitent
+      kind: attack
+      affinity: bloom
+      target: single_enemy
+      spotlight_cost: 0
+      scale: {primary: power, secondary: precision}
+      output: {damage: medium, break: medium}
+      effect: "2 hits; if user HP < 50%, gain +25% damage and apply snare"
+
+    last_rite:
+      owner: penitent
+      kind: finisher
+      affinity: shade
+      target: single_enemy
+      spotlight_cost: 2
+      scale: {primary: power, secondary: precision}
+      output: {damage: very_high, break: low}
+      effect: "deal bonus damage to staggered or hexed targets; extra bonus if user HP < 50%"
+
+  enemy_types:
+    rustbound_pilgrim:
+      tier: normal
+      affinity: ash
+      role: slow_bruiser
+      stat_profile: {hp: medium, guard: low, break: medium, speed: low}
+      gimmick: "charges a delayed overhead hit that inflicts scorch"
+      counterplay: "guard the charge, then punish with break"
+
+    ivy_strangler:
+      tier: normal
+      affinity: bloom
+      role: controller
+      stat_profile: {hp: low, guard: medium, break: low, speed: medium}
+      gimmick: "applies snare and punishes attacking the same target repeatedly"
+      counterplay: "swap targets or burst it with ash"
+
+    flood_acolyte:
+      tier: normal
+      affinity: tide
+      role: setup_caster
+      stat_profile: {hp: low, guard: low, break: low, speed: medium}
+      gimmick: "spreads soak to enable ally combos"
+      counterplay: "focus it early or punish with spark"
+
+    switchblade_drone:
+      tier: normal
+      affinity: spark
+      role: fast_skirmisher
+      stat_profile: {hp: low, guard: low, break: low, speed: high}
+      gimmick: "multi-hit attacks gain damage against soaked targets"
+      counterplay: "bastion and parry punish"
+
+    veil_leech:
+      tier: normal
+      affinity: shade
+      role: guard_drain_parasite
+      stat_profile: {hp: low, guard: medium, break: low, speed: medium}
+      gimmick: "drains guard and hides behind a small barrier"
+      counterplay: "use halo reveal and burst it"
+
+    lamp_witness:
+      tier: normal
+      affinity: halo
+      role: support_cleanser
+      stat_profile: {hp: low, guard: medium, break: low, speed: low}
+      gimmick: "cleanses ally statuses and applies reveal to the party"
+      counterplay: "focus it with shade damage"
+
+    toll_knight:
+      tier: elite
+      affinity: ash
+      role: armored_tank
+      stat_profile: {hp: high, guard: high, break: high, speed: low}
+      gimmick: "large delayed bell swings; gains guard if chipped too lightly"
+      counterplay: "use heavy break and punish after the full swing"
+
+    root_jury:
+      tier: elite
+      affinity: bloom
+      role: defender_controller
+      stat_profile: {hp: high, guard: medium, break: low, speed: low}
+      gimmick: "taunts and locks one ally with bramble roots"
+      counterplay: "ash damage removes roots and opens the team"
+
+    canal_seraph:
+      tier: elite
+      affinity: tide
+      role: flying_caster
+      stat_profile: {hp: medium, guard: high, break: low, speed: medium}
+      gimmick: "stays airborne and becomes vulnerable only after spark hits or parries"
+      counterplay: "bring ranger or spark damage"
+
+    static_chorister:
+      tier: elite
+      affinity: spark
+      role: burst_caster
+      stat_profile: {hp: medium, guard: low, break: medium, speed: medium}
+      gimmick: "chains jolt through the whole party if multiple allies are soaked"
+      counterplay: "cleanse soak or burst it before it sings"
+
+    archive_shade:
+      tier: elite
+      affinity: shade
+      role: mimic
+      stat_profile: {hp: medium, guard: medium, break: medium, speed: medium}
+      gimmick: "copies the last player posture and gains a related buff"
+      counterplay: "bait a weak posture, then burst"
+
+    glass_hound:
+      tier: elite
+      affinity: halo
+      role: predator
+      stat_profile: {hp: medium, guard: low, break: low, speed: high}
+      gimmick: "marks the lowest_guard ally and gains bonus crit on pounce"
+      counterplay: "protect weak allies and parry the leap"
+
+  bosses:
+    bell_warden:
+      primary_affinity: ash
+      secondary_affinity: halo
+      core_lesson: "learn Guard, Break, and safe punishment windows"
+      phase_1: "slow bell swings, guard-heavy body, simple punish windows"
+      phase_2: "faster multi-hit toll chains and larger scorch pressure"
+      signature_move: "cathedral_toll: three delayed hits ending in a shockwave"
+      break_window: "after the full toll chain or after a clean parry on the final hit"
+      desperation_below_35_percent: "burns its own guard to gain damage and acts more aggressively"
+
+    flood_archivist:
+      primary_affinity: tide
+      secondary_affinity: shade
+      core_lesson: "swap around affinity changes and manage Soak safely"
+      phase_1: "casts tide spells and archives player weaknesses"
+      phase_2: "rotates its active affinity and rewrites matchup rules each cycle"
+      signature_move: "redacted_surge: marks one affinity as forbidden and punishes it"
+      break_window: "during its affinity rewrite channel"
+      desperation_below_35_percent: "floods the field with Soak and alternates tide/spark burst turns"
+
+    glass_hound_matriarch:
+      primary_affinity: halo
+      secondary_affinity: bloom
+      core_lesson: "protect the backline, react to adds, and punish leap timings"
+      phase_1: "fast pounces, pack marks, and single-target pressure"
+      phase_2: "summons glass_hound adds and gains extra turns if an exposed ally falls"
+      signature_move: "kennel_of_mirrors: summons 2 hounds, then leaps the lowest_guard ally"
+      break_window: "after a parried leap or after both adds are removed"
+      desperation_below_35_percent: "chain-pounces every other turn and ignores taunt once"
+
+    quiet_magistrate:
+      primary_affinity: shade
+      secondary_affinity: halo
+      core_lesson: "vary postures and avoid repeating the same patterns"
+      phase_1: "reads repeated skill use and punishes predictable posture loops"
+      phase_2: "silences one posture each cycle and rewards flexible play"
+      signature_move: "sentence_of_repetition: heavy punish if the same skill or posture repeats"
+      break_window: "after the party uses 3 different postures within 2 rounds"
+      desperation_below_35_percent: "locks the last repeated pattern and gains huge damage against it"

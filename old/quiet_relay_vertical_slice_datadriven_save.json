@@ -1,0 +1,163 @@
+{
+  "save_version": 1,
+  "players": [
+    {
+      "entity_id": "vanguard",
+      "affinity": "ash",
+      "max_hp": 160,
+      "hp": 152,
+      "max_guard": 72,
+      "guard": 72,
+      "max_break": 90,
+      "break_meter": 90,
+      "speed": 8,
+      "skills": [
+        "standard_strike",
+        "brace",
+        "read_opening",
+        "anchor_cleave",
+        "ward_bell",
+        "execution_drop"
+      ],
+      "role": "frontline_tank_break",
+      "posture": "flow",
+      "barrier": 0,
+      "conditions": {},
+      "metadata": {
+        "weapon_id": "greatblade",
+        "weapon_name": "Anchor Greatblade",
+        "relic_ids": [
+          "iron_vow"
+        ],
+        "relic_names": [
+          "Iron Vow"
+        ]
+      }
+    },
+    {
+      "entity_id": "duelist",
+      "affinity": "halo",
+      "max_hp": 120,
+      "hp": 120,
+      "max_guard": 46,
+      "guard": 46,
+      "max_break": 42,
+      "break_meter": 42,
+      "speed": 16,
+      "skills": [
+        "standard_strike",
+        "brace",
+        "read_opening",
+        "mark_lunge",
+        "feint_circuit",
+        "glass_reprise"
+      ],
+      "role": "fast_crit_counter",
+      "posture": "flow",
+      "barrier": 0,
+      "conditions": {},
+      "metadata": {
+        "weapon_id": "rapier",
+        "weapon_name": "Relay Rapier",
+        "relic_ids": [
+          "glass_lens"
+        ],
+        "relic_names": [
+          "Glass Lens"
+        ]
+      }
+    },
+    {
+      "entity_id": "cantor",
+      "affinity": "shade",
+      "max_hp": 120,
+      "hp": 120,
+      "max_guard": 46,
+      "guard": 46,
+      "max_break": 64,
+      "break_meter": 64,
+      "speed": 12,
+      "skills": [
+        "standard_strike",
+        "brace",
+        "read_opening",
+        "salt_psalm",
+        "undertow_litany",
+        "hex_burst"
+      ],
+      "role": "status_barrier_support",
+      "posture": "flow",
+      "barrier": 0,
+      "conditions": {},
+      "metadata": {
+        "weapon_id": "chime_staff",
+        "weapon_name": "Undertow Chime Staff",
+        "relic_ids": [
+          "witness_thread"
+        ],
+        "relic_names": [
+          "Witness Thread"
+        ]
+      }
+    }
+  ],
+  "rng_state": "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",
+  "expedition_active": false,
+  "current_node_index": 6,
+  "recovery_charges": 4,
+  "max_recovery_charges": 4,
+  "starting_spotlight": 2,
+  "prebattle_barrier": 0,
+  "boss_guard_penalty": 50,
+  "run_shards": 9,
+  "boons": [
+    "stage_light",
+    "supply_cache",
+    "stage_light",
+    "bellbreaker_oil",
+    "bellbreaker_oil"
+  ],
+  "best_nodes_cleared": 6,
+  "wins": 2,
+  "losses": 0,
+  "last_result": "Victory in District 03: Rain Toll Corridor. Total shards earned: 9.",
+  "report_lines": [
+    "Created new campaign with seed 2026.",
+    "Started a new expedition.",
+    "Battle at Overpass Watch: player. Log: /mnt/data/quiet_relay_vertical_slice_datadriven_logs/01_overpass_watch.txt",
+    "Cleared Overpass Watch. Shards total: 1.",
+    "Reward chosen: Stage Light.",
+    "Battle at Flooded Arcade: player. Log: /mnt/data/quiet_relay_vertical_slice_datadriven_logs/02_flooded_arcade.txt",
+    "Cleared Flooded Arcade. Shards total: 2.",
+    "Reward chosen: Supply Cache.",
+    "Reward chosen: Stage Light.",
+    "Resolved event node: Service Niche.",
+    "Battle at Witness Chapel: player. Log: /mnt/data/quiet_relay_vertical_slice_datadriven_logs/04_witness_chapel.txt",
+    "Cleared Witness Chapel. Shards total: 3.",
+    "Reward chosen: Bellbreaker Oil.",
+    "Battle at Toll Plaza: player. Log: /mnt/data/quiet_relay_vertical_slice_datadriven_logs/05_toll_plaza.txt",
+    "Cleared Toll Plaza. Shards total: 5.",
+    "Reward chosen: Bellbreaker Oil.",
+    "Battle at Bell Tower Threshold: player. Log: /mnt/data/quiet_relay_vertical_slice_datadriven_logs/06_bell_tower.txt",
+    "Cleared Bell Tower Threshold. Shards total: 9.",
+    "Victory in District 03: Rain Toll Corridor. Total shards earned: 9.",
+    "Started a new expedition.",
+    "Battle at Overpass Watch: player. Log: /mnt/data/quiet_relay_vertical_slice_datadriven_logs/01_overpass_watch.txt",
+    "Cleared Overpass Watch. Shards total: 1.",
+    "Reward chosen: Stage Light.",
+    "Battle at Flooded Arcade: player. Log: /mnt/data/quiet_relay_vertical_slice_datadriven_logs/02_flooded_arcade.txt",
+    "Cleared Flooded Arcade. Shards total: 2.",
+    "Reward chosen: Supply Cache.",
+    "Reward chosen: Stage Light.",
+    "Resolved event node: Service Niche.",
+    "Battle at Witness Chapel: player. Log: /mnt/data/quiet_relay_vertical_slice_datadriven_logs/04_witness_chapel.txt",
+    "Cleared Witness Chapel. Shards total: 3.",
+    "Reward chosen: Bellbreaker Oil.",
+    "Battle at Toll Plaza: player. Log: /mnt/data/quiet_relay_vertical_slice_datadriven_logs/05_toll_plaza.txt",
+    "Cleared Toll Plaza. Shards total: 5.",
+    "Reward chosen: Bellbreaker Oil.",
+    "Battle at Bell Tower Threshold: player. Log: /mnt/data/quiet_relay_vertical_slice_datadriven_logs/06_bell_tower.txt",
+    "Cleared Bell Tower Threshold. Shards total: 9.",
+    "Victory in District 03: Rain Toll Corridor. Total shards earned: 9."
+  ]
+}

@@ -1,0 +1,45 @@
+Quiet Relay: 2026 - Vertical Slice Run Report
+========================================================================
+District: District 03: Rain Toll Corridor
+Last result: Victory in District 03: Rain Toll Corridor. Total shards earned: 9.
+Wins/Losses: 2/0
+Best nodes cleared: 6
+
+Recent events:
+- Created new campaign with seed 2026.
+- Started a new expedition.
+- Battle at Overpass Watch: player. Log: /mnt/data/quiet_relay_vertical_slice_datadriven_logs/01_overpass_watch.txt
+- Cleared Overpass Watch. Shards total: 1.
+- Reward chosen: Stage Light.
+- Battle at Flooded Arcade: player. Log: /mnt/data/quiet_relay_vertical_slice_datadriven_logs/02_flooded_arcade.txt
+- Cleared Flooded Arcade. Shards total: 2.
+- Reward chosen: Supply Cache.
+- Reward chosen: Stage Light.
+- Resolved event node: Service Niche.
+- Battle at Witness Chapel: player. Log: /mnt/data/quiet_relay_vertical_slice_datadriven_logs/04_witness_chapel.txt
+- Cleared Witness Chapel. Shards total: 3.
+- Reward chosen: Bellbreaker Oil.
+- Battle at Toll Plaza: player. Log: /mnt/data/quiet_relay_vertical_slice_datadriven_logs/05_toll_plaza.txt
+- Cleared Toll Plaza. Shards total: 5.
+- Reward chosen: Bellbreaker Oil.
+- Battle at Bell Tower Threshold: player. Log: /mnt/data/quiet_relay_vertical_slice_datadriven_logs/06_bell_tower.txt
+- Cleared Bell Tower Threshold. Shards total: 9.
+- Victory in District 03: Rain Toll Corridor. Total shards earned: 9.
+- Started a new expedition.
+- Battle at Overpass Watch: player. Log: /mnt/data/quiet_relay_vertical_slice_datadriven_logs/01_overpass_watch.txt
+- Cleared Overpass Watch. Shards total: 1.
+- Reward chosen: Stage Light.
+- Battle at Flooded Arcade: player. Log: /mnt/data/quiet_relay_vertical_slice_datadriven_logs/02_flooded_arcade.txt
+- Cleared Flooded Arcade. Shards total: 2.
+- Reward chosen: Supply Cache.
+- Reward chosen: Stage Light.
+- Resolved event node: Service Niche.
+- Battle at Witness Chapel: player. Log: /mnt/data/quiet_relay_vertical_slice_datadriven_logs/04_witness_chapel.txt
+- Cleared Witness Chapel. Shards total: 3.
+- Reward chosen: Bellbreaker Oil.
+- Battle at Toll Plaza: player. Log: /mnt/data/quiet_relay_vertical_slice_datadriven_logs/05_toll_plaza.txt
+- Cleared Toll Plaza. Shards total: 5.
+- Reward chosen: Bellbreaker Oil.
+- Battle at Bell Tower Threshold: player. Log: /mnt/data/quiet_relay_vertical_slice_datadriven_logs/06_bell_tower.txt
+- Cleared Bell Tower Threshold. Shards total: 9.
+- Victory in District 03: Rain Toll Corridor. Total shards earned: 9.

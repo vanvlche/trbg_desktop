@@ -1,0 +1,89 @@
+[Round 01] Battle begins.
+[Round 01] Turn order: Duelist, Cantor, Ivy Strangler #2, Rustbound Pilgrim, Vanguard
+[Round 01] Duelist enters flow posture (balanced spread).
+[Round 01] Spotlight +1 (Duelist entered Flow) -> 1/5
+[Round 01] Duelist uses Standard Strike [P:80/exalted, R:70/fierce, C:90/exalted]
+[Round 01] Ivy Strangler #2 loses 17 break.
+[Round 01] Duelist hits Ivy Strangler #2 for 27 guard.
+[Round 01] Cantor enters flow posture (balanced spread).
+[Round 01] Spotlight +1 (Cantor entered Flow) -> 2/5
+[Round 01] Cantor uses Read Opening [P:90/exalted, R:70/fierce, C:90/exalted]
+[Round 01] Ivy Strangler #2 loses 16 break.
+[Round 01] Cantor hits Ivy Strangler #2 for 16 guard.
+[Round 01] Ivy Strangler #2 gains reveal (1).
+[Round 01] Duelist gains 8 barrier from Cantor's passive.
+[Round 01] Ivy Strangler #2 is no longer affected by reveal.
+[Round 01] Ivy Strangler #2 recovers 3 guard.
+[Round 01] Ivy Strangler #2 enters flow posture (balanced spread).
+[Round 01] Spotlight +1 (Ivy Strangler #2 entered Flow) -> 3/5
+[Round 01] Ivy Strangler #2 lashes thorn-vines at Duelist.
+[Round 01] Duelist misses the parry and is punished.
+[Round 01] Duelist's barrier absorbs 8 damage.
+[Round 01] Duelist loses 8 break.
+[Round 01] Ivy Strangler #2 hits Duelist for 7 guard.
+[Round 01] Duelist gains snare (2).
+[Round 01] Rustbound Pilgrim raises its weapon and begins charging a heavy overhead.
+[Round 01] Vanguard enters flow posture (balanced spread).
+[Round 01] Spotlight +1 (Vanguard entered Flow) -> 4/5
+[Round 01] Vanguard uses Standard Strike [P:90/exalted, R:90/exalted, C:90/exalted]
+[Round 01] Ivy Strangler #2 loses 9 break.
+[Round 01] Ivy Strangler #2 is staggered!
+[Round 01] Vanguard hits Ivy Strangler #2 for 6 guard, 22 hp.
+[Round 02] ------------------------------------------------------------
+[Round 02] Turn order: Duelist, Ivy Strangler #2, Cantor, Vanguard, Rustbound Pilgrim
+[Round 02] Duelist recovers 4 guard.
+[Round 02] Duelist enters flow posture (balanced spread).
+[Round 02] Spotlight +1 (Duelist entered Flow) -> 5/5
+[Round 02] Duelist cleanses snare via Flow.
+[Round 02] Duelist uses Mark Lunge [P:80/exalted, R:80/exalted, C:90/exalted]
+[Round 02] Duelist hits Ivy Strangler #2 for 37 hp.
+[Round 02] Ivy Strangler #2 gains reveal (2).
+[Round 02] Ivy Strangler #2 is staggered and loses the turn.
+[Round 02] Spotlight -1 (Cantor used Hex Burst) -> 4/5
+[Round 02] Cantor enters bastion posture (composure dominant).
+[Round 02] Cantor uses Hex Burst [P:50/keen, R:70/fierce, C:80/exalted]
+[Round 02] Hex Burst consumes reveal for bonus damage.
+[Round 02] Cantor hits Ivy Strangler #2 for 35 hp.
+[Round 02] Ivy Strangler #2 falls.
+[Round 02] Rustbound Pilgrim loses 6 break.
+[Round 02] Vanguard enters bastion posture (composure dominant).
+[Round 02] Vanguard uses Anchor Cleave [P:50/keen, R:80/exalted, C:90/exalted]
+[Round 02] Rustbound Pilgrim loses 44 break.
+[Round 02] Vanguard hits Rustbound Pilgrim for 28 guard, 22 hp. CRIT!
+[Round 02] Vanguard loses 8 guard from Anchor Cleave.
+[Round 02] Rustbound Pilgrim recovers 3 guard.
+[Round 02] Rustbound Pilgrim enters ravage posture (power dominant).
+[Round 02] Rustbound Pilgrim brings down a rusted overhead on Vanguard.
+[Round 02] Vanguard mistimes the dodge and still takes reduced damage.
+[Round 02] Vanguard loses 13 break.
+[Round 02] Rustbound Pilgrim hits Vanguard for 18 guard.
+[Round 02] Vanguard gains scorch (2).
+[Round 03] ------------------------------------------------------------
+[Round 03] Turn order: Duelist, Cantor, Rustbound Pilgrim, Vanguard
+[Round 03] Duelist recovers 3 guard.
+[Round 03] Duelist enters flow posture (balanced spread).
+[Round 03] Spotlight +1 (Duelist entered Flow) -> 5/5
+[Round 03] Duelist uses Standard Strike [P:90/exalted, R:75/fierce, C:90/exalted]
+[Round 03] Rustbound Pilgrim loses 14 break.
+[Round 03] Rustbound Pilgrim is staggered!
+[Round 03] Duelist hits Rustbound Pilgrim for 3 guard, 24 hp.
+[Round 03] Cantor enters flow posture (balanced spread).
+[Round 03] Cantor uses Salt Psalm [P:70/fierce, R:99/exalted, C:99/exalted]
+[Round 03] Cantor hits Rustbound Pilgrim for 24 hp.
+[Round 03] Rustbound Pilgrim is staggered and loses the turn.
+[Round 03] Vanguard is scorched for 8 damage.
+[Round 03] Vanguard loses 8 HP (scorch).
+[Round 03] Vanguard recovers 4 guard.
+[Round 03] Vanguard enters flow posture (balanced spread).
+[Round 03] Vanguard cleanses scorch via Flow.
+[Round 03] Vanguard uses Read Opening [P:70/fierce, R:90/exalted, C:90/exalted]
+[Round 03] Rustbound Pilgrim loses 20 break.
+[Round 03] Vanguard hits Rustbound Pilgrim for 23 hp.
+[Round 03] Rustbound Pilgrim gains reveal (1).
+[Round 04] ------------------------------------------------------------
+[Round 04] Turn order: Duelist, Cantor, Rustbound Pilgrim, Vanguard
+[Round 04] Duelist enters flow posture (balanced spread).
+[Round 04] Duelist uses Mark Lunge [P:90/exalted, R:90/exalted, C:90/exalted]
+[Round 04] Duelist hits Rustbound Pilgrim for 41 hp.
+[Round 04] Rustbound Pilgrim falls.
+[Round 04] Players win the battle.

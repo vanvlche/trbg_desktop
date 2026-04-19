@@ -1,0 +1,144 @@
+{
+  "vanguard": {
+    "display_name": "Vanguard",
+    "role": "frontline_tank_break",
+    "weapon": "greatblade",
+    "default_affinity": "ash",
+    "preferred_inputs": [
+      "power",
+      "composure"
+    ],
+    "stat_profile": {
+      "hp": "high",
+      "guard": "high",
+      "speed": "low",
+      "break": "high"
+    },
+    "passive": "entering bastion or ravage restores 10% max_guard",
+    "skills": [
+      "standard_strike",
+      "brace",
+      "read_opening",
+      "anchor_cleave",
+      "ward_bell",
+      "execution_drop"
+    ],
+    "starting_relics": [
+      "iron_vow"
+    ]
+  },
+  "duelist": {
+    "display_name": "Duelist",
+    "role": "fast_crit_counter",
+    "weapon": "rapier",
+    "default_affinity": "halo",
+    "preferred_inputs": [
+      "precision",
+      "composure"
+    ],
+    "stat_profile": {
+      "hp": "medium",
+      "guard": "medium",
+      "speed": "high",
+      "break": "low"
+    },
+    "passive": "first crit each turn grants 1 spotlight",
+    "skills": [
+      "standard_strike",
+      "brace",
+      "read_opening",
+      "mark_lunge",
+      "feint_circuit",
+      "glass_reprise"
+    ],
+    "starting_relics": [
+      "glass_lens"
+    ]
+  },
+  "cantor": {
+    "display_name": "Cantor",
+    "role": "status_barrier_support",
+    "weapon": "chime_staff",
+    "default_affinity": "shade",
+    "preferred_inputs": [
+      "precision",
+      "composure"
+    ],
+    "stat_profile": {
+      "hp": "medium",
+      "guard": "medium",
+      "speed": "medium",
+      "break": "medium"
+    },
+    "passive": "when this unit applies a status, the lowest_guard ally gains a small barrier",
+    "skills": [
+      "standard_strike",
+      "brace",
+      "read_opening",
+      "salt_psalm",
+      "undertow_litany",
+      "hex_burst",
+      "tuning_fork_cut",
+      "final_verse"
+    ],
+    "starting_relics": [
+      "witness_thread"
+    ]
+  },
+  "ranger": {
+    "display_name": "Ranger",
+    "role": "ranged_control_swap_enabler",
+    "weapon": "signal_rifle",
+    "default_affinity": "spark",
+    "preferred_inputs": [
+      "precision",
+      "power"
+    ],
+    "stat_profile": {
+      "hp": "medium",
+      "guard": "low",
+      "speed": "high",
+      "break": "medium"
+    },
+    "passive": "first attack against a revealed target gains guard (swap passive adapted for prototype)",
+    "skills": [
+      "standard_strike",
+      "brace",
+      "read_opening",
+      "pinning_round",
+      "linebreaker_shot",
+      "relay_beacon"
+    ],
+    "starting_relics": [
+      "flood_seal"
+    ]
+  },
+  "penitent": {
+    "display_name": "Penitent",
+    "role": "risk_reward_finisher",
+    "weapon": "chain_blade",
+    "default_affinity": "shade",
+    "preferred_inputs": [
+      "power",
+      "precision"
+    ],
+    "stat_profile": {
+      "hp": "medium",
+      "guard": "low",
+      "speed": "medium",
+      "break": "high"
+    },
+    "passive": "when below 50% hp, finishing skills gain +1 effective power band",
+    "skills": [
+      "standard_strike",
+      "brace",
+      "read_opening",
+      "blood_oath",
+      "thorn_spiral",
+      "last_rite"
+    ],
+    "starting_relics": [
+      "black_salt_charm"
+    ]
+  }
+}

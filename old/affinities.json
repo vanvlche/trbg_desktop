@@ -1,0 +1,58 @@
+{
+  "note": "neutral is outside the wheel and has no weakness or strength",
+  "order": [
+    "ash",
+    "bloom",
+    "tide",
+    "spark",
+    "shade",
+    "halo"
+  ],
+  "advantage_rules": {
+    "damage_mult": 1.25,
+    "status_accuracy_bonus": 15,
+    "first_advantage_hit_spotlight": 1
+  },
+  "disadvantage_rules": {
+    "damage_mult": 0.8,
+    "status_accuracy_penalty": 15
+  },
+  "affinities": {
+    "ash": {
+      "strong_vs": "bloom",
+      "weak_vs": "halo",
+      "status": "scorch"
+    },
+    "bloom": {
+      "strong_vs": "tide",
+      "weak_vs": "ash",
+      "status": "snare"
+    },
+    "tide": {
+      "strong_vs": "spark",
+      "weak_vs": "bloom",
+      "status": "soak"
+    },
+    "spark": {
+      "strong_vs": "shade",
+      "weak_vs": "tide",
+      "status": "jolt"
+    },
+    "shade": {
+      "strong_vs": "halo",
+      "weak_vs": "spark",
+      "status": "hex"
+    },
+    "halo": {
+      "strong_vs": "ash",
+      "weak_vs": "shade",
+      "status": "reveal"
+    }
+  },
+  "combo_rules": [
+    "spark hitting soaked targets chains bonus damage to another enemy",
+    "ash hitting snared targets triggers burst damage and removes snare",
+    "halo cleansing or barriering allies removes hex",
+    "shade hitting barriered targets corrupts barrier and deals bonus break"
+  ]
+}

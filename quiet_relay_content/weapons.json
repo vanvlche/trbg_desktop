@@ -1,0 +1,47 @@
+{
+  "greatblade": {
+    "display_name": "Anchor Greatblade",
+    "class": "greatblade",
+    "damage_profile": "high",
+    "break_profile": "very_high",
+    "speed_profile": "low",
+    "special_modifier": "break_skills_plus_15_percent",
+    "description": "A bell-steel slab built for decisive stagger pressure."
+  },
+  "rapier": {
+    "display_name": "Relay Rapier",
+    "class": "rapier",
+    "damage_profile": "medium",
+    "break_profile": "low",
+    "speed_profile": "high",
+    "special_modifier": "counter_crit_plus_10",
+    "description": "A narrow dueling blade tuned for feints, reveals, and ripostes."
+  },
+  "chime_staff": {
+    "display_name": "Undertow Chime Staff",
+    "class": "staff",
+    "damage_profile": "low",
+    "break_profile": "medium",
+    "speed_profile": "medium",
+    "special_modifier": "status_accuracy_plus_10",
+    "description": "A resonant staff that binds prayer, barriers, and hexes."
+  },
+  "signal_rifle": {
+    "display_name": "Signal Rifle",
+    "class": "rifle",
+    "damage_profile": "high",
+    "break_profile": "medium",
+    "speed_profile": "high",
+    "special_modifier": "reveal_bonus_plus_10_percent",
+    "description": "A long rifle built to expose weak points through the rain."
+  },
+  "chain_blade": {
+    "display_name": "Penitent Chain-Blade",
+    "class": "chain_blade",
+    "damage_profile": "high",
+    "break_profile": "high",
+    "speed_profile": "medium",
+    "special_modifier": "low_hp_finishers_plus_15_percent",
+    "description": "A hooked chain weapon that trades blood for terrifying finishers."
+  }
+}
