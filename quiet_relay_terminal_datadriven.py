@@ -129,6 +129,68 @@ PARRY_GUARD_COST = 10
 PARRY_BREAK_COST = 12
 PARRY_EXTRA_BREAK_ON_FAIL = 12
 COMPOSURE_TEMPO_THRESHOLD = 160
+DEFAULT_MAX_ACTION_METER = 100
+PLAYER_ACTION_SAFETY_CAP = 8
+AMBUSH_RUSH_NEXT_ATTACK_ACCURACY_BONUS = 15
+AMBUSH_RUSH_DAMAGE_MULTIPLIER = 0.85
+AMBUSH_RUSH_BREAK_MULTIPLIER = 0.85
+BACKSTEP_SLASH_DAMAGE_MULTIPLIER = 0.60
+BACKSTEP_SLASH_BREAK_MULTIPLIER = 0.60
+BACKSTEP_NEXT_DODGE_BONUS = 20
+BACKSTEP_NEXT_ATTACK_ACCURACY_PENALTY = 10
+BACKFLIP_BREAK_COST = 10
+BACKFLIP_NEXT_DODGE_BONUS = 25
+BACKFLIP_NEXT_TURN_HEALING_BONUS = 0.25
+TRANCE_REQUIRED_READY_COUNT = 3
+TRANCE_PRECISION_DECAY_PER_ATTACK = 10
+TRANCE_MAX_CHAIN_ATTACKS = 7
+TRANCE_DAMAGE_MULTIPLIER = 0.75
+TRANCE_BREAK_MULTIPLIER = 0.75
+CHARGE_SLASH_GUARD_COST = 10
+CHARGE_SLASH_BREAK_COST = 12
+CHARGE_SLASH_DAMAGE_MULTIPLIER = 0.65
+CHARGE_SLASH_BREAK_MULTIPLIER = 2.25
+CHARGE_SLASH_NEXT_TURN_AP_BONUS_ON_STAGGER = 30
+POISONED_CHALICE_HEAL = 35
+POISONED_CHALICE_DAMAGE_MULTIPLIER = 0.85
+POISONED_CHALICE_BREAK_MULTIPLIER = 0.85
+POISONED_CHALICE_NEXT_TURN_DODGE_PENALTY = 25
+POISONED_CHALICE_NEXT_TURN_ACCURACY_PENALTY = 20
+DOUBLE_STRIKE_DAMAGE_MULTIPLIER = 0.80
+DOUBLE_STRIKE_BREAK_MULTIPLIER = 0.80
+DOUBLE_STRIKE_SECOND_ATTACK_ACCURACY_PENALTY = 10
+P2_BATTLE_METADATA_KEYS = (
+    "queued_next_turn_accuracy_penalty",
+    "queued_next_turn_dodge_penalty",
+    "queued_next_turn_healing_efficiency_bonus",
+    "queued_disable_guard",
+    "queued_disable_parry",
+    "queued_next_turn_action_meter_bonus",
+    "active_turn_accuracy_penalty",
+    "active_turn_dodge_penalty",
+    "active_turn_healing_efficiency_bonus",
+    "active_disable_guard",
+    "active_disable_parry",
+    "active_turn_action_meter_bonus",
+    "next_attack_accuracy_bonus",
+    "next_attack_accuracy_penalty",
+    "next_dodge_bonus",
+    "next_healing_efficiency_bonus",
+    "temporary_precision_delta",
+    "trance_used_this_battle",
+    "trance_ready_count",
+    "trance_chain_active",
+    "p2_action_used_this_turn",
+)
+RULES_VISIBILITY_HIDDEN = "hidden"
+RULES_VISIBILITY_FUZZY = "fuzzy"
+RULES_VISIBILITY_DEBUG = "debug"
+RULES_VISIBILITY_CHOICES = (
+    RULES_VISIBILITY_HIDDEN,
+    RULES_VISIBILITY_FUZZY,
+    RULES_VISIBILITY_DEBUG,
+)
+DEFAULT_RULES_VISIBILITY = RULES_VISIBILITY_FUZZY
 
 UI_ICONS = {
     "battle": "⚔️",
@@ -154,6 +216,123 @@ def emoji_label(key: str, text: str) -> str:
     icon = ui_icon(key)
     return f"{icon} {text}" if icon else text
 
+
+def normalize_rules_visibility(value: object) -> str:
+    text = str(value or "").strip().lower()
+    if text in RULES_VISIBILITY_CHOICES:
+        return text
+    return DEFAULT_RULES_VISIBILITY
+
+
+def is_debug_rules(state: object) -> bool:
+    return normalize_rules_visibility(
+        getattr(state, "rules_visibility", DEFAULT_RULES_VISIBILITY)
+    ) == RULES_VISIBILITY_DEBUG
+
+
+def is_fuzzy_rules(state: object) -> bool:
+    return normalize_rules_visibility(
+        getattr(state, "rules_visibility", DEFAULT_RULES_VISIBILITY)
+    ) == RULES_VISIBILITY_FUZZY
+
+
+def is_hidden_rules(state: object) -> bool:
+    return normalize_rules_visibility(
+        getattr(state, "rules_visibility", DEFAULT_RULES_VISIBILITY)
+    ) == RULES_VISIBILITY_HIDDEN
+
+
+def log_player(state: object, message: str) -> None:
+    getattr(state, "logger").log(getattr(state, "round_number"), message)
+
+
+def log_rules_debug(state: object, message: str) -> None:
+    if is_debug_rules(state):
+        log_player(state, "[DEBUG] " + message)
+
+
+def rules_outcome_messages(
+    state: object,
+    player_message: str,
+    debug_message: str = "",
+    hidden_message: Optional[str] = None,
+) -> List[str]:
+    messages: List[str] = []
+    if is_debug_rules(state) and debug_message:
+        messages.append("[DEBUG] " + debug_message)
+        if player_message:
+            messages.extend(player_message.splitlines())
+        return messages
+    if is_hidden_rules(state) and hidden_message is not None:
+        if hidden_message:
+            messages.extend(hidden_message.splitlines())
+        return messages
+    if player_message:
+        messages.extend(player_message.splitlines())
+    return messages
+
+
+def log_rules_outcome(
+    state: object,
+    player_message: str,
+    debug_message: str = "",
+    hidden_message: Optional[str] = None,
+) -> None:
+    for message in rules_outcome_messages(
+        state,
+        player_message=player_message,
+        debug_message=debug_message,
+        hidden_message=hidden_message,
+    ):
+        log_player(state, message)
+
+
+def chance_to_read_label(chance: int) -> str:
+    chance = clamp_int(int(chance), 0, 100)
+    if chance < 25:
+        return "Reckless"
+    if chance < 45:
+        return "Shaky"
+    if chance < 65:
+        return "Uncertain"
+    if chance < 85:
+        return "Stable"
+    return "Clean"
+
+
+def gate_gap_to_read_label(gap: int) -> str:
+    gap = int(gap)
+    if gap < -20:
+        return "Reckless"
+    if gap < -8:
+        return "Shaky"
+    if gap < 8:
+        return "Uncertain"
+    if gap < 20:
+        return "Stable"
+    return "Clean"
+
+
+def qualitative_power_line(multiplier: float) -> str:
+    if multiplier >= 1.25:
+        return "The blow carries through."
+    if multiplier >= 1.05:
+        return "The strike lands with weight."
+    if multiplier >= 0.95:
+        return "The attack finds its line."
+    return "The hit lacks full bite."
+
+
+def tempo_read_label(meter: int, threshold: int) -> str:
+    if threshold <= 0:
+        return "ready"
+    ratio = float(meter) / float(threshold)
+    if ratio >= 0.85:
+        return "nearly ready"
+    if ratio >= 0.45:
+        return "gathering"
+    return "quiet"
+
 # ---------------------------------------------------------------------------
 # Dataclasses
 # ---------------------------------------------------------------------------
@@ -174,6 +353,23 @@ class Skill:
     break_tier: str
     effect_id: str
     tags: Tuple[str, ...] = ()
+    action_cost: int = 100
+    force_turn_end: bool = True
+    requires_full_action_meter: bool = False
+    power_requirement: Optional[int] = None
+    allowed_characters: Tuple[str, ...] = ()
+    once_per_battle: bool = False
+    guard_cost: int = 0
+    break_cost: int = 0
+    recovery_charge_cost: int = 0
+    next_attack_accuracy_bonus: int = 0
+    next_attack_accuracy_penalty: int = 0
+    next_turn_accuracy_penalty: int = 0
+    next_turn_dodge_bonus: int = 0
+    next_turn_dodge_penalty: int = 0
+    next_turn_healing_bonus: float = 0.0
+    next_turn_action_meter_bonus: int = 0
+    max_chain_attacks: int = 1
 
 
 @dataclass(frozen=True)
@@ -247,6 +443,9 @@ class Combatant:
     crit_spotlight_used_this_turn: bool = False
     times_acted: int = 0
     last_skill_used: Optional[str] = None
+    action_meter: int = 0
+    max_action_meter: int = DEFAULT_MAX_ACTION_METER
+    force_turn_end: bool = False
     metadata: Dict[str, object] = field(default_factory=dict)
 
     def alive(self) -> bool:
@@ -376,6 +575,27 @@ def build_skills() -> Dict[str, Skill]:
             break_tier=raw["output"]["break"],
             effect_id=raw["effect_id"],
             tags=tuple(str(tag) for tag in raw.get("tags", [])),
+            action_cost=int(raw.get("action_cost", 100)),
+            force_turn_end=bool(raw.get("force_turn_end", True)),
+            requires_full_action_meter=bool(raw.get("requires_full_action_meter", False)),
+            power_requirement=(
+                int(raw["power_requirement"])
+                if raw.get("power_requirement") is not None
+                else None
+            ),
+            allowed_characters=tuple(str(item) for item in raw.get("allowed_characters", [])),
+            once_per_battle=bool(raw.get("once_per_battle", False)),
+            guard_cost=int(raw.get("guard_cost", 0)),
+            break_cost=int(raw.get("break_cost", 0)),
+            recovery_charge_cost=int(raw.get("recovery_charge_cost", 0)),
+            next_attack_accuracy_bonus=int(raw.get("next_attack_accuracy_bonus", 0)),
+            next_attack_accuracy_penalty=int(raw.get("next_attack_accuracy_penalty", 0)),
+            next_turn_accuracy_penalty=int(raw.get("next_turn_accuracy_penalty", 0)),
+            next_turn_dodge_bonus=int(raw.get("next_turn_dodge_bonus", 0)),
+            next_turn_dodge_penalty=int(raw.get("next_turn_dodge_penalty", 0)),
+            next_turn_healing_bonus=float(raw.get("next_turn_healing_bonus", 0.0)),
+            next_turn_action_meter_bonus=int(raw.get("next_turn_action_meter_bonus", 0)),
+            max_chain_attacks=max(1, int(raw.get("max_chain_attacks", 1))),
         )
     return result
 
@@ -390,6 +610,616 @@ HP_PROFILE = {name: int(value) for name, value in CONTENT.rules["stat_profiles"]
 GUARD_PROFILE = {name: int(value) for name, value in CONTENT.rules["stat_profiles"]["guard"].items()}
 BREAK_PROFILE = {name: int(value) for name, value in CONTENT.rules["stat_profiles"]["break"].items()}
 SPEED_PROFILE = {name: int(value) for name, value in CONTENT.rules["stat_profiles"]["speed"].items()}
+
+
+def equipment_ids_for_blueprint(blueprint: Dict[str, Any]) -> List[str]:
+    raw_equipment = blueprint.get("starting_equipment")
+    if isinstance(raw_equipment, list) and raw_equipment:
+        return [str(equipment_id) for equipment_id in raw_equipment]
+    weapon_id = str(blueprint.get("weapon", "")).strip()
+    return [weapon_id] if weapon_id else []
+
+
+def resolve_equipment(equipment_id: str) -> Dict[str, Any]:
+    raw = dict(WEAPON_DATA.get(equipment_id, {}))
+    slot_type = str(raw.get("slot_type", "one_handed"))
+    if slot_type not in {"one_handed", "two_handed"}:
+        slot_type = "one_handed"
+    hands = raw.get("hands")
+    if not isinstance(hands, int) or isinstance(hands, bool):
+        hands = 2 if slot_type == "two_handed" else 1
+    return {
+        **raw,
+        "equipment_id": equipment_id,
+        "display_name": str(raw.get("display_name", equipment_id or "Unknown Weapon")),
+        "slot_type": slot_type,
+        "hands": 2 if slot_type == "two_handed" else max(1, min(2, int(hands))),
+        "equipment_category": str(raw.get("equipment_category", "weapon")),
+        "rarity": str(raw.get("rarity", "common")),
+        "tags": [str(tag) for tag in raw.get("tags", []) if str(tag)],
+    }
+
+
+def _equipment_int(equipment: Dict[str, Any], key: str, default: int = 0) -> int:
+    value = equipment.get(key, default)
+    if isinstance(value, bool):
+        return default
+    if isinstance(value, int):
+        return value
+    return default
+
+
+def _equipment_float(equipment: Dict[str, Any], key: str, default: float = 1.0) -> float:
+    value = equipment.get(key, default)
+    if isinstance(value, bool):
+        return default
+    if isinstance(value, (int, float)):
+        return float(value)
+    return default
+
+
+def _cap_equipment_multiplier(value: float) -> float:
+    return clamp(float(value), 0.25, 1.25)
+
+
+def _equipment_matches_efficiency_key(equipment_items: Sequence[Dict[str, Any]], key: str) -> bool:
+    for equipment in equipment_items:
+        tags = {str(tag) for tag in equipment.get("tags", [])}
+        if key == equipment.get("slot_type"):
+            return True
+        if key == equipment.get("equipment_category"):
+            return True
+        if key in tags:
+            return True
+    return False
+
+
+def _merge_explicit_equipment_efficiency(
+    metadata: Dict[str, object],
+    equipment_items: Sequence[Dict[str, Any]],
+    efficiency: Any,
+) -> None:
+    if not isinstance(efficiency, dict):
+        return
+    for key, modifiers in efficiency.items():
+        key_text = str(key)
+        if not isinstance(modifiers, dict) or not _equipment_matches_efficiency_key(equipment_items, key_text):
+            continue
+        efficiency_tags = list(metadata.get("equipment_efficiency_tags", []))
+        if key_text not in efficiency_tags:
+            efficiency_tags.append(key_text)
+        metadata["equipment_efficiency_tags"] = efficiency_tags
+        for modifier_name, modifier_value in modifiers.items():
+            if isinstance(modifier_value, bool) or not isinstance(modifier_value, (int, float)):
+                continue
+            value = float(modifier_value)
+            if modifier_name == "damage_multiplier":
+                metadata["equipment_damage_multiplier"] = _cap_equipment_multiplier(
+                    float(metadata.get("equipment_damage_multiplier", 1.0)) * value
+                )
+            elif modifier_name == "break_multiplier":
+                metadata["equipment_break_multiplier"] = _cap_equipment_multiplier(
+                    float(metadata.get("equipment_break_multiplier", 1.0)) * value
+                )
+            elif modifier_name in {"guard_efficiency", "guard_efficiency_multiplier"}:
+                metadata["equipment_guard_efficiency_multiplier"] = _cap_equipment_multiplier(
+                    float(metadata.get("equipment_guard_efficiency_multiplier", 1.0)) * value
+                )
+            elif modifier_name == "healing_multiplier":
+                metadata["equipment_healing_multiplier"] = _cap_equipment_multiplier(
+                    float(metadata.get("equipment_healing_multiplier", 1.0)) * value
+                )
+            elif modifier_name == "strong_attack_power_requirement_modifier":
+                metadata["equipment_strong_attack_power_requirement_modifier"] = int(
+                    metadata.get("equipment_strong_attack_power_requirement_modifier", 0)
+                ) + int(value)
+
+
+def materialize_equipment_metadata(character_id: str, blueprint: Dict[str, Any]) -> Dict[str, object]:
+    equipment_ids = equipment_ids_for_blueprint(blueprint)
+    equipment_items = [resolve_equipment(equipment_id) for equipment_id in equipment_ids]
+    equipment_names = [str(item["display_name"]) for item in equipment_items]
+    equipment_tags = sorted({tag for item in equipment_items for tag in item.get("tags", [])})
+    two_handed = any(int(item.get("hands", 1)) == 2 or item.get("slot_type") == "two_handed" for item in equipment_items)
+    main_hand = equipment_ids[0] if equipment_ids else ""
+    off_hand = "" if two_handed or len(equipment_ids) < 2 else equipment_ids[1]
+    primary_offensive = ""
+    for item in equipment_items:
+        tags = {str(tag) for tag in item.get("tags", [])}
+        if item.get("equipment_category") != "shield" and "shield" not in tags:
+            primary_offensive = str(item.get("equipment_id", ""))
+            break
+    if not primary_offensive and equipment_ids:
+        primary_offensive = equipment_ids[0]
+    primary_name = resolve_equipment(primary_offensive).get("display_name", primary_offensive) if primary_offensive else "Unknown Weapon"
+
+    metadata: Dict[str, object] = {
+        "equipment_ids": equipment_ids,
+        "equipment_names": equipment_names,
+        "equipment_tags": equipment_tags,
+        "main_hand": main_hand,
+        "off_hand": off_hand,
+        "two_handed": two_handed,
+        "weapon_id": primary_offensive,
+        "weapon_name": str(primary_name),
+        "equipment_accuracy_modifier": sum(_equipment_int(item, "accuracy_modifier") for item in equipment_items),
+        "equipment_power_modifier": sum(_equipment_int(item, "power_modifier") for item in equipment_items),
+        "equipment_composure_modifier": sum(_equipment_int(item, "composure_modifier") for item in equipment_items),
+        "equipment_damage_multiplier": 1.0,
+        "equipment_break_multiplier": 1.0,
+        "equipment_heavy_attack_damage_multiplier": 1.0,
+        "equipment_light_attack_accuracy_modifier": sum(
+            _equipment_int(item, "light_attack_accuracy_modifier") for item in equipment_items
+        ),
+        "equipment_strong_attack_power_requirement_modifier": sum(
+            _equipment_int(item, "strong_attack_power_requirement_modifier") for item in equipment_items
+        ),
+        "equipment_guard_efficiency_multiplier": 1.0,
+        "equipment_healing_multiplier": 1.0,
+        "equipment_efficiency_tags": [],
+        "equipment_max_guard_bonus": sum(_equipment_int(item, "max_guard_bonus") for item in equipment_items),
+        "equipment_guard_bonus": sum(_equipment_int(item, "guard_bonus") for item in equipment_items),
+        "equipment_max_break_bonus": sum(_equipment_int(item, "max_break_bonus") for item in equipment_items),
+        "equipment_dodge_break_cost_modifier": sum(_equipment_int(item, "dodge_break_cost_modifier") for item in equipment_items),
+        "equipment_parry_guard_cost_modifier": sum(_equipment_int(item, "parry_guard_cost_modifier") for item in equipment_items),
+        "equipment_parry_break_cost_modifier": sum(_equipment_int(item, "parry_break_cost_modifier") for item in equipment_items),
+    }
+    for item in equipment_items:
+        metadata["equipment_damage_multiplier"] = float(metadata["equipment_damage_multiplier"]) * _equipment_float(item, "damage_multiplier")
+        metadata["equipment_break_multiplier"] = float(metadata["equipment_break_multiplier"]) * _equipment_float(item, "break_multiplier")
+        metadata["equipment_heavy_attack_damage_multiplier"] = (
+            float(metadata["equipment_heavy_attack_damage_multiplier"])
+            * _equipment_float(item, "heavy_attack_damage_multiplier")
+        )
+
+    categories = {str(item.get("equipment_category", "")) for item in equipment_items}
+    tags = set(equipment_tags)
+    slots = {str(item.get("slot_type", "")) for item in equipment_items}
+    favored = False
+    efficiency_tags: List[str] = []
+    if character_id == "vanguard" and "one_handed" in slots:
+        favored = True
+        efficiency_tags.append("one_handed")
+        if "shield" in categories or "shield" in tags:
+            metadata["equipment_guard_efficiency_multiplier"] = _cap_equipment_multiplier(
+                float(metadata["equipment_guard_efficiency_multiplier"]) + 0.10
+            )
+            efficiency_tags.append("shield_guard")
+    if character_id == "duelist" and "two_handed" in slots:
+        favored = True
+        efficiency_tags.append("two_handed")
+    if character_id == "cantor" and (
+        "mage" in tags or categories.intersection({"staff", "wand", "scepter", "chime", "mage_focus"})
+    ):
+        favored = True
+        efficiency_tags.append("mage")
+        metadata["equipment_healing_multiplier"] = _cap_equipment_multiplier(
+            float(metadata["equipment_healing_multiplier"]) + 0.15
+        )
+    if character_id == "ranger" and "bow" in categories:
+        favored = True
+        efficiency_tags.append("bow")
+    if character_id in {"pilgrim", "penitent"} and "dagger" in categories:
+        favored = True
+        efficiency_tags.append("dagger")
+    if favored:
+        metadata["equipment_damage_multiplier"] = _cap_equipment_multiplier(
+            float(metadata["equipment_damage_multiplier"]) + 0.08
+        )
+        metadata["equipment_break_multiplier"] = _cap_equipment_multiplier(
+            float(metadata["equipment_break_multiplier"]) + 0.08
+        )
+    metadata["equipment_efficiency_tags"] = sorted(set(efficiency_tags))
+    _merge_explicit_equipment_efficiency(metadata, equipment_items, blueprint.get("equipment_efficiency"))
+    metadata["equipment_damage_multiplier"] = _cap_equipment_multiplier(float(metadata["equipment_damage_multiplier"]))
+    metadata["equipment_break_multiplier"] = _cap_equipment_multiplier(float(metadata["equipment_break_multiplier"]))
+    metadata["equipment_heavy_attack_damage_multiplier"] = _cap_equipment_multiplier(
+        float(metadata["equipment_heavy_attack_damage_multiplier"])
+    )
+    return metadata
+
+
+def apply_equipment_stat_modifiers(combatant: Combatant, equipment_metadata: Dict[str, object]) -> None:
+    max_guard_bonus = int(equipment_metadata.get("equipment_max_guard_bonus", 0))
+    guard_bonus = int(equipment_metadata.get("equipment_guard_bonus", 0))
+    max_break_bonus = int(equipment_metadata.get("equipment_max_break_bonus", 0))
+    if max_guard_bonus:
+        combatant.max_guard = max(0, combatant.max_guard + max_guard_bonus)
+        combatant.guard = max(0, combatant.guard + max_guard_bonus)
+    if guard_bonus:
+        combatant.guard = max(0, min(combatant.max_guard, combatant.guard + guard_bonus))
+    if max_break_bonus:
+        combatant.max_break = max(1, combatant.max_break + max_break_bonus)
+        combatant.break_meter = max(0, combatant.break_meter + max_break_bonus)
+
+
+def ensure_equipment_metadata(combatant: Combatant) -> None:
+    if combatant.team != "player" or combatant.metadata.get("equipment_ids"):
+        combatant.metadata.setdefault("weapon_name", "Unknown Weapon")
+        return
+    blueprint = CHARACTER_BLUEPRINTS.get(combatant.entity_id)
+    if not isinstance(blueprint, dict):
+        combatant.metadata.setdefault("equipment_ids", [])
+        combatant.metadata.setdefault("equipment_names", [])
+        combatant.metadata.setdefault("weapon_id", str(combatant.metadata.get("weapon_id", "")))
+        combatant.metadata.setdefault("weapon_name", str(combatant.metadata.get("weapon_name", "Unknown Weapon")))
+        return
+    fresh_metadata = materialize_equipment_metadata(combatant.entity_id, blueprint)
+    for key, value in fresh_metadata.items():
+        combatant.metadata.setdefault(key, value)
+
+
+def get_meta_int(actor: Combatant, key: str, default: int = 0) -> int:
+    value = actor.metadata.get(key, default)
+    if isinstance(value, bool):
+        return int(value)
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return int(default)
+
+
+def add_meta_int(
+    actor: Combatant,
+    key: str,
+    amount: int,
+    min_value: Optional[int] = None,
+    max_value: Optional[int] = None,
+) -> int:
+    value = get_meta_int(actor, key, 0) + int(amount)
+    if min_value is not None:
+        value = max(int(min_value), value)
+    if max_value is not None:
+        value = min(int(max_value), value)
+    actor.metadata[key] = value
+    return value
+
+
+def pop_meta_int(actor: Combatant, key: str, default: int = 0) -> int:
+    value = get_meta_int(actor, key, default)
+    actor.metadata.pop(key, None)
+    return value
+
+
+def get_meta_float(actor: Combatant, key: str, default: float = 0.0) -> float:
+    value = actor.metadata.get(key, default)
+    if isinstance(value, bool):
+        return float(default)
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return float(default)
+
+
+def add_meta_float(
+    actor: Combatant,
+    key: str,
+    amount: float,
+    min_value: Optional[float] = None,
+    max_value: Optional[float] = None,
+) -> float:
+    value = get_meta_float(actor, key, 0.0) + float(amount)
+    if min_value is not None:
+        value = max(float(min_value), value)
+    if max_value is not None:
+        value = min(float(max_value), value)
+    actor.metadata[key] = value
+    return value
+
+
+def pop_meta_float(actor: Combatant, key: str, default: float = 0.0) -> float:
+    value = get_meta_float(actor, key, default)
+    actor.metadata.pop(key, None)
+    return value
+
+
+def get_meta_bool(actor: Combatant, key: str, default: bool = False) -> bool:
+    return bool(actor.metadata.get(key, default))
+
+
+def set_meta_bool(actor: Combatant, key: str, value: bool = True) -> None:
+    actor.metadata[key] = bool(value)
+
+
+def queue_next_turn_modifier(actor: Combatant, key: str, value: object) -> None:
+    if isinstance(value, bool):
+        actor.metadata[key] = bool(value)
+    elif isinstance(value, int):
+        add_meta_int(actor, key, value)
+    elif isinstance(value, float):
+        add_meta_float(actor, key, value)
+    else:
+        actor.metadata[key] = value
+
+
+def promote_next_turn_modifiers(actor: Combatant, *, include_defense: bool = True) -> None:
+    mapping = {
+        "queued_next_turn_accuracy_penalty": "active_turn_accuracy_penalty",
+        "queued_next_turn_healing_efficiency_bonus": "active_turn_healing_efficiency_bonus",
+        "queued_next_turn_action_meter_bonus": "active_turn_action_meter_bonus",
+    }
+    if include_defense:
+        mapping.update(
+            {
+                "queued_next_turn_dodge_penalty": "active_turn_dodge_penalty",
+                "queued_disable_guard": "active_disable_guard",
+                "queued_disable_parry": "active_disable_parry",
+            }
+        )
+    for queued_key, active_key in mapping.items():
+        if queued_key not in actor.metadata:
+            continue
+        value = actor.metadata.pop(queued_key)
+        if isinstance(value, bool):
+            actor.metadata[active_key] = bool(value)
+        elif isinstance(value, int):
+            add_meta_int(actor, active_key, value)
+        elif isinstance(value, float):
+            add_meta_float(actor, active_key, value)
+        else:
+            actor.metadata[active_key] = value
+
+
+def promote_reaction_modifiers_for_incoming(actor: Combatant) -> None:
+    promote_next_turn_modifiers(actor, include_defense=True)
+
+
+def clear_active_turn_modifiers(actor: Combatant, *, include_defense: bool = False) -> None:
+    had_ap_bonus = "active_turn_action_meter_bonus" in actor.metadata
+    keys = [
+        "active_turn_accuracy_penalty",
+        "active_turn_healing_efficiency_bonus",
+        "active_turn_action_meter_bonus",
+    ]
+    if include_defense:
+        keys.extend(["active_turn_dodge_penalty", "active_disable_guard", "active_disable_parry"])
+    for key in keys:
+        actor.metadata.pop(key, None)
+    if had_ap_bonus:
+        base_max = max(
+            DEFAULT_MAX_ACTION_METER,
+            int(actor.metadata.get("base_max_action_meter", DEFAULT_MAX_ACTION_METER)),
+        )
+        actor.max_action_meter = base_max
+        actor.metadata["max_action_meter"] = base_max
+        set_action_meter(actor, min(get_action_meter(actor), base_max))
+
+
+def clear_p2_battle_metadata(actor: Combatant) -> None:
+    for key in P2_BATTLE_METADATA_KEYS:
+        actor.metadata.pop(key, None)
+
+
+def initialize_p2_battle_metadata(state: "BattleState") -> None:
+    for actor in state.living_players():
+        clear_p2_battle_metadata(actor)
+        set_meta_bool(actor, "trance_used_this_battle", False)
+        actor.metadata["trance_ready_count"] = 0
+
+
+def skill_allowed_for_actor_id(character_id: str, skill: Skill) -> bool:
+    return not skill.allowed_characters or character_id in skill.allowed_characters
+
+
+def skill_allowed_for_actor(actor: Combatant, skill: Skill) -> bool:
+    return skill_allowed_for_actor_id(actor.entity_id, skill)
+
+
+def get_action_meter(actor: Combatant) -> int:
+    return int(getattr(actor, "action_meter", actor.metadata.get("action_meter", 0)))
+
+
+def set_action_meter(actor: Combatant, value: int) -> None:
+    amount = clamp_int(int(value), 0, get_max_action_meter(actor))
+    actor.action_meter = amount
+    actor.metadata["action_meter"] = amount
+
+
+def get_max_action_meter(actor: Combatant) -> int:
+    value = int(getattr(actor, "max_action_meter", actor.metadata.get("max_action_meter", DEFAULT_MAX_ACTION_METER)))
+    return max(1, value)
+
+
+def set_force_turn_end(actor: Combatant, value: bool) -> None:
+    actor.force_turn_end = bool(value)
+    actor.metadata["force_turn_end"] = bool(value)
+
+
+def should_force_turn_end(actor: Combatant) -> bool:
+    return bool(getattr(actor, "force_turn_end", actor.metadata.get("force_turn_end", False)))
+
+
+def spend_action_meter(actor: Combatant, amount: int) -> bool:
+    cost = max(0, int(amount))
+    if get_action_meter(actor) < cost:
+        return False
+    set_action_meter(actor, get_action_meter(actor) - cost)
+    return True
+
+
+def reset_action_meter_for_turn(actor: Combatant) -> None:
+    base_max = max(
+        DEFAULT_MAX_ACTION_METER,
+        int(actor.metadata.get("base_max_action_meter", DEFAULT_MAX_ACTION_METER)),
+    )
+    bonus = get_meta_int(actor, "active_turn_action_meter_bonus", 0)
+    actor.max_action_meter = base_max + max(0, bonus)
+    actor.metadata["max_action_meter"] = actor.max_action_meter
+    set_action_meter(actor, actor.max_action_meter)
+    set_force_turn_end(actor, False)
+
+
+def skill_action_cost(skill: Skill) -> int:
+    return max(0, int(getattr(skill, "action_cost", 100)))
+
+
+def skill_force_turn_end(skill: Skill) -> bool:
+    return bool(getattr(skill, "force_turn_end", True))
+
+
+def skill_requires_full_action_meter(skill: Skill) -> bool:
+    return bool(getattr(skill, "requires_full_action_meter", False))
+
+
+def skill_power_requirement(skill: Skill, actor: Combatant) -> Optional[int]:
+    base = getattr(skill, "power_requirement", None)
+    if base is None:
+        return None
+    modifier = int(actor.metadata.get("equipment_strong_attack_power_requirement_modifier", 0))
+    return clamp_int(int(base) + modifier, 40, 80)
+
+
+def can_pay_action_cost(actor: Combatant, skill: Skill, state: Optional["BattleState"] = None) -> Tuple[bool, str]:
+    if not skill_allowed_for_actor(actor, skill):
+        return False, "That line is unavailable to this character."
+    if skill_requires_full_action_meter(skill) and get_action_meter(actor) < get_max_action_meter(actor):
+        return False, f"{skill.display_name} requires full Action Meter."
+    cost = skill_action_cost(skill)
+    if get_action_meter(actor) < cost:
+        return False, "Not enough Action Meter."
+    if skill.guard_cost and actor.guard < skill.guard_cost:
+        if state is not None and is_debug_rules(state):
+            return False, f"[DEBUG] {skill.display_name} unavailable: guard={actor.guard} < {skill.guard_cost}."
+        return False, "You do not have the frame to charge the cut."
+    if skill.break_cost and actor.break_meter < skill.break_cost and skill.effect_id != "backflip":
+        if state is not None and is_debug_rules(state):
+            return False, f"[DEBUG] {skill.display_name} unavailable: break={actor.break_meter} < {skill.break_cost}."
+        return False, "You do not have the frame to charge the cut."
+    if skill.recovery_charge_cost:
+        charges = int(getattr(state, "recovery_charges", 0)) if state is not None else 0
+        if charges < skill.recovery_charge_cost:
+            if state is not None and is_debug_rules(state):
+                return False, f"[DEBUG] {skill.display_name} unavailable: recovery_charges={charges} < {skill.recovery_charge_cost}."
+            return False, "No recovery charge remains."
+    if skill.once_per_battle and get_meta_bool(actor, f"{skill.effect_id}_used_this_battle", False):
+        return False, f"{skill.display_name} is spent for this battle."
+    if skill.effect_id == "trance":
+        ready_count = get_meta_int(actor, "trance_ready_count", 0)
+        if ready_count < TRANCE_REQUIRED_READY_COUNT:
+            if state is not None and is_debug_rules(state):
+                return False, f"[DEBUG] Trance unavailable: ready_count={ready_count} < {TRANCE_REQUIRED_READY_COUNT}."
+            return False, "Trance is not ready."
+        if state is not None and not state.living_enemies():
+            return False, "No target remains."
+    return True, ""
+
+
+def skill_menu_suffix(state: BattleState, skill: Skill, actor: Combatant) -> str:
+    parts = [f"{skill_action_cost(skill)} AP"]
+    if skill.guard_cost and skill.break_cost:
+        parts.append("costs Guard/Break")
+    elif skill.guard_cost:
+        parts.append("costs Guard")
+    elif skill.break_cost:
+        parts.append("costs Break")
+    if skill.recovery_charge_cost:
+        parts.append("uses Recovery")
+    if skill.allowed_characters:
+        parts.append("/".join(name.title() for name in skill.allowed_characters))
+    if skill.effect_id == "ambush_rush":
+        parts.append("setup")
+    elif skill.effect_id == "backstep_slash":
+        parts.append("evasive")
+    elif skill.effect_id == "backflip":
+        parts.append("evasive")
+    elif skill.effect_id == "trance":
+        parts.append("once/battle")
+        parts.append("limit")
+    elif skill.effect_id == "poisoned_chalice":
+        parts.append("bitter recovery")
+    elif skill.effect_id == "double_strike":
+        parts.append("two attacks")
+        parts.append("defense lockout")
+    if is_debug_rules(state):
+        if skill_requires_full_action_meter(skill):
+            parts.append("full AP")
+        requirement = skill_power_requirement(skill, actor)
+        if requirement is not None:
+            parts.append(f"Power {requirement}+")
+        debug_parts = []
+        if skill.next_attack_accuracy_bonus:
+            debug_parts.append(f"next accuracy +{skill.next_attack_accuracy_bonus}")
+        if skill.next_attack_accuracy_penalty:
+            debug_parts.append(f"next accuracy -{skill.next_attack_accuracy_penalty}")
+        if skill.next_turn_dodge_bonus:
+            debug_parts.append(f"dodge +{skill.next_turn_dodge_bonus}")
+        if skill.next_turn_dodge_penalty:
+            debug_parts.append(f"dodge -{skill.next_turn_dodge_penalty}")
+        if skill.next_turn_accuracy_penalty:
+            debug_parts.append(f"next turn accuracy -{skill.next_turn_accuracy_penalty}")
+        if skill.next_turn_healing_bonus:
+            debug_parts.append(f"healing +{skill.next_turn_healing_bonus:.0%}")
+        if debug_parts:
+            parts.extend(debug_parts)
+    elif skill.effect_id == "light_attack":
+        parts.append("low commitment")
+    elif skill.effect_id == "heavy_attack":
+        parts.append("full commitment")
+    elif skill_force_turn_end(skill):
+        parts.append("commitment")
+    if skill_force_turn_end(skill):
+        parts.append("ends turn")
+    if is_fuzzy_rules(state):
+        if skill.effect_id == "heavy_attack":
+            requirement = skill_power_requirement(skill, actor)
+            if requirement is not None:
+                power = int(state.node_axis_scores.get("power", 60))
+                parts.append(f"Read: {gate_gap_to_read_label(power - requirement)}")
+        elif skill.effect_id == "light_attack":
+            precision = int(state.node_axis_scores.get("precision", 60))
+            parts.append(f"Read: {chance_to_read_label(55 + int(precision * 0.40))}")
+    affordable, reason = can_pay_action_cost(actor, skill, state)
+    if not affordable:
+        parts.append(reason)
+    return "[" + ", ".join(parts) + "]"
+
+
+def affordable_player_skills(state: BattleState, actor: Combatant) -> List[Skill]:
+    skills: List[Skill] = []
+    for skill_id in actor.skills:
+        skill = SKILLS[skill_id]
+        if state.spotlight < skill.spotlight_cost:
+            continue
+        affordable, _ = can_pay_action_cost(actor, skill, state)
+        if affordable:
+            skills.append(skill)
+    return skills
+
+
+def get_current_power_for_action(state: BattleState, actor: Combatant, skill: Skill, inputs: Optional[ResolvedInputs]) -> int:
+    if inputs is not None:
+        return int(inputs.power)
+    raw_inputs = actor.metadata.get("last_inputs")
+    if isinstance(raw_inputs, ResolvedInputs):
+        return int(raw_inputs.power)
+    if isinstance(state.node_axis_scores, dict):
+        return int(state.node_axis_scores.get("power", 60))
+    return 60 if not state.interactive else 0
+
+
+def resolve_heavy_attack_gate(
+    state: BattleState,
+    actor: Combatant,
+    skill: Skill,
+    inputs: Optional[ResolvedInputs],
+) -> bool:
+    requirement = skill_power_requirement(skill, actor)
+    if requirement is None:
+        return True
+    power = get_current_power_for_action(state, actor, skill, inputs)
+    if power >= requirement:
+        return True
+    log_rules_outcome(
+        state,
+        "The heavy line commits, but the force does not carry through.\n"
+        "The opening closes before the blow lands.",
+        f"Heavy Attack failed: Power {power} < requirement {requirement}.",
+        hidden_message="The heavy line fails.",
+    )
+    log_player(state, "Turn ends.")
+    set_action_meter(actor, 0)
+    set_force_turn_end(actor, True)
+    return False
 
 
 def create_player(character_id: str) -> Combatant:
@@ -407,12 +1237,17 @@ def create_player(character_id: str) -> Combatant:
         max_break=BREAK_PROFILE[stats["break"]],
         break_meter=BREAK_PROFILE[stats["break"]],
         speed=SPEED_PROFILE[stats["speed"]],
-        skills=list(raw["skills"]),
+        skills=[
+            skill_id
+            for skill_id in list(raw["skills"])
+            if skill_id in SKILLS and skill_allowed_for_actor_id(character_id, SKILLS[skill_id])
+        ],
         role=raw["role"],
         is_boss=False,
     )
-    combatant.metadata["weapon_id"] = raw.get("weapon")
-    combatant.metadata["weapon_name"] = WEAPON_DATA.get(raw.get("weapon", ""), {}).get("display_name", raw.get("weapon", ""))
+    equipment_metadata = materialize_equipment_metadata(character_id, raw)
+    apply_equipment_stat_modifiers(combatant, equipment_metadata)
+    combatant.metadata.update(equipment_metadata)
     combatant.metadata["relic_ids"] = list(raw.get("starting_relics", []))
     combatant.metadata["relic_names"] = [
         RELIC_DATA.get(relic_id, {}).get("display_name", relic_id)
@@ -591,11 +1426,14 @@ class BattleState:
     rng: random.Random
     logger: BattleLogger
     interactive: bool = True
+    rules_visibility: str = DEFAULT_RULES_VISIBILITY
     round_number: int = 1
     spotlight: int = 0
     spotlight_max: int = 5
     enemy_spotlight: int = 0
     enemy_spotlight_max: int = 5
+    recovery_charges: int = 0
+    recovery_heal_amount: int = POISONED_CHALICE_HEAL
     node_axis_scores: Dict[str, int] = field(default_factory=lambda: {"power": 60, "precision": 60, "composure": 60})
     player_tempo_meter: int = 0
     bonus_action_rounds: Set[Tuple[int, str]] = field(default_factory=set)
@@ -615,6 +1453,9 @@ class BattleState:
     cursor: BattleCursor = field(default_factory=BattleCursor)
     battle_over: bool = False
     winner: Optional[str] = None
+
+    def __post_init__(self) -> None:
+        self.rules_visibility = normalize_rules_visibility(self.rules_visibility)
 
     def living_players(self) -> List[Combatant]:
         return [unit for unit in self.players if unit.alive()]
@@ -637,7 +1478,15 @@ class BattleState:
         delta = self.spotlight - old
         if delta != 0:
             sign_text = "+" if delta > 0 else ""
-            self.logger.log(self.round_number, f"Player Spotlight {sign_text}{delta} ({reason}) -> {self.spotlight}/{self.spotlight_max}")
+            if is_debug_rules(self):
+                self.logger.log(
+                    self.round_number,
+                    f"Player Spotlight {sign_text}{delta} ({reason}) -> {self.spotlight}/{self.spotlight_max}",
+                )
+            elif delta > 0:
+                self.logger.log(self.round_number, "Player Spotlight rises.")
+            else:
+                self.logger.log(self.round_number, "Player Spotlight falls.")
 
     def change_enemy_spotlight(self, amount: int, reason: str) -> None:
         old = self.enemy_spotlight
@@ -645,10 +1494,17 @@ class BattleState:
         delta = self.enemy_spotlight - old
         if delta != 0:
             sign_text = "+" if delta > 0 else ""
-            self.logger.log(
-                self.round_number,
-                f"Enemy Spotlight {sign_text}{delta} ({reason}) -> {self.enemy_spotlight}/{self.enemy_spotlight_max}",
-            )
+            if is_debug_rules(self):
+                self.logger.log(
+                    self.round_number,
+                    f"Enemy Spotlight {sign_text}{delta} ({reason}) -> {self.enemy_spotlight}/{self.enemy_spotlight_max}",
+                )
+            elif "cashed" in reason:
+                self.logger.log(self.round_number, "Enemy Spotlight is cashed for pressure.")
+            elif delta > 0:
+                self.logger.log(self.round_number, "Enemy Spotlight rises.")
+            else:
+                self.logger.log(self.round_number, "Enemy Spotlight falls.")
 
     def change_spotlight(self, amount: int, reason: str) -> None:
         self.change_player_spotlight(amount, reason)
@@ -677,22 +1533,32 @@ class BattleState:
     def render_state(self) -> None:
         print("\n" + "=" * 84)
         axes = self.node_axis_scores
+        if is_debug_rules(self):
+            tempo_text = f"Tempo {self.player_tempo_meter}/{COMPOSURE_TEMPO_THRESHOLD}"
+            axis_text = (
+                f"Node Axis: Power {axes.get('power', 60)}, "
+                f"Precision {axes.get('precision', 60)}, "
+                f"Composure {axes.get('composure', 60)}"
+            )
+        elif is_fuzzy_rules(self):
+            tempo_text = f"Rhythm {tempo_read_label(self.player_tempo_meter, COMPOSURE_TEMPO_THRESHOLD).title()}"
+            axis_text = "Route pressure: readable."
+        else:
+            tempo_text = "Rhythm in motion"
+            axis_text = "The route pressure settles over the fight."
         print(
             f"{emoji_label('round', f'ROUND {self.round_number}')} | "
             f"{emoji_label('spotlight', 'Player Spotlight')} {self.spotlight}/{self.spotlight_max} | "
             f"Enemy Spotlight {self.enemy_spotlight}/{self.enemy_spotlight_max} | "
-            f"Tempo {self.player_tempo_meter}/{COMPOSURE_TEMPO_THRESHOLD}"
+            f"{tempo_text}"
         )
-        print(
-            f"Node Axis: Power {axes.get('power', 60)}, "
-            f"Precision {axes.get('precision', 60)}, "
-            f"Composure {axes.get('composure', 60)}"
-        )
+        print(axis_text)
         print("-" * 84)
         print(emoji_label("party", "PLAYERS"))
         for idx, unit in enumerate(self.players, start=1):
             prefix = ">" if unit.alive() else "x"
-            print(f"{prefix}{idx}. {unit.summary_line()}")
+            ap_text = f"  AP {get_action_meter(unit):>3}/{get_max_action_meter(unit):<3}" if unit.alive() else ""
+            print(f"{prefix}{idx}. {unit.summary_line()}{ap_text}")
         print("-" * 84)
         print(emoji_label("enemies", "ENEMIES"))
         for idx, unit in enumerate(self.enemies, start=1):
@@ -838,6 +1704,9 @@ def combatant_to_payload(unit: Combatant) -> Dict[str, object]:
         "crit_spotlight_used_this_turn": unit.crit_spotlight_used_this_turn,
         "times_acted": unit.times_acted,
         "last_skill_used": unit.last_skill_used,
+        "action_meter": get_action_meter(unit),
+        "max_action_meter": get_max_action_meter(unit),
+        "force_turn_end": should_force_turn_end(unit),
         "metadata": _json_safe_value(unit.metadata),
     }
 
@@ -870,8 +1739,12 @@ def combatant_from_payload(payload: Dict[str, object]) -> Combatant:
             if payload.get("last_skill_used") is not None
             else None
         ),
+        action_meter=int(payload.get("action_meter", 0)),
+        max_action_meter=int(payload.get("max_action_meter", DEFAULT_MAX_ACTION_METER)),
+        force_turn_end=bool(payload.get("force_turn_end", False)),
         metadata=dict(_json_restore_value(payload.get("metadata", {}))),
     )
+    ensure_equipment_metadata(unit)
     return unit
 
 
@@ -937,6 +1810,9 @@ def battle_state_to_payload(state: BattleState) -> Dict[str, object]:
         "spotlight_max": state.spotlight_max,
         "enemy_spotlight": state.enemy_spotlight,
         "enemy_spotlight_max": state.enemy_spotlight_max,
+        "recovery_charges": state.recovery_charges,
+        "recovery_heal_amount": state.recovery_heal_amount,
+        "rules_visibility": state.rules_visibility,
         "node_axis_scores": {str(key): int(value) for key, value in state.node_axis_scores.items()},
         "player_tempo_meter": state.player_tempo_meter,
         "bonus_action_rounds": [[int(round_number), str(actor_id)] for round_number, actor_id in state.bonus_action_rounds],
@@ -965,6 +1841,8 @@ def battle_state_from_payload(
     rng: random.Random,
     logger: BattleLogger,
     interactive: bool = True,
+    rules_visibility: str = DEFAULT_RULES_VISIBILITY,
+    recovery_charges: Optional[int] = None,
 ) -> BattleState:
     return BattleState(
         players=players,
@@ -972,11 +1850,17 @@ def battle_state_from_payload(
         rng=rng,
         logger=logger,
         interactive=interactive,
+        rules_visibility=normalize_rules_visibility(rules_visibility),
         round_number=int(payload.get("round_number", 1)),
         spotlight=int(payload.get("spotlight", 0)),
         spotlight_max=int(payload.get("spotlight_max", 5)),
         enemy_spotlight=int(payload.get("enemy_spotlight", 0)),
         enemy_spotlight_max=int(payload.get("enemy_spotlight_max", 5)),
+        recovery_charges=int(payload.get(
+            "recovery_charges",
+            0 if recovery_charges is None else recovery_charges,
+        )),
+        recovery_heal_amount=int(payload.get("recovery_heal_amount", POISONED_CHALICE_HEAL)),
         node_axis_scores={
             "power": clamp_int(int(dict(payload.get("node_axis_scores", {})).get("power", 60)), 0, 100),
             "precision": clamp_int(int(dict(payload.get("node_axis_scores", {})).get("precision", 60)), 0, 100),
@@ -1327,6 +2211,7 @@ def parse_optional_defensive_triplet(raw: str) -> Optional[Tuple[int, int, int]]
 
 
 def prompt_optional_defensive_triplet(
+    state: BattleState,
     profile: DefensiveReadProfile,
     attacker: Combatant,
     target: Combatant,
@@ -1334,19 +2219,31 @@ def prompt_optional_defensive_triplet(
 ) -> Optional[Tuple[int, int, int]]:
     _, fiction = DEFENSIVE_READ_FICTION.get(profile.tag, (profile.tag, f"shows a {profile.tag} pattern"))
     print(f"\nIncoming pattern: {attacker.name} {fiction}.")
-    primary = AXIS_LABELS.get(profile.primary_axis, profile.primary_axis.title())
-    secondary = AXIS_LABELS.get(profile.secondary_axis, profile.secondary_axis.title())
+    if is_debug_rules(state):
+        primary = AXIS_LABELS.get(profile.primary_axis, profile.primary_axis.title())
+        secondary = AXIS_LABELS.get(profile.secondary_axis, profile.secondary_axis.title())
+        prompt_title = f"{profile.tag.replace('_', ' ').title()} Pattern Read available. "
+        guidance = f"Favor {primary}; {secondary} helps. "
+    elif is_fuzzy_rules(state):
+        prompt_title = "A defensive read is available. "
+        guidance = "The threat has a readable shape. "
+    else:
+        prompt_title = "A defensive response is available. "
+        guidance = ""
     while True:
         raw = input(
-            f"{profile.tag.replace('_', ' ').title()} Pattern Read available. "
-            f"Favor {primary}; {secondary} helps. "
-            "Enter power precision composure to sharpen the reaction, "
+            prompt_title
+            + f"{guidance}"
+            + "Enter power precision composure to sharpen the reaction, "
             "or press Enter to keep the base reaction > "
         )
         try:
             return parse_optional_defensive_triplet(raw)
         except ValueError:
-            print("Enter three numbers, for example 42 74 65, or press Enter to skip Pattern Read.")
+            if is_debug_rules(state):
+                print("Enter three numbers, for example 42 74 65, or press Enter to skip Pattern Read.")
+            else:
+                print("Enter three numbers, for example 42 74 65, or press Enter to keep the base reaction.")
 
 
 def auto_triplet_for_defensive_profile(
@@ -1398,13 +2295,16 @@ def get_or_create_defensive_read_snapshot(
     cached = state.reaction_read_cache.get(cache_key)
     if cached is not None:
         if cached.raw_tier > 0:
-            state.logger.log(
-                state.round_number,
-                f"{target.name} holds the same {profile.tag.replace('_', ' ')} Pattern Read.",
-            )
+            if is_debug_rules(state):
+                state.logger.log(
+                    state.round_number,
+                    f"{target.name} holds the same {profile.tag.replace('_', ' ')} Pattern Read.",
+                )
+            elif is_fuzzy_rules(state):
+                state.logger.log(state.round_number, f"{target.name} holds the same readable shape.")
         return cached
     if state.interactive:
-        triplet = prompt_optional_defensive_triplet(profile, attacker, target, reaction)
+        triplet = prompt_optional_defensive_triplet(state, profile, attacker, target, reaction)
     else:
         triplet = auto_triplet_for_defensive_profile(profile, reaction, state.rng)
     snapshot = make_defensive_read_snapshot(profile, triplet)
@@ -1450,6 +2350,30 @@ def crit_chance(actor: Combatant, skill: Skill, inputs: ResolvedInputs, target: 
     return clamp_int(chance, 0, 95)
 
 
+def current_attack_accuracy_modifier(actor: Combatant, skill: Skill) -> int:
+    modifier = 0
+    modifier += get_meta_int(actor, "next_attack_accuracy_bonus", 0)
+    modifier -= get_meta_int(actor, "next_attack_accuracy_penalty", 0)
+    modifier -= get_meta_int(actor, "active_turn_accuracy_penalty", 0)
+    modifier += get_meta_int(actor, "temporary_precision_delta", 0)
+    if "light_attack" in skill.tags or skill.effect_id in {
+        "light_attack",
+        "ambush_rush",
+        "backstep_slash",
+        "poisoned_chalice",
+        "double_strike",
+        "trance",
+    }:
+        modifier += int(actor.metadata.get("equipment_light_attack_accuracy_modifier", 0))
+    return modifier
+
+
+def consume_next_attack_accuracy_modifiers(actor: Combatant) -> Tuple[int, int]:
+    bonus = pop_meta_int(actor, "next_attack_accuracy_bonus", 0)
+    penalty = pop_meta_int(actor, "next_attack_accuracy_penalty", 0)
+    return bonus, penalty
+
+
 def player_hit_chance(actor: Combatant, skill: Skill, inputs: ResolvedInputs, target: Combatant) -> int:
     precision = inputs.precision
     chance = 55 + int(precision * 0.40)
@@ -1468,6 +2392,8 @@ def player_hit_chance(actor: Combatant, skill: Skill, inputs: ResolvedInputs, ta
     ranged_attack = skill.kind == "ranged_attack" or "ranged" in skill.tags or skill.effect_id == "linebreaker_shot"
     if target.has_condition("airborne"):
         chance += 5 if ranged_attack else -8
+    chance += int(actor.metadata.get("equipment_accuracy_modifier", 0))
+    chance += current_attack_accuracy_modifier(actor, skill)
     return clamp_int(chance, 35, 95)
 
 
@@ -1555,7 +2481,18 @@ def apply_damage_to_target(
                 skill,
             )
         hit_chance = player_hit_chance(source, skill, inputs, target)
+        accuracy_modifier = current_attack_accuracy_modifier(source, skill)
+        if accuracy_modifier:
+            log_rules_debug(
+                state,
+                f"Attack accuracy modifier {accuracy_modifier:+d} for {source.name}'s {skill.display_name}.",
+            )
         roll = state.rng.randint(1, 100)
+        consumed_bonus, consumed_penalty = consume_next_attack_accuracy_modifiers(source)
+        if consumed_bonus and not is_debug_rules(state):
+            state.logger.log(state.round_number, "The marked opening is spent.")
+        if consumed_penalty and not is_debug_rules(state):
+            state.logger.log(state.round_number, "The compromised footing passes through the strike.")
         margin = roll - hit_chance
         high_risk = (
             skill.effect_id == "anchor_cleave"
@@ -1564,14 +2501,24 @@ def apply_damage_to_target(
         )
         if roll <= hit_chance:
             result["hit_outcome"] = "hit"
-            state.logger.log(state.round_number, f"{source.name} lines up {target.name} [hit roll {roll}/{hit_chance}].")
+            log_rules_outcome(
+                state,
+                f"{source.name}'s hit lands clean on {target.name}.",
+                f"Hit roll: roll={roll}, chance={hit_chance}, outcome=hit.",
+                hidden_message=f"{source.name} hits {target.name}.",
+            )
         elif margin <= 10:
             result["hit_outcome"] = "graze"
             damage = ceil_int(damage * 0.50)
             break_damage = ceil_int(break_damage * 0.50)
             status_to_apply = None
             can_crit = False
-            state.logger.log(state.round_number, f"{source.name} grazes {target.name} [hit roll {roll}/{hit_chance}].")
+            log_rules_outcome(
+                state,
+                f"The edge catches {target.name}, but not cleanly.",
+                f"Hit roll: roll={roll}, chance={hit_chance}, outcome=graze.",
+                hidden_message=f"{source.name} grazes {target.name}.",
+            )
             if high_risk and margin >= 6:
                 state.change_enemy_spotlight(1, f"{source.name} risky graze")
         else:
@@ -1580,8 +2527,19 @@ def apply_damage_to_target(
             break_damage = ceil_int(break_damage * 0.20)
             status_to_apply = None
             can_crit = False
-            state.logger.log(state.round_number, f"{source.name} misses {target.name} [hit roll {roll}/{hit_chance}].")
+            severe_miss = margin >= 20
+            log_rules_outcome(
+                state,
+                (
+                    "The attack cuts wide, and the enemy reads the overreach."
+                    if severe_miss
+                    else "The attack cuts wide."
+                ),
+                f"Hit roll: roll={roll}, chance={hit_chance}, outcome=miss.",
+                hidden_message="The attack misses.",
+            )
             if margin >= 20:
+                log_rules_debug(state, f"Enemy Spotlight +1: severe miss by {margin}.")
                 state.change_enemy_spotlight(1, f"{source.name} missed by {margin}")
             if high_risk:
                 state.change_enemy_spotlight(1, f"{source.name} risky miss")
@@ -1593,7 +2551,8 @@ def apply_damage_to_target(
             state.change_enemy_spotlight(-1, "cashed for pressure")
             damage = ceil_int(damage * ENEMY_SPOTLIGHT_DAMAGE_MULTIPLIER)
             break_damage = ceil_int(break_damage * ENEMY_SPOTLIGHT_BREAK_MULTIPLIER)
-            state.logger.log(state.round_number, "Enemy Spotlight is cashed for pressure.")
+            if is_debug_rules(state):
+                state.logger.log(state.round_number, "Enemy Spotlight is cashed for pressure.")
 
     if can_crit:
         chance = crit_chance(source, skill, make_resolved_inputs(50, 50, 50, skill), target, extra_bonus=crit_bonus)
@@ -1609,6 +2568,7 @@ def apply_damage_to_target(
     # Reactions apply only when enemies attack player characters with direct attacks.
     reaction = None
     if target.team == "player" and source.team == "enemy" and damage > 0 and not ignore_reaction:
+        promote_reaction_modifiers_for_incoming(target)
         reaction = choose_reaction(state, target, source, skill, incoming_tags=resolved_tags)
         result["reaction"] = reaction
         defensive_read = get_or_create_defensive_read_snapshot(
@@ -2067,35 +3027,62 @@ def choose_reaction(
     resolved_tags = tuple(str(tag) for tag in incoming_tags)
     has_pressure_tags = any(tag in POSITION_PUNISH_TAGS for tag in resolved_tags)
     if not state.interactive:
+        guard_disabled = get_meta_bool(target, "active_disable_guard", False)
+        parry_disabled = get_meta_bool(target, "active_disable_parry", False)
         if target.position == "pressing":
             if target.guard <= 8:
                 return "dodge"
-            if has_pressure_tags:
+            if has_pressure_tags and not parry_disabled:
                 return "parry"
-        if target.position == "withdrawn":
+        if target.position == "withdrawn" and not guard_disabled:
             if target.guard <= 8:
                 return "dodge"
             return "guard"
         # Auto logic: bastion likes parry, low guard likes dodge, otherwise guard.
-        if target.posture == "bastion" or target.has_condition("feint_circuit"):
+        if (target.posture == "bastion" or target.has_condition("feint_circuit")) and not parry_disabled:
             return "parry"
         if target.guard <= 8:
+            return "dodge"
+        if guard_disabled:
             return "dodge"
         return "guard"
 
     while True:
         print(f"\nReaction for {target.name}: [g]uard, [d]odge, [p]arry")
-        tag_text = ", ".join(resolved_tags) if resolved_tags else "-"
+        if is_debug_rules(state):
+            tag_text = ", ".join(resolved_tags) if resolved_tags else "-"
+        elif is_fuzzy_rules(state):
+            tag_labels = {
+                "heavy": "heavy pressure",
+                "channel": "channeling",
+                "burst_start": "burst threat",
+                "guard": "guard pressure",
+                "break": "break pressure",
+            }
+            vague_tags = []
+            for tag in resolved_tags:
+                label = tag_labels.get(tag)
+                if label and label not in vague_tags:
+                    vague_tags.append(label)
+            tag_text = ", ".join(vague_tags[:3]) if vague_tags else "uncertain pressure"
+        else:
+            tag_text = "incoming pressure"
         print(
             f"Incoming: {attacker.name} uses {skill.display_name} [{tag_text}]. "
             f"{target.name} posture={target.posture} pos={target.position}."
         )
         choice = input("> ").strip().lower()
         if choice in {"g", "guard", ""}:
+            if get_meta_bool(target, "active_disable_guard", False):
+                print("Your stance will not hold a guard right now.")
+                continue
             return "guard"
         if choice in {"d", "dodge"}:
             return "dodge"
         if choice in {"p", "parry"}:
+            if get_meta_bool(target, "active_disable_parry", False):
+                print("The counterbeat is unavailable this turn.")
+                continue
             return "parry"
         print("Please type g, d, or p.")
 
@@ -2142,12 +3129,39 @@ def resolve_reaction(
     read_tier = effective_defensive_read_tier(defensive_read, defensive_profile, reaction)
 
     if reaction == "guard":
+        if get_meta_bool(target, "active_disable_guard", False):
+            target.metadata.pop("active_disable_guard", None)
+            target.metadata["bypass_guard_this_hit"] = True
+            logs.extend(
+                rules_outcome_messages(
+                    state,
+                    "Your stance will not hold a guard right now.",
+                    "Guard unavailable from active_disable_guard.",
+                    hidden_message="The guard is unavailable.",
+                )
+            )
+            return incoming_damage, incoming_break, prevented, logs
         if inputs.power < GUARD_POWER_REQUIREMENT:
             target.metadata["bypass_guard_this_hit"] = True
             state.change_enemy_spotlight(1, f"{target.name} failed guard gate")
-            logs.append(f"Guard gate failed: Power {inputs.power} < {GUARD_POWER_REQUIREMENT}.")
+            logs.extend(
+                rules_outcome_messages(
+                    state,
+                    "The guard comes up, but the weight punches through.\n"
+                    "The enemy takes the measure of your stance.",
+                    f"Guard gate failed: Power {inputs.power} < {GUARD_POWER_REQUIREMENT}.",
+                    hidden_message="The guard fails.",
+                )
+            )
             return incoming_damage, incoming_break, prevented, logs
-        logs.append(f"Guard gate success: Power {inputs.power} >= {GUARD_POWER_REQUIREMENT}.")
+        logs.extend(
+            rules_outcome_messages(
+                state,
+                "The guardline holds.",
+                f"Guard gate success: Power {inputs.power} >= {GUARD_POWER_REQUIREMENT}.",
+                hidden_message="The guard holds.",
+            )
+        )
         hp_spill_mult, guard_break_mult = position_guard_modifiers(target.position)
         if read_tier > 0:
             read_hp_mult, read_break_mult = GUARD_READ_BONUSES[read_tier]
@@ -2170,7 +3184,7 @@ def resolve_reaction(
         effective_break = ceil_int(incoming_break * guard_break_mult)
         if target.position == "withdrawn" and overflow > 0:
             logs.append(f"Withdrawn footing trims the spill on {target.name}'s guard.")
-        if read_tier > 0 and defensive_profile is not None:
+        if read_tier > 0 and defensive_profile is not None and not is_hidden_rules(state):
             logs.append(pattern_read_reaction_line(target, defensive_profile, "guard", read_tier))
         handle_reaction_success_triggers(
             state=state,
@@ -2191,7 +3205,14 @@ def resolve_reaction(
         if inputs.precision < DODGE_PRECISION_REQUIREMENT:
             target.metadata["bypass_guard_this_hit"] = True
             state.change_enemy_spotlight(1, f"{target.name} failed dodge gate")
-            logs.append(f"Dodge gate failed: Precision {inputs.precision} < {DODGE_PRECISION_REQUIREMENT}.")
+            logs.extend(
+                rules_outcome_messages(
+                    state,
+                    "The sidestep opens too early.\nThe enemy follows the motion.\nBreak strains.",
+                    f"Dodge gate failed: Precision {inputs.precision} < {DODGE_PRECISION_REQUIREMENT}.",
+                    hidden_message="The dodge fails. Break strains.",
+                )
+            )
             return (
                 ceil_int(incoming_damage * 1.20),
                 incoming_break + DODGE_EXTRA_BREAK_ON_FAIL,
@@ -2216,12 +3237,28 @@ def resolve_reaction(
         if read_tier > 0:
             read_chance_bonus, _, _ = DODGE_READ_BONUSES[read_tier]
             chance += read_chance_bonus
+        next_dodge_bonus = pop_meta_int(target, "next_dodge_bonus", 0)
+        active_dodge_penalty = get_meta_int(target, "active_turn_dodge_penalty", 0)
+        chance += next_dodge_bonus
+        chance -= active_dodge_penalty
+        if next_dodge_bonus or active_dodge_penalty:
+            log_rules_debug(
+                state,
+                f"Dodge modifiers: next_bonus={next_dodge_bonus}, active_penalty={active_dodge_penalty}.",
+            )
         chance = clamp_int(chance, 10, 90)
         roll = state.rng.randint(1, 100)
         if roll <= chance:
             prevented = True
-            logs.append(f"{target.name} dodges cleanly [dodge roll {roll}/{chance}].")
-            if read_tier > 0 and defensive_profile is not None:
+            logs.extend(
+                rules_outcome_messages(
+                    state,
+                    "The step slips through the threat.\nThe attack cuts through rain and empty air.",
+                    f"Dodge roll: roll={roll}, chance={chance}, outcome=success.",
+                    hidden_message="The attack misses.",
+                )
+            )
+            if read_tier > 0 and defensive_profile is not None and not is_hidden_rules(state):
                 logs.append(pattern_read_reaction_line(target, defensive_profile, "dodge", read_tier))
             if target.position == "withdrawn":
                 logs.append(f"{target.name} slips wide from withdrawn footing.")
@@ -2238,10 +3275,30 @@ def resolve_reaction(
             return 0, 0, prevented, logs
         reduced = ceil_int(incoming_damage * failed_damage_mult)
         state.change_enemy_spotlight(1, f"{target.name} mistimed dodge")
-        logs.append(f"{target.name} mistimes the dodge [dodge roll {roll}/{chance}].")
+        logs.extend(
+            rules_outcome_messages(
+                state,
+                "The step starts clean, then slips on the return.",
+                f"Dodge roll: roll={roll}, chance={chance}, outcome=failed.",
+                hidden_message="The dodge slips.",
+            )
+        )
         return reduced, ceil_int(incoming_break * failed_break_mult), prevented, logs
 
     # parry
+    if get_meta_bool(target, "active_disable_parry", False):
+        target.metadata.pop("active_disable_parry", None)
+        target.metadata["bypass_guard_this_hit"] = True
+        state.change_enemy_spotlight(1, f"{target.name} parry unavailable")
+        logs.extend(
+            rules_outcome_messages(
+                state,
+                "The counterbeat is unavailable this turn.\nThe counter collapses.",
+                "Parry unavailable from active_disable_parry.",
+                hidden_message="The counter collapses.",
+            )
+        )
+        return ceil_int(incoming_damage * 1.15), incoming_break + 6, prevented, logs
     spent_guard = spend_guard_for_reaction(target, PARRY_GUARD_COST)
     spent_break = spend_break_for_reaction(target, PARRY_BREAK_COST)
     logs.append(f"{target.name} spends {spent_guard}/{PARRY_GUARD_COST} Guard and {spent_break}/{PARRY_BREAK_COST} Break to parry.")
@@ -2249,9 +3306,13 @@ def resolve_reaction(
         target.metadata["bypass_guard_this_hit"] = True
         state.change_spotlight(-1, f"{target.name} underfunded parry")
         state.change_enemy_spotlight(1, f"{target.name} underfunded parry")
-        logs.append(
-            f"Parry resource gate failed: Guard {spent_guard}/{PARRY_GUARD_COST}, "
-            f"Break {spent_break}/{PARRY_BREAK_COST}."
+        logs.extend(
+            rules_outcome_messages(
+                state,
+                "The answer is almost there, but the counter collapses.",
+                f"Parry resource gate failed: Guard {spent_guard}/{PARRY_GUARD_COST}, Break {spent_break}/{PARRY_BREAK_COST}.",
+                hidden_message="The counter collapses.",
+            )
         )
         return (
             ceil_int(incoming_damage * 1.35),
@@ -2260,17 +3321,33 @@ def resolve_reaction(
             logs,
         )
     failed_axes: List[str] = []
+    failed_axis_names: List[str] = []
     if inputs.power < PARRY_POWER_REQUIREMENT:
         failed_axes.append(f"Power {inputs.power} < {PARRY_POWER_REQUIREMENT}")
+        failed_axis_names.append("power")
     if inputs.precision < PARRY_PRECISION_REQUIREMENT:
         failed_axes.append(f"Precision {inputs.precision} < {PARRY_PRECISION_REQUIREMENT}")
+        failed_axis_names.append("precision")
     if inputs.composure < PARRY_COMPOSURE_REQUIREMENT:
         failed_axes.append(f"Composure {inputs.composure} < {PARRY_COMPOSURE_REQUIREMENT}")
+        failed_axis_names.append("composure")
     if failed_axes:
         target.metadata["bypass_guard_this_hit"] = True
         state.change_spotlight(-1, f"{target.name} failed parry gate")
         state.change_enemy_spotlight(1, f"{target.name} failed parry gate")
-        logs.append("Parry gate failed: " + "; ".join(failed_axes) + ".")
+        logs.extend(
+            rules_outcome_messages(
+                state,
+                "You catch the first beat, then lose the return.\nThe counter collapses.",
+                (
+                    "Parry gate failed: "
+                    f"failed_axes={failed_axis_names}; "
+                    f"scores={{'power': {inputs.power}, 'precision': {inputs.precision}, 'composure': {inputs.composure}}}; "
+                    f"requirements={{'power': {PARRY_POWER_REQUIREMENT}, 'precision': {PARRY_PRECISION_REQUIREMENT}, 'composure': {PARRY_COMPOSURE_REQUIREMENT}}}."
+                ),
+                hidden_message="The counter collapses.",
+            )
+        )
         return (
             ceil_int(incoming_damage * 1.35),
             incoming_break + PARRY_EXTRA_BREAK_ON_FAIL,
@@ -2298,8 +3375,15 @@ def resolve_reaction(
     roll = state.rng.randint(1, 100)
     if roll <= chance:
         prevented = True
-        logs.append(f"Parry! {target.name} rings the bell-note false [parry roll {roll}/{chance}].")
-        if read_tier > 0 and defensive_profile is not None:
+        logs.extend(
+            rules_outcome_messages(
+                state,
+                "The beat turns in your hands.\nThe enemy's rhythm breaks.",
+                f"Parry roll: roll={roll}, chance={chance}, outcome=success.",
+                hidden_message="The parry lands.",
+            )
+        )
+        if read_tier > 0 and defensive_profile is not None and not is_hidden_rules(state):
             logs.append(pattern_read_reaction_line(target, defensive_profile, "parry", read_tier))
         parry_break = max(0, 18 + (6 if target.posture == "bastion" else 0) + parry_break_bonus + read_parry_break_bonus)
         apply_break_damage(state, attacker, parry_break)
@@ -2343,7 +3427,14 @@ def resolve_reaction(
 
     # Failed parry.
     state.change_enemy_spotlight(1, f"{target.name} missed parry")
-    logs.append(f"{target.name} misses the parry [parry roll {roll}/{chance}] and is punished.")
+    logs.extend(
+        rules_outcome_messages(
+            state,
+            "The answer is almost there, but the timing breaks.",
+            f"Parry roll: roll={roll}, chance={chance}, outcome=failed.",
+            hidden_message="The counter collapses.",
+        )
+    )
     return ceil_int(incoming_damage * 1.15), incoming_break + 6, prevented, logs
 
 
@@ -2431,10 +3522,13 @@ def auto_triplet_for_skill(user: Combatant, skill: Skill, rng: random.Random) ->
 
 def apply_posture_and_post_action_effects(state: BattleState, actor: Combatant, inputs: ResolvedInputs) -> None:
     actor.posture = inputs.posture
-    state.logger.log(
-        state.round_number,
-        f"{actor.name} enters {actor.posture} posture ({inputs.posture_reason}).",
-    )
+    if is_debug_rules(state):
+        state.logger.log(
+            state.round_number,
+            f"{actor.name} enters {actor.posture} posture ({inputs.posture_reason}).",
+        )
+    else:
+        state.logger.log(state.round_number, f"{actor.name} enters {actor.posture} posture.")
     if actor.posture in {"ravage", "focus"}:
         step_position_toward_pressing(state, actor)
     elif actor.posture == "bastion":
@@ -2458,7 +3552,79 @@ def cleanse_one_debuff(state: BattleState, actor: Combatant, source_text: str = 
             return
 
 
-def choose_player_skill(state: BattleState, actor: Combatant) -> Skill:
+def battle_healing_multiplier(actor: Combatant) -> float:
+    multiplier = 1.0
+    multiplier *= float(actor.metadata.get("equipment_healing_multiplier", 1.0))
+    active_bonus = get_meta_float(actor, "active_turn_healing_efficiency_bonus", 0.0)
+    next_bonus = pop_meta_float(actor, "next_healing_efficiency_bonus", 0.0)
+    multiplier *= 1.0 + max(0.0, active_bonus + next_bonus)
+    return clamp(multiplier, 0.25, 1.75)
+
+
+def heal_actor_in_battle(state: BattleState, actor: Combatant, base_amount: int, source_text: str) -> int:
+    amount = ceil_int(int(base_amount) * battle_healing_multiplier(actor))
+    before = actor.hp
+    actor.hp = min(actor.max_hp, actor.hp + amount)
+    healed = actor.hp - before
+    state.logger.log(state.round_number, f"{actor.name} restores {healed} HP from {source_text}.")
+    log_rules_debug(state, f"{source_text} heal base={base_amount}, final={healed}.")
+    return healed
+
+
+def choose_followup_target(state: BattleState, actor: Combatant, skill: Skill, current: Optional[Combatant]) -> Optional[Combatant]:
+    if current is not None and current.alive():
+        return current
+    candidates = state.get_opponents(actor)
+    if not candidates:
+        return None
+    return auto_choose_target(state, actor, skill, candidates)
+
+
+def perform_attack_variant(
+    state: BattleState,
+    actor: Combatant,
+    target: Optional[Combatant],
+    skill: Skill,
+    damage: int,
+    break_damage: int,
+    damage_multiplier: float = 1.0,
+    break_multiplier: float = 1.0,
+    temporary_precision_delta: int = 0,
+    attack_tags: Optional[Sequence[str]] = None,
+) -> Dict[str, object]:
+    target = choose_followup_target(state, actor, skill, target)
+    if target is None:
+        return {"outcome": "no_target", "target_defeated": False, "target_staggered": False, "target": None}
+    was_staggered = target.has_condition("staggered") or target.break_meter <= 0
+    old_delta = get_meta_int(actor, "temporary_precision_delta", 0)
+    if temporary_precision_delta:
+        actor.metadata["temporary_precision_delta"] = old_delta + int(temporary_precision_delta)
+    try:
+        result = apply_damage_to_target(
+            state=state,
+            source=actor,
+            target=target,
+            damage=ceil_int(damage * float(damage_multiplier)),
+            break_damage=ceil_int(break_damage * float(break_multiplier)),
+            skill=skill,
+            can_crit=True,
+            attack_tags=attack_tags,
+        )
+    finally:
+        if old_delta:
+            actor.metadata["temporary_precision_delta"] = old_delta
+        else:
+            actor.metadata.pop("temporary_precision_delta", None)
+    now_staggered = target.has_condition("staggered") or target.break_meter <= 0
+    return {
+        "outcome": str(result.get("hit_outcome") or "none"),
+        "target_defeated": bool(result.get("killed", False)),
+        "target_staggered": bool(now_staggered and not was_staggered),
+        "target": target,
+    }
+
+
+def choose_player_skill(state: BattleState, actor: Combatant) -> Optional[Skill]:
     available: List[Skill] = []
     for skill_id in actor.skills:
         skill = SKILLS[skill_id]
@@ -2467,14 +3633,22 @@ def choose_player_skill(state: BattleState, actor: Combatant) -> Skill:
         available.append(skill)
 
     while True:
-        print(f"\n{actor.name}'s turn. Choose a skill:")
+        print(
+            f"\n{actor.name}'s turn. Action Meter: "
+            f"{get_action_meter(actor)}/{get_max_action_meter(actor)}. Choose an action:"
+        )
         for idx, skill in enumerate(available, start=1):
-            print(
-                f"  {idx}. {skill.display_name:<18} "
-                f"[{skill.kind}] cost={skill.spotlight_cost} "
-                f"scale={skill.primary_scale}/{skill.secondary_scale} "
-                f"target={skill.target}"
-            )
+            if is_debug_rules(state):
+                detail = (
+                    f"[{skill.kind}] spotlight={skill.spotlight_cost} "
+                    f"scale={skill.primary_scale}/{skill.secondary_scale} "
+                    f"target={skill.target}"
+                )
+            else:
+                detail = f"[{skill.kind}] spotlight={skill.spotlight_cost} target={skill.target}"
+            print(f"  {idx}. {skill.display_name:<18} {skill_menu_suffix(state, skill, actor)} {detail}")
+        end_idx = len(available) + 1
+        print(f"  {end_idx}. End Turn")
         raw = input("> ").strip()
         if raw == "" and available:
             return available[0]
@@ -2485,44 +3659,100 @@ def choose_player_skill(state: BattleState, actor: Combatant) -> Skill:
             continue
         if 1 <= idx <= len(available):
             return available[idx - 1]
+        if idx == end_idx:
+            set_force_turn_end(actor, True)
+            return None
         print("That number is out of range.")
 
 
-def auto_choose_player_skill(state: BattleState, actor: Combatant) -> Skill:
+def auto_choose_player_skill(state: BattleState, actor: Combatant) -> Optional[Skill]:
     available = [SKILLS[skill_id] for skill_id in actor.skills if state.spotlight >= SKILLS[skill_id].spotlight_cost]
     enemies = state.living_enemies()
+    if not enemies:
+        return None
+    affordable = affordable_player_skills(state, actor)
+    if not affordable:
+        return None
+    boss_or_heavy = any(enemy.is_boss or enemy.hp >= 60 for enemy in enemies)
+    trance = SKILLS.get("trance")
+    poisoned = SKILLS.get("poisoned_chalice")
+    charge = SKILLS.get("charge_slash")
+    backstep = SKILLS.get("backstep_slash")
+    double = SKILLS.get("double_strike")
+    ambush = SKILLS.get("ambush_rush")
+    if trance in affordable and boss_or_heavy:
+        return trance
+    if poisoned in affordable and actor.hp <= max(1, int(actor.max_hp * 0.40)):
+        return poisoned
+    if actor.entity_id == "vanguard" and charge in affordable and any(enemy.break_meter > 0 for enemy in enemies):
+        return charge
+    if actor.entity_id in {"duelist", "ranger"} and backstep in affordable and actor.hp > max(1, int(actor.max_hp * 0.35)) and state.rng.random() < 0.25:
+        return backstep
+    if double in affordable and actor.hp > max(1, int(actor.max_hp * 0.50)) and state.rng.random() < 0.20:
+        return double
+    if ambush in affordable and boss_or_heavy and state.rng.random() < 0.25:
+        return ambush
+    heavy = SKILLS.get("heavy_attack")
+    light = SKILLS.get("light_attack")
+    if (
+        heavy in affordable
+        and get_action_meter(actor) == get_max_action_meter(actor)
+        and int(state.node_axis_scores.get("power", 60)) >= (skill_power_requirement(heavy, actor) or 60)
+        and max(enemy.hp for enemy in enemies) >= 30
+        and state.rng.random() < 0.35
+    ):
+        return heavy
+    if light in affordable:
+        return light
 
     # Simple priorities.
     staggered = [enemy for enemy in enemies if enemy.has_condition("staggered")]
     if actor.entity_id == "vanguard":
-        if state.spotlight >= 2 and staggered:
+        if state.spotlight >= 2 and staggered and SKILLS["execution_drop"] in affordable:
             return SKILLS["execution_drop"]
-        return SKILLS["anchor_cleave"]
+        return SKILLS["anchor_cleave"] if SKILLS["anchor_cleave"] in affordable else affordable[0]
     if actor.entity_id == "duelist":
         target = max(enemies, key=lambda unit: unit.hp) if enemies else None
-        if state.spotlight >= 2 and target and (target.has_condition("reveal") or target.has_condition("staggered")):
+        if (
+            state.spotlight >= 2
+            and target
+            and (target.has_condition("reveal") or target.has_condition("staggered"))
+            and SKILLS["glass_reprise"] in affordable
+        ):
             return SKILLS["glass_reprise"]
-        return SKILLS["mark_lunge"]
+        return SKILLS["mark_lunge"] if SKILLS["mark_lunge"] in affordable else affordable[0]
     if actor.entity_id == "cantor":
-        if state.spotlight >= 2 and any(enemy.has_condition("reveal") or enemy.has_condition("staggered") for enemy in enemies):
+        if (
+            state.spotlight >= 2
+            and any(enemy.has_condition("reveal") or enemy.has_condition("staggered") for enemy in enemies)
+            and SKILLS["final_verse"] in affordable
+        ):
             return SKILLS["final_verse"]
-        if any(enemy.has_condition("reveal") or target_recently_channeled(enemy) for enemy in enemies):
+        if any(enemy.has_condition("reveal") or target_recently_channeled(enemy) for enemy in enemies) and SKILLS["tuning_fork_cut"] in affordable:
             return SKILLS["tuning_fork_cut"]
-        if state.spotlight >= 1 and any(enemy.has_condition("hex") or enemy.has_condition("reveal") or enemy.has_condition("snare") for enemy in enemies):
+        if (
+            state.spotlight >= 1
+            and any(enemy.has_condition("hex") or enemy.has_condition("reveal") or enemy.has_condition("snare") for enemy in enemies)
+            and SKILLS["hex_burst"] in affordable
+        ):
             return SKILLS["hex_burst"]
-        return SKILLS["salt_psalm"]
+        return SKILLS["salt_psalm"] if SKILLS["salt_psalm"] in affordable else affordable[0]
     if actor.entity_id == "ranger":
-        if any(enemy.has_condition("airborne") or enemy.guard > 0 for enemy in enemies):
+        if any(enemy.has_condition("airborne") or enemy.guard > 0 for enemy in enemies) and SKILLS["linebreaker_shot"] in affordable:
             return SKILLS["linebreaker_shot"]
-        return SKILLS["pinning_round"]
+        return SKILLS["pinning_round"] if SKILLS["pinning_round"] in affordable else affordable[0]
     if actor.entity_id == "penitent":
-        if actor.hp > actor.max_hp * 0.65 and not actor.next_attack_power_bonus:
+        if actor.hp > actor.max_hp * 0.65 and not actor.next_attack_power_bonus and SKILLS["blood_oath"] in affordable:
             return SKILLS["blood_oath"]
-        if state.spotlight >= 2 and any(enemy.has_condition("hex") or enemy.has_condition("staggered") for enemy in enemies):
+        if (
+            state.spotlight >= 2
+            and any(enemy.has_condition("hex") or enemy.has_condition("staggered") for enemy in enemies)
+            and SKILLS["last_rite"] in affordable
+        ):
             return SKILLS["last_rite"]
-        return SKILLS["thorn_spiral"]
+        return SKILLS["thorn_spiral"] if SKILLS["thorn_spiral"] in affordable else affordable[0]
 
-    return available[0] if available else SKILLS["standard_strike"]
+    return affordable[0] if affordable else None
 
 
 def choose_target(state: BattleState, actor: Combatant, skill: Skill) -> List[Combatant]:
@@ -2572,9 +3802,24 @@ def perform_player_action(state: BattleState, actor: Combatant) -> bool:
     if state.interactive:
         state.render_state()
         skill = choose_player_skill(state, actor)
+        if skill is None:
+            state.logger.log(state.round_number, f"{actor.name} ends the turn.")
+            return False
+        affordable, reason = can_pay_action_cost(actor, skill, state)
+        if not affordable:
+            state.logger.log(state.round_number, reason)
+            return False
         targets = choose_target(state, actor, skill)
     else:
         skill = auto_choose_player_skill(state, actor)
+        if skill is None:
+            set_force_turn_end(actor, True)
+            return False
+        affordable, reason = can_pay_action_cost(actor, skill, state)
+        if not affordable:
+            state.logger.log(state.round_number, reason)
+            set_force_turn_end(actor, True)
+            return False
         targets = choose_target(state, actor, skill)
 
     raw = state.node_axis_scores
@@ -2592,12 +3837,71 @@ def perform_player_action(state: BattleState, actor: Combatant) -> bool:
 
     state.change_spotlight(-skill.spotlight_cost, f"{actor.name} used {skill.display_name}")
     actor.metadata["last_inputs"] = resolved_inputs
+    if skill.effect_id == "heavy_attack" and not resolve_heavy_attack_gate(state, actor, skill, resolved_inputs):
+        actor.times_acted += 1
+        actor.last_skill_used = skill.skill_id
+        return True
+
+    if not spend_action_meter(actor, skill_action_cost(skill)):
+        state.logger.log(state.round_number, "Not enough Action Meter.")
+        return False
+    state.logger.log(
+        state.round_number,
+        f"{actor.name} spends {skill_action_cost(skill)} AP -> {get_action_meter(actor)}/{get_max_action_meter(actor)}.",
+    )
     apply_posture_and_post_action_effects(state, actor, resolved_inputs)
     context = ActionContext(user=actor, skill=skill, targets=targets, inputs=resolved_inputs, spotlight_spent=skill.spotlight_cost)
     resolve_action(state, context)
+    if skill_force_turn_end(skill):
+        set_force_turn_end(actor, True)
     actor.times_acted += 1
     actor.last_skill_used = skill.skill_id
     return True
+
+
+def perform_player_turn(state: BattleState, actor: Combatant, *, reset_meter: bool = True) -> bool:
+    if reset_meter:
+        for defense_key in (
+            "active_turn_dodge_penalty",
+            "active_disable_guard",
+            "active_disable_parry",
+            "queued_next_turn_dodge_penalty",
+            "queued_disable_guard",
+            "queued_disable_parry",
+        ):
+            actor.metadata.pop(defense_key, None)
+        promote_next_turn_modifiers(actor, include_defense=False)
+        reset_action_meter_for_turn(actor)
+    acted = False
+    try:
+        for _ in range(PLAYER_ACTION_SAFETY_CAP):
+            if not actor.alive() or state.battle_over or not state.living_enemies():
+                break
+            if should_force_turn_end(actor) or get_action_meter(actor) <= 0:
+                break
+            if not affordable_player_skills(state, actor):
+                state.logger.log(state.round_number, f"{actor.name} has no affordable actions and ends the turn.")
+                set_force_turn_end(actor, True)
+                break
+            before_ap = get_action_meter(actor)
+            action_resolved = perform_player_action(state, actor)
+            if action_resolved:
+                acted = True
+                if state.check_end():
+                    break
+                continue
+            if should_force_turn_end(actor):
+                break
+            if not state.interactive:
+                break
+            if get_action_meter(actor) == before_ap:
+                continue
+        else:
+            state.logger.log(state.round_number, f"{actor.name}'s action loop hits the safety limit and ends.")
+            set_force_turn_end(actor, True)
+    finally:
+        clear_active_turn_modifiers(actor, include_defense=False)
+    return acted
 
 
 def resolve_action(state: BattleState, context: ActionContext) -> None:
@@ -2625,16 +3929,24 @@ def resolve_action(state: BattleState, context: ActionContext) -> None:
         if actor.team == "player":
             power_damage_mult = player_power_damage_multiplier(state, actor, skill, inputs)
             power_break_mult = 1.0 + (power_damage_mult - 1.0) * 0.50
-            state.logger.log(state.round_number, f"Power output x{power_damage_mult:.2f} from Power {inputs.power}.")
+            log_rules_outcome(
+                state,
+                qualitative_power_line(power_damage_mult),
+                f"Power multiplier x{power_damage_mult:.2f} from Power {inputs.power}.",
+                hidden_message="The blow commits.",
+            )
     self_risk_reduction = current_self_risk_reduction(state, actor, skill)
 
-    state.logger.log(
-        state.round_number,
-        f"{actor.name} uses {skill.display_name} "
-        f"[P:{inputs.power}/{inputs.band_names['power']}, "
-        f"R:{inputs.precision}/{inputs.band_names['precision']}, "
-        f"C:{inputs.composure}/{inputs.band_names['composure']}]",
-    )
+    if is_debug_rules(state):
+        state.logger.log(
+            state.round_number,
+            f"{actor.name} uses {skill.display_name} "
+            f"[P:{inputs.power}/{inputs.band_names['power']}, "
+            f"R:{inputs.precision}/{inputs.band_names['precision']}, "
+            f"C:{inputs.composure}/{inputs.band_names['composure']}]",
+        )
+    else:
+        state.logger.log(state.round_number, f"{actor.name} uses {skill.display_name}.")
 
     if skill.effect_id == "brace":
         gained = actor.restore_guard(ceil_int(actor.max_guard * 0.35))
@@ -2677,11 +3989,235 @@ def resolve_action(state: BattleState, context: ActionContext) -> None:
         finalize_action_resolution(state, actor, skill)
         return
 
+    if skill.effect_id == "backflip":
+        spent_break = min(actor.break_meter, BACKFLIP_BREAK_COST)
+        actor.break_meter = max(0, actor.break_meter - BACKFLIP_BREAK_COST)
+        if spent_break < BACKFLIP_BREAK_COST:
+            add_meta_int(actor, "next_attack_accuracy_penalty", 5)
+        add_meta_int(actor, "next_dodge_bonus", BACKFLIP_NEXT_DODGE_BONUS)
+        queue_next_turn_modifier(actor, "queued_next_turn_healing_efficiency_bonus", BACKFLIP_NEXT_TURN_HEALING_BONUS)
+        state.logger.log(state.round_number, "You flip clear of the line and come down ready to mend.")
+        state.logger.log(state.round_number, "Break strains under the landing.")
+        log_rules_debug(
+            state,
+            (
+                f"Backflip: break -{spent_break}, next_dodge_bonus +{BACKFLIP_NEXT_DODGE_BONUS}, "
+                f"queued healing bonus +{BACKFLIP_NEXT_TURN_HEALING_BONUS:.0%}."
+            ),
+        )
+        finalize_action_resolution(state, actor, skill)
+        return
+
     # Most direct skills are resolved through attack / effect application.
     base_damage = DAMAGE_TIERS[skill.damage_tier]
     base_break = BREAK_TIERS[skill.break_tier]
     damage = ceil_int(base_damage * scale * before_damage_mult * counterphrase_damage_mult * power_damage_mult)
     break_damage = ceil_int(base_break * scale * before_break_mult * counterphrase_break_mult * power_break_mult)
+    if actor.team == "player" and (
+        skill.effect_id in {
+            "light_attack",
+            "heavy_attack",
+            "ambush_rush",
+            "backstep_slash",
+            "trance",
+            "charge_slash",
+            "poisoned_chalice",
+            "double_strike",
+        }
+        or "light_attack" in skill.tags
+    ):
+        damage = ceil_int(damage * float(actor.metadata.get("equipment_damage_multiplier", 1.0)))
+        break_damage = ceil_int(break_damage * float(actor.metadata.get("equipment_break_multiplier", 1.0)))
+        if skill.effect_id == "heavy_attack":
+            damage = ceil_int(damage * float(actor.metadata.get("equipment_heavy_attack_damage_multiplier", 1.0)))
+
+    if skill.effect_id == "ambush_rush":
+        target = targets[0] if targets else None
+        perform_attack_variant(
+            state,
+            actor,
+            target,
+            skill,
+            damage,
+            break_damage,
+            AMBUSH_RUSH_DAMAGE_MULTIPLIER,
+            AMBUSH_RUSH_BREAK_MULTIPLIER,
+        )
+        add_meta_int(actor, "next_attack_accuracy_bonus", AMBUSH_RUSH_NEXT_ATTACK_ACCURACY_BONUS)
+        state.logger.log(state.round_number, "You rush the line and leave the next opening marked.")
+        log_rules_debug(state, f"Ambush Rush: next_attack_accuracy_bonus +{AMBUSH_RUSH_NEXT_ATTACK_ACCURACY_BONUS}.")
+        finalize_action_resolution(state, actor, skill)
+        return
+
+    if skill.effect_id == "backstep_slash":
+        target = targets[0] if targets else None
+        perform_attack_variant(
+            state,
+            actor,
+            target,
+            skill,
+            damage,
+            break_damage,
+            BACKSTEP_SLASH_DAMAGE_MULTIPLIER,
+            BACKSTEP_SLASH_BREAK_MULTIPLIER,
+        )
+        add_meta_int(actor, "next_dodge_bonus", BACKSTEP_NEXT_DODGE_BONUS)
+        add_meta_int(actor, "next_attack_accuracy_penalty", BACKSTEP_NEXT_ATTACK_ACCURACY_PENALTY)
+        state.logger.log(state.round_number, "You cut while falling out of line.")
+        state.logger.log(state.round_number, "The retreat opens space, but the next strike will be harder to place.")
+        log_rules_debug(
+            state,
+            (
+                f"Backstep Slash: next_dodge_bonus +{BACKSTEP_NEXT_DODGE_BONUS}, "
+                f"next_attack_accuracy_penalty +{BACKSTEP_NEXT_ATTACK_ACCURACY_PENALTY}."
+            ),
+        )
+        finalize_action_resolution(state, actor, skill)
+        return
+
+    if skill.effect_id == "trance":
+        ready_count = get_meta_int(actor, "trance_ready_count", 0)
+        spotlight_spent = state.spotlight
+        set_meta_bool(actor, "trance_used_this_battle", True)
+        set_meta_bool(actor, "trance_chain_active", True)
+        if spotlight_spent:
+            state.change_spotlight(-spotlight_spent, f"{actor.name} Trance")
+        state.logger.log(state.round_number, "The noise falls away.")
+        state.logger.log(state.round_number, "You move until the line breaks.")
+        log_rules_debug(state, f"Trance ready_count={ready_count}, spotlight_spent={spotlight_spent}.")
+        target = targets[0] if targets else None
+        max_chain = max(1, min(skill.max_chain_attacks, TRANCE_MAX_CHAIN_ATTACKS))
+        for chain_index in range(max_chain):
+            target = choose_followup_target(state, actor, skill, target)
+            if target is None or state.check_end():
+                break
+            delta = -TRANCE_PRECISION_DECAY_PER_ATTACK * chain_index
+            log_rules_debug(state, f"Trance attack #{chain_index + 1} temporary_precision_delta={delta}.")
+            result = perform_attack_variant(
+                state,
+                actor,
+                target,
+                skill,
+                damage,
+                break_damage,
+                TRANCE_DAMAGE_MULTIPLIER,
+                TRANCE_BREAK_MULTIPLIER,
+                temporary_precision_delta=delta,
+            )
+            target = result.get("target") if isinstance(result.get("target"), Combatant) else target
+            if result.get("outcome") == "miss":
+                state.logger.log(state.round_number, "The trance ends when the strike finally misses.")
+                break
+            if state.check_end():
+                break
+        else:
+            state.logger.log(state.round_number, "The trance ends.")
+        actor.metadata.pop("trance_chain_active", None)
+        finalize_action_resolution(state, actor, skill)
+        return
+
+    if skill.effect_id == "charge_slash":
+        actor.guard = max(0, actor.guard - CHARGE_SLASH_GUARD_COST)
+        actor.break_meter = max(0, actor.break_meter - CHARGE_SLASH_BREAK_COST)
+        state.logger.log(state.round_number, "You spend the frame and drive the cut into the enemy's balance.")
+        state.logger.log(state.round_number, "The guardline bites into your arms.")
+        log_rules_debug(
+            state,
+            (
+                f"Charge Slash: guard -{CHARGE_SLASH_GUARD_COST}, break -{CHARGE_SLASH_BREAK_COST}, "
+                f"break_mult={CHARGE_SLASH_BREAK_MULTIPLIER:.2f}."
+            ),
+        )
+        result = perform_attack_variant(
+            state,
+            actor,
+            targets[0] if targets else None,
+            skill,
+            damage,
+            break_damage,
+            CHARGE_SLASH_DAMAGE_MULTIPLIER,
+            CHARGE_SLASH_BREAK_MULTIPLIER,
+        )
+        if result.get("target_staggered"):
+            queue_next_turn_modifier(
+                actor,
+                "queued_next_turn_action_meter_bonus",
+                CHARGE_SLASH_NEXT_TURN_AP_BONUS_ON_STAGGER,
+            )
+            state.logger.log(state.round_number, "The enemy's rhythm buckles.")
+            log_rules_debug(
+                state,
+                f"Charge Slash staggered target; queued AP +{CHARGE_SLASH_NEXT_TURN_AP_BONUS_ON_STAGGER}.",
+            )
+        finalize_action_resolution(state, actor, skill)
+        return
+
+    if skill.effect_id == "poisoned_chalice":
+        state.recovery_charges = max(0, state.recovery_charges - 1)
+        state.logger.log(state.round_number, "You drink the bitter charge and strike before it settles.")
+        heal_actor_in_battle(state, actor, state.recovery_heal_amount, "Poisoned Chalice")
+        perform_attack_variant(
+            state,
+            actor,
+            targets[0] if targets else None,
+            skill,
+            damage,
+            break_damage,
+            POISONED_CHALICE_DAMAGE_MULTIPLIER,
+            POISONED_CHALICE_BREAK_MULTIPLIER,
+        )
+        queue_next_turn_modifier(actor, "queued_next_turn_dodge_penalty", POISONED_CHALICE_NEXT_TURN_DODGE_PENALTY)
+        queue_next_turn_modifier(actor, "queued_next_turn_accuracy_penalty", POISONED_CHALICE_NEXT_TURN_ACCURACY_PENALTY)
+        state.logger.log(state.round_number, "The aftertaste will ruin your next step.")
+        log_rules_debug(
+            state,
+            (
+                f"Poisoned Chalice: recovery_charges -1 -> {state.recovery_charges}, "
+                f"queued dodge -{POISONED_CHALICE_NEXT_TURN_DODGE_PENALTY}, "
+                f"queued accuracy -{POISONED_CHALICE_NEXT_TURN_ACCURACY_PENALTY}."
+            ),
+        )
+        finalize_action_resolution(state, actor, skill)
+        return
+
+    if skill.effect_id == "double_strike":
+        state.logger.log(state.round_number, "You split the line into two cuts.")
+        first = perform_attack_variant(
+            state,
+            actor,
+            targets[0] if targets else None,
+            skill,
+            damage,
+            break_damage,
+            DOUBLE_STRIKE_DAMAGE_MULTIPLIER,
+            DOUBLE_STRIKE_BREAK_MULTIPLIER,
+        )
+        second_penalty = DOUBLE_STRIKE_SECOND_ATTACK_ACCURACY_PENALTY
+        tags = {str(tag) for tag in actor.metadata.get("equipment_tags", [])}
+        if actor.entity_id == "duelist" or {"multi_hit", "duelist"} & tags:
+            second_penalty = 5
+        second_target = first.get("target") if isinstance(first.get("target"), Combatant) else (targets[0] if targets else None)
+        if not state.check_end():
+            perform_attack_variant(
+                state,
+                actor,
+                second_target,
+                skill,
+                damage,
+                break_damage,
+                DOUBLE_STRIKE_DAMAGE_MULTIPLIER,
+                DOUBLE_STRIKE_BREAK_MULTIPLIER,
+                temporary_precision_delta=-second_penalty,
+            )
+        queue_next_turn_modifier(actor, "queued_disable_guard", True)
+        queue_next_turn_modifier(actor, "queued_disable_parry", True)
+        state.logger.log(state.round_number, "The second cut leaves no room to guard next turn.")
+        log_rules_debug(
+            state,
+            f"Double Strike: two attacks, second accuracy penalty -{second_penalty}. Queued next turn guard/parry disabled.",
+        )
+        finalize_action_resolution(state, actor, skill)
+        return
 
     # Multi-hit skills handled explicitly.
     if skill.effect_id == "glass_reprise":
@@ -2791,7 +4327,7 @@ def resolve_action(state: BattleState, context: ActionContext) -> None:
             status_duration = 2
             status_chance = 92
             state.logger.log(state.round_number, f"{skill.display_name} finds a resonant opening.")
-        apply_damage_to_target(
+        result = apply_damage_to_target(
             state=state,
             source=actor,
             target=target,
@@ -2821,7 +4357,7 @@ def resolve_action(state: BattleState, context: ActionContext) -> None:
             verse_crit_bonus = 12
             state.change_spotlight(1, f"{actor.name} Final Verse")
             state.logger.log(state.round_number, f"{skill.display_name} crescendos on an exposed target.")
-        apply_damage_to_target(
+        result = apply_damage_to_target(
             state=state,
             source=actor,
             target=target,
@@ -2851,7 +4387,7 @@ def resolve_action(state: BattleState, context: ActionContext) -> None:
             # Very light baseline chance for affinity-themed attacks.
             status_payload = None
 
-        apply_damage_to_target(
+        result = apply_damage_to_target(
             state=state,
             source=actor,
             target=target,
@@ -2917,10 +4453,25 @@ def maybe_grant_composure_bonus_action(state: BattleState, actor: Combatant, inp
     if state.player_tempo_meter >= threshold:
         state.player_tempo_meter -= threshold
         state.bonus_action_rounds.add(key)
-        state.logger.log(state.round_number, f"{actor.name} keeps tempo from Composure {inputs.composure}: bonus action.")
+        if inputs.composure >= 80:
+            add_meta_int(actor, "trance_ready_count", 1, min_value=0)
+            log_rules_debug(state, f"Trance readiness +1 -> {get_meta_int(actor, 'trance_ready_count', 0)}.")
+        log_rules_outcome(
+            state,
+            "The rhythm breaks open: bonus action.",
+            f"Composure tempo {state.player_tempo_meter + threshold}/{threshold}; input={inputs.composure}; bonus action.",
+            hidden_message="Bonus action gained.",
+        )
         return True
 
-    state.logger.log(state.round_number, f"Composure tempo {state.player_tempo_meter}/{threshold}.")
+    log_rules_debug(state, f"Composure tempo {state.player_tempo_meter}/{threshold}.")
+    if is_fuzzy_rules(state):
+        if tempo_read_label(state.player_tempo_meter, threshold) == "nearly ready":
+            state.logger.log(state.round_number, "The rhythm is nearly ready.")
+        else:
+            state.logger.log(state.round_number, "The rhythm gathers.")
+    elif is_hidden_rules(state):
+        state.logger.log(state.round_number, "The rhythm gathers.")
     return False
 
 
@@ -3974,13 +5525,19 @@ def ensure_round_ready(state: BattleState) -> None:
     if not state.cursor.battle_started:
         for unit in state.everyone():
             unit.position = POSITION_DEFAULT
+        initialize_p2_battle_metadata(state)
         state.cursor.battle_started = True
         state.logger.log(state.round_number, "Battle begins.")
         axes = state.node_axis_scores
-        state.logger.log(
-            state.round_number,
-            f"Node axis scores: Power {axes.get('power', 60)}, Precision {axes.get('precision', 60)}, Composure {axes.get('composure', 60)}.",
-        )
+        if is_debug_rules(state):
+            state.logger.log(
+                state.round_number,
+                f"Node axis scores: Power {axes.get('power', 60)}, Precision {axes.get('precision', 60)}, Composure {axes.get('composure', 60)}.",
+            )
+        elif is_fuzzy_rules(state):
+            state.logger.log(state.round_number, "Route pressure settles into a readable rhythm.")
+        else:
+            state.logger.log(state.round_number, "The route pressure settles over the fight.")
 
     if state.cursor.turn_order_ids and state.cursor.next_actor_index < len(state.cursor.turn_order_ids):
         return
@@ -4012,12 +5569,12 @@ def process_turn(state: BattleState, actor: Combatant) -> None:
         state.logger.log(state.round_number, f"{actor.name} recovers {recovered} guard.")
 
     if actor.team == "player":
-        acted = perform_player_action(state, actor)
+        acted = perform_player_turn(state, actor)
         if acted and not state.check_end():
             inputs = actor.metadata.get("last_inputs")
             if isinstance(inputs, ResolvedInputs) and maybe_grant_composure_bonus_action(state, actor, inputs):
                 if actor.alive() and not state.battle_over:
-                    perform_player_action(state, actor)
+                    perform_player_turn(state, actor)
     else:
         enemy_action_template(state, actor)
         actor.times_acted += 1
@@ -4058,6 +5615,8 @@ def run_battle(
         state.logger.log(state.round_number, "Players win the battle.")
     else:
         state.logger.log(state.round_number, "Enemies win the battle.")
+    for actor in state.players:
+        clear_p2_battle_metadata(actor)
     return state.winner or "unknown"
 
 
@@ -4129,6 +5688,12 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
         default="quiet_relay_last_battle_log_datadriven.txt",
         help="Where to write the battle log after the fight",
     )
+    parser.add_argument(
+        "--rules-visibility",
+        choices=RULES_VISIBILITY_CHOICES,
+        default=DEFAULT_RULES_VISIBILITY,
+        help="How explicit combat rules should be in player-facing logs",
+    )
     return parser.parse_args(argv)
 
 
@@ -4148,9 +5713,13 @@ def print_intro(args: argparse.Namespace, party_ids: Sequence[str]) -> None:
     print(f"{emoji_label('party', 'Party')}: {', '.join(party_ids)}")
     print(f"{emoji_label('battle', 'Scenario')}: {args.scenario}")
     print(f"{emoji_label('continue', 'Mode')}: {'AUTO' if args.auto else 'INTERACTIVE'}")
+    print(f"Rules visibility: {args.rules_visibility}")
     print(f"{emoji_label('load', 'Content')}: {CONTENT.base_dir}")
     print("=" * 60)
-    print(emoji_label("inspect", "Tip: player actions require manual Power Precision Composure inputs such as: 72 61 84"))
+    if args.rules_visibility == RULES_VISIBILITY_DEBUG:
+        print(emoji_label("inspect", "Tip: player actions require manual Power Precision Composure inputs such as: 72 61 84"))
+    else:
+        print(emoji_label("inspect", "Tip: player actions use three manual action inputs such as: 72 61 84"))
     if not args.auto:
         print("Enemy attacks will ask for Guard / Dodge / Parry reactions.")
         print("Some heavy, channel, or burst-start attacks may offer a Pattern Read after that choice.")
@@ -4179,6 +5748,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         rng=rng,
         logger=logger,
         interactive=not args.auto,
+        rules_visibility=args.rules_visibility,
     )
 
     print_intro(args, party_ids)

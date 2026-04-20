@@ -35,6 +35,8 @@ ALLOWED_INPUT_DIMENSIONS = {"power", "precision", "composure"}
 ALLOWED_REACTIONS = {"guard", "dodge", "parry"}
 ALLOWED_DEFENSIVE_READ_TAGS = {"heavy", "channel", "burst_start"}
 ALLOWED_REWARD_TABLE_TYPES = {"choice", "shop"}
+ALLOWED_EQUIPMENT_SLOT_TYPES = {"one_handed", "two_handed"}
+ALLOWED_EQUIPMENT_RARITIES = {"common", "uncommon", "rare", "very_rare"}
 ALLOWED_RELIC_EFFECTS = {
     "apply_status_to_attacker",
     "apply_status_to_self",
@@ -105,6 +107,44 @@ def _validate_slug_list(
             raise ContentError(f"{owner} {field_name} entries must be lowercase short slugs.")
         if allowed is not None and item not in allowed:
             raise ContentError(f"{owner} {field_name} contains unsupported value '{item}'.")
+
+
+def _validate_equipment_tags(owner: str, value: Any) -> None:
+    if value is None:
+        return
+    if not isinstance(value, list):
+        raise ContentError(f"{owner} tags must be a list when present.")
+    for tag in value:
+        if not isinstance(tag, str) or not _is_short_slug(tag, max_len=48):
+            raise ContentError(f"{owner} tags must contain non-empty short slugs.")
+
+
+def _equipment_slot_type(raw: Mapping[str, Any]) -> str:
+    return str(raw.get("slot_type", "one_handed"))
+
+
+def _equipment_hands(raw: Mapping[str, Any]) -> int:
+    raw_hands = raw.get("hands")
+    if raw_hands is None:
+        return 2 if _equipment_slot_type(raw) == "two_handed" else 1
+    return int(raw_hands)
+
+
+def _validate_numeric_object(owner: str, value: Any) -> None:
+    if value is None:
+        return
+    if not isinstance(value, dict):
+        raise ContentError(f"{owner} must be an object when present.")
+    for key, modifiers in value.items():
+        if not isinstance(key, str) or not _is_short_slug(key, max_len=48):
+            raise ContentError(f"{owner} keys must be lowercase short slugs.")
+        if not isinstance(modifiers, dict):
+            raise ContentError(f"{owner}.{key} must map to an object of numeric modifiers.")
+        for modifier_name, modifier_value in modifiers.items():
+            if not isinstance(modifier_name, str) or not _is_short_slug(modifier_name, max_len=64):
+                raise ContentError(f"{owner}.{key} modifier names must be lowercase short slugs.")
+            if isinstance(modifier_value, bool) or not isinstance(modifier_value, (int, float)):
+                raise ContentError(f"{owner}.{key}.{modifier_name} must be numeric.")
 
 
 def _validate_encounter_variant(owner: str, raw: Any, valid_encounters: Set[str]) -> None:
@@ -239,9 +279,22 @@ def _materialize_character_blueprints(rules: Mapping[str, Any], characters: Mapp
         if not isinstance(raw, dict):
             raise ContentError(f"Character '{char_id}' must be an object.")
         merged = dict(raw)
+        raw_starting_equipment = raw.get("starting_equipment")
+        if isinstance(raw_starting_equipment, list) and raw_starting_equipment:
+            starting_equipment = [str(equipment_id) for equipment_id in raw_starting_equipment]
+        else:
+            starting_equipment = [str(raw["weapon"])]
+        merged["starting_equipment"] = starting_equipment
+        if raw.get("weapon") is not None:
+            merged["weapon"] = str(raw["weapon"])
+        else:
+            merged["weapon"] = starting_equipment[0]
         explicit_skills = raw.get("skills")
         if isinstance(explicit_skills, list) and explicit_skills:
-            merged_skills = [str(skill_id) for skill_id in explicit_skills]
+            merged_skills = []
+            for skill_id in shared_skills + [str(skill_id) for skill_id in explicit_skills]:
+                if skill_id not in merged_skills:
+                    merged_skills.append(skill_id)
         else:
             unique_skills = list(raw.get("unique_start_skills", []))
             merged_skills = []
@@ -371,6 +424,67 @@ def _validate_skills(skills: Mapping[str, Any], valid_affinities: Set[str], char
         if tags is not None:
             if not isinstance(tags, list) or not all(isinstance(tag, str) and tag for tag in tags):
                 raise ContentError(f"Skill '{skill_id}' tags must be a list of non-empty strings when present.")
+        action_cost = raw.get("action_cost")
+        if action_cost is not None and (
+            isinstance(action_cost, bool) or not isinstance(action_cost, int) or action_cost < 0
+        ):
+            raise ContentError(f"Skill '{skill_id}' action_cost must be an integer >= 0 when present.")
+        force_turn_end = raw.get("force_turn_end")
+        if force_turn_end is not None and not isinstance(force_turn_end, bool):
+            raise ContentError(f"Skill '{skill_id}' force_turn_end must be a boolean when present.")
+        requires_full_action_meter = raw.get("requires_full_action_meter")
+        if requires_full_action_meter is not None and not isinstance(requires_full_action_meter, bool):
+            raise ContentError(f"Skill '{skill_id}' requires_full_action_meter must be a boolean when present.")
+        power_requirement = raw.get("power_requirement")
+        if power_requirement is not None and (
+            isinstance(power_requirement, bool)
+            or not isinstance(power_requirement, int)
+            or not 0 <= power_requirement <= 100
+        ):
+            raise ContentError(f"Skill '{skill_id}' power_requirement must be an integer from 0 to 100 when present.")
+        allowed_characters = raw.get("allowed_characters")
+        if allowed_characters is not None:
+            if (
+                not isinstance(allowed_characters, list)
+                or not allowed_characters
+                or not all(isinstance(item, str) and item in characters for item in allowed_characters)
+            ):
+                raise ContentError(
+                    f"Skill '{skill_id}' allowed_characters must be a non-empty list of known character ids."
+                )
+        once_per_battle = raw.get("once_per_battle")
+        if once_per_battle is not None and not isinstance(once_per_battle, bool):
+            raise ContentError(f"Skill '{skill_id}' once_per_battle must be a boolean when present.")
+        for field_name in (
+            "guard_cost",
+            "break_cost",
+            "recovery_charge_cost",
+            "max_chain_attacks",
+        ):
+            value = raw.get(field_name)
+            if value is not None and (
+                isinstance(value, bool)
+                or not isinstance(value, int)
+                or value < (1 if field_name == "max_chain_attacks" else 0)
+            ):
+                comparator = ">= 1" if field_name == "max_chain_attacks" else ">= 0"
+                raise ContentError(f"Skill '{skill_id}' {field_name} must be an integer {comparator} when present.")
+        for field_name in (
+            "next_attack_accuracy_bonus",
+            "next_attack_accuracy_penalty",
+            "next_turn_accuracy_penalty",
+            "next_turn_dodge_bonus",
+            "next_turn_dodge_penalty",
+            "next_turn_action_meter_bonus",
+        ):
+            value = raw.get(field_name)
+            if value is not None and (isinstance(value, bool) or not isinstance(value, int)):
+                raise ContentError(f"Skill '{skill_id}' {field_name} must be an integer when present.")
+        healing_bonus = raw.get("next_turn_healing_bonus")
+        if healing_bonus is not None and (
+            isinstance(healing_bonus, bool) or not isinstance(healing_bonus, (int, float))
+        ):
+            raise ContentError(f"Skill '{skill_id}' next_turn_healing_bonus must be numeric when present.")
 
 
 def _validate_characters(
@@ -391,8 +505,35 @@ def _validate_characters(
         if affinity not in valid_affinities:
             raise ContentError(f"Character '{char_id}' uses unknown affinity '{affinity}'.")
         weapon_id = raw.get("weapon")
-        if weapon_id not in weapons:
-            raise ContentError(f"Character '{char_id}' references unknown weapon '{weapon_id}'.")
+        starting_equipment = raw.get("starting_equipment")
+        if starting_equipment is not None:
+            if not isinstance(starting_equipment, list) or not starting_equipment:
+                raise ContentError(f"Character '{char_id}' starting_equipment must be a non-empty list when present.")
+            unknown_equipment = [str(item) for item in starting_equipment if item not in weapons]
+            if unknown_equipment:
+                raise ContentError(
+                    f"Character '{char_id}' references unknown starting equipment: {unknown_equipment}."
+                )
+            total_hands = 0
+            two_handed = []
+            for equipment_id in starting_equipment:
+                equipment_raw = weapons[str(equipment_id)]
+                hands = _equipment_hands(equipment_raw)
+                total_hands += hands
+                if hands == 2 or _equipment_slot_type(equipment_raw) == "two_handed":
+                    two_handed.append(str(equipment_id))
+            if total_hands > 2:
+                raise ContentError(f"Character '{char_id}' starting_equipment uses {total_hands} hands; max is 2.")
+            if two_handed and len(starting_equipment) > 1:
+                raise ContentError(
+                    f"Character '{char_id}' equips two-handed item(s) {two_handed} with other equipment."
+                )
+            if weapon_id is not None and weapon_id not in weapons:
+                raise ContentError(f"Character '{char_id}' references unknown weapon '{weapon_id}'.")
+        else:
+            if weapon_id not in weapons:
+                raise ContentError(f"Character '{char_id}' references unknown weapon '{weapon_id}'.")
+        _validate_numeric_object(f"Character '{char_id}' equipment_efficiency", raw.get("equipment_efficiency"))
         stat_profile = raw.get("stat_profile")
         if not isinstance(stat_profile, dict):
             raise ContentError(f"Character '{char_id}' must define stat_profile.")
@@ -463,14 +604,68 @@ def _validate_bosses(bosses: Mapping[str, Any], valid_affinities: Set[str]) -> N
 
 
 def _validate_weapons(weapons: Mapping[str, Any], valid_affinities: Set[str]) -> None:
+    int_fields = {
+        "accuracy_modifier",
+        "power_modifier",
+        "composure_modifier",
+        "guard_bonus",
+        "max_guard_bonus",
+        "max_break_bonus",
+        "dodge_break_cost_modifier",
+        "parry_guard_cost_modifier",
+        "parry_break_cost_modifier",
+        "light_attack_accuracy_modifier",
+        "strong_attack_power_requirement_modifier",
+    }
+    float_fields = {
+        "damage_multiplier",
+        "break_multiplier",
+        "heavy_attack_damage_multiplier",
+    }
     for weapon_id, raw in weapons.items():
         if not isinstance(raw, dict):
             raise ContentError(f"Weapon '{weapon_id}' must be an object.")
         affinity_hint = raw.get("affinity_hint")
         if affinity_hint is not None and affinity_hint not in valid_affinities:
             raise ContentError(f"Weapon '{weapon_id}' has invalid affinity_hint '{affinity_hint}'.")
-        if "display_name" not in raw:
+        display_name = raw.get("display_name")
+        if not isinstance(display_name, str) or not display_name.strip():
             raise ContentError(f"Weapon '{weapon_id}' is missing display_name.")
+        slot_type = raw.get("slot_type", "one_handed")
+        if slot_type not in ALLOWED_EQUIPMENT_SLOT_TYPES:
+            raise ContentError(
+                f"Weapon '{weapon_id}' slot_type must be one of {sorted(ALLOWED_EQUIPMENT_SLOT_TYPES)}."
+            )
+        hands = raw.get("hands")
+        if hands is None:
+            hands = 2 if slot_type == "two_handed" else 1
+        if isinstance(hands, bool) or not isinstance(hands, int) or hands not in {1, 2}:
+            raise ContentError(f"Weapon '{weapon_id}' hands must be 1 or 2.")
+        if slot_type == "one_handed" and hands != 1:
+            raise ContentError(f"Weapon '{weapon_id}' slot_type one_handed requires hands == 1.")
+        if slot_type == "two_handed" and hands != 2:
+            raise ContentError(f"Weapon '{weapon_id}' slot_type two_handed requires hands == 2.")
+        rarity = raw.get("rarity", "common")
+        if rarity not in ALLOWED_EQUIPMENT_RARITIES:
+            raise ContentError(
+                f"Weapon '{weapon_id}' rarity must be one of {sorted(ALLOWED_EQUIPMENT_RARITIES)}."
+            )
+        category = raw.get("equipment_category", "weapon")
+        if not isinstance(category, str) or not _is_short_slug(category, max_len=48):
+            raise ContentError(f"Weapon '{weapon_id}' equipment_category must be a short slug.")
+        _validate_equipment_tags(f"Weapon '{weapon_id}'", raw.get("tags", []))
+        tags = [str(tag) for tag in raw.get("tags", [])]
+        if category in {"staff", "wand", "scepter", "chime", "mage_focus"} and "mage" not in tags:
+            raise ContentError(f"Weapon '{weapon_id}' mage equipment must include the 'mage' tag.")
+        for field_name in int_fields:
+            value = raw.get(field_name)
+            if value is not None and (isinstance(value, bool) or not isinstance(value, int)):
+                raise ContentError(f"Weapon '{weapon_id}' {field_name} must be an integer when present.")
+        for field_name in float_fields:
+            value = raw.get(field_name)
+            if value is not None and (isinstance(value, bool) or not isinstance(value, (int, float))):
+                raise ContentError(f"Weapon '{weapon_id}' {field_name} must be numeric when present.")
+        _validate_short_text(f"Weapon '{weapon_id}'", "notes", raw.get("notes"), max_len=160)
 
 
 def _validate_relics(relics: Mapping[str, Any]) -> None:

@@ -123,6 +123,15 @@
     }
   },
   "shared_start_skills": [
+    "light_attack",
+    "heavy_attack",
+    "ambush_rush",
+    "backstep_slash",
+    "backflip",
+    "charge_slash",
+    "poisoned_chalice",
+    "double_strike",
+    "trance",
     "standard_strike",
     "brace",
     "read_opening"

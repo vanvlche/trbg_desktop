@@ -1,4 +1,259 @@
 {
+  "light_attack": {
+    "display_name": "Light Attack",
+    "owner": "shared",
+    "kind": "attack",
+    "affinity": "neutral",
+    "target": "single_enemy",
+    "spotlight_cost": 0,
+    "scale": {
+      "primary": "precision",
+      "secondary": "power"
+    },
+    "output": {
+      "damage": "low",
+      "break": "low"
+    },
+    "effect_id": "light_attack",
+    "tags": [
+      "basic",
+      "attack",
+      "light_attack"
+    ],
+    "action_cost": 45,
+    "force_turn_end": false,
+    "requires_full_action_meter": false
+  },
+  "heavy_attack": {
+    "display_name": "Heavy Attack",
+    "owner": "shared",
+    "kind": "attack",
+    "affinity": "neutral",
+    "target": "single_enemy",
+    "spotlight_cost": 0,
+    "scale": {
+      "primary": "power",
+      "secondary": "precision"
+    },
+    "output": {
+      "damage": "high",
+      "break": "medium"
+    },
+    "effect_id": "heavy_attack",
+    "tags": [
+      "basic",
+      "attack",
+      "heavy_attack",
+      "force_turn_end"
+    ],
+    "action_cost": 100,
+    "force_turn_end": true,
+    "requires_full_action_meter": true,
+    "power_requirement": 60
+  },
+  "ambush_rush": {
+    "display_name": "Ambush Rush",
+    "owner": "shared",
+    "kind": "attack",
+    "affinity": "neutral",
+    "target": "single_enemy",
+    "spotlight_cost": 0,
+    "scale": {
+      "primary": "precision",
+      "secondary": "power"
+    },
+    "output": {
+      "damage": "low",
+      "break": "low"
+    },
+    "effect_id": "ambush_rush",
+    "tags": [
+      "tactical",
+      "attack",
+      "light_attack",
+      "setup",
+      "force_turn_end"
+    ],
+    "action_cost": 60,
+    "force_turn_end": true,
+    "requires_full_action_meter": false,
+    "next_attack_accuracy_bonus": 15
+  },
+  "backstep_slash": {
+    "display_name": "Backstep Slash",
+    "owner": "shared",
+    "kind": "attack",
+    "affinity": "neutral",
+    "target": "single_enemy",
+    "spotlight_cost": 0,
+    "scale": {
+      "primary": "precision",
+      "secondary": "composure"
+    },
+    "output": {
+      "damage": "low",
+      "break": "low"
+    },
+    "effect_id": "backstep_slash",
+    "tags": [
+      "tactical",
+      "attack",
+      "evasion",
+      "class_limited"
+    ],
+    "allowed_characters": [
+      "duelist",
+      "ranger"
+    ],
+    "action_cost": 55,
+    "force_turn_end": false,
+    "requires_full_action_meter": false,
+    "next_turn_dodge_bonus": 20,
+    "next_attack_accuracy_penalty": 10
+  },
+  "backflip": {
+    "display_name": "Backflip",
+    "owner": "shared",
+    "kind": "utility",
+    "affinity": "neutral",
+    "target": "self",
+    "spotlight_cost": 0,
+    "scale": {
+      "primary": "composure",
+      "secondary": "precision"
+    },
+    "output": {
+      "damage": "none",
+      "break": "none"
+    },
+    "effect_id": "backflip",
+    "tags": [
+      "tactical",
+      "evasion",
+      "healing_setup"
+    ],
+    "action_cost": 60,
+    "force_turn_end": false,
+    "requires_full_action_meter": false,
+    "break_cost": 10,
+    "next_turn_dodge_bonus": 25,
+    "next_turn_healing_bonus": 0.25
+  },
+  "charge_slash": {
+    "display_name": "Charge Slash",
+    "owner": "shared",
+    "kind": "attack",
+    "affinity": "neutral",
+    "target": "single_enemy",
+    "spotlight_cost": 0,
+    "scale": {
+      "primary": "power",
+      "secondary": "composure"
+    },
+    "output": {
+      "damage": "medium",
+      "break": "high"
+    },
+    "effect_id": "charge_slash",
+    "tags": [
+      "vanguard",
+      "attack",
+      "break",
+      "guard_cost",
+      "class_limited"
+    ],
+    "allowed_characters": [
+      "vanguard"
+    ],
+    "action_cost": 80,
+    "force_turn_end": true,
+    "requires_full_action_meter": false,
+    "guard_cost": 10,
+    "break_cost": 12,
+    "next_turn_action_meter_bonus": 30
+  },
+  "poisoned_chalice": {
+    "display_name": "Poisoned Chalice",
+    "owner": "shared",
+    "kind": "attack",
+    "affinity": "neutral",
+    "target": "single_enemy",
+    "spotlight_cost": 0,
+    "scale": {
+      "primary": "composure",
+      "secondary": "precision"
+    },
+    "output": {
+      "damage": "low",
+      "break": "low"
+    },
+    "effect_id": "poisoned_chalice",
+    "tags": [
+      "recovery",
+      "attack",
+      "self_debuff",
+      "force_turn_end"
+    ],
+    "action_cost": 100,
+    "force_turn_end": true,
+    "requires_full_action_meter": false,
+    "recovery_charge_cost": 1,
+    "next_turn_dodge_penalty": 25,
+    "next_turn_accuracy_penalty": 20
+  },
+  "double_strike": {
+    "display_name": "Double Strike",
+    "owner": "shared",
+    "kind": "attack",
+    "affinity": "neutral",
+    "target": "single_enemy",
+    "spotlight_cost": 0,
+    "scale": {
+      "primary": "precision",
+      "secondary": "power"
+    },
+    "output": {
+      "damage": "low",
+      "break": "low"
+    },
+    "effect_id": "double_strike",
+    "tags": [
+      "attack",
+      "multi_hit",
+      "self_debuff"
+    ],
+    "action_cost": 80,
+    "force_turn_end": false,
+    "requires_full_action_meter": false
+  },
+  "trance": {
+    "display_name": "Trance",
+    "owner": "shared",
+    "kind": "attack",
+    "affinity": "neutral",
+    "target": "single_enemy",
+    "spotlight_cost": 0,
+    "scale": {
+      "primary": "composure",
+      "secondary": "precision"
+    },
+    "output": {
+      "damage": "low",
+      "break": "low"
+    },
+    "effect_id": "trance",
+    "tags": [
+      "limit",
+      "chain_attack",
+      "spotlight",
+      "once_per_battle"
+    ],
+    "action_cost": 100,
+    "force_turn_end": true,
+    "requires_full_action_meter": false,
+    "once_per_battle": true,
+    "max_chain_attacks": 7
+  },
   "standard_strike": {
     "display_name": "Standard Strike",
     "owner": "shared",

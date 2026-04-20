@@ -432,7 +432,43 @@ def get_event(event_id: str) -> EventText:
     return EVENTS[event_id]
 
 
-def route_preview_header(node: DistrictNode, *, semantic_icons: bool = True) -> str:
+THREAT_TAG_LABELS = {
+    "heavy": "heavy pressure",
+    "channel": "channeling",
+    "burst_start": "burst threat",
+    "burst": "burst threat",
+    "attrition": "attrition",
+    "evasive": "evasive target",
+    "dodge": "evasive target",
+    "guard": "guard pressure",
+    "break": "break pressure",
+    "barrier": "defensive pressure",
+    "recovery": "attrition",
+    "sustain": "attrition",
+    "spotlight": "momentum swings",
+    "boss": "boss pressure",
+    "boss_prep": "tower pressure",
+    "risk": "unstable pressure",
+    "shards": "high stakes",
+}
+
+
+def vague_threat_labels(tags: Sequence[str]) -> List[str]:
+    labels: List[str] = []
+    for raw_tag in tags:
+        label = THREAT_TAG_LABELS.get(str(raw_tag))
+        if label and label not in labels:
+            labels.append(label)
+    return labels
+
+
+def route_preview_header(
+    node: DistrictNode,
+    *,
+    semantic_icons: bool = True,
+    rules_visibility: str = qr.DEFAULT_RULES_VISIBILITY,
+) -> str:
+    visibility = qr.normalize_rules_visibility(rules_visibility)
     title_icon = ""
     if semantic_icons:
         title_icon = emoji_for_route_family(node.route_family) if node.route_family else emoji_for_node_kind(node.kind)
@@ -441,12 +477,16 @@ def route_preview_header(node: DistrictNode, *, semantic_icons: bool = True) -> 
     if node.route_family:
         family_text = f"{title_from_slug(node.route_family)} route"
         parts.append(family_text)
-    if node.risk_tier:
+    if node.risk_tier and visibility != qr.RULES_VISIBILITY_HIDDEN:
         risk_icon = emoji_for_risk_tier(node.risk_tier) if semantic_icons else ""
         risk_text = f"{title_from_slug(node.risk_tier)} risk"
         parts.append(f"{risk_icon} {risk_text}" if risk_icon else risk_text)
-    if node.preview_tags:
+    if node.preview_tags and visibility == qr.RULES_VISIBILITY_DEBUG:
         parts.append("[" + ", ".join(node.preview_tags[:3]) + "]")
+    elif node.preview_tags and visibility == qr.RULES_VISIBILITY_FUZZY:
+        vague_tags = vague_threat_labels(node.preview_tags)
+        if vague_tags:
+            parts.append("[" + ", ".join(vague_tags[:3]) + "]")
     return " -- ".join(parts)
 
 
@@ -459,21 +499,45 @@ def reward_preview_text(node: DistrictNode) -> str:
     return table.preview_text
 
 
-def route_preview_detail(node: DistrictNode) -> str:
+def encounter_lesson_preview(
+    node: DistrictNode,
+    rules_visibility: str = qr.DEFAULT_RULES_VISIBILITY,
+) -> str:
+    visibility = qr.normalize_rules_visibility(rules_visibility)
+    if visibility == qr.RULES_VISIBILITY_HIDDEN:
+        return node.preview_text
+    if visibility == qr.RULES_VISIBILITY_FUZZY:
+        parts = [node.preview_text] if node.preview_text else []
+        vague_tags = vague_threat_labels(node.preview_tags)
+        if vague_tags:
+            parts.append("Threat: " + ", ".join(vague_tags[:3]) + ".")
+        return " ".join(parts)
+    return node.preview_text
+
+
+def route_preview_detail(
+    node: DistrictNode,
+    rules_visibility: str = qr.DEFAULT_RULES_VISIBILITY,
+) -> str:
+    visibility = qr.normalize_rules_visibility(rules_visibility)
     parts = []
-    if node.preview_text:
-        parts.append(node.preview_text)
+    lesson = encounter_lesson_preview(node, visibility)
+    if lesson:
+        parts.append(lesson)
     reward_text = reward_preview_text(node)
-    if reward_text:
+    if reward_text and visibility != qr.RULES_VISIBILITY_HIDDEN:
         parts.append(reward_text)
     return " ".join(parts)
 
 
-def route_choice_log_text(node: DistrictNode) -> str:
-    detail = route_preview_detail(node)
+def route_choice_log_text(
+    node: DistrictNode,
+    rules_visibility: str = qr.DEFAULT_RULES_VISIBILITY,
+) -> str:
+    detail = route_preview_detail(node, rules_visibility)
     if detail:
-        return f"{route_preview_header(node, semantic_icons=False)} | {detail}"
-    return route_preview_header(node, semantic_icons=False)
+        return f"{route_preview_header(node, semantic_icons=False, rules_visibility=rules_visibility)} | {detail}"
+    return route_preview_header(node, semantic_icons=False, rules_visibility=rules_visibility)
 
 
 def get_current_node(campaign: CampaignState) -> Optional[DistrictNode]:
@@ -876,6 +940,8 @@ def clear_battle_only_state(player: qr.Combatant) -> None:
     player.last_skill_used = None
     preserved_metadata = {key: value for key, value in player.metadata.items() if key not in {"last_inputs"}}
     player.metadata = preserved_metadata
+    if hasattr(qr, "clear_p2_battle_metadata"):
+        qr.clear_p2_battle_metadata(player)
     player.guard = max(0, min(player.guard, player.max_guard))
     player.break_meter = max(0, min(player.break_meter, player.max_break))
 
@@ -1035,7 +1101,11 @@ def apply_option(campaign: CampaignState, option_id: str) -> Tuple[str, bool]:
 # ---------------------------------------------------------------------------
 
 
-def render_party(campaign: CampaignState) -> None:
+def render_party(
+    campaign: CampaignState,
+    rules_visibility: str = qr.DEFAULT_RULES_VISIBILITY,
+) -> None:
+    visibility = qr.normalize_rules_visibility(rules_visibility)
     print(f"\n{emoji_label('party', 'PARTY STATUS')}")
     print("-" * 84)
     selected_names = [
@@ -1045,8 +1115,10 @@ def render_party(campaign: CampaignState) -> None:
     print(emoji_label("route", "Selected for next expedition: ") + ", ".join(selected_names))
     for idx, player in enumerate(campaign.players, start=1):
         weapon_name = str(player.metadata.get("weapon_name", "Unknown Weapon"))
+        equipment_names = [str(name) for name in player.metadata.get("equipment_names", [])]
+        equipment_text = ", ".join(equipment_names) if equipment_names else weapon_name
         relic_names = [str(name) for name in player.metadata.get("relic_names", [])]
-        extra_bits = [f"weapon={weapon_name}"]
+        extra_bits = [f"weapon={weapon_name}", f"equipment={equipment_text}"]
         if relic_names:
             extra_bits.append(f"{emoji_label('relic', 'relics')}=" + ", ".join(relic_names))
         character_icon = emoji_for_character_id(player.entity_id)
@@ -1062,10 +1134,15 @@ def render_party(campaign: CampaignState) -> None:
     print(f"{emoji_label('shards', 'Echo Shards')}: {campaign.run_shards}")
     if campaign.expedition_active:
         axes = normalize_axis_scores(campaign.current_node_axis_scores)
-        print(
-            f"Current Node Axis: Power {axes['power']}, "
-            f"Precision {axes['precision']}, Composure {axes['composure']}"
-        )
+        if visibility == qr.RULES_VISIBILITY_DEBUG:
+            print(
+                f"Current Node Axis: Power {axes['power']}, "
+                f"Precision {axes['precision']}, Composure {axes['composure']}"
+            )
+        elif visibility == qr.RULES_VISIBILITY_FUZZY:
+            print("Current route pressure: readable.")
+        else:
+            print("Current route pressure: settled.")
     print(f"{emoji_label('load', 'Content Pack')}: {qr.CONTENT.base_dir}")
     if campaign.boons:
         print(emoji_label("event", "Run Boons:"))
@@ -1116,7 +1193,11 @@ def configure_party(campaign: CampaignState) -> None:
         return
 
 
-def render_hub(campaign: CampaignState, save_file: str) -> None:
+def render_hub(
+    campaign: CampaignState,
+    save_file: str,
+    rules_visibility: str = qr.DEFAULT_RULES_VISIBILITY,
+) -> None:
     clear_screen()
     district = get_district(campaign.district_id)
     hub_event = get_event(district.hub_event_id)
@@ -1129,16 +1210,20 @@ def render_hub(campaign: CampaignState, save_file: str) -> None:
     print(f"Record: {campaign.wins} wins / {campaign.losses} losses | Best nodes cleared: {campaign.best_nodes_cleared}")
     print(f"{emoji_label('save', 'Save file')}: {save_file}")
     print(current_progress_text(campaign))
-    render_party(campaign)
+    render_party(campaign, rules_visibility)
 
 
-def render_node_banner(node: DistrictNode, campaign: CampaignState) -> None:
+def render_node_banner(
+    node: DistrictNode,
+    campaign: CampaignState,
+    rules_visibility: str = qr.DEFAULT_RULES_VISIBILITY,
+) -> None:
     clear_screen()
     district = get_district(campaign.district_id)
     event = get_event(node.event_id)
     current_step = campaign.nodes_cleared() + 1
     print(emoji_label("route", district.display_name))
-    print(f"{route_preview_header(node)}")
+    print(f"{route_preview_header(node, rules_visibility=rules_visibility)}")
     print(f"Route Step {current_step}")
     print(f"{emoji_label('shards', 'Echo Shards on hand')}: {campaign.run_shards}")
     print("-" * 84)
@@ -1323,6 +1408,7 @@ def resume_battle_from_snapshot(
     campaign: CampaignState,
     node: DistrictNode,
     auto: bool,
+    rules_visibility: str = qr.DEFAULT_RULES_VISIBILITY,
 ) -> Optional[qr.BattleState]:
     snapshot = campaign.battle_snapshot
     if snapshot is None:
@@ -1341,10 +1427,13 @@ def resume_battle_from_snapshot(
         rng=rng,
         logger=logger,
         interactive=not auto,
+        rules_visibility=rules_visibility,
+        recovery_charges=campaign.recovery_charges,
     )
     state.cursor = qr.battle_cursor_from_payload(dict(snapshot["cursor"]))
     campaign.players = state.players
     campaign.rng = state.rng
+    campaign.recovery_charges = state.recovery_charges
     return state
 
 
@@ -1356,6 +1445,7 @@ def save_battle_snapshot(
 ) -> None:
     campaign.players = state.players
     campaign.rng = state.rng
+    campaign.recovery_charges = state.recovery_charges
     campaign.current_node_axis_scores = normalize_axis_scores(state.node_axis_scores)
     campaign.node_axis_history[node.node_id] = normalize_axis_scores(state.node_axis_scores)
     campaign.battle_snapshot = create_battle_snapshot(campaign, node, state)
@@ -1643,7 +1733,12 @@ def use_recovery_charge(campaign: CampaignState, auto: bool) -> None:
     campaign.record(f"Used a recovery charge on {target.name}, restoring HP, Guard, and Break.")
 
 
-def maybe_interstitial_menu(campaign: CampaignState, save_file: str, auto: bool) -> bool:
+def maybe_interstitial_menu(
+    campaign: CampaignState,
+    save_file: str,
+    auto: bool,
+    rules_visibility: str = qr.DEFAULT_RULES_VISIBILITY,
+) -> bool:
     """Return True if expedition should continue, False if the player returned to hub."""
     if auto:
         low_hp_count = sum(1 for player in campaign.players if player.hp <= player.max_hp * 0.45)
@@ -1663,7 +1758,7 @@ def maybe_interstitial_menu(campaign: CampaignState, save_file: str, auto: bool)
         if raw in {"", "1"}:
             return True
         if raw == "2":
-            render_party(campaign)
+            render_party(campaign, rules_visibility)
             continue
         if raw == "3":
             use_recovery_charge(campaign, auto=False)
@@ -1684,6 +1779,7 @@ def choose_next_node(
     next_node_ids: Sequence[str],
     auto: bool,
     auto_route: str = "first",
+    rules_visibility: str = qr.DEFAULT_RULES_VISIBILITY,
 ) -> Optional[str]:
     if not next_node_ids:
         return None
@@ -1694,8 +1790,8 @@ def choose_next_node(
     print(emoji_label("route", "Choose the next route:"))
     for idx, node_id in enumerate(next_node_ids, start=1):
         node = district.nodes[node_id]
-        print(f"  {idx}. {route_preview_header(node)}")
-        detail = route_preview_detail(node)
+        print(f"  {idx}. {route_preview_header(node, rules_visibility=rules_visibility)}")
+        detail = route_preview_detail(node, rules_visibility)
         if detail:
             print(indented_wrap(detail))
 
@@ -1705,7 +1801,7 @@ def choose_next_node(
         else:
             choice = next_node_ids[0]
         print(emoji_label("continue", f"Auto route choice: {district.nodes[choice].title}"))
-        campaign.record(f"Route chosen: {route_choice_log_text(district.nodes[choice])}")
+        campaign.record(f"Route chosen: {route_choice_log_text(district.nodes[choice], rules_visibility)}")
         return choice
 
     while True:
@@ -1720,7 +1816,7 @@ def choose_next_node(
             break
         print("That number is out of range.")
 
-    campaign.record(f"Route chosen: {route_choice_log_text(district.nodes[choice])}")
+    campaign.record(f"Route chosen: {route_choice_log_text(district.nodes[choice], rules_visibility)}")
     return choice
 
 
@@ -1745,10 +1841,12 @@ def resolve_battle_node(
     auto: bool,
     log_dir: str,
     save_file: str,
+    rules_visibility: str = qr.DEFAULT_RULES_VISIBILITY,
     node_axis_override: Optional[Dict[str, int]] = None,
     axis_file_data: Optional[Dict[str, object]] = None,
 ) -> bool:
-    state = resume_battle_from_snapshot(campaign, node, auto=auto)
+    visibility = qr.normalize_rules_visibility(rules_visibility)
+    state = resume_battle_from_snapshot(campaign, node, auto=auto, rules_visibility=visibility)
     if state is None:
         prepare_players_for_battle(campaign)
         axis_scores = prompt_node_axis_scores(
@@ -1773,14 +1871,22 @@ def resolve_battle_node(
             rng=campaign.rng,
             logger=logger,
             interactive=not auto,
+            rules_visibility=visibility,
             spotlight=campaign.starting_spotlight,
+            recovery_charges=campaign.recovery_charges,
+            recovery_heal_amount=35,
             node_axis_scores=axis_scores,
         )
         print(f"Battle setup: starting Spotlight {campaign.starting_spotlight}, prebattle barrier {campaign.prebattle_barrier}.")
-        print(
-            f"Node axis scores: Power {axis_scores['power']}, "
-            f"Precision {axis_scores['precision']}, Composure {axis_scores['composure']}."
-        )
+        if visibility == qr.RULES_VISIBILITY_DEBUG:
+            print(
+                f"Node axis scores: Power {axis_scores['power']}, "
+                f"Precision {axis_scores['precision']}, Composure {axis_scores['composure']}."
+            )
+        elif visibility == qr.RULES_VISIBILITY_FUZZY:
+            print("Node pressure: readable.")
+        else:
+            print("Node pressure settles over the fight.")
         if str(encounter_info.get("variant_id", "fixed")) != "fixed":
             print(f"Encounter variant: {encounter_info['variant_id']} ({', '.join(encounter_ids)})")
     else:
@@ -1799,6 +1905,7 @@ def resolve_battle_node(
     campaign.battle_snapshot = None
     campaign.players = state.players
     campaign.rng = state.rng
+    campaign.recovery_charges = state.recovery_charges
 
     os.makedirs(log_dir, exist_ok=True)
     district = get_district(campaign.district_id)
@@ -1850,14 +1957,16 @@ def run_expedition(
     save_file: str,
     log_dir: str,
     auto_route: str = "first",
+    rules_visibility: str = qr.DEFAULT_RULES_VISIBILITY,
     node_axis_override: Optional[Dict[str, int]] = None,
     axis_file_data: Optional[Dict[str, object]] = None,
 ) -> None:
+    visibility = qr.normalize_rules_visibility(rules_visibility)
     district = get_district(campaign.district_id)
     report_file = report_path_for_save(save_file)
     while campaign.expedition_active and campaign.current_node_id is not None:
         node = district.nodes[campaign.current_node_id]
-        render_node_banner(node, campaign)
+        render_node_banner(node, campaign, visibility)
 
         if node.kind in {"battle", "boss"}:
             success = resolve_battle_node(
@@ -1866,6 +1975,7 @@ def run_expedition(
                 auto=auto,
                 log_dir=log_dir,
                 save_file=save_file,
+                rules_visibility=visibility,
                 node_axis_override=node_axis_override,
                 axis_file_data=axis_file_data,
             )
@@ -1883,7 +1993,13 @@ def run_expedition(
             campaign.cleared_node_ids.append(node.node_id)
         campaign.best_nodes_cleared = max(campaign.best_nodes_cleared, campaign.nodes_cleared())
 
-        next_node_id = choose_next_node(campaign, node.next_node_ids, auto=auto, auto_route=auto_route)
+        next_node_id = choose_next_node(
+            campaign,
+            node.next_node_ids,
+            auto=auto,
+            auto_route=auto_route,
+            rules_visibility=visibility,
+        )
         campaign.current_node_id = next_node_id
         save_campaign(campaign, save_file)
 
@@ -1893,7 +2009,7 @@ def run_expedition(
             write_run_report(campaign, report_file)
             return
 
-        if not maybe_interstitial_menu(campaign, save_file=save_file, auto=auto):
+        if not maybe_interstitial_menu(campaign, save_file=save_file, auto=auto, rules_visibility=visibility):
             write_run_report(campaign, report_file)
             return
 
@@ -1911,12 +2027,14 @@ def hub_menu(
     auto: bool,
     log_dir: str,
     auto_route: str = "first",
+    rules_visibility: str = qr.DEFAULT_RULES_VISIBILITY,
     node_axis_override: Optional[Dict[str, int]] = None,
     axis_file_data: Optional[Dict[str, object]] = None,
 ) -> None:
+    visibility = qr.normalize_rules_visibility(rules_visibility)
     report_file = report_path_for_save(save_file)
     while True:
-        render_hub(campaign, save_file)
+        render_hub(campaign, save_file, visibility)
 
         if auto:
             if campaign.expedition_active:
@@ -1926,6 +2044,7 @@ def hub_menu(
                     save_file=save_file,
                     log_dir=log_dir,
                     auto_route=auto_route,
+                    rules_visibility=visibility,
                     node_axis_override=node_axis_override,
                     axis_file_data=axis_file_data,
                 )
@@ -1937,6 +2056,7 @@ def hub_menu(
                     save_file=save_file,
                     log_dir=log_dir,
                     auto_route=auto_route,
+                    rules_visibility=visibility,
                     node_axis_override=node_axis_override,
                     axis_file_data=axis_file_data,
                 )
@@ -1968,6 +2088,7 @@ def hub_menu(
                 save_file=save_file,
                 log_dir=log_dir,
                 auto_route=auto_route,
+                rules_visibility=visibility,
                 node_axis_override=node_axis_override,
                 axis_file_data=axis_file_data,
             )
@@ -1982,13 +2103,14 @@ def hub_menu(
                 save_file=save_file,
                 log_dir=log_dir,
                 auto_route=auto_route,
+                rules_visibility=visibility,
                 node_axis_override=node_axis_override,
                 axis_file_data=axis_file_data,
             )
             save_campaign(campaign, save_file)
             continue
         if choice == "inspect":
-            render_party(campaign)
+            render_party(campaign, visibility)
             input("Press Enter to return to the hub.")
             continue
         if choice == "party":
@@ -2088,12 +2210,19 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
         choices=AUTO_ROUTE_CHOICES,
         help="Auto route choice when a node branches (first or last option).",
     )
+    parser.add_argument(
+        "--rules-visibility",
+        default=qr.DEFAULT_RULES_VISIBILITY,
+        choices=qr.RULES_VISIBILITY_CHOICES,
+        help="How explicit combat rules should be in player-facing logs and previews.",
+    )
     return parser.parse_args(argv)
 
 
 def main(argv: Optional[Sequence[str]] = None) -> int:
     raw_argv = list(sys.argv[1:] if argv is None else argv)
     args = parse_args(raw_argv)
+    rules_visibility = qr.normalize_rules_visibility(args.rules_visibility)
     explicit_solo = any(item == "--solo-character" or item.startswith("--solo-character=") for item in raw_argv)
     try:
         if args.party:
@@ -2144,6 +2273,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         auto=args.auto,
         log_dir=args.log_dir,
         auto_route=args.auto_route,
+        rules_visibility=rules_visibility,
         node_axis_override=node_axis_override,
         axis_file_data=axis_file_data,
     )

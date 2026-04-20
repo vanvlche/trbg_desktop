@@ -43,5 +43,350 @@
     "speed_profile": "medium",
     "special_modifier": "low_hp_finishers_plus_15_percent",
     "description": "A hooked chain weapon that trades blood for terrifying finishers."
+  },
+  "iron_sword": {
+    "display_name": "Iron Sword",
+    "slot_type": "one_handed",
+    "hands": 1,
+    "equipment_category": "sword",
+    "rarity": "common",
+    "affinity_hint": "ash",
+    "tags": [
+      "melee",
+      "sword",
+      "one_handed"
+    ],
+    "damage_multiplier": 1.0,
+    "break_multiplier": 1.0
+  },
+  "wooden_shield": {
+    "display_name": "Wooden Shield",
+    "slot_type": "one_handed",
+    "hands": 1,
+    "equipment_category": "shield",
+    "rarity": "common",
+    "affinity_hint": null,
+    "tags": [
+      "shield",
+      "guard",
+      "one_handed"
+    ],
+    "max_guard_bonus": 8,
+    "guard_bonus": 8,
+    "dodge_break_cost_modifier": 4
+  },
+  "dual_machete": {
+    "display_name": "Dual Machete",
+    "slot_type": "two_handed",
+    "hands": 2,
+    "equipment_category": "machete",
+    "rarity": "common",
+    "affinity_hint": "halo",
+    "tags": [
+      "melee",
+      "two_handed",
+      "duelist",
+      "multi_hit"
+    ],
+    "damage_multiplier": 1.05,
+    "break_multiplier": 0.95,
+    "light_attack_accuracy_modifier": 3
+  },
+  "fortune_teller_staff": {
+    "display_name": "Fortune Teller's Staff",
+    "slot_type": "one_handed",
+    "hands": 1,
+    "equipment_category": "staff",
+    "rarity": "common",
+    "affinity_hint": "shade",
+    "tags": [
+      "mage",
+      "staff",
+      "one_handed",
+      "cantor"
+    ],
+    "damage_multiplier": 0.95,
+    "break_multiplier": 1.0
+  },
+  "wooden_bow": {
+    "display_name": "Wooden Bow",
+    "slot_type": "two_handed",
+    "hands": 2,
+    "equipment_category": "bow",
+    "rarity": "common",
+    "affinity_hint": "spark",
+    "tags": [
+      "ranged",
+      "bow",
+      "two_handed",
+      "ranger"
+    ],
+    "light_attack_accuracy_modifier": 5,
+    "damage_multiplier": 0.95
+  },
+  "dagger": {
+    "display_name": "Dagger",
+    "slot_type": "one_handed",
+    "hands": 1,
+    "equipment_category": "dagger",
+    "rarity": "common",
+    "affinity_hint": "shade",
+    "tags": [
+      "melee",
+      "dagger",
+      "one_handed",
+      "pilgrim"
+    ],
+    "light_attack_accuracy_modifier": 5,
+    "damage_multiplier": 0.9
+  },
+  "bell_iron_sabre": {
+    "display_name": "Bell-Iron Sabre",
+    "slot_type": "one_handed",
+    "hands": 1,
+    "equipment_category": "sword",
+    "rarity": "uncommon",
+    "affinity_hint": "ash",
+    "tags": [
+      "melee",
+      "sword",
+      "one_handed",
+      "vanguard"
+    ],
+    "light_attack_accuracy_modifier": 5,
+    "guard_bonus": 4
+  },
+  "tollsplitter_hatchet": {
+    "display_name": "Tollsplitter Hatchet",
+    "slot_type": "one_handed",
+    "hands": 1,
+    "equipment_category": "axe",
+    "rarity": "rare",
+    "affinity_hint": "ash",
+    "tags": [
+      "melee",
+      "axe",
+      "one_handed",
+      "vanguard",
+      "break"
+    ],
+    "break_multiplier": 1.15,
+    "heavy_attack_damage_multiplier": 1.1,
+    "accuracy_modifier": -3
+  },
+  "gate_buckler": {
+    "display_name": "Gate Buckler",
+    "slot_type": "one_handed",
+    "hands": 1,
+    "equipment_category": "shield",
+    "rarity": "uncommon",
+    "affinity_hint": null,
+    "tags": [
+      "shield",
+      "guard",
+      "parry",
+      "one_handed",
+      "vanguard"
+    ],
+    "max_guard_bonus": 6,
+    "parry_guard_cost_modifier": -3
+  },
+  "anchor_towershield": {
+    "display_name": "Anchor Towershield",
+    "slot_type": "one_handed",
+    "hands": 1,
+    "equipment_category": "shield",
+    "rarity": "rare",
+    "affinity_hint": null,
+    "tags": [
+      "shield",
+      "guard",
+      "heavy",
+      "one_handed",
+      "vanguard"
+    ],
+    "max_guard_bonus": 16,
+    "guard_bonus": 16,
+    "dodge_break_cost_modifier": 8,
+    "damage_multiplier": 0.95
+  },
+  "oathbreaker_sword": {
+    "display_name": "Oathbreaker Sword",
+    "slot_type": "one_handed",
+    "hands": 1,
+    "equipment_category": "sword",
+    "rarity": "very_rare",
+    "affinity_hint": "ash",
+    "tags": [
+      "melee",
+      "sword",
+      "one_handed",
+      "vanguard",
+      "stagger"
+    ],
+    "damage_multiplier": 1.08,
+    "break_multiplier": 1.1
+  },
+  "glass_rapier_pair": {
+    "display_name": "Glass Rapier Pair",
+    "slot_type": "two_handed",
+    "hands": 2,
+    "equipment_category": "sabre",
+    "rarity": "rare",
+    "affinity_hint": "halo",
+    "tags": [
+      "melee",
+      "two_handed",
+      "duelist",
+      "precision"
+    ],
+    "light_attack_accuracy_modifier": 8,
+    "damage_multiplier": 0.95
+  },
+  "mirror_kukri": {
+    "display_name": "Mirror Kukri",
+    "slot_type": "two_handed",
+    "hands": 2,
+    "equipment_category": "dagger",
+    "rarity": "uncommon",
+    "affinity_hint": "halo",
+    "tags": [
+      "melee",
+      "two_handed",
+      "duelist",
+      "crit"
+    ],
+    "damage_multiplier": 1.05,
+    "accuracy_modifier": -2
+  },
+  "twin_sting_sabre": {
+    "display_name": "Twin-Sting Sabre",
+    "slot_type": "two_handed",
+    "hands": 2,
+    "equipment_category": "sabre",
+    "rarity": "rare",
+    "affinity_hint": "halo",
+    "tags": [
+      "melee",
+      "two_handed",
+      "duelist",
+      "multi_hit"
+    ],
+    "light_attack_accuracy_modifier": 4,
+    "break_multiplier": 1.05
+  },
+  "execution_falchions": {
+    "display_name": "Execution Falchions",
+    "slot_type": "two_handed",
+    "hands": 2,
+    "equipment_category": "sword",
+    "rarity": "very_rare",
+    "affinity_hint": "ash",
+    "tags": [
+      "melee",
+      "two_handed",
+      "duelist",
+      "execute"
+    ],
+    "damage_multiplier": 1.15,
+    "accuracy_modifier": -5
+  },
+  "chain_machete": {
+    "display_name": "Chain Machete",
+    "slot_type": "two_handed",
+    "hands": 2,
+    "equipment_category": "machete",
+    "rarity": "uncommon",
+    "affinity_hint": "halo",
+    "tags": [
+      "melee",
+      "two_handed",
+      "duelist",
+      "break"
+    ],
+    "break_multiplier": 1.12,
+    "accuracy_modifier": -3
+  },
+  "chorus_bell_wand": {
+    "display_name": "Chorus Bell Wand",
+    "slot_type": "one_handed",
+    "hands": 1,
+    "equipment_category": "wand",
+    "rarity": "uncommon",
+    "affinity_hint": "halo",
+    "tags": [
+      "mage",
+      "wand",
+      "one_handed",
+      "cantor",
+      "barrier"
+    ],
+    "damage_multiplier": 0.95,
+    "break_multiplier": 1.05
+  },
+  "undertow_scepter": {
+    "display_name": "Undertow Scepter",
+    "slot_type": "one_handed",
+    "hands": 1,
+    "equipment_category": "scepter",
+    "rarity": "rare",
+    "affinity_hint": "tide",
+    "tags": [
+      "mage",
+      "scepter",
+      "one_handed",
+      "cantor",
+      "healing"
+    ],
+    "damage_multiplier": 0.9
+  },
+  "salt_censer": {
+    "display_name": "Salt Censer",
+    "slot_type": "one_handed",
+    "hands": 1,
+    "equipment_category": "mage_focus",
+    "rarity": "uncommon",
+    "affinity_hint": "shade",
+    "tags": [
+      "mage",
+      "focus",
+      "one_handed",
+      "cantor",
+      "cleanse"
+    ],
+    "max_break_bonus": 6
+  },
+  "glass_astrolabe": {
+    "display_name": "Glass Astrolabe",
+    "slot_type": "one_handed",
+    "hands": 1,
+    "equipment_category": "mage_focus",
+    "rarity": "rare",
+    "affinity_hint": "halo",
+    "tags": [
+      "mage",
+      "focus",
+      "one_handed",
+      "cantor",
+      "reveal"
+    ],
+    "light_attack_accuracy_modifier": 4
+  },
+  "funeral_chime_staff": {
+    "display_name": "Funeral Chime Staff",
+    "slot_type": "two_handed",
+    "hands": 2,
+    "equipment_category": "staff",
+    "rarity": "very_rare",
+    "affinity_hint": "shade",
+    "tags": [
+      "mage",
+      "staff",
+      "two_handed",
+      "cantor",
+      "spotlight"
+    ],
+    "damage_multiplier": 1.05,
+    "break_multiplier": 1.1
   }
 }

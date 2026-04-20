@@ -2,7 +2,11 @@
   "vanguard": {
     "display_name": "Vanguard",
     "role": "frontline_tank_break",
-    "weapon": "greatblade",
+    "weapon": "iron_sword",
+    "starting_equipment": [
+      "iron_sword",
+      "wooden_shield"
+    ],
     "default_affinity": "ash",
     "preferred_inputs": [
       "power",
@@ -16,6 +20,8 @@
     },
     "passive": "entering bastion or ravage restores 10% max_guard",
     "skills": [
+      "light_attack",
+      "heavy_attack",
       "standard_strike",
       "brace",
       "read_opening",
@@ -30,7 +36,10 @@
   "duelist": {
     "display_name": "Duelist",
     "role": "fast_crit_counter",
-    "weapon": "rapier",
+    "weapon": "dual_machete",
+    "starting_equipment": [
+      "dual_machete"
+    ],
     "default_affinity": "halo",
     "preferred_inputs": [
       "precision",
@@ -44,6 +53,8 @@
     },
     "passive": "first crit each turn grants 1 spotlight",
     "skills": [
+      "light_attack",
+      "heavy_attack",
       "standard_strike",
       "brace",
       "read_opening",
@@ -58,7 +69,10 @@
   "cantor": {
     "display_name": "Cantor",
     "role": "status_barrier_support",
-    "weapon": "chime_staff",
+    "weapon": "fortune_teller_staff",
+    "starting_equipment": [
+      "fortune_teller_staff"
+    ],
     "default_affinity": "shade",
     "preferred_inputs": [
       "precision",
@@ -72,6 +86,8 @@
     },
     "passive": "when this unit applies a status, the lowest_guard ally gains a small barrier",
     "skills": [
+      "light_attack",
+      "heavy_attack",
       "standard_strike",
       "brace",
       "read_opening",
@@ -88,7 +104,10 @@
   "ranger": {
     "display_name": "Ranger",
     "role": "ranged_control_swap_enabler",
-    "weapon": "signal_rifle",
+    "weapon": "wooden_bow",
+    "starting_equipment": [
+      "wooden_bow"
+    ],
     "default_affinity": "spark",
     "preferred_inputs": [
       "precision",
@@ -102,6 +121,8 @@
     },
     "passive": "first attack against a revealed target gains guard (swap passive adapted for prototype)",
     "skills": [
+      "light_attack",
+      "heavy_attack",
       "standard_strike",
       "brace",
       "read_opening",
@@ -116,7 +137,10 @@
   "penitent": {
     "display_name": "Penitent",
     "role": "risk_reward_finisher",
-    "weapon": "chain_blade",
+    "weapon": "dagger",
+    "starting_equipment": [
+      "dagger"
+    ],
     "default_affinity": "shade",
     "preferred_inputs": [
       "power",
@@ -130,6 +154,8 @@
     },
     "passive": "when below 50% hp, finishing skills gain +1 effective power band",
     "skills": [
+      "light_attack",
+      "heavy_attack",
       "standard_strike",
       "brace",
       "read_opening",
