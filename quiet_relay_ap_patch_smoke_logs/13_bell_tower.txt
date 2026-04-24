@@ -1,0 +1,271 @@
+[Round 01] Battle loadout: Feint Rush, Double Strike, Charge Slash.
+[Round 01] Battle begins.
+[Round 01] Node axis scores: Power 80, Precision 80, Composure 80.
+[Round 01] Turn order: Orison, Vicar of the Last Toll, Vanguard
+[Round 01] Orison weighs the party like flood-forged debt.
+[Round 01] Orison, Vicar of the Last Toll enters ravage posture (power dominant).
+[Round 01] Orison, Vicar of the Last Toll presses the line.
+[Round 01] Orison, Vicar of the Last Toll drives a tower step through Vanguard.
+[Round 01] Player Spotlight +2 (Slip Ledger) -> 3/5
+[Round 01] Slip Ledger steadies Vanguard's next offensive risk.
+[Round 01] Vanguard spends 8/8 Break to dodge.
+[Round 01] Vanguard dodges cleanly [dodge roll 11/62].
+[Round 01] Orison, Vicar of the Last Toll loses 10 break.
+[Round 01] Orison oversteps into an exposed beat.
+[Round 01] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+[Round 01] Vanguard enters flow posture (balanced spread).
+[Round 01] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 01] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 01] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 01] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 54/95].
+[Round 01] Orison, Vicar of the Last Toll loses 84 break.
+[Round 01] Vanguard hits Orison, Vicar of the Last Toll for 22 guard.
+[Round 01] Charge Slash batters the enemy's Break.
+[Round 01] Vanguard's slip window closes.
+[Round 01] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 01] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 01] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 01] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 21/95].
+[Round 01] Orison, Vicar of the Last Toll loses 65 break.
+[Round 01] Orison, Vicar of the Last Toll withdraws behind the guard (staggered).
+[Round 01] Orison, Vicar of the Last Toll is staggered!
+[Round 01] Vanguard hits Orison, Vicar of the Last Toll for 33 guard. CRIT!
+[Round 01] Charge Slash batters the enemy's Break.
+[Round 01] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 02] ------------------------------------------------------------
+[Round 02] Turn order: Orison, Vicar of the Last Toll, Vanguard
+[Round 02] Orison, Vicar of the Last Toll is staggered and loses the turn.
+[Round 02] Orison, Vicar of the Last Toll is no longer affected by reveal.
+[Round 02] Vanguard cashes in +1 AP from last turn's setup.
+[Round 02] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+[Round 02] Vanguard enters flow posture (balanced spread).
+[Round 02] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 02] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 02] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 02] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 40/94].
+[Round 02] Orison, Vicar of the Last Toll loses 84 break.
+[Round 02] Vanguard hits Orison, Vicar of the Last Toll for 20 guard.
+[Round 02] Charge Slash batters the enemy's Break.
+[Round 02] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 02] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 02] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 02] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 53/94].
+[Round 02] Orison, Vicar of the Last Toll loses 75 break.
+[Round 02] Orison, Vicar of the Last Toll is staggered!
+[Round 02] Vanguard hits Orison, Vicar of the Last Toll for 20 guard.
+[Round 02] Charge Slash batters the enemy's Break.
+[Round 02] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 02] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 02] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 02] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 20/95].
+[Round 02] Vanguard hits Orison, Vicar of the Last Toll for 7 guard, 21 hp.
+[Round 03] ------------------------------------------------------------
+[Round 03] Turn order: Orison, Vicar of the Last Toll, Vanguard
+[Round 03] Orison, Vicar of the Last Toll is staggered and loses the turn.
+[Round 03] Vanguard cashes in +1 AP from last turn's setup.
+[Round 03] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+[Round 03] Vanguard enters flow posture (balanced spread).
+[Round 03] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 03] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 03] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 03] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 14/94].
+[Round 03] Orison, Vicar of the Last Toll loses 84 break.
+[Round 03] Vanguard hits Orison, Vicar of the Last Toll for 20 hp.
+[Round 03] Charge Slash batters the enemy's Break.
+[Round 03] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 03] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 03] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 03] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 10/94].
+[Round 03] Orison, Vicar of the Last Toll loses 75 break.
+[Round 03] Orison, Vicar of the Last Toll is staggered!
+[Round 03] Vanguard hits Orison, Vicar of the Last Toll for 30 hp. CRIT!
+[Round 03] Charge Slash batters the enemy's Break.
+[Round 03] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 03] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 03] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 03] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 45/95].
+[Round 03] Vanguard hits Orison, Vicar of the Last Toll for 28 hp.
+[Round 04] ------------------------------------------------------------
+[Round 04] Turn order: Orison, Vicar of the Last Toll, Vanguard
+[Round 04] Orison, Vicar of the Last Toll is staggered and loses the turn.
+[Round 04] Vanguard cashes in +1 AP from last turn's setup.
+[Round 04] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+[Round 04] Vanguard enters flow posture (balanced spread).
+[Round 04] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 04] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 04] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 04] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 4/94].
+[Round 04] Orison, Vicar of the Last Toll loses 93 break.
+[Round 04] Vanguard hits Orison, Vicar of the Last Toll for 30 hp. CRIT!
+[Round 04] Charge Slash batters the enemy's Break.
+[Round 04] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 04] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 04] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 04] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 66/94].
+[Round 04] Orison, Vicar of the Last Toll loses 66 break.
+[Round 04] Orison, Vicar of the Last Toll is staggered!
+[Round 04] Vanguard hits Orison, Vicar of the Last Toll for 20 hp.
+[Round 04] Charge Slash batters the enemy's Break.
+[Round 04] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 04] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 04] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 04] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 42/95].
+[Round 04] Vanguard hits Orison, Vicar of the Last Toll for 28 hp.
+[Round 05] ------------------------------------------------------------
+[Round 05] Turn order: Orison, Vicar of the Last Toll, Vanguard
+[Round 05] Orison, Vicar of the Last Toll is staggered and loses the turn.
+[Round 05] Vanguard cashes in +1 AP from last turn's setup.
+[Round 05] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+[Round 05] Vanguard enters flow posture (balanced spread).
+[Round 05] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 05] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 05] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 05] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 16/94].
+[Round 05] Orison, Vicar of the Last Toll loses 84 break.
+[Round 05] Vanguard hits Orison, Vicar of the Last Toll for 20 hp.
+[Round 05] Charge Slash batters the enemy's Break.
+[Round 05] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 05] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 05] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 05] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 60/94].
+[Round 05] Orison, Vicar of the Last Toll loses 75 break.
+[Round 05] Orison, Vicar of the Last Toll is staggered!
+[Round 05] Vanguard hits Orison, Vicar of the Last Toll for 20 hp.
+[Round 05] Charge Slash batters the enemy's Break.
+[Round 05] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 05] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 05] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 05] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 80/95].
+[Round 05] Vanguard hits Orison, Vicar of the Last Toll for 28 hp.
+[Round 06] ------------------------------------------------------------
+[Round 06] Turn order: Orison, Vicar of the Last Toll, Vanguard
+[Round 06] Orison, Vicar of the Last Toll is staggered and loses the turn.
+[Round 06] Vanguard cashes in +1 AP from last turn's setup.
+[Round 06] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+[Round 06] Vanguard enters flow posture (balanced spread).
+[Round 06] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 06] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 06] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 06] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 56/94].
+[Round 06] Orison, Vicar of the Last Toll loses 84 break.
+[Round 06] Vanguard hits Orison, Vicar of the Last Toll for 20 hp.
+[Round 06] Charge Slash batters the enemy's Break.
+[Round 06] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 06] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 06] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 06] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 44/94].
+[Round 06] Orison, Vicar of the Last Toll loses 75 break.
+[Round 06] Orison, Vicar of the Last Toll is staggered!
+[Round 06] Vanguard hits Orison, Vicar of the Last Toll for 20 hp.
+[Round 06] Charge Slash batters the enemy's Break.
+[Round 06] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 06] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 06] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 06] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 77/95].
+[Round 06] Vanguard hits Orison, Vicar of the Last Toll for 28 hp.
+[Round 07] ------------------------------------------------------------
+[Round 07] Turn order: Orison, Vicar of the Last Toll, Vanguard
+[Round 07] Orison, Vicar of the Last Toll is staggered and loses the turn.
+[Round 07] Vanguard cashes in +1 AP from last turn's setup.
+[Round 07] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+[Round 07] Vanguard enters flow posture (balanced spread).
+[Round 07] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 07] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 07] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 07] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 52/94].
+[Round 07] Orison, Vicar of the Last Toll loses 93 break.
+[Round 07] Vanguard hits Orison, Vicar of the Last Toll for 30 hp. CRIT!
+[Round 07] Charge Slash batters the enemy's Break.
+[Round 07] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 07] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 07] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 07] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 26/94].
+[Round 07] Orison, Vicar of the Last Toll loses 66 break.
+[Round 07] Orison, Vicar of the Last Toll is staggered!
+[Round 07] Vanguard hits Orison, Vicar of the Last Toll for 20 hp.
+[Round 07] Charge Slash batters the enemy's Break.
+[Round 07] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 07] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 07] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 07] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 23/95].
+[Round 07] Vanguard hits Orison, Vicar of the Last Toll for 42 hp. CRIT!
+[Round 08] ------------------------------------------------------------
+[Round 08] Turn order: Orison, Vicar of the Last Toll, Vanguard
+[Round 08] Orison, Vicar of the Last Toll is staggered and loses the turn.
+[Round 08] Vanguard cashes in +1 AP from last turn's setup.
+[Round 08] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+[Round 08] Vanguard enters flow posture (balanced spread).
+[Round 08] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 08] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 08] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 08] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 7/94].
+[Round 08] Orison, Vicar of the Last Toll loses 84 break.
+[Round 08] Vanguard hits Orison, Vicar of the Last Toll for 20 hp.
+[Round 08] Charge Slash batters the enemy's Break.
+[Round 08] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 08] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 08] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 08] Vanguard grazes Orison, Vicar of the Last Toll [hit roll 97/94].
+[Round 08] Orison, Vicar of the Last Toll loses 42 break.
+[Round 08] Vanguard hits Orison, Vicar of the Last Toll for 10 hp.
+[Round 08] Charge Slash batters the enemy's Break.
+[Round 08] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 08] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 08] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 83/95].
+[Round 08] Orison, Vicar of the Last Toll loses 13 break.
+[Round 08] Vanguard hits Orison, Vicar of the Last Toll for 21 hp.
+[Round 09] ------------------------------------------------------------
+[Round 09] Turn order: Orison, Vicar of the Last Toll, Vanguard
+[Round 09] Orison, Vicar of the Last Toll recovers 3 guard.
+[Round 09] Orison, Vicar of the Last Toll enters Quiet Relay cadence.
+[Round 09] Orison, Vicar of the Last Toll enters flow posture (balanced spread).
+[Round 09] Orison, Vicar of the Last Toll recenters to set footing.
+[Round 09] Player Spotlight +1 (Orison, Vicar of the Last Toll entered Flow) -> 4/5
+[Round 09] Orison, Vicar of the Last Toll invokes Quiet Relay.
+[Round 09] The second toll comes after the breath.
+[Round 09] Only one bellflash is true.
+[Round 09] A false flash skims high before the true cut arrives.
+[Round 09] Enemy Spotlight +1 (Vanguard mistimed dodge) -> 1/5
+[Round 09] Vanguard spends 8/8 Break to dodge.
+[Round 09] Vanguard mistimes the dodge [dodge roll 83/68].
+[Round 09] Vanguard's barrier absorbs 10 damage.
+[Round 09] Vanguard loses 10 break.
+[Round 09] Orison, Vicar of the Last Toll hits Vanguard for 2 hp.
+[Round 09] Vanguard gains reveal (1).
+[Round 09] Enemy Spotlight +1 (Orison, Vicar of the Last Toll applied reveal) -> 2/5
+[Round 09] The tower tolls red.
+[Round 09] Enemy Spotlight -1 (cashed for pressure) -> 1/5
+[Round 09] Enemy Spotlight is cashed for pressure.
+[Round 09] Player Spotlight +1 (Slip Ledger) -> 5/5
+[Round 09] Slip Ledger steadies Vanguard's next offensive risk.
+[Round 09] Floodgate Loop inflicts soak on Orison, Vicar of the Last Toll.
+[Round 09] Vanguard cleanses reveal via Floodgate Loop.
+[Round 09] Orison, Vicar of the Last Toll withdraws behind the guard (pressure answered).
+[Round 09] Vanguard spends 8/8 Break to dodge.
+[Round 09] Vanguard dodges cleanly [dodge roll 21/68].
+[Round 09] Vanguard reads the weight and slips clear.
+[Round 09] Orison, Vicar of the Last Toll loses 18 break.
+[Round 09] A clean relay read turns Orison's climax into a punish window.
+[Round 09] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+[Round 09] Vanguard enters flow posture (balanced spread).
+[Round 09] Vanguard uses Double Strike [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 09] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 09] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 85/95].
+[Round 09] Orison, Vicar of the Last Toll loses 2 break.
+[Round 09] Orison, Vicar of the Last Toll is staggered!
+[Round 09] Vanguard hits Orison, Vicar of the Last Toll for 29 hp. CRIT!
+[Round 09] Double Strike hit 1/2 resolves.
+[Round 09] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 50/95].
+[Round 09] Vanguard hits Orison, Vicar of the Last Toll for 26 hp.
+[Round 09] Double Strike hit 2/2 resolves.
+[Round 09] Double Strike piles on extra Break pressure.
+[Round 09] Vanguard is left open: Guard and Parry are disabled until the next turn.
+[Round 09] Vanguard's slip window closes.
+[Round 09] Vanguard uses Double Strike [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 09] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 09] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 55/95].
+[Round 09] Vanguard hits Orison, Vicar of the Last Toll for 26 hp.
+[Round 09] Orison, Vicar of the Last Toll falls.
+[Round 09] Double Strike hit 1/2 resolves.
+[Round 09] Vanguard is left open: Guard and Parry are disabled until the next turn.
+[Round 09] Players win the battle.

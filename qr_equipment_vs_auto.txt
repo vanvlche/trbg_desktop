@@ -1,0 +1,1049 @@
+
+====================================================================================
+🕯️ Quiet Relay: 2026 - Operations Base [Fully Data-Driven]
+------------------------------------------------------------------------------------
+Late 2026. Rain ticks against emergency floodlights while the expedition team
+regroups in a ruined signal base. Beyond the shutters waits the Rain Toll
+Corridor, a short but hostile district warped by bells, transit steel, and ash.
+
+🧭 District: District 03: Rain Toll Corridor
+Last result: No expeditions yet.
+Record: 0 wins / 0 losses | Best nodes cleared: 0
+💾 Save file: quiet_relay_equipment_smoke_save.json
+↩️ No expedition currently active.
+
+⛭ PARTY STATUS
+------------------------------------------------------------------------------------
+🧭 Selected for next expedition: Vanguard
+1. 🛡️ Vanguard           HP 160/160  GUARD  72/72   BREAK  90/90   ash    posture=flow    pos=set       | gear=Iron Sword + Wooden Shield | 🧿 relics=Iron Vow
+------------------------------------------------------------------------------------
+🩹 Recovery Charges: 3/3 | Healing Potions: 1 | ☀️ Start Spotlight: 0 | 🛡️ Prebattle Barrier: 0 | 👑 Boss Guard Penalty: 0
+💠 Echo Shards: 0
+📂 Content Pack: /mnt/c/Users/kim50/projects/trbg_desktop/quiet_relay_content
+✦ Run Boons: none
+
+
+====================================================================================
+🧭 District 03: Rain Toll Corridor
+◈ Overpass Watch -- Battle -- Shared route -- 🟡 Medium risk -- [guard, spotlight, recovery]
+Route Step 1
+💠 Echo Shards on hand: 0
+------------------------------------------------------------------------------------
+An elevated roadway buckles under cathedral stone. A Rustbound Pilgrim drags its
+bell-metal blade through the rain while ivy crawls across the guardrail.
+
+Battle setup: starting Spotlight 0, prebattle barrier 0.
+Node axis scores: Power 80, Precision 80, Composure 80.
+Encounter variant: pilgrim_ivy_watch (rustbound_pilgrim, ivy_strangler)
+Battle loadout: Feint Rush, Double Strike, Charge Slash.
+Battle begins.
+Vanguard equips Iron Sword + Wooden Shield.
+Vanguard shield discipline: Guard +2, reaction +5%, Break +5%, Charge Slash Break +10%.
+Node axis scores: Power 80, Precision 80, Composure 80.
+Turn order: Ivy Strangler #2, Rustbound Pilgrim, Vanguard
+Ivy Strangler #2 enters flow posture (balanced spread).
+Player Spotlight +1 (Ivy Strangler #2 entered Flow) -> 1/5
+Ivy Strangler #2 lashes thorn-vines at Vanguard.
+Vanguard withdraws behind the guard.
+Guard gate success: Power 80 >= 55.
+Vanguard loses 9 break.
+Ivy Strangler #2 hits Vanguard for 14 guard.
+Vanguard gains snare (2).
+Rustbound Pilgrim raises its weapon and begins charging a heavy overhead.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard recenters to set footing.
+Vanguard cleanses snare via Flow.
+Vanguard spends 9 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Rustbound Pilgrim [hit roll 29/95].
+Rustbound Pilgrim loses 54 break.
+Rustbound Pilgrim withdraws behind the guard (staggered).
+Rustbound Pilgrim is staggered!
+Vanguard hits Rustbound Pilgrim for 23 guard.
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+Vanguard spends 9 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Ivy Strangler #2 [hit roll 80/95].
+Ivy Strangler #2 loses 36 break.
+Ivy Strangler #2 withdraws behind the guard (staggered).
+Ivy Strangler #2 is staggered!
+Vanguard hits Ivy Strangler #2 for 29 guard.
+Player Spotlight +1 (Vanguard exploited affinity) -> 2/5
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+------------------------------------------------------------
+Turn order: Ivy Strangler #2, Rustbound Pilgrim, Vanguard
+Ivy Strangler #2 is staggered and loses the turn.
+Rustbound Pilgrim is staggered and loses the turn.
+Vanguard cashes in +1 AP from last turn's setup.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+Vanguard enters flow posture (balanced spread).
+Player Spotlight +1 (Vanguard entered Flow) -> 3/5
+Vanguard spends 9 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard grazes Rustbound Pilgrim [hit roll 100/95].
+Rustbound Pilgrim loses 54 break.
+Rustbound Pilgrim is staggered!
+Vanguard hits Rustbound Pilgrim for 2 guard, 10 hp.
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+Vanguard spends 9 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard grazes Ivy Strangler #2 [hit roll 99/95].
+Ivy Strangler #2 loses 36 break.
+Ivy Strangler #2 is staggered!
+Vanguard hits Ivy Strangler #2 for 11 guard, 4 hp.
+Player Spotlight +1 (Vanguard exploited affinity) -> 4/5
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Ivy Strangler #2 [hit roll 63/95].
+Vanguard hits Ivy Strangler #2 for 39 hp.
+Player Spotlight +1 (Vanguard exploited affinity) -> 5/5
+------------------------------------------------------------
+Turn order: Ivy Strangler #2, Vanguard, Rustbound Pilgrim
+Ivy Strangler #2 is staggered and loses the turn.
+Vanguard cashes in +1 AP from last turn's setup.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 9 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Ivy Strangler #2 [hit roll 11/95].
+Ivy Strangler #2 loses 36 break.
+Ivy Strangler #2 is staggered!
+Vanguard hits Ivy Strangler #2 for 29 hp.
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+Vanguard uses Double Strike [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Ivy Strangler #2 [hit roll 37/95].
+Vanguard hits Ivy Strangler #2 for 45 hp. CRIT!
+Ivy Strangler #2 falls.
+Double Strike hit 1/2 resolves.
+Vanguard is left open: Guard and Parry are disabled until the next turn.
+Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Rustbound Pilgrim [hit roll 58/95].
+Vanguard hits Rustbound Pilgrim for 48 hp. CRIT!
+Rustbound Pilgrim is staggered and loses the turn.
+Rustbound Pilgrim is no longer affected by delayed_overhead.
+------------------------------------------------------------
+Turn order: Vanguard, Rustbound Pilgrim
+Vanguard cashes in +1 AP from last turn's setup.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 9 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Rustbound Pilgrim [hit roll 87/95].
+Rustbound Pilgrim loses 54 break.
+Rustbound Pilgrim is staggered!
+Vanguard hits Rustbound Pilgrim for 23 hp.
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+Vanguard uses Double Strike [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Rustbound Pilgrim [hit roll 27/95].
+Vanguard hits Rustbound Pilgrim for 24 hp.
+Rustbound Pilgrim falls.
+Double Strike hit 1/2 resolves.
+Vanguard is left open: Guard and Parry are disabled until the next turn.
+Players win the battle.
+Battle log written to: quiet_relay_equipment_smoke_logs/01_overpass_watch.txt
+Victory. Echo shards gained: 1. Echo shards on hand: 1
+Choose 1 reward from Overpass Watch Rewards:
+  1. Iron Mesh - +12 max guard to all allies, and restore 12 guard.
+  2. Stage Light - +1 starting Spotlight for future battles this run (max 3).
+  3. Field Dressing - Heal all allies for 18 HP.
+The team rehearses the opening beat. Starting Spotlight increases by 1.
+🧭 Choose the next route:
+  1. 🔧 Flooded Arcade -- Boss -- Maintenance route -- 🟢 Low risk -- [sustain, barrier, dodge]
+     Safer maintenance route with recovery and guard rewards. Likely rewards:
+     sustain, barrier, dodge.
+  2. 🕯️ Witness Chapel -- Boss -- Chapel route -- 🟡 Medium risk -- [parry, reveal, break]
+     Sharper chapel route with parry tempo and reveal rewards. Likely rewards:
+     parry, reveal, break.
+▶️ Auto route choice: Flooded Arcade
+
+====================================================================================
+🧭 District 03: Rain Toll Corridor
+🔧 Flooded Arcade -- Boss -- Maintenance route -- 🟢 Low risk -- [sustain, barrier, dodge]
+Route Step 2
+💠 Echo Shards on hand: 1
+------------------------------------------------------------------------------------
+Neon signage flickers beneath rising water as Moraine, Bailiff of the Sluice,
+locks a flood-key into place. Bell-marked channels throb under the tiles,
+warning that one mistimed read will drag someone under.
+
+Battle setup: starting Spotlight 1, prebattle barrier 0.
+Node axis scores: Power 80, Precision 80, Composure 80.
+Battle loadout: Feint Rush, Double Strike, Charge Slash.
+Battle begins.
+Vanguard equips Iron Sword + Wooden Shield.
+Vanguard shield discipline: Guard +2, reaction +5%, Break +5%, Charge Slash Break +10%.
+Node axis scores: Power 80, Precision 80, Composure 80.
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+Moraine, Bailiff of the Sluice withdraws behind the guard.
+Moraine, Bailiff of the Sluice slams a gate stamp into Vanguard.
+Enemy Spotlight +1 (Vanguard mistimed dodge) -> 1/5
+Vanguard spends 8/8 Break to dodge.
+Vanguard mistimes the dodge [dodge roll 96/76].
+Vanguard loses 13 break.
+Moraine, Bailiff of the Sluice hits Vanguard for 4 guard, 8 hp.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 66/95].
+Moraine, Bailiff of the Sluice loses 97 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 23 guard.
+Charge Slash batters the enemy's Break.
+Vanguard uses Double Strike [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 10/95].
+Moraine, Bailiff of the Sluice loses 10 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 18 guard.
+Double Strike hit 1/2 resolves.
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 44/95].
+Moraine, Bailiff of the Sluice loses 11 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 27 guard. CRIT!
+Double Strike hit 2/2 resolves.
+Moraine, Bailiff of the Sluice loses 2 break.
+Moraine, Bailiff of the Sluice is staggered!
+Double Strike piles on extra Break pressure.
+Vanguard is left open: Guard and Parry are disabled until the next turn.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice is staggered and loses the turn.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 59/95].
+Moraine, Bailiff of the Sluice loses 97 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 23 guard.
+Charge Slash batters the enemy's Break.
+Vanguard uses Double Strike [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 83/95].
+Moraine, Bailiff of the Sluice loses 10 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 11 guard, 7 hp.
+Double Strike hit 1/2 resolves.
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 92/95].
+Moraine, Bailiff of the Sluice loses 10 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 18 hp.
+Double Strike hit 2/2 resolves.
+Moraine, Bailiff of the Sluice loses 3 break.
+Moraine, Bailiff of the Sluice is staggered!
+Double Strike piles on extra Break pressure.
+Vanguard is left open: Guard and Parry are disabled until the next turn.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice is staggered and loses the turn.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 48/95].
+Moraine, Bailiff of the Sluice loses 97 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 23 hp.
+Charge Slash batters the enemy's Break.
+Vanguard uses Double Strike [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 60/95].
+Moraine, Bailiff of the Sluice loses 10 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 18 hp.
+Double Strike hit 1/2 resolves.
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 12/95].
+Moraine, Bailiff of the Sluice loses 10 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 18 hp.
+Double Strike hit 2/2 resolves.
+Moraine, Bailiff of the Sluice loses 3 break.
+Moraine, Bailiff of the Sluice is staggered!
+Double Strike piles on extra Break pressure.
+Vanguard is left open: Guard and Parry are disabled until the next turn.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice is staggered and loses the turn.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 15/95].
+Moraine, Bailiff of the Sluice loses 97 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 23 hp.
+Charge Slash batters the enemy's Break.
+Vanguard uses Double Strike [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 65/95].
+Moraine, Bailiff of the Sluice loses 10 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 18 hp.
+Double Strike hit 1/2 resolves.
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 77/95].
+Moraine, Bailiff of the Sluice loses 10 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 18 hp.
+Double Strike hit 2/2 resolves.
+Moraine, Bailiff of the Sluice loses 3 break.
+Moraine, Bailiff of the Sluice is staggered!
+Double Strike piles on extra Break pressure.
+Vanguard is left open: Guard and Parry are disabled until the next turn.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice is staggered and loses the turn.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 54/95].
+Moraine, Bailiff of the Sluice loses 97 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 23 hp.
+Charge Slash batters the enemy's Break.
+Vanguard uses Double Strike [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 62/95].
+Moraine, Bailiff of the Sluice loses 10 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 18 hp.
+Double Strike hit 1/2 resolves.
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 67/95].
+Moraine, Bailiff of the Sluice loses 11 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 27 hp. CRIT!
+Double Strike hit 2/2 resolves.
+Moraine, Bailiff of the Sluice loses 2 break.
+Moraine, Bailiff of the Sluice is staggered!
+Double Strike piles on extra Break pressure.
+Vanguard is left open: Guard and Parry are disabled until the next turn.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice is staggered and loses the turn.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+Vanguard enters flow posture (balanced spread).
+Player Spotlight +1 (Vanguard entered Flow) -> 2/5
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 7/95].
+Moraine, Bailiff of the Sluice loses 97 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 23 hp.
+Charge Slash batters the enemy's Break.
+Vanguard uses Double Strike [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 67/95].
+Moraine, Bailiff of the Sluice loses 10 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 18 hp.
+Double Strike hit 1/2 resolves.
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 14/95].
+Moraine, Bailiff of the Sluice loses 10 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 18 hp.
+Double Strike hit 2/2 resolves.
+Moraine, Bailiff of the Sluice loses 3 break.
+Moraine, Bailiff of the Sluice is staggered!
+Double Strike piles on extra Break pressure.
+Vanguard is left open: Guard and Parry are disabled until the next turn.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice is staggered and loses the turn.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 62/95].
+Moraine, Bailiff of the Sluice loses 97 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 23 hp.
+Charge Slash batters the enemy's Break.
+Vanguard uses Double Strike [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 16/95].
+Moraine, Bailiff of the Sluice loses 10 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 18 hp.
+Double Strike hit 1/2 resolves.
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 90/95].
+Moraine, Bailiff of the Sluice loses 10 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 18 hp.
+Double Strike hit 2/2 resolves.
+Moraine, Bailiff of the Sluice loses 3 break.
+Moraine, Bailiff of the Sluice is staggered!
+Double Strike piles on extra Break pressure.
+Vanguard is left open: Guard and Parry are disabled until the next turn.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice is staggered and loses the turn.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+Vanguard enters flow posture (balanced spread).
+Player Spotlight +1 (Vanguard entered Flow) -> 3/5
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 70/95].
+Moraine, Bailiff of the Sluice loses 97 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 23 hp.
+Charge Slash batters the enemy's Break.
+Vanguard uses Double Strike [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 72/95].
+Moraine, Bailiff of the Sluice loses 10 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 18 hp.
+Double Strike hit 1/2 resolves.
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 86/95].
+Moraine, Bailiff of the Sluice loses 10 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 18 hp.
+Double Strike hit 2/2 resolves.
+Moraine, Bailiff of the Sluice loses 3 break.
+Moraine, Bailiff of the Sluice is staggered!
+Double Strike piles on extra Break pressure.
+Vanguard is left open: Guard and Parry are disabled until the next turn.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice is staggered and loses the turn.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 90/95].
+Vanguard hits Moraine, Bailiff of the Sluice for 23 hp.
+Moraine, Bailiff of the Sluice falls.
+Charge Slash batters the enemy's Break.
+Players win the battle.
+Battle log written to: quiet_relay_equipment_smoke_logs/02_flooded_arcade.txt
+Victory. Echo shards gained: 1. Echo shards on hand: 2
+Choose 1 reward from Flooded Arcade Rewards:
+  1. Maintenance Harness - Grant the Maintenance Harness relic to the current party.
+  2. Floodgate Loop - Grant the Floodgate Loop relic to the current party.
+  3. Supply Cache - +1 recovery charge, up to 5.
+The team secures Maintenance Harness. Its combat trigger is now active for this
+run.
+🧭 Choose the next route:
+  1. 🔧 Service Niche -- Event -- Maintenance route -- 🟢 Low risk -- [shop, recovery, sustain]
+     Spend shards to stabilize before the maintenance follow-through. Likely
+     rewards: sustain, barrier, recovery.
+  2. 🔧 Sluice Jury -- Battle -- Maintenance route -- 🔴 High risk -- [elite, shards, break]
+     Detour into an elite fight for extra shards and stronger break prep. Likely
+     rewards: elite, break, boss_prep.
+▶️ Auto route choice: Service Niche
+
+====================================================================================
+🧭 District 03: Rain Toll Corridor
+🔧 Service Niche -- Event -- Maintenance route -- 🟢 Low risk -- [shop, recovery, sustain]
+Route Step 3
+💠 Echo Shards on hand: 2
+------------------------------------------------------------------------------------
+You find a dry maintenance recess behind a humming panel. The team can patch
+wounds, rewire defenses, or prepare for the toll plaza ahead.
+
+
+Service Niche Bench. Echo Shards on hand: 2
+Spend up to 1 purchase here, or press Enter to leave.
+Auto shop choice: Slip Ledger
+The team secures Slip Ledger. Its combat trigger is now active for this run.
+Echo Shards remaining: 0
+The team closes the route kit and moves on.
+
+====================================================================================
+🧭 District 03: Rain Toll Corridor
+🔧 Drainage Switchback -- Battle -- Maintenance route -- 🟢 Low risk -- [sustain, guard, recovery]
+Route Step 4
+💠 Echo Shards on hand: 0
+------------------------------------------------------------------------------------
+A service stair drops into a pump channel where the waterline rises and falls by
+bell pulse. A Flood Acolyte tries to soak the lane while a Veil Leech chews at
+exposed guard, turning the maintenance route into a practical test of staying
+patched together.
+
+Battle setup: starting Spotlight 1, prebattle barrier 0.
+Node axis scores: Power 80, Precision 80, Composure 80.
+Encounter variant: ivy_veil_drain (ivy_strangler, veil_leech)
+Battle loadout: Feint Rush, Double Strike, Charge Slash.
+Battle begins.
+Vanguard equips Iron Sword + Wooden Shield.
+Vanguard shield discipline: Guard +2, reaction +5%, Break +5%, Charge Slash Break +10%.
+Node axis scores: Power 80, Precision 80, Composure 80.
+Turn order: Ivy Strangler, Veil Leech #2, Vanguard
+Ivy Strangler enters flow posture (balanced spread).
+Player Spotlight +1 (Ivy Strangler entered Flow) -> 2/5
+Ivy Strangler lashes thorn-vines at Vanguard.
+Player Spotlight +2 (Slip Ledger) -> 4/5
+Slip Ledger steadies Vanguard's next offensive risk.
+Vanguard spends 8/8 Break to dodge.
+Vanguard dodges cleanly [dodge roll 5/70].
+Veil Leech #2 enters flow posture (balanced spread).
+Player Spotlight +1 (Veil Leech #2 entered Flow) -> 5/5
+Veil Leech #2 siphons warding light from Vanguard.
+Slip Ledger steadies Vanguard's next offensive risk.
+Vanguard spends 8/8 Break to dodge.
+Vanguard dodges cleanly [dodge roll 20/70].
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Ivy Strangler [hit roll 84/95].
+Ivy Strangler loses 36 break.
+Ivy Strangler withdraws behind the guard (staggered).
+Ivy Strangler is staggered!
+Vanguard hits Ivy Strangler for 29 guard.
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+Vanguard's slip window closes.
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Veil Leech #2 [hit roll 59/95].
+Veil Leech #2 loses 36 break.
+Veil Leech #2 withdraws behind the guard (staggered).
+Veil Leech #2 is staggered!
+Vanguard hits Veil Leech #2 for 23 guard.
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+------------------------------------------------------------
+Turn order: Ivy Strangler, Veil Leech #2, Vanguard
+Ivy Strangler is staggered and loses the turn.
+Veil Leech #2 is staggered and loses the turn.
+Vanguard cashes in +1 AP from last turn's setup.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Ivy Strangler [hit roll 89/95].
+Ivy Strangler loses 36 break.
+Ivy Strangler is staggered!
+Vanguard hits Ivy Strangler for 11 guard, 18 hp.
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Veil Leech #2 [hit roll 60/95].
+Veil Leech #2 loses 36 break.
+Veil Leech #2 is staggered!
+Vanguard hits Veil Leech #2 for 17 guard, 6 hp.
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard grazes Ivy Strangler [hit roll 99/95].
+Vanguard hits Ivy Strangler for 20 hp.
+------------------------------------------------------------
+Turn order: Ivy Strangler, Veil Leech #2, Vanguard
+Ivy Strangler is staggered and loses the turn.
+Veil Leech #2 is staggered and loses the turn.
+Vanguard cashes in +1 AP from last turn's setup.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Veil Leech #2 [hit roll 5/95].
+Veil Leech #2 loses 36 break.
+Veil Leech #2 is staggered!
+Vanguard hits Veil Leech #2 for 23 hp.
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Ivy Strangler [hit roll 41/95].
+Ivy Strangler loses 36 break.
+Ivy Strangler is staggered!
+Vanguard hits Ivy Strangler for 29 hp.
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Ivy Strangler [hit roll 13/95].
+Vanguard hits Ivy Strangler for 39 hp.
+Ivy Strangler falls.
+------------------------------------------------------------
+Turn order: Veil Leech #2, Vanguard
+Veil Leech #2 is staggered and loses the turn.
+Vanguard cashes in +1 AP from last turn's setup.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Veil Leech #2 [hit roll 66/95].
+Veil Leech #2 loses 36 break.
+Veil Leech #2 is staggered!
+Vanguard hits Veil Leech #2 for 23 hp.
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+Vanguard uses Double Strike [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Veil Leech #2 [hit roll 58/95].
+Vanguard hits Veil Leech #2 for 24 hp.
+Veil Leech #2 falls.
+Double Strike hit 1/2 resolves.
+Vanguard is left open: Guard and Parry are disabled until the next turn.
+Players win the battle.
+Battle log written to: quiet_relay_equipment_smoke_logs/05_drainage_switchback.txt
+Victory. Echo shards gained: 1. Echo shards on hand: 1
+Choose 1 reward from Drainage Switchback Rewards:
+  1. Floodgate Loop - Grant the Floodgate Loop relic to the current party.
+  2. Steady Chimes - +10 max break to all allies.
+  3. Field Dressing - Heal all allies for 18 HP.
+The team secures Floodgate Loop. Its combat trigger is now active for this run.
+
+====================================================================================
+🧭 District 03: Rain Toll Corridor
+◈ Toll Plaza -- Battle -- Shared route -- 🔴 High risk -- [break, recovery, cadence]
+Route Step 5
+💠 Echo Shards on hand: 1
+------------------------------------------------------------------------------------
+The lanes narrow into a dead checkpoint under immense bells. A Toll Knight waits
+motionless among cracked barriers and drowned ticket booths.
+
+Battle setup: starting Spotlight 1, prebattle barrier 0.
+Node axis scores: Power 80, Precision 80, Composure 80.
+Encounter variant: toll_flood_lock (toll_knight, flood_acolyte)
+Battle loadout: Feint Rush, Double Strike, Charge Slash.
+Battle begins.
+Vanguard equips Iron Sword + Wooden Shield.
+Vanguard shield discipline: Guard +2, reaction +5%, Break +5%, Charge Slash Break +10%.
+Node axis scores: Power 80, Precision 80, Composure 80.
+Turn order: Flood Acolyte #2, Toll Knight, Vanguard
+Flood Acolyte #2 enters focus posture (precision dominant).
+Flood Acolyte #2 presses the line.
+Flood Acolyte #2 drenches Vanguard.
+Player Spotlight +2 (Slip Ledger) -> 3/5
+Slip Ledger steadies Vanguard's next offensive risk.
+Vanguard spends 8/8 Break to dodge.
+Vanguard dodges cleanly [dodge roll 35/70].
+Toll Knight enters ravage posture (power dominant).
+Toll Knight presses the line.
+Toll Knight tightens its stance and restores 0 guard.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Toll Knight [hit roll 64/95].
+Toll Knight loses 95 break.
+Toll Knight withdraws behind the guard (staggered).
+Toll Knight is staggered!
+Vanguard hits Toll Knight for 23 guard.
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+Vanguard's slip window closes.
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Flood Acolyte #2 [hit roll 13/95].
+Flood Acolyte #2 loses 36 break.
+Flood Acolyte #2 withdraws behind the guard (staggered).
+Flood Acolyte #2 is staggered!
+Vanguard hits Flood Acolyte #2 for 23 guard.
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+------------------------------------------------------------
+Turn order: Flood Acolyte #2, Toll Knight, Vanguard
+Flood Acolyte #2 is staggered and loses the turn.
+Toll Knight is staggered and loses the turn.
+Vanguard cashes in +1 AP from last turn's setup.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Toll Knight [hit roll 2/95].
+Toll Knight loses 95 break.
+Toll Knight is staggered!
+Vanguard hits Toll Knight for 35 guard. CRIT!
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Flood Acolyte #2 [hit roll 1/95].
+Flood Acolyte #2 loses 36 break.
+Flood Acolyte #2 is staggered!
+Vanguard hits Flood Acolyte #2 for 2 guard, 21 hp.
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Flood Acolyte #2 [hit roll 75/95].
+Vanguard hits Flood Acolyte #2 for 32 hp.
+------------------------------------------------------------
+Turn order: Flood Acolyte #2, Toll Knight, Vanguard
+Flood Acolyte #2 is staggered and loses the turn.
+Toll Knight is staggered and loses the turn.
+Vanguard cashes in +1 AP from last turn's setup.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Toll Knight [hit roll 32/95].
+Toll Knight loses 95 break.
+Toll Knight is staggered!
+Vanguard hits Toll Knight for 20 guard, 3 hp.
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Flood Acolyte #2 [hit roll 80/95].
+Vanguard hits Flood Acolyte #2 for 35 hp. CRIT!
+Flood Acolyte #2 falls.
+Charge Slash batters the enemy's Break.
+Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard grazes Toll Knight [hit roll 97/95].
+Vanguard hits Toll Knight for 16 hp.
+------------------------------------------------------------
+Turn order: Toll Knight, Vanguard
+Toll Knight is staggered and loses the turn.
+Vanguard cashes in +1 AP from last turn's setup.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard grazes Toll Knight [hit roll 97/95].
+Toll Knight loses 49 break.
+Vanguard hits Toll Knight for 12 hp.
+Charge Slash batters the enemy's Break.
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Toll Knight [hit roll 82/95].
+Toll Knight loses 46 break.
+Toll Knight is staggered!
+Vanguard hits Toll Knight for 23 hp.
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Toll Knight [hit roll 20/95].
+Vanguard hits Toll Knight for 48 hp. CRIT!
+------------------------------------------------------------
+Turn order: Toll Knight, Vanguard
+Toll Knight is staggered and loses the turn.
+Vanguard cashes in +1 AP from last turn's setup.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard grazes Toll Knight [hit roll 99/95].
+Toll Knight loses 49 break.
+Vanguard hits Toll Knight for 12 hp.
+Charge Slash batters the enemy's Break.
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Toll Knight [hit roll 63/95].
+Toll Knight loses 46 break.
+Toll Knight is staggered!
+Vanguard hits Toll Knight for 23 hp.
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Toll Knight [hit roll 93/95].
+Vanguard hits Toll Knight for 32 hp.
+------------------------------------------------------------
+Turn order: Toll Knight, Vanguard
+Toll Knight is staggered and loses the turn.
+Vanguard cashes in +1 AP from last turn's setup.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Toll Knight [hit roll 17/95].
+Vanguard hits Toll Knight for 23 hp.
+Toll Knight falls.
+Charge Slash batters the enemy's Break.
+Players win the battle.
+Battle log written to: quiet_relay_equipment_smoke_logs/10_toll_plaza.txt
+Victory. Echo shards gained: 2. Echo shards on hand: 3
+
+Toll Plaza Preparations. Echo Shards on hand: 3
+Spend up to 2 purchases before the bell tower.
+Auto shop choice: Bellbreaker Oil
+Bellbreaker oil is brushed onto blades. Boss guard penalty increases by 25.
+Echo Shards remaining: 1
+
+Toll Plaza Preparations. Echo Shards on hand: 1
+Spend up to 2 purchases before the bell tower.
+The team keeps the remaining Echo Shards for the route ahead.
+🧭 Choose the next route:
+  1. ◈ Undertone Landing -- Event -- Shared route -- 🟢 Low risk -- [recovery, break, boss_prep]
+     Shared boss-prep stop with two final preparations. Likely rewards:
+     recovery, break, boss_prep.
+  2. ◈ Tollgate Surge -- Battle -- Shared route -- 🔴 High risk -- [risk, shards, boss_prep]
+     Skip the safe landing for a final elite payoff before Orison. Likely
+     rewards: risk, shards, boss_prep.
+▶️ Auto route choice: Undertone Landing
+
+====================================================================================
+🧭 District 03: Rain Toll Corridor
+◈ Undertone Landing -- Event -- Shared route -- 🟢 Low risk -- [recovery, break, boss_prep]
+Route Step 6
+💠 Echo Shards on hand: 1
+------------------------------------------------------------------------------------
+A landing below the bell tower hums with three debts braided into one undertone.
+The route behind you colors the echo: sluice-weight and guard on one side,
+chapel aim and late chimes on the other. There is time for two final
+preparations before Orison answers.
+
+Choose 2 rewards from Undertone Landing Preparations:
+Pick 1/2 (2 picks remaining):
+  1. Ward Flares - All allies start future battles with 10 barrier.
+  2. Steady Chimes - +10 max break to all allies.
+  3. Field Dressing - Heal all allies for 18 HP.
+  4. Bellbreaker Oil - Bosses start with 25 less guard.
+Bellbreaker oil is brushed onto blades. Boss guard penalty increases by 25.
+Pick 2/2 (1 pick remaining):
+  1. Ward Flares - All allies start future battles with 10 barrier.
+  2. Steady Chimes - +10 max break to all allies.
+  3. Field Dressing - Heal all allies for 18 HP.
+Ward flares are packed for the route. Future battles start with +10 barrier.
+
+====================================================================================
+🧭 District 03: Rain Toll Corridor
+◈ Bell Tower Threshold -- Boss -- Shared route -- 🔴 High risk -- [boss, break, parry]
+Route Step 7
+💠 Echo Shards on hand: 1
+------------------------------------------------------------------------------------
+At the district heart, Orison, Vicar of the Last Toll, steps from the tower
+shadow and names three debts: force, aim, and nerve. The first bellflash is
+clear, but the second toll waits after the breath.
+
+Battle setup: starting Spotlight 1, prebattle barrier 10.
+Node axis scores: Power 80, Precision 80, Composure 80.
+Battle loadout: Feint Rush, Double Strike, Charge Slash.
+Battle begins.
+Vanguard equips Iron Sword + Wooden Shield.
+Vanguard shield discipline: Guard +2, reaction +5%, Break +5%, Charge Slash Break +10%.
+Node axis scores: Power 80, Precision 80, Composure 80.
+Turn order: Orison, Vicar of the Last Toll, Vanguard
+Orison weighs the party like flood-forged debt.
+Orison, Vicar of the Last Toll enters ravage posture (power dominant).
+Orison, Vicar of the Last Toll presses the line.
+Orison, Vicar of the Last Toll drives a tower step through Vanguard.
+Enemy Spotlight +1 (Vanguard mistimed dodge) -> 1/5
+Vanguard spends 8/8 Break to dodge.
+Vanguard mistimes the dodge [dodge roll 86/70].
+Vanguard's barrier absorbs 10 damage.
+Vanguard loses 19 break.
+Orison, Vicar of the Last Toll hits Vanguard for 9 hp.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 21/95].
+Orison, Vicar of the Last Toll loses 97 break.
+Vanguard hits Orison, Vicar of the Last Toll for 23 guard.
+Charge Slash batters the enemy's Break.
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 76/95].
+Orison, Vicar of the Last Toll loses 62 break.
+Orison, Vicar of the Last Toll withdraws behind the guard (staggered).
+Orison, Vicar of the Last Toll is staggered!
+Vanguard hits Orison, Vicar of the Last Toll for 23 guard.
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+------------------------------------------------------------
+Turn order: Orison, Vicar of the Last Toll, Vanguard
+Orison, Vicar of the Last Toll is staggered and loses the turn.
+Vanguard cashes in +1 AP from last turn's setup.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 20/95].
+Orison, Vicar of the Last Toll loses 97 break.
+Vanguard hits Orison, Vicar of the Last Toll for 23 guard.
+Charge Slash batters the enemy's Break.
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 26/95].
+Orison, Vicar of the Last Toll loses 62 break.
+Orison, Vicar of the Last Toll is staggered!
+Vanguard hits Orison, Vicar of the Last Toll for 23 guard.
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 2/95].
+Vanguard hits Orison, Vicar of the Last Toll for 18 guard, 30 hp. CRIT!
+------------------------------------------------------------
+Turn order: Orison, Vicar of the Last Toll, Vanguard
+Orison, Vicar of the Last Toll is staggered and loses the turn.
+Vanguard cashes in +1 AP from last turn's setup.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 45/95].
+Orison, Vicar of the Last Toll loses 97 break.
+Vanguard hits Orison, Vicar of the Last Toll for 23 hp.
+Charge Slash batters the enemy's Break.
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 46/95].
+Orison, Vicar of the Last Toll loses 62 break.
+Orison, Vicar of the Last Toll is staggered!
+Vanguard hits Orison, Vicar of the Last Toll for 23 hp.
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 4/95].
+Vanguard hits Orison, Vicar of the Last Toll for 48 hp. CRIT!
+------------------------------------------------------------
+Turn order: Orison, Vicar of the Last Toll, Vanguard
+Orison, Vicar of the Last Toll is staggered and loses the turn.
+Vanguard cashes in +1 AP from last turn's setup.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 39/95].
+Orison, Vicar of the Last Toll loses 97 break.
+Vanguard hits Orison, Vicar of the Last Toll for 23 hp.
+Charge Slash batters the enemy's Break.
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 42/95].
+Orison, Vicar of the Last Toll loses 62 break.
+Orison, Vicar of the Last Toll is staggered!
+Vanguard hits Orison, Vicar of the Last Toll for 23 hp.
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 64/95].
+Vanguard hits Orison, Vicar of the Last Toll for 32 hp.
+------------------------------------------------------------
+Turn order: Orison, Vicar of the Last Toll, Vanguard
+Orison, Vicar of the Last Toll is staggered and loses the turn.
+Vanguard cashes in +1 AP from last turn's setup.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 20/95].
+Orison, Vicar of the Last Toll loses 97 break.
+Vanguard hits Orison, Vicar of the Last Toll for 23 hp.
+Charge Slash batters the enemy's Break.
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 67/95].
+Orison, Vicar of the Last Toll loses 62 break.
+Orison, Vicar of the Last Toll is staggered!
+Vanguard hits Orison, Vicar of the Last Toll for 23 hp.
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 56/95].
+Vanguard hits Orison, Vicar of the Last Toll for 32 hp.
+------------------------------------------------------------
+Turn order: Orison, Vicar of the Last Toll, Vanguard
+Orison, Vicar of the Last Toll is staggered and loses the turn.
+Vanguard cashes in +1 AP from last turn's setup.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 87/95].
+Orison, Vicar of the Last Toll loses 97 break.
+Vanguard hits Orison, Vicar of the Last Toll for 23 hp.
+Charge Slash batters the enemy's Break.
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 9/95].
+Orison, Vicar of the Last Toll loses 62 break.
+Orison, Vicar of the Last Toll is staggered!
+Vanguard hits Orison, Vicar of the Last Toll for 23 hp.
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 52/95].
+Vanguard hits Orison, Vicar of the Last Toll for 48 hp. CRIT!
+------------------------------------------------------------
+Turn order: Orison, Vicar of the Last Toll, Vanguard
+Orison, Vicar of the Last Toll is staggered and loses the turn.
+Vanguard cashes in +1 AP from last turn's setup.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 6/95].
+Orison, Vicar of the Last Toll loses 97 break.
+Vanguard hits Orison, Vicar of the Last Toll for 23 hp.
+Charge Slash batters the enemy's Break.
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 70/95].
+Orison, Vicar of the Last Toll loses 62 break.
+Orison, Vicar of the Last Toll is staggered!
+Vanguard hits Orison, Vicar of the Last Toll for 35 hp. CRIT!
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 58/95].
+Vanguard hits Orison, Vicar of the Last Toll for 32 hp.
+------------------------------------------------------------
+Turn order: Orison, Vicar of the Last Toll, Vanguard
+Orison, Vicar of the Last Toll is staggered and loses the turn.
+Vanguard cashes in +1 AP from last turn's setup.
+Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard spends 0 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 87/95].
+Orison, Vicar of the Last Toll loses 107 break.
+Vanguard hits Orison, Vicar of the Last Toll for 35 hp. CRIT!
+Charge Slash batters the enemy's Break.
+Vanguard uses Double Strike [P:80/exalted, R:80/exalted, C:80/exalted]
+Power output x1.30 damage / x1.24 break from Power 80.
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 17/95].
+Orison, Vicar of the Last Toll loses 10 break.
+Vanguard hits Orison, Vicar of the Last Toll for 18 hp.
+Double Strike hit 1/2 resolves.
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 68/95].
+Vanguard hits Orison, Vicar of the Last Toll for 18 hp.
+Orison, Vicar of the Last Toll falls.
+Double Strike hit 2/2 resolves.
+Vanguard is left open: Guard and Parry are disabled until the next turn.
+Players win the battle.
+Battle log written to: quiet_relay_equipment_smoke_logs/13_bell_tower.txt
+Victory. Echo shards gained: 4. Echo shards on hand: 5

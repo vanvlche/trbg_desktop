@@ -1,0 +1,74 @@
+[Round 01] Battle begins.
+[Round 01] Turn order: Duelist, Bellglass Precentor, Cantor, Vanguard
+[Round 01] Duelist enters flow posture (balanced spread).
+[Round 01] Spotlight +1 (Duelist entered Flow) -> 2/5
+[Round 01] Duelist uses Mark Lunge [P:54/keen, R:71/fierce, C:71/fierce]
+[Round 01] Bellglass Precentor loses 15 break.
+[Round 01] Duelist hits Bellglass Precentor for 23 guard.
+[Round 01] Bellglass Precentor gains reveal (2).
+[Round 01] Bellglass Precentor recovers 3 guard.
+[Round 01] Bellglass Precentor enters focus posture (precision dominant).
+[Round 01] Bellglass Precentor presses the line.
+[Round 01] Bellglass Precentor begins with the first bell against Vanguard.
+[Round 01] Vanguard withdraws behind the guard.
+[Round 01] Vanguard loses 9 break.
+[Round 01] Bellglass Precentor hits Vanguard for 17 guard.
+[Round 01] Vanguard gains reveal (1).
+[Round 01] Spotlight -2 (Cantor used Final Verse) -> 0/5
+[Round 01] Cantor enters focus posture (precision dominant).
+[Round 01] Cantor presses the line.
+[Round 01] Cantor uses Final Verse [P:46/keen, R:80/exalted, C:74/fierce]
+[Round 01] Spotlight +1 (Cantor Final Verse) -> 1/5
+[Round 01] Final Verse crescendos on an exposed target.
+[Round 01] Bellglass Precentor loses 49 break.
+[Round 01] Cantor hits Bellglass Precentor for 55 guard, 96 hp. CRIT!
+[Round 01] Spotlight +1 (Cantor exploited affinity) -> 2/5
+[Round 01] Vanguard is no longer affected by reveal.
+[Round 01] Vanguard recovers 4 guard.
+[Round 01] Vanguard enters ravage posture (power dominant).
+[Round 01] Vanguard recenters to set footing.
+[Round 01] Vanguard restores 7 guard from passive.
+[Round 01] Vanguard uses Anchor Cleave [P:86/exalted, R:54/keen, C:73/fierce]
+[Round 01] Bellglass Precentor loses 36 break.
+[Round 01] Bellglass Precentor withdraws behind the guard (staggered).
+[Round 01] Bellglass Precentor is staggered!
+[Round 01] Vanguard hits Bellglass Precentor for 47 hp.
+[Round 01] Vanguard loses 7 guard from Anchor Cleave.
+[Round 02] ------------------------------------------------------------
+[Round 02] Turn order: Duelist, Bellglass Precentor, Cantor, Vanguard
+[Round 02] Spotlight -2 (Duelist used Glass Reprise) -> 0/5
+[Round 02] Duelist enters focus posture (precision dominant).
+[Round 02] Duelist presses the line.
+[Round 02] Duelist uses Glass Reprise [P:59/keen, R:90/exalted, C:74/fierce]
+[Round 02] Duelist hits Bellglass Precentor for 60 hp. CRIT!
+[Round 02] Spotlight +1 (Duelist passive crit) -> 1/5
+[Round 02] Glass Reprise hit 1/3 lands.
+[Round 02] Duelist hits Bellglass Precentor for 40 hp.
+[Round 02] Glass Reprise hit 2/3 lands.
+[Round 02] Duelist hits Bellglass Precentor for 40 hp.
+[Round 02] Glass Reprise hit 3/3 lands.
+[Round 02] Bellglass Precentor is staggered and loses the turn.
+[Round 02] Bellglass Precentor is no longer affected by reveal.
+[Round 02] Cantor enters focus posture (precision dominant).
+[Round 02] Cantor uses Salt Psalm [P:42/keen, R:81/exalted, C:73/fierce]
+[Round 02] Bellglass Precentor loses 19 break.
+[Round 02] Cantor hits Bellglass Precentor for 24 hp.
+[Round 02] Bellglass Precentor gains hex (2).
+[Round 02] Vanguard gains 8 barrier from Cantor's passive.
+[Round 02] Spotlight +1 (Cantor exploited affinity) -> 2/5
+[Round 02] Vanguard recovers 4 guard.
+[Round 02] Vanguard enters flow posture (balanced spread).
+[Round 02] Spotlight +1 (Vanguard entered Flow) -> 3/5
+[Round 02] Vanguard uses Anchor Cleave [P:71/fierce, R:60/fierce, C:78/fierce]
+[Round 02] Bellglass Precentor loses 42 break.
+[Round 02] Vanguard hits Bellglass Precentor for 32 hp.
+[Round 02] Vanguard loses 4 guard from Anchor Cleave.
+[Round 03] ------------------------------------------------------------
+[Round 03] Turn order: Duelist, Bellglass Precentor, Cantor, Vanguard
+[Round 03] Duelist enters flow posture (balanced spread).
+[Round 03] Duelist recenters to set footing.
+[Round 03] Spotlight +1 (Duelist entered Flow) -> 4/5
+[Round 03] Duelist uses Mark Lunge [P:50/keen, R:76/fierce, C:75/fierce]
+[Round 03] Duelist hits Bellglass Precentor for 26 hp.
+[Round 03] Bellglass Precentor falls.
+[Round 03] Players win the battle.

@@ -1,0 +1,46 @@
+[Round 01] Battle begins.
+[Round 01] Turn order: Duelist, Cantor, Static Chorister, Vanguard
+[Round 01] Duelist enters focus posture (precision dominant).
+[Round 01] Duelist presses the line.
+[Round 01] Duelist uses Mark Lunge [P:44/keen, R:86/exalted, C:74/fierce]
+[Round 01] Static Chorister loses 16 break.
+[Round 01] Duelist hits Static Chorister for 29 guard.
+[Round 01] Static Chorister gains reveal (2).
+[Round 01] Cantor enters flow posture (balanced spread).
+[Round 01] Spotlight +1 (Cantor entered Flow) -> 2/5
+[Round 01] Cantor uses Tuning Fork Cut [P:57/keen, R:78/fierce, C:72/fierce]
+[Round 01] Tuning Fork Cut finds a resonant opening.
+[Round 01] Static Chorister loses 44 break.
+[Round 01] Cantor hits Static Chorister for 6 guard, 29 hp. CRIT!
+[Round 01] Static Chorister recovers 3 guard.
+[Round 01] Static Chorister enters flow posture (balanced spread).
+[Round 01] Spotlight +1 (Static Chorister entered Flow) -> 3/5
+[Round 01] Static Chorister cleanses reveal via Flow.
+[Round 01] Static Chorister snaps a charge into Duelist.
+[Round 01] Duelist recenters to set footing.
+[Round 01] Duelist loses 11 break.
+[Round 01] Static Chorister hits Duelist for 13 guard.
+[Round 01] Vanguard enters flow posture (balanced spread).
+[Round 01] Spotlight +1 (Vanguard entered Flow) -> 4/5
+[Round 01] Vanguard uses Anchor Cleave [P:70/fierce, R:50/keen, C:75/fierce]
+[Round 01] Static Chorister loses 20 break.
+[Round 01] Static Chorister withdraws behind the guard (staggered).
+[Round 01] Static Chorister is staggered!
+[Round 01] Vanguard hits Static Chorister for 3 guard, 51 hp. CRIT!
+[Round 01] Vanguard loses 4 guard from Anchor Cleave.
+[Round 02] ------------------------------------------------------------
+[Round 02] Turn order: Duelist, Static Chorister, Cantor, Vanguard
+[Round 02] Duelist recovers 4 guard.
+[Round 02] Spotlight -2 (Duelist used Glass Reprise) -> 2/5
+[Round 02] Duelist enters flow posture (balanced spread).
+[Round 02] Spotlight +1 (Duelist entered Flow) -> 3/5
+[Round 02] Duelist uses Glass Reprise [P:62/fierce, R:69/fierce, C:72/fierce]
+[Round 02] Duelist hits Static Chorister for 26 hp.
+[Round 02] Glass Reprise hit 1/3 lands.
+[Round 02] Duelist hits Static Chorister for 39 hp. CRIT!
+[Round 02] Spotlight +1 (Duelist passive crit) -> 4/5
+[Round 02] Glass Reprise hit 2/3 lands.
+[Round 02] Duelist hits Static Chorister for 26 hp.
+[Round 02] Static Chorister falls.
+[Round 02] Glass Reprise hit 3/3 lands.
+[Round 02] Players win the battle.

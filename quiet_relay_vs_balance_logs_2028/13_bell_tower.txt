@@ -1,0 +1,276 @@
+[Round 01] Battle begins.
+[Round 01] Node axis scores: Power 80, Precision 80, Composure 80.
+[Round 01] Turn order: Orison, Vicar of the Last Toll, Vanguard
+[Round 01] Orison weighs the party like flood-forged debt.
+[Round 01] Orison, Vicar of the Last Toll enters ravage posture (power dominant).
+[Round 01] Orison, Vicar of the Last Toll presses the line.
+[Round 01] Orison, Vicar of the Last Toll drives a tower step through Vanguard.
+[Round 01] Player Spotlight +2 (Slip Ledger) -> 3/5
+[Round 01] Slip Ledger steadies Vanguard's next offensive risk.
+[Round 01] Vanguard spends 0/8 Break to dodge.
+[Round 01] Vanguard's empty Break meter makes the dodge shaky.
+[Round 01] Vanguard dodges cleanly [dodge roll 1/42].
+[Round 01] Orison, Vicar of the Last Toll loses 10 break.
+[Round 01] Orison oversteps into an exposed beat.
+[Round 01] Vanguard enters flow posture (balanced spread).
+[Round 01] Power output x1.19 from Power 80.
+[Round 01] Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 01] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 28/92].
+[Round 01] Orison, Vicar of the Last Toll loses 31 break.
+[Round 01] Vanguard hits Orison, Vicar of the Last Toll for 32 guard.
+[Round 01] Vanguard loses 0 guard from Anchor Cleave.
+[Round 01] Vanguard's slip window closes.
+[Round 01] Composure tempo 80/160.
+[Round 02] ------------------------------------------------------------
+[Round 02] Turn order: Orison, Vicar of the Last Toll, Vanguard
+[Round 02] Orison, Vicar of the Last Toll is no longer affected by reveal.
+[Round 02] Orison, Vicar of the Last Toll recovers 3 guard.
+[Round 02] Orison, Vicar of the Last Toll enters flow posture (balanced spread).
+[Round 02] Orison, Vicar of the Last Toll recenters to set footing.
+[Round 02] Player Spotlight +1 (Orison, Vicar of the Last Toll entered Flow) -> 4/5
+[Round 02] Only one bellflash is true.
+[Round 02] A false flash skims high before the true cut arrives.
+[Round 02] Enemy Spotlight +1 (Vanguard mistimed dodge) -> 1/5
+[Round 02] Vanguard spends 0/8 Break to dodge.
+[Round 02] Vanguard's empty Break meter makes the dodge shaky.
+[Round 02] Vanguard mistimes the dodge [dodge roll 86/48].
+[Round 02] Vanguard withdraws behind the guard (staggered).
+[Round 02] Vanguard is staggered!
+[Round 02] Enemy Spotlight +1 (Orison, Vicar of the Last Toll staggered Vanguard) -> 2/5
+[Round 02] Orison, Vicar of the Last Toll hits Vanguard for 15 hp.
+[Round 02] Vanguard is staggered and loses the turn.
+[Round 03] ------------------------------------------------------------
+[Round 03] Turn order: Orison, Vicar of the Last Toll, Vanguard
+[Round 03] Orison, Vicar of the Last Toll recovers 3 guard.
+[Round 03] Orison, Vicar of the Last Toll enters flow posture (balanced spread).
+[Round 03] Orison tolls for nerve; the pressure lands after the breath.
+[Round 03] Enemy Spotlight -1 (cashed for pressure) -> 1/5
+[Round 03] Enemy Spotlight is cashed for pressure.
+[Round 03] Player Spotlight +1 (Slip Ledger) -> 5/5
+[Round 03] Slip Ledger steadies Vanguard's next offensive risk.
+[Round 03] Floodgate Loop inflicts soak on Orison, Vicar of the Last Toll.
+[Round 03] Vanguard recenters to set footing.
+[Round 03] Orison, Vicar of the Last Toll withdraws behind the guard (pressure answered).
+[Round 03] Vanguard spends 8/8 Break to dodge.
+[Round 03] Vanguard dodges cleanly [dodge roll 42/90].
+[Round 03] Vanguard reads the channel beat and slips clear.
+[Round 03] Vanguard slips wide from withdrawn footing.
+[Round 03] Orison, Vicar of the Last Toll loses 9 break.
+[Round 03] The toll is answered cleanly and Orison yields ground.
+[Round 03] Vanguard enters flow posture (balanced spread).
+[Round 03] Power output x1.27 from Power 80.
+[Round 03] Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 03] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 77/92].
+[Round 03] Orison, Vicar of the Last Toll loses 36 break.
+[Round 03] Vanguard hits Orison, Vicar of the Last Toll for 35 guard.
+[Round 03] Vanguard loses 0 guard from Anchor Cleave.
+[Round 03] Vanguard's slip window closes.
+[Round 03] Vanguard keeps tempo from Composure 80: bonus action.
+[Round 03] Vanguard enters flow posture (balanced spread).
+[Round 03] Power output x1.10 from Power 80.
+[Round 03] Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 03] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 83/92].
+[Round 03] Orison, Vicar of the Last Toll loses 33 break.
+[Round 03] Vanguard hits Orison, Vicar of the Last Toll for 30 guard.
+[Round 03] Vanguard loses 0 guard from Anchor Cleave.
+[Round 04] ------------------------------------------------------------
+[Round 04] Turn order: Orison, Vicar of the Last Toll, Vanguard
+[Round 04] Orison, Vicar of the Last Toll is no longer affected by soak.
+[Round 04] Orison, Vicar of the Last Toll is no longer affected by reveal.
+[Round 04] Orison, Vicar of the Last Toll recovers 3 guard.
+[Round 04] Orison, Vicar of the Last Toll enters ravage posture (power dominant).
+[Round 04] Orison, Vicar of the Last Toll recenters to set footing.
+[Round 04] The tower tolls red.
+[Round 04] Enemy Spotlight -1 (cashed for pressure) -> 0/5
+[Round 04] Enemy Spotlight is cashed for pressure.
+[Round 04] Enemy Spotlight +1 (Vanguard mistimed dodge) -> 1/5
+[Round 04] Vanguard spends 8/8 Break to dodge.
+[Round 04] Vanguard mistimes the dodge [dodge roll 89/68].
+[Round 04] Vanguard loses 24 break.
+[Round 04] Orison, Vicar of the Last Toll hits Vanguard for 22 hp.
+[Round 04] Vanguard gains scorch (1).
+[Round 04] Vanguard is scorched for 8 damage.
+[Round 04] Vanguard loses 8 HP (scorch).
+[Round 04] Vanguard is no longer affected by scorch.
+[Round 04] Vanguard enters flow posture (balanced spread).
+[Round 04] Power output x1.28 from Power 80.
+[Round 04] Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 04] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 85/87].
+[Round 04] Orison, Vicar of the Last Toll loses 32 break.
+[Round 04] Vanguard hits Orison, Vicar of the Last Toll for 7 guard, 24 hp.
+[Round 04] Vanguard loses 0 guard from Anchor Cleave.
+[Round 04] Composure tempo 80/160.
+[Round 05] ------------------------------------------------------------
+[Round 05] Turn order: Orison, Vicar of the Last Toll, Vanguard
+[Round 05] Orison, Vicar of the Last Toll recovers 3 guard.
+[Round 05] Orison, Vicar of the Last Toll enters ravage posture (power dominant).
+[Round 05] Orison, Vicar of the Last Toll presses the line.
+[Round 05] Orison, Vicar of the Last Toll drives a tower step through Vanguard.
+[Round 05] Enemy Spotlight -1 (cashed for pressure) -> 0/5
+[Round 05] Enemy Spotlight is cashed for pressure.
+[Round 05] Slip Ledger steadies Vanguard's next offensive risk.
+[Round 05] Vanguard spends 8/8 Break to dodge.
+[Round 05] Vanguard dodges cleanly [dodge roll 35/62].
+[Round 05] Orison, Vicar of the Last Toll loses 8 break.
+[Round 05] Orison, Vicar of the Last Toll withdraws behind the guard (staggered).
+[Round 05] Orison, Vicar of the Last Toll is staggered!
+[Round 05] Orison oversteps into an exposed beat.
+[Round 05] Player Spotlight -2 (Vanguard used Execution Drop) -> 3/5
+[Round 05] Vanguard enters flow posture (balanced spread).
+[Round 05] Power output x1.22 from Power 80.
+[Round 05] Vanguard uses Execution Drop [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 05] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 64/95].
+[Round 05] Vanguard hits Orison, Vicar of the Last Toll for 97 hp.
+[Round 05] Vanguard's slip window closes.
+[Round 05] Vanguard keeps tempo from Composure 80: bonus action.
+[Round 05] Player Spotlight -2 (Vanguard used Execution Drop) -> 1/5
+[Round 05] Vanguard enters flow posture (balanced spread).
+[Round 05] Power output x1.24 from Power 80.
+[Round 05] Vanguard uses Execution Drop [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 05] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 9/95].
+[Round 05] Vanguard hits Orison, Vicar of the Last Toll for 98 hp.
+[Round 06] ------------------------------------------------------------
+[Round 06] Turn order: Orison, Vicar of the Last Toll, Vanguard
+[Round 06] Orison, Vicar of the Last Toll is staggered and loses the turn.
+[Round 06] Orison, Vicar of the Last Toll is no longer affected by reveal.
+[Round 06] Vanguard enters flow posture (balanced spread).
+[Round 06] Power output x1.22 from Power 80.
+[Round 06] Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 06] Vanguard grazes Orison, Vicar of the Last Toll [hit roll 96/87].
+[Round 06] Enemy Spotlight +1 (Vanguard risky graze) -> 1/5
+[Round 06] Orison, Vicar of the Last Toll loses 16 break.
+[Round 06] Vanguard hits Orison, Vicar of the Last Toll for 15 hp.
+[Round 06] Vanguard loses 0 guard from Anchor Cleave.
+[Round 06] Composure tempo 80/160.
+[Round 07] ------------------------------------------------------------
+[Round 07] Turn order: Orison, Vicar of the Last Toll, Vanguard
+[Round 07] Orison, Vicar of the Last Toll recovers 3 guard.
+[Round 07] Orison, Vicar of the Last Toll enters ravage posture (power dominant).
+[Round 07] Orison, Vicar of the Last Toll recenters to set footing.
+[Round 07] The tower tolls red.
+[Round 07] Enemy Spotlight -1 (cashed for pressure) -> 0/5
+[Round 07] Enemy Spotlight is cashed for pressure.
+[Round 07] Player Spotlight +2 (Slip Ledger) -> 3/5
+[Round 07] Slip Ledger steadies Vanguard's next offensive risk.
+[Round 07] Floodgate Loop inflicts soak on Orison, Vicar of the Last Toll.
+[Round 07] Orison, Vicar of the Last Toll withdraws behind the guard (pressure answered).
+[Round 07] Vanguard spends 8/8 Break to dodge.
+[Round 07] Vanguard dodges cleanly [dodge roll 13/68].
+[Round 07] Vanguard reads the weight and slips clear.
+[Round 07] Orison, Vicar of the Last Toll loses 9 break.
+[Round 07] The toll is answered cleanly and Orison yields ground.
+[Round 07] Vanguard enters flow posture (balanced spread).
+[Round 07] Power output x1.31 from Power 80.
+[Round 07] Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 07] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 25/92].
+[Round 07] Orison, Vicar of the Last Toll loses 33 break.
+[Round 07] Vanguard hits Orison, Vicar of the Last Toll for 38 hp.
+[Round 07] Vanguard loses 0 guard from Anchor Cleave.
+[Round 07] Vanguard's slip window closes.
+[Round 07] Vanguard keeps tempo from Composure 80: bonus action.
+[Round 07] Vanguard enters flow posture (balanced spread).
+[Round 07] Power output x1.36 from Power 80.
+[Round 07] Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 07] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 69/92].
+[Round 07] Orison, Vicar of the Last Toll loses 34 break.
+[Round 07] Vanguard hits Orison, Vicar of the Last Toll for 39 hp.
+[Round 07] Vanguard loses 0 guard from Anchor Cleave.
+[Round 08] ------------------------------------------------------------
+[Round 08] Turn order: Orison, Vicar of the Last Toll, Vanguard
+[Round 08] Orison, Vicar of the Last Toll is no longer affected by soak.
+[Round 08] Orison, Vicar of the Last Toll is no longer affected by reveal.
+[Round 08] Orison, Vicar of the Last Toll recovers 3 guard.
+[Round 08] Orison, Vicar of the Last Toll enters flow posture (balanced spread).
+[Round 08] Orison, Vicar of the Last Toll recenters to set footing.
+[Round 08] Player Spotlight +1 (Orison, Vicar of the Last Toll entered Flow) -> 4/5
+[Round 08] Only one bellflash is true.
+[Round 08] A false flash skims high before the true cut arrives.
+[Round 08] Player Spotlight +1 (Slip Ledger) -> 5/5
+[Round 08] Slip Ledger steadies Vanguard's next offensive risk.
+[Round 08] Floodgate Loop inflicts soak on Orison, Vicar of the Last Toll.
+[Round 08] Orison, Vicar of the Last Toll withdraws behind the guard (pressure answered).
+[Round 08] Vanguard spends 8/8 Break to dodge.
+[Round 08] Vanguard dodges cleanly [dodge roll 6/68].
+[Round 08] Vanguard reads the burst and slips clear.
+[Round 08] Orison, Vicar of the Last Toll loses 9 break.
+[Round 08] The toll is answered cleanly and Orison yields ground.
+[Round 08] Vanguard enters flow posture (balanced spread).
+[Round 08] Power output x1.36 from Power 80.
+[Round 08] Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 08] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 12/92].
+[Round 08] Orison, Vicar of the Last Toll loses 38 break.
+[Round 08] Vanguard hits Orison, Vicar of the Last Toll for 59 hp. CRIT!
+[Round 08] Vanguard loses 0 guard from Anchor Cleave.
+[Round 08] Vanguard's slip window closes.
+[Round 08] Composure tempo 80/160.
+[Round 09] ------------------------------------------------------------
+[Round 09] Turn order: Orison, Vicar of the Last Toll, Vanguard
+[Round 09] Orison, Vicar of the Last Toll is no longer affected by soak.
+[Round 09] Orison, Vicar of the Last Toll is no longer affected by reveal.
+[Round 09] Orison, Vicar of the Last Toll recovers 3 guard.
+[Round 09] Orison, Vicar of the Last Toll enters Quiet Relay cadence.
+[Round 09] Orison, Vicar of the Last Toll enters flow posture (balanced spread).
+[Round 09] Orison, Vicar of the Last Toll recenters to set footing.
+[Round 09] Orison, Vicar of the Last Toll invokes Quiet Relay.
+[Round 09] The second toll comes after the breath.
+[Round 09] Orison tolls for nerve; the pressure lands after the breath.
+[Round 09] Enemy Spotlight +1 (Vanguard mistimed dodge) -> 1/5
+[Round 09] Vanguard spends 8/8 Break to dodge.
+[Round 09] Vanguard mistimes the dodge [dodge roll 91/80].
+[Round 09] Vanguard loses 12 break.
+[Round 09] Orison, Vicar of the Last Toll hits Vanguard for 11 hp.
+[Round 09] The tower tolls red.
+[Round 09] Enemy Spotlight -1 (cashed for pressure) -> 0/5
+[Round 09] Enemy Spotlight is cashed for pressure.
+[Round 09] Enemy Spotlight +1 (Vanguard mistimed dodge) -> 1/5
+[Round 09] Vanguard spends 6/8 Break to dodge.
+[Round 09] Vanguard's empty Break meter makes the dodge shaky.
+[Round 09] Vanguard mistimes the dodge [dodge roll 83/48].
+[Round 09] Vanguard withdraws behind the guard (staggered).
+[Round 09] Vanguard is staggered!
+[Round 09] Enemy Spotlight +1 (Orison, Vicar of the Last Toll staggered Vanguard) -> 2/5
+[Round 09] Orison, Vicar of the Last Toll hits Vanguard for 15 hp.
+[Round 09] Vanguard gains scorch (1).
+[Round 09] Orison, Vicar of the Last Toll loses 12 break.
+[Round 09] Quiet Relay exhausts Orison's footing and opens a brief punish window.
+[Round 09] Vanguard is scorched for 8 damage.
+[Round 09] Vanguard loses 8 HP (scorch).
+[Round 09] Vanguard is staggered and loses the turn.
+[Round 09] Vanguard is no longer affected by scorch.
+[Round 10] ------------------------------------------------------------
+[Round 10] Turn order: Orison, Vicar of the Last Toll, Vanguard
+[Round 10] Orison, Vicar of the Last Toll is no longer affected by reveal.
+[Round 10] Orison, Vicar of the Last Toll recovers 3 guard.
+[Round 10] Orison, Vicar of the Last Toll enters ravage posture (power dominant).
+[Round 10] Orison, Vicar of the Last Toll presses the line.
+[Round 10] The tower tolls red.
+[Round 10] Enemy Spotlight -1 (cashed for pressure) -> 1/5
+[Round 10] Enemy Spotlight is cashed for pressure.
+[Round 10] Slip Ledger steadies Vanguard's next offensive risk.
+[Round 10] Floodgate Loop inflicts soak on Orison, Vicar of the Last Toll.
+[Round 10] Vanguard recenters to set footing.
+[Round 10] Orison, Vicar of the Last Toll recenters to set footing (pressure answered).
+[Round 10] Vanguard spends 8/8 Break to dodge.
+[Round 10] Vanguard dodges cleanly [dodge roll 14/78].
+[Round 10] Vanguard reads the weight and slips clear.
+[Round 10] Vanguard slips wide from withdrawn footing.
+[Round 10] Orison, Vicar of the Last Toll loses 8 break.
+[Round 10] Orison, Vicar of the Last Toll withdraws behind the guard (staggered).
+[Round 10] Orison, Vicar of the Last Toll is staggered!
+[Round 10] The toll is answered cleanly and Orison yields ground.
+[Round 10] Player Spotlight -2 (Vanguard used Execution Drop) -> 3/5
+[Round 10] Vanguard enters flow posture (balanced spread).
+[Round 10] Power output x1.15 from Power 80.
+[Round 10] Vanguard uses Execution Drop [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 10] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 29/95].
+[Round 10] Vanguard hits Orison, Vicar of the Last Toll for 92 hp.
+[Round 10] Vanguard's slip window closes.
+[Round 10] Vanguard keeps tempo from Composure 80: bonus action.
+[Round 10] Player Spotlight -2 (Vanguard used Execution Drop) -> 1/5
+[Round 10] Vanguard enters flow posture (balanced spread).
+[Round 10] Power output x1.40 from Power 80.
+[Round 10] Vanguard uses Execution Drop [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 10] Vanguard lines up Orison, Vicar of the Last Toll [hit roll 87/95].
+[Round 10] Vanguard hits Orison, Vicar of the Last Toll for 111 hp.
+[Round 10] Orison, Vicar of the Last Toll falls.
+[Round 10] Players win the battle.

@@ -1,0 +1,143 @@
+[Round 01] Battle begins.
+[Round 01] Node axis scores: Power 80, Precision 80, Composure 80.
+[Round 01] Turn order: Veil Leech #2, Flood Acolyte, Vanguard
+[Round 01] Veil Leech #2 enters flow posture (balanced spread).
+[Round 01] Player Spotlight +1 (Veil Leech #2 entered Flow) -> 2/5
+[Round 01] Veil Leech #2 siphons warding light from Vanguard.
+[Round 01] Enemy Spotlight +1 (Vanguard mistimed dodge) -> 1/5
+[Round 01] Vanguard spends 8/8 Break to dodge.
+[Round 01] Vanguard mistimes the dodge [dodge roll 63/62].
+[Round 01] Vanguard loses 7 break.
+[Round 01] Veil Leech #2 hits Vanguard for 8 hp.
+[Round 01] Flood Acolyte enters focus posture (precision dominant).
+[Round 01] Flood Acolyte presses the line.
+[Round 01] Flood Acolyte drenches Vanguard.
+[Round 01] Enemy Spotlight -1 (cashed for pressure) -> 0/5
+[Round 01] Enemy Spotlight is cashed for pressure.
+[Round 01] Enemy Spotlight +1 (Vanguard mistimed dodge) -> 1/5
+[Round 01] Vanguard spends 8/8 Break to dodge.
+[Round 01] Vanguard mistimes the dodge [dodge roll 93/62].
+[Round 01] Vanguard loses 7 break.
+[Round 01] Flood Acolyte hits Vanguard for 9 hp.
+[Round 01] Vanguard gains soak (2).
+[Round 01] Vanguard enters flow posture (balanced spread).
+[Round 01] Vanguard cleanses soak via Flow.
+[Round 01] Power output x1.24 from Power 80.
+[Round 01] Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 01] Vanguard lines up Flood Acolyte [hit roll 61/87].
+[Round 01] Flood Acolyte loses 32 break.
+[Round 01] Vanguard hits Flood Acolyte for 25 guard, 5 hp.
+[Round 01] Vanguard loses 0 guard from Anchor Cleave.
+[Round 01] Composure tempo 80/160.
+[Round 02] ------------------------------------------------------------
+[Round 02] Turn order: Veil Leech #2, Flood Acolyte, Vanguard
+[Round 02] Veil Leech #2 enters flow posture (balanced spread).
+[Round 02] Veil Leech #2 siphons warding light from Vanguard.
+[Round 02] Enemy Spotlight -1 (cashed for pressure) -> 0/5
+[Round 02] Enemy Spotlight is cashed for pressure.
+[Round 02] Player Spotlight +2 (Slip Ledger) -> 4/5
+[Round 02] Slip Ledger steadies Vanguard's next offensive risk.
+[Round 02] Vanguard spends 8/8 Break to dodge.
+[Round 02] Vanguard dodges cleanly [dodge roll 38/62].
+[Round 02] Flood Acolyte recovers 3 guard.
+[Round 02] Flood Acolyte enters focus posture (precision dominant).
+[Round 02] Flood Acolyte drenches Vanguard.
+[Round 02] Player Spotlight +1 (Slip Ledger) -> 5/5
+[Round 02] Slip Ledger steadies Vanguard's next offensive risk.
+[Round 02] Vanguard spends 8/8 Break to dodge.
+[Round 02] Vanguard dodges cleanly [dodge roll 11/62].
+[Round 02] Vanguard enters flow posture (balanced spread).
+[Round 02] Power output x1.20 from Power 80.
+[Round 02] Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 02] Vanguard lines up Flood Acolyte [hit roll 21/87].
+[Round 02] Flood Acolyte loses 4 break.
+[Round 02] Flood Acolyte withdraws behind the guard (staggered).
+[Round 02] Flood Acolyte is staggered!
+[Round 02] Vanguard hits Flood Acolyte for 3 guard, 26 hp.
+[Round 02] Vanguard loses 0 guard from Anchor Cleave.
+[Round 02] Vanguard's slip window closes.
+[Round 02] Vanguard keeps tempo from Composure 80: bonus action.
+[Round 02] Player Spotlight -2 (Vanguard used Execution Drop) -> 3/5
+[Round 02] Vanguard enters flow posture (balanced spread).
+[Round 02] Power output x1.33 from Power 80.
+[Round 02] Vanguard uses Execution Drop [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 02] Vanguard lines up Flood Acolyte [hit roll 76/95].
+[Round 02] Vanguard hits Flood Acolyte for 90 hp.
+[Round 02] Flood Acolyte falls.
+[Round 03] ------------------------------------------------------------
+[Round 03] Turn order: Veil Leech #2, Vanguard
+[Round 03] Veil Leech #2 enters flow posture (balanced spread).
+[Round 03] Player Spotlight +1 (Veil Leech #2 entered Flow) -> 4/5
+[Round 03] Veil Leech #2 siphons warding light from Vanguard.
+[Round 03] Player Spotlight +1 (Slip Ledger) -> 5/5
+[Round 03] Slip Ledger steadies Vanguard's next offensive risk.
+[Round 03] Vanguard spends 2/8 Break to dodge.
+[Round 03] Vanguard's empty Break meter makes the dodge shaky.
+[Round 03] Vanguard dodges cleanly [dodge roll 20/42].
+[Round 03] Vanguard enters flow posture (balanced spread).
+[Round 03] Power output x1.24 from Power 80.
+[Round 03] Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 03] Vanguard lines up Veil Leech #2 [hit roll 26/87].
+[Round 03] Veil Leech #2 loses 32 break.
+[Round 03] Vanguard hits Veil Leech #2 for 30 guard.
+[Round 03] Vanguard loses 0 guard from Anchor Cleave.
+[Round 03] Vanguard's slip window closes.
+[Round 03] Composure tempo 80/160.
+[Round 04] ------------------------------------------------------------
+[Round 04] Turn order: Veil Leech #2, Vanguard
+[Round 04] Veil Leech #2 recovers 3 guard.
+[Round 04] Veil Leech #2 enters flow posture (balanced spread).
+[Round 04] Veil Leech #2 siphons warding light from Vanguard.
+[Round 04] Slip Ledger steadies Vanguard's next offensive risk.
+[Round 04] Vanguard spends 0/8 Break to dodge.
+[Round 04] Vanguard's empty Break meter makes the dodge shaky.
+[Round 04] Vanguard dodges cleanly [dodge roll 10/42].
+[Round 04] Vanguard enters flow posture (balanced spread).
+[Round 04] Power output x1.03 from Power 80.
+[Round 04] Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 04] Vanguard lines up Veil Leech #2 [hit roll 45/87].
+[Round 04] Veil Leech #2 loses 4 break.
+[Round 04] Veil Leech #2 withdraws behind the guard (staggered).
+[Round 04] Veil Leech #2 is staggered!
+[Round 04] Vanguard hits Veil Leech #2 for 13 guard, 12 hp.
+[Round 04] Vanguard loses 0 guard from Anchor Cleave.
+[Round 04] Vanguard's slip window closes.
+[Round 04] Vanguard keeps tempo from Composure 80: bonus action.
+[Round 04] Player Spotlight -2 (Vanguard used Execution Drop) -> 3/5
+[Round 04] Vanguard enters flow posture (balanced spread).
+[Round 04] Power output x1.18 from Power 80.
+[Round 04] Vanguard uses Execution Drop [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 04] Vanguard grazes Veil Leech #2 [hit roll 99/95].
+[Round 04] Vanguard hits Veil Leech #2 for 41 hp.
+[Round 05] ------------------------------------------------------------
+[Round 05] Turn order: Veil Leech #2, Vanguard
+[Round 05] Veil Leech #2 is staggered and loses the turn.
+[Round 05] Vanguard enters flow posture (balanced spread).
+[Round 05] Power output x1.22 from Power 80.
+[Round 05] Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 05] Vanguard grazes Veil Leech #2 [hit roll 88/87].
+[Round 05] Veil Leech #2 loses 16 break.
+[Round 05] Vanguard hits Veil Leech #2 for 15 hp.
+[Round 05] Vanguard loses 0 guard from Anchor Cleave.
+[Round 05] Composure tempo 80/160.
+[Round 06] ------------------------------------------------------------
+[Round 06] Turn order: Veil Leech #2, Vanguard
+[Round 06] Veil Leech #2 recovers 3 guard.
+[Round 06] Veil Leech #2 enters flow posture (balanced spread).
+[Round 06] Veil Leech #2 recenters to set footing.
+[Round 06] Player Spotlight +1 (Veil Leech #2 entered Flow) -> 4/5
+[Round 06] Veil Leech #2 siphons warding light from Vanguard.
+[Round 06] Player Spotlight +1 (Slip Ledger) -> 5/5
+[Round 06] Slip Ledger steadies Vanguard's next offensive risk.
+[Round 06] Vanguard spends 0/8 Break to dodge.
+[Round 06] Vanguard's empty Break meter makes the dodge shaky.
+[Round 06] Vanguard dodges cleanly [dodge roll 16/42].
+[Round 06] Vanguard enters flow posture (balanced spread).
+[Round 06] Power output x1.23 from Power 80.
+[Round 06] Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 06] Vanguard lines up Veil Leech #2 [hit roll 60/87].
+[Round 06] Vanguard hits Veil Leech #2 for 3 guard, 27 hp.
+[Round 06] Veil Leech #2 falls.
+[Round 06] Vanguard loses 0 guard from Anchor Cleave.
+[Round 06] Vanguard's slip window closes.
+[Round 06] Players win the battle.

@@ -1,0 +1,135 @@
+[Round 01] Battle loadout: Charge Slash, Shield Oath, Defensive Technique.
+[Round 01] Battle begins.
+[Round 01] Vanguard equips Iron Sword + Wooden Shield.
+[Round 01] Vanguard shield discipline: Guard +2, reaction +5%, Break +5%, Charge Slash Break +10%.
+[Round 01] Node axis scores: Power 80, Precision 80, Composure 80.
+[Round 01] Turn order: Veil Leech #2, Flood Acolyte, Vanguard
+[Round 01] Veil Leech #2 enters flow posture (balanced spread).
+[Round 01] Player Spotlight +1 (Veil Leech #2 entered Flow) -> 2/5
+[Round 01] Veil Leech #2 siphons warding light from Vanguard.
+[Round 01] Maintenance Harness restores 10 guard to Vanguard.
+[Round 01] Maintenance Harness grants Vanguard 6 barrier.
+[Round 01] Vanguard withdraws behind the guard.
+[Round 01] Guard gate success: Power 80 >= 55.
+[Round 01] Vanguard's barrier absorbs 6 damage.
+[Round 01] Vanguard loses 9 break.
+[Round 01] Veil Leech #2 hits Vanguard for 6 guard.
+[Round 01] Vanguard gains hex (2).
+[Round 01] Enemy Spotlight +1 (Veil Leech #2 applied hex) -> 1/5
+[Round 01] Veil Leech #2 steals 10 guard and turns it into barrier.
+[Round 01] Flood Acolyte enters focus posture (precision dominant).
+[Round 01] Flood Acolyte presses the line.
+[Round 01] Flood Acolyte drenches Vanguard.
+[Round 01] Enemy Spotlight -1 (cashed for pressure) -> 0/5
+[Round 01] Enemy Spotlight is cashed for pressure.
+[Round 01] Maintenance Harness restores 10 guard to Vanguard.
+[Round 01] Maintenance Harness grants Vanguard 6 barrier.
+[Round 01] Guard gate success: Power 80 >= 55.
+[Round 01] Vanguard's barrier absorbs 6 damage.
+[Round 01] Vanguard loses 9 break.
+[Round 01] Flood Acolyte hits Vanguard for 7 guard.
+[Round 01] Vanguard gains soak (2).
+[Round 01] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+[Round 01] Vanguard enters flow posture (balanced spread).
+[Round 01] Vanguard recenters to set footing.
+[Round 01] Vanguard cleanses soak via Flow.
+[Round 01] Shield Oath restores 15 guard and strengthens the next Break action.
+[Round 01] Vanguard spends 9 guard to wind up Charge Slash.
+[Round 01] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 01] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 01] Shield Oath sharpens the next Break action x1.15.
+[Round 01] Vanguard lines up Flood Acolyte [hit roll 47/91].
+[Round 01] Flood Acolyte loses 36 break.
+[Round 01] Flood Acolyte withdraws behind the guard (staggered).
+[Round 01] Flood Acolyte is staggered!
+[Round 01] Vanguard hits Flood Acolyte for 23 guard.
+[Round 01] Charge Slash batters the enemy's Break.
+[Round 01] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 01] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 01] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 01] Vanguard lines up Flood Acolyte [hit roll 34/95].
+[Round 01] Vanguard hits Flood Acolyte for 2 guard, 30 hp.
+[Round 02] ------------------------------------------------------------
+[Round 02] Turn order: Veil Leech #2, Flood Acolyte, Vanguard
+[Round 02] Veil Leech #2 enters flow posture (balanced spread).
+[Round 02] Veil Leech #2 siphons warding light from Vanguard.
+[Round 02] Maintenance Harness restores 10 guard to Vanguard.
+[Round 02] Maintenance Harness grants Vanguard 6 barrier.
+[Round 02] Vanguard withdraws behind the guard.
+[Round 02] Guard gate success: Power 80 >= 55.
+[Round 02] Vanguard's barrier absorbs 6 damage.
+[Round 02] Vanguard loses 9 break.
+[Round 02] Veil Leech #2 hits Vanguard for 6 guard.
+[Round 02] Vanguard gains hex (2).
+[Round 02] Enemy Spotlight +1 (Veil Leech #2 applied hex) -> 1/5
+[Round 02] Veil Leech #2 steals 10 guard and turns it into barrier.
+[Round 02] Flood Acolyte is staggered and loses the turn.
+[Round 02] Vanguard cashes in +1 AP from last turn's setup.
+[Round 02] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+[Round 02] Vanguard enters flow posture (balanced spread).
+[Round 02] Vanguard recenters to set footing.
+[Round 02] Vanguard cleanses hex via Flow.
+[Round 02] Vanguard spends 9 guard to wind up Charge Slash.
+[Round 02] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 02] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 02] Vanguard lines up Veil Leech #2 [hit roll 72/95].
+[Round 02] Veil Leech #2's barrier absorbs 20 damage.
+[Round 02] Veil Leech #2 loses 36 break.
+[Round 02] Veil Leech #2 withdraws behind the guard (staggered).
+[Round 02] Veil Leech #2 is staggered!
+[Round 02] Vanguard hits Veil Leech #2 for 3 guard.
+[Round 02] Charge Slash batters the enemy's Break.
+[Round 02] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 02] Vanguard spends 9 guard to wind up Charge Slash.
+[Round 02] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 02] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 02] Vanguard lines up Flood Acolyte [hit roll 5/95].
+[Round 02] Flood Acolyte loses 36 break.
+[Round 02] Flood Acolyte is staggered!
+[Round 02] Vanguard hits Flood Acolyte for 23 hp.
+[Round 02] Charge Slash batters the enemy's Break.
+[Round 02] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 02] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 02] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 02] Vanguard lines up Flood Acolyte [hit roll 41/95].
+[Round 02] Vanguard hits Flood Acolyte for 32 hp.
+[Round 02] Flood Acolyte falls.
+[Round 03] ------------------------------------------------------------
+[Round 03] Turn order: Veil Leech #2, Vanguard
+[Round 03] Veil Leech #2 is staggered and loses the turn.
+[Round 03] Vanguard cashes in +1 AP from last turn's setup.
+[Round 03] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+[Round 03] Vanguard enters flow posture (balanced spread).
+[Round 03] Shield Oath restores 15 guard and strengthens the next Break action.
+[Round 03] Vanguard spends 9 guard to wind up Charge Slash.
+[Round 03] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 03] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 03] Shield Oath sharpens the next Break action x1.15.
+[Round 03] Vanguard lines up Veil Leech #2 [hit roll 89/95].
+[Round 03] Veil Leech #2 loses 36 break.
+[Round 03] Veil Leech #2 is staggered!
+[Round 03] Vanguard hits Veil Leech #2 for 23 guard.
+[Round 03] Charge Slash batters the enemy's Break.
+[Round 03] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 03] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 03] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 03] Vanguard lines up Veil Leech #2 [hit roll 66/95].
+[Round 03] Vanguard hits Veil Leech #2 for 14 guard, 18 hp.
+[Round 03] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 03] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 03] Vanguard lines up Veil Leech #2 [hit roll 58/95].
+[Round 03] Vanguard hits Veil Leech #2 for 32 hp.
+[Round 04] ------------------------------------------------------------
+[Round 04] Turn order: Veil Leech #2, Vanguard
+[Round 04] Veil Leech #2 is staggered and loses the turn.
+[Round 04] Vanguard cashes in +1 AP from last turn's setup.
+[Round 04] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+[Round 04] Vanguard enters flow posture (balanced spread).
+[Round 04] Vanguard spends 9 guard to wind up Charge Slash.
+[Round 04] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 04] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 04] Vanguard lines up Veil Leech #2 [hit roll 62/95].
+[Round 04] Vanguard hits Veil Leech #2 for 35 hp. CRIT!
+[Round 04] Veil Leech #2 falls.
+[Round 04] Charge Slash batters the enemy's Break.
+[Round 04] Players win the battle.

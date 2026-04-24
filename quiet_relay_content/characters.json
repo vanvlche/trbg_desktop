@@ -2,7 +2,11 @@
   "vanguard": {
     "display_name": "Vanguard",
     "role": "frontline_tank_break",
-    "weapon": "greatblade",
+    "weapon": "iron_sword",
+    "starting_equipment": {
+      "main_hand": "iron_sword",
+      "off_hand": "wooden_shield"
+    },
     "default_affinity": "ash",
     "preferred_inputs": [
       "power",
@@ -30,7 +34,10 @@
   "duelist": {
     "display_name": "Duelist",
     "role": "fast_crit_counter",
-    "weapon": "rapier",
+    "weapon": "dual_machetes",
+    "starting_equipment": {
+      "both_hands": "dual_machetes"
+    },
     "default_affinity": "halo",
     "preferred_inputs": [
       "precision",
@@ -58,7 +65,10 @@
   "cantor": {
     "display_name": "Cantor",
     "role": "status_barrier_support",
-    "weapon": "chime_staff",
+    "weapon": "fortune_tellers_staff",
+    "starting_equipment": {
+      "main_hand": "fortune_tellers_staff"
+    },
     "default_affinity": "shade",
     "preferred_inputs": [
       "precision",
@@ -88,7 +98,10 @@
   "ranger": {
     "display_name": "Ranger",
     "role": "ranged_control_swap_enabler",
-    "weapon": "signal_rifle",
+    "weapon": "wooden_bow",
+    "starting_equipment": {
+      "both_hands": "wooden_bow"
+    },
     "default_affinity": "spark",
     "preferred_inputs": [
       "precision",
@@ -116,7 +129,10 @@
   "penitent": {
     "display_name": "Penitent",
     "role": "risk_reward_finisher",
-    "weapon": "chain_blade",
+    "weapon": "penitents_dagger",
+    "starting_equipment": {
+      "main_hand": "penitents_dagger"
+    },
     "default_affinity": "shade",
     "preferred_inputs": [
       "power",

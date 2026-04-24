@@ -14,7 +14,8 @@ Features:
 - guard / dodge / parry
 - Spotlight meter
 - rich logging
-- manual player input per action
+- manual player input per turn
+- AP-based player actions and battle loadouts
 - auto mode for tests
 
 Standard library only.
@@ -84,6 +85,7 @@ SKILL_DATA = CONTENT.skill_data
 ENEMY_BLUEPRINTS = CONTENT.enemy_data
 BOSS_BLUEPRINTS = CONTENT.boss_data
 WEAPON_DATA = CONTENT.weapon_data
+EQUIPMENT_DATA = WEAPON_DATA
 RELIC_DATA = CONTENT.relic_data
 
 STATUS_DISPLAY_ORDER = [
@@ -92,10 +94,13 @@ STATUS_DISPLAY_ORDER = [
     "soak",
     "jolt",
     "hex",
+    "poisoned_chalice",
     "reveal",
+    "rain_mark",
     "taunt",
     "brace_guard",
     "feint_circuit",
+    "blood_vow",
     "exposed_self",
     "delayed_overhead",
     "airborne",
@@ -111,6 +116,13 @@ if POSITION_DEFAULT not in POSITION_INDEX:
     POSITION_DEFAULT = "set"
 POSITION_PUNISH_TAGS = {"heavy", "channel", "burst_start"}
 ENABLE_SEMANTIC_EMOJI_UI = True
+
+DEFAULT_AXIS_TRIPLET = (60, 60, 60)
+BALANCE_MODE_STANDARD = "standard"
+BALANCE_MODE_EXPEDITION = "expedition"
+DEFAULT_HEALING_POTIONS_PER_RUN = 1
+EXTRA_ACTION_LOADOUT_SLOTS = 3
+EQUIPMENT_SLOTS = ("main_hand", "off_hand", "both_hands")
 
 BOSS_STAT_MULTIPLIER = 1.5
 ENEMY_DAMAGE_MULTIPLIER = 1.25
@@ -129,6 +141,136 @@ PARRY_GUARD_COST = 10
 PARRY_BREAK_COST = 12
 PARRY_EXTRA_BREAK_ON_FAIL = 12
 COMPOSURE_TEMPO_THRESHOLD = 160
+MAX_STARTING_AP = 6
+
+POWER_DAMAGE_MULT_PER_POINT = 0.01
+POWER_DAMAGE_MULT_MIN = 0.60
+POWER_DAMAGE_MULT_MAX = 1.60
+POWER_BREAK_MULT_PER_POINT = 0.008
+POWER_BREAK_MULT_MIN = 0.70
+POWER_BREAK_MULT_MAX = 1.50
+PRECISION_HIT_BONUS_PER_POINT = 0.008
+PRECISION_CRIT_BONUS_PER_POINT = 0.003
+PRECISION_MAX_CRIT_BONUS = 0.45
+PLAYER_ATTACK_BASE_HIT_CHANCE = 70
+PLAYER_MIN_HIT_CHANCE = 10
+PLAYER_MAX_HIT_CHANCE = 95
+HEALING_POTION_HEAL_RATIO = 0.35
+NEXT_TURN_AP_BONUS_CAP = 1
+DEFENSIVE_ACTIONS_ARE_BASIC = False
+
+LIGHT_ATTACK_AP_COST = 1
+HEAVY_ATTACK_POWER_REQUIREMENT = 60
+HEAVY_ATTACK_DAMAGE_MULTIPLIER = 2.00
+HEAVY_ATTACK_BREAK_MULTIPLIER = 1.70
+HEAVY_ATTACK_POWER_SURGE_THRESHOLD = 75
+HEAVY_ATTACK_POWER_SURGE_DAMAGE_MULT = 1.10
+HEAVY_ATTACK_POWER_SURGE_BREAK_MULT = 1.10
+FEINT_RUSH_AP_COST = 1
+FEINT_RUSH_ACCURACY_BONUS = 15
+DOUBLE_STRIKE_AP_COST = 2
+DOUBLE_STRIKE_DAMAGE_MULTIPLIER = 0.75
+DOUBLE_STRIKE_BREAK_MULTIPLIER = 0.75
+DOUBLE_STRIKE_BOTH_HITS_BREAK_BONUS = 6
+BACKSTEP_SLASH_AP_COST = 1
+BACKSTEP_SLASH_DAMAGE_MULTIPLIER = 0.80
+BACKSTEP_SLASH_ACCURACY_PENALTY = 10
+BACKSTEP_SLASH_DUELIST_EVASION_BONUS = 20
+BACKSTEP_SLASH_RANGER_EVASION_BONUS = 25
+CHARGE_SLASH_AP_COST = 2
+CHARGE_SLASH_DAMAGE_MULTIPLIER = 0.95
+CHARGE_SLASH_BREAK_MULTIPLIER = 2.40
+CHARGE_SLASH_SELF_GUARD_COST = 10
+TRANCE_AP_COST = 3
+TRANCE_REQUIRED_HIGH_COMPOSURE_TURNS = 3
+TRANCE_NORMAL_MAX_HITS = 6
+TRANCE_BOSS_MAX_HITS = 4
+TRANCE_SPOTLIGHT_HIT_BONUS = 5
+TRANCE_SPOTLIGHT_DAMAGE_BONUS_PER = 0.03
+TRANCE_CHAIN_HIT_PENALTY_PER_HIT = 8
+TRANCE_BOSS_FOLLOWUP_DAMAGE_MULT = 0.85
+POISONED_CHALICE_AP_COST = 2
+POISONED_CHALICE_DAMAGE_MULTIPLIER = 0.90
+POISONED_CHALICE_DURATION = 2
+POISONED_CHALICE_MIN_DOT = 4
+POISONED_CHALICE_BREAK_VULNERABILITY_MULT = 1.10
+POISONED_CHALICE_EVASION_PENALTY = 25
+POISONED_CHALICE_ACCURACY_PENALTY = 15
+BACKFLIP_AP_COST = 1
+BACKFLIP_EVASION_BONUS = 25
+BACKFLIP_BREAK_RECOVERY_RATIO = 0.20
+BACKFLIP_NEXT_HEALING_BONUS = 0.20
+BACKFLIP_MAX_USES_PER_COMBAT = 2
+DEFENSIVE_TECHNIQUE_AP_COST = 1
+DEFENSIVE_TECHNIQUE_GUARD_RECOVERY_RATIO = 0.25
+DEFENSIVE_TECHNIQUE_BASTION_BONUS = 0.10
+DEFENSIVE_TECHNIQUE_SHIELD_BONUS = 0.10
+DEFENSIVE_TECHNIQUE_VANGUARD_SHIELD_BONUS = 0.10
+DEFENSIVE_TECHNIQUE_REACTION_BONUS = 5
+FRACTURE_SHIELD_GUARD_RECOVERY_MULT = 1.30
+FRACTURE_SHIELD_EXCESS_BREAK_RATIO = 0.50
+REGAIN_BALANCE_AP_COST = 1
+REGAIN_BALANCE_BREAK_RECOVERY_RATIO = 0.25
+REGAIN_BALANCE_LOW_STABILITY_THRESHOLD = 0.30
+REGAIN_BALANCE_LOW_STABILITY_BONUS = 0.10
+REGAIN_BALANCE_COMPOSURE_THRESHOLD = 70
+REGAIN_BALANCE_COMPOSURE_BONUS = 0.10
+REGAIN_BALANCE_STANCE_BONUS = 0.10
+SHIELD_OATH_AP_COST = 1
+SHIELD_OATH_GUARD_RECOVERY_RATIO = 0.20
+SHIELD_OATH_BREAK_BONUS_MULT = 1.15
+SHIELD_OATH_COOLDOWN_TURNS = 2
+RAZOR_ENCORE_AP_COST = 2
+RAZOR_ENCORE_FOLLOWUP_DAMAGE_MULTIPLIER = 0.65
+QUIET_BENEDICTION_AP_COST = 2
+QUIET_BENEDICTION_HEAL_RATIO = 0.22
+RAIN_MARK_AP_COST = 1
+RAIN_MARK_DURATION = 2
+RAIN_MARK_HIT_BONUS = 10
+RAIN_MARK_BREAK_BONUS_MULT = 1.10
+BLOOD_VOW_AP_COST = 1
+BLOOD_VOW_DAMAGE_BONUS_MULT = 1.15
+BLOOD_VOW_MAX_HP_COST_RATIO = 0.08
+BLOOD_VOW_CURRENT_HP_COST_RATIO = 0.10
+BLOOD_VOW_STATUS_DURATION = 2
+MOONCLEAVE_MAX_STACKS = 6
+MOONCLEAVE_CRIT_BONUS_PER_STACK = 5
+BLACK_VIAL_MAX_STACKS = 3
+BLACK_VIAL_DAMAGE_BONUS_PER_STACK = 0.08
+BLACK_VIAL_STATUS_BONUS_PER_STACK = 5
+KINGS_WAGER_INCOMING_DAMAGE_MULT = 2.00
+KINGS_WAGER_EXECUTION_THRESHOLD = 5
+KINGS_WAGER_BOSS_EXECUTION_VALUE = 3
+ANKLET_AP_REFUND = 1
+ANKLET_AP_REFUND_EXTRA_CAP = 1
+ANKLET_PRECISION_CARRY_BONUS = 10
+POTION_UPGRADE_CAPACITY_BONUS = 1
+POTION_UPGRADE_STRONGER_MULT = 1.20
+POTION_UPGRADE_GUARD_RESTORE_RATIO = 0.18
+POTION_UPGRADE_SPOTLIGHT_GAIN = 1
+CHALICE_TOLERANCE_PENALTY_MULT = 0.50
+VANGUARD_ONE_HANDED_DAMAGE_MULTIPLIER = 1.03
+VANGUARD_ONE_HANDED_BREAK_MULTIPLIER = 1.05
+VANGUARD_SHIELD_GUARD_BONUS = 2
+VANGUARD_SHIELD_REACTION_BONUS = 5
+VANGUARD_SHIELD_CHARGE_SLASH_BREAK_MULTIPLIER = 1.10
+VANGUARD_SHIELD_CHARGE_SLASH_GUARD_DELTA = -1
+DUELIST_PAIRED_HIT_BONUS = 5
+DUELIST_PAIRED_CRIT_BONUS = 3
+DUELIST_PAIRED_DOUBLE_STRIKE_HIT_BONUS = 5
+DUELIST_PAIRED_DOUBLE_STRIKE_CRIT_BONUS = 2
+DUELIST_TWO_HANDED_BLADE_DAMAGE_MULTIPLIER = 1.05
+DUELIST_TWO_HANDED_BLADE_CRIT_BONUS = 2
+CANTOR_MAGE_HIT_BONUS = 3
+CANTOR_MAGE_STATUS_SUCCESS_BONUS = 5
+CANTOR_MAGE_HEALING_MULTIPLIER = 1.10
+
+FLOW_SPOTLIGHT_COOLDOWN_ROUNDS = 2
+FOCUS_HIT_BONUS = 10
+FOCUS_MIN_HIT_CHANCE = 72
+FOCUS_GRAZE_MARGIN = 14
+RAVAGE_BREAK_FINISH_RATIO = 0.45
+RAVAGE_BREAK_FINISH_MULTIPLIER = 1.35
 
 UI_ICONS = {
     "battle": "⚔️",
@@ -144,10 +286,24 @@ UI_ICONS = {
 }
 
 
+def stdout_supports_text(text: str) -> bool:
+    if not text:
+        return True
+    encoding = getattr(sys.stdout, "encoding", None) or "utf-8"
+    if "utf" not in encoding.lower() and not text.isascii():
+        return False
+    try:
+        text.encode(encoding)
+    except (LookupError, UnicodeEncodeError):
+        return False
+    return True
+
+
 def ui_icon(key: str) -> str:
     if not ENABLE_SEMANTIC_EMOJI_UI:
         return ""
-    return UI_ICONS.get(key, "")
+    icon = UI_ICONS.get(key, "")
+    return icon if stdout_supports_text(icon) else ""
 
 
 def emoji_label(key: str, text: str) -> str:
@@ -177,6 +333,69 @@ class Skill:
 
 
 @dataclass(frozen=True)
+class BattleActionDef:
+    action_id: str
+    name: str
+    description: str
+    ap_cost: int
+    force_turn_end: bool = False
+    requires_full_ap: bool = False
+    consumes_all_ap: bool = False
+    requires_class: Tuple[str, ...] = ()
+    target: str = "single_enemy"
+    kind: str = "attack"
+    affinity: Optional[str] = None
+    primary_scale: str = "power"
+    secondary_scale: str = "precision"
+    damage_tier: str = "medium"
+    break_tier: str = "low"
+    tags: Tuple[str, ...] = ()
+    is_extra_action: bool = False
+
+
+@dataclass(frozen=True)
+class EquipmentItem:
+    item_id: str
+    display_name: str
+    type: str
+    handedness: str
+    slot: str
+    tags: Tuple[str, ...]
+    description: str
+    base_damage_bonus: int = 0
+    damage_multiplier: float = 1.0
+    break_multiplier: float = 1.0
+    hit_bonus: int = 0
+    crit_bonus: int = 0
+    guard_bonus: int = 0
+    evasion_bonus: int = 0
+    ap_bonus: int = 0
+    healing_multiplier: float = 1.0
+    potion_heal_bonus: int = 0
+    status_success_bonus: int = 0
+    reaction_bonus: int = 0
+    action_modifiers: Dict[str, Dict[str, Any]] = field(default_factory=dict)
+    class_bonuses: Dict[str, Dict[str, Any]] = field(default_factory=dict)
+
+
+@dataclass
+class EquipmentModifiers:
+    base_damage_bonus: int = 0
+    damage_multiplier: float = 1.0
+    break_multiplier: float = 1.0
+    hit_bonus: int = 0
+    crit_bonus: int = 0
+    guard_bonus: int = 0
+    evasion_bonus: int = 0
+    ap_bonus: int = 0
+    healing_multiplier: float = 1.0
+    potion_heal_bonus: int = 0
+    status_success_bonus: int = 0
+    reaction_bonus: int = 0
+    self_guard_cost_delta: int = 0
+
+
+@dataclass(frozen=True)
 class DefensiveReadProfile:
     tag: str
     primary_axis: str
@@ -191,6 +410,23 @@ class PatternReadSnapshot:
     secondary_band_idx: int
     raw_tier: int
     triplet: Tuple[int, int, int]
+
+
+@dataclass(frozen=True)
+class PartyBalanceProfile:
+    party_size: int
+    mode: str
+    enemy_hp_mult: float = 1.0
+    enemy_guard_mult: float = 1.0
+    enemy_break_mult: float = 1.0
+    enemy_damage_mult: float = 1.0
+    boss_hp_mult: float = 1.0
+    boss_guard_mult: float = 1.0
+    boss_break_mult: float = 1.0
+    boss_pressure_mult: float = 1.0
+    reaction_failure_damage_mult: float = 1.0
+    healing_reward_mult: float = 1.0
+    recovery_heal_mult: float = 1.0
 
 
 @dataclass
@@ -279,12 +515,53 @@ class Combatant:
             return False
 
         self.crit_spotlight_used_this_turn = False
+        if self.team == "player":
+            self.metadata["used_light_attack_this_turn"] = False
+            self.metadata["current_ap"] = 0
+            self.metadata["starting_ap"] = 0
+            self.metadata.pop("turn_inputs", None)
+            self.metadata.pop("turn_power", None)
+            self.metadata.pop("turn_precision", None)
+            self.metadata.pop("turn_composure", None)
+            self.metadata.pop("action_input_logged_round", None)
+            self.metadata.pop("evasion_bonus_until_next_turn", None)
+            self.metadata.pop("evasion_penalty_until_next_turn", None)
+            self.metadata.pop("cannot_guard_next_turn", None)
+            self.metadata.pop("cannot_parry_next_turn", None)
+            self.metadata.pop("current_action_accuracy_modifier", None)
+            self.metadata.pop("defensive_reaction_bonus_until_next_turn", None)
+            self.metadata["defensive_technique_used_turn"] = False
+            self.metadata["regain_balance_used_turn"] = False
+            self.metadata["fracture_shield_overflow_used_turn"] = False
+            self.metadata["anklet_refund_used_this_turn"] = False
+            self.metadata.pop("turn_accuracy_penalty", None)
+            pending_turn_accuracy_penalty = clamp_int(
+                int(self.metadata.pop("pending_poisoned_chalice_accuracy_penalty", 0)),
+                0,
+                100,
+            )
+            if pending_turn_accuracy_penalty > 0:
+                self.metadata["turn_accuracy_penalty"] = pending_turn_accuracy_penalty
+                state.logger.log(
+                    state.round_number,
+                    f"{self.name} is still reeling from Poisoned Chalice: attack accuracy -{pending_turn_accuracy_penalty} this turn.",
+                )
+            shield_oath_cooldown = max(0, int(self.metadata.get("shield_oath_cooldown", 0)))
+            if shield_oath_cooldown > 0:
+                self.metadata["shield_oath_cooldown"] = shield_oath_cooldown - 1
 
         # Tick ongoing effects before duration reduction.
         if self.has_condition("scorch"):
             dmg = max(4, int(self.max_hp * 0.05))
             state.logger.log(state.round_number, f"{self.name} is scorched for {dmg} damage.")
             state.apply_direct_hp_loss(self, dmg, reason="scorch")
+        if self.has_condition("poisoned_chalice"):
+            dmg = max(
+                POISONED_CHALICE_MIN_DOT,
+                int(self.metadata.get("poisoned_chalice_dot", POISONED_CHALICE_MIN_DOT)),
+            )
+            state.logger.log(state.round_number, f"{self.name} suffers {dmg} damage from Poisoned Chalice.")
+            state.apply_direct_hp_loss(self, dmg, reason="poisoned_chalice")
         if self.has_condition("jolt"):
             guard_loss = 8
             state.logger.log(state.round_number, f"{self.name} crackles with jolt and loses {guard_loss} guard.")
@@ -382,6 +659,630 @@ def build_skills() -> Dict[str, Skill]:
 
 SKILLS = build_skills()
 
+BATTLE_ACTIONS: Dict[str, BattleActionDef] = {
+    "light_attack": BattleActionDef(
+        action_id="light_attack",
+        name="Light Attack",
+        description="Reliable 1 AP attack. Can be chained into Feint Rush.",
+        ap_cost=LIGHT_ATTACK_AP_COST,
+        primary_scale="power",
+        secondary_scale="precision",
+        damage_tier="medium",
+        break_tier="low",
+    ),
+    "heavy_attack": BattleActionDef(
+        action_id="heavy_attack",
+        name="Heavy Attack",
+        description="Full-AP finisher. Falters if Power is below 60.",
+        ap_cost=1,
+        force_turn_end=True,
+        requires_full_ap=True,
+        consumes_all_ap=True,
+        primary_scale="power",
+        secondary_scale="precision",
+        damage_tier="high",
+        break_tier="medium",
+        tags=("heavy",),
+    ),
+    "use_healing_potion": BattleActionDef(
+        action_id="use_healing_potion",
+        name="Use Healing Potion",
+        description="Consume 1 potion to restore 35% max HP and end the turn.",
+        ap_cost=1,
+        force_turn_end=True,
+        consumes_all_ap=True,
+        target="self",
+        kind="utility",
+        primary_scale="composure",
+        secondary_scale="power",
+        damage_tier="none",
+        break_tier="none",
+    ),
+    "feint_rush": BattleActionDef(
+        action_id="feint_rush",
+        name="Feint Rush",
+        description="After Light Attack, end the turn to boost the next attack's accuracy.",
+        ap_cost=FEINT_RUSH_AP_COST,
+        force_turn_end=True,
+        requires_class=(),
+        target="self",
+        kind="utility",
+        primary_scale="precision",
+        secondary_scale="composure",
+        damage_tier="none",
+        break_tier="none",
+        is_extra_action=True,
+    ),
+    "double_strike": BattleActionDef(
+        action_id="double_strike",
+        name="Double Strike",
+        description="Attack twice for 2 AP, but Guard and Parry are disabled until your next turn.",
+        ap_cost=DOUBLE_STRIKE_AP_COST,
+        primary_scale="precision",
+        secondary_scale="power",
+        damage_tier="medium",
+        break_tier="low",
+        is_extra_action=True,
+    ),
+    "backstep_slash": BattleActionDef(
+        action_id="backstep_slash",
+        name="Backstep Slash",
+        description="Duelist/Ranger only. Slash, gain evasion, and take an accuracy penalty on the next attack.",
+        ap_cost=BACKSTEP_SLASH_AP_COST,
+        requires_class=("duelist", "ranger"),
+        primary_scale="precision",
+        secondary_scale="composure",
+        damage_tier="medium",
+        break_tier="low",
+        is_extra_action=True,
+    ),
+    "charge_slash": BattleActionDef(
+        action_id="charge_slash",
+        name="Charge Slash",
+        description="Vanguard only. Spend Guard to hammer enemy Break and gain +1 AP next turn on stagger.",
+        ap_cost=CHARGE_SLASH_AP_COST,
+        requires_class=("vanguard",),
+        primary_scale="power",
+        secondary_scale="composure",
+        damage_tier="medium",
+        break_tier="high",
+        tags=("heavy", "burst_start"),
+        is_extra_action=True,
+    ),
+    "trance": BattleActionDef(
+        action_id="trance",
+        name="Trance",
+        description="Once per combat. Requires 3 turns of Composure 80+ and 1+ Spotlight to launch a chain finisher.",
+        ap_cost=TRANCE_AP_COST,
+        force_turn_end=True,
+        consumes_all_ap=True,
+        kind="finisher",
+        primary_scale="composure",
+        secondary_scale="precision",
+        damage_tier="medium",
+        break_tier="medium",
+        tags=("combo", "heavy"),
+        is_extra_action=True,
+    ),
+    "poisoned_chalice": BattleActionDef(
+        action_id="poisoned_chalice",
+        name="Poisoned Chalice",
+        description="Spend 1 potion to heal, strike, and poison the target, but suffer next-turn penalties.",
+        ap_cost=POISONED_CHALICE_AP_COST,
+        force_turn_end=True,
+        consumes_all_ap=True,
+        kind="attack",
+        primary_scale="power",
+        secondary_scale="precision",
+        damage_tier="medium",
+        break_tier="low",
+        is_extra_action=True,
+    ),
+    "backflip": BattleActionDef(
+        action_id="backflip",
+        name="Backflip",
+        description="Recover stability, raise evasion, and strengthen the next heal. Max 2 uses per combat.",
+        ap_cost=BACKFLIP_AP_COST,
+        target="self",
+        kind="utility",
+        primary_scale="composure",
+        secondary_scale="precision",
+        damage_tier="none",
+        break_tier="none",
+        is_extra_action=True,
+    ),
+    "defensive_technique": BattleActionDef(
+        action_id="defensive_technique",
+        name="Defensive Technique",
+        description="Recover Guard and sharpen defensive timing. Once per turn.",
+        ap_cost=DEFENSIVE_TECHNIQUE_AP_COST,
+        target="self",
+        kind="defense",
+        primary_scale="composure",
+        secondary_scale="power",
+        damage_tier="none",
+        break_tier="none",
+        is_extra_action=True,
+    ),
+    "regain_balance": BattleActionDef(
+        action_id="regain_balance",
+        name="Regain Balance",
+        description="Recover Break stability, stronger when near collapse. Once per turn.",
+        ap_cost=REGAIN_BALANCE_AP_COST,
+        target="self",
+        kind="utility",
+        primary_scale="composure",
+        secondary_scale="power",
+        damage_tier="none",
+        break_tier="none",
+        is_extra_action=True,
+    ),
+    "shield_oath": BattleActionDef(
+        action_id="shield_oath",
+        name="Shield Oath",
+        description="Vanguard only. Restore Guard and empower the next Break action.",
+        ap_cost=SHIELD_OATH_AP_COST,
+        requires_class=("vanguard",),
+        target="self",
+        kind="utility",
+        primary_scale="composure",
+        secondary_scale="power",
+        damage_tier="none",
+        break_tier="none",
+        is_extra_action=True,
+    ),
+    "razor_encore": BattleActionDef(
+        action_id="razor_encore",
+        name="Razor Encore",
+        description="Duelist only. Crit to trigger a reduced follow-up slash.",
+        ap_cost=RAZOR_ENCORE_AP_COST,
+        requires_class=("duelist",),
+        primary_scale="precision",
+        secondary_scale="power",
+        damage_tier="medium",
+        break_tier="low",
+        is_extra_action=True,
+    ),
+    "quiet_benediction": BattleActionDef(
+        action_id="quiet_benediction",
+        name="Quiet Benediction",
+        description="Cantor only. Heal the most wounded ally, cleanse one debuff, and gain extra value from mage gear.",
+        ap_cost=QUIET_BENEDICTION_AP_COST,
+        requires_class=("cantor",),
+        target="self",
+        kind="support",
+        primary_scale="composure",
+        secondary_scale="precision",
+        damage_tier="none",
+        break_tier="none",
+        is_extra_action=True,
+    ),
+    "rain_mark": BattleActionDef(
+        action_id="rain_mark",
+        name="Rain Mark",
+        description="Ranger only. Mark an enemy for reliable follow-up hits and the next Break push.",
+        ap_cost=RAIN_MARK_AP_COST,
+        requires_class=("ranger",),
+        kind="utility",
+        primary_scale="precision",
+        secondary_scale="composure",
+        damage_tier="none",
+        break_tier="none",
+        is_extra_action=True,
+    ),
+    "blood_vow": BattleActionDef(
+        action_id="blood_vow",
+        name="Blood Vow",
+        description="Penitent only. Sacrifice HP to empower the next attack with damage and curse pressure.",
+        ap_cost=BLOOD_VOW_AP_COST,
+        requires_class=("penitent",),
+        target="self",
+        kind="utility",
+        primary_scale="power",
+        secondary_scale="composure",
+        damage_tier="none",
+        break_tier="none",
+        is_extra_action=True,
+    ),
+}
+
+BASIC_BATTLE_ACTION_IDS = (
+    "light_attack",
+    "heavy_attack",
+    "use_healing_potion",
+) + (() if not DEFENSIVE_ACTIONS_ARE_BASIC else ("defensive_technique", "regain_balance"))
+EXTRA_BATTLE_ACTION_IDS = (
+    "feint_rush",
+    "double_strike",
+    "backstep_slash",
+    "charge_slash",
+    "trance",
+    "poisoned_chalice",
+    "backflip",
+    "shield_oath",
+    "razor_encore",
+    "quiet_benediction",
+    "rain_mark",
+    "blood_vow",
+) + (() if DEFENSIVE_ACTIONS_ARE_BASIC else ("defensive_technique", "regain_balance"))
+
+
+# ---------------------------------------------------------------------------
+# Equipment registry and helpers
+# ---------------------------------------------------------------------------
+
+
+def chance_bonus_points(value: Any) -> int:
+    if value is None:
+        return 0
+    number = float(value)
+    if -1.0 <= number <= 1.0:
+        return int(round(number * 100.0))
+    return int(round(number))
+
+
+def build_equipment_registry() -> Dict[str, EquipmentItem]:
+    registry: Dict[str, EquipmentItem] = {}
+    for item_id, raw in EQUIPMENT_DATA.items():
+        registry[item_id] = EquipmentItem(
+            item_id=item_id,
+            display_name=str(raw["display_name"]),
+            type=str(raw.get("type", "weapon")),
+            handedness=str(raw.get("handedness", "one_handed")),
+            slot=str(raw.get("slot", "main_hand")),
+            tags=tuple(str(tag) for tag in raw.get("tags", [])),
+            description=str(raw.get("description", "")),
+            base_damage_bonus=int(raw.get("base_damage_bonus", 0)),
+            damage_multiplier=float(raw.get("damage_multiplier", 1.0)),
+            break_multiplier=float(raw.get("break_multiplier", 1.0)),
+            hit_bonus=chance_bonus_points(raw.get("hit_bonus", 0)),
+            crit_bonus=chance_bonus_points(raw.get("crit_bonus", 0)),
+            guard_bonus=int(raw.get("guard_bonus", 0)),
+            evasion_bonus=chance_bonus_points(raw.get("evasion_bonus", 0)),
+            ap_bonus=int(raw.get("ap_bonus", 0)),
+            healing_multiplier=float(raw.get("healing_multiplier", 1.0)),
+            potion_heal_bonus=int(raw.get("potion_heal_bonus", 0)),
+            status_success_bonus=chance_bonus_points(raw.get("status_success_bonus", 0)),
+            reaction_bonus=chance_bonus_points(raw.get("reaction_bonus", 0)),
+            action_modifiers={
+                str(action_id): dict(payload)
+                for action_id, payload in dict(raw.get("action_modifiers", {})).items()
+                if isinstance(payload, dict)
+            },
+            class_bonuses={
+                str(class_id): dict(payload)
+                for class_id, payload in dict(raw.get("class_bonuses", {})).items()
+                if isinstance(payload, dict)
+            },
+        )
+    return registry
+
+
+EQUIPMENT = build_equipment_registry()
+
+
+def get_equipment(item_id: object) -> Optional[EquipmentItem]:
+    if item_id is None:
+        return None
+    return EQUIPMENT.get(str(item_id))
+
+
+def equipment_occupies_both_hands(item: EquipmentItem) -> bool:
+    return item.slot == "both_hands" or item.handedness in {"two_handed", "paired"}
+
+
+def starting_equipment_slots_for_character(character_id: str) -> Dict[str, str]:
+    raw = CHARACTER_BLUEPRINTS.get(character_id, {})
+    configured = raw.get("starting_equipment", {})
+    slot_map: Dict[str, str] = {}
+    if isinstance(configured, dict):
+        for slot_name in EQUIPMENT_SLOTS:
+            item_id = configured.get(slot_name)
+            if item_id and get_equipment(item_id) is not None:
+                slot_map[slot_name] = str(item_id)
+    if slot_map:
+        return slot_map
+    fallback_weapon_id = str(raw.get("weapon", "")).strip()
+    fallback_item = get_equipment(fallback_weapon_id)
+    if fallback_item is None:
+        return {}
+    return {fallback_item.slot: fallback_item.item_id}
+
+
+def sanitize_equipment_slot_map(slot_map: object) -> Dict[str, str]:
+    raw_slots = dict(slot_map) if isinstance(slot_map, dict) else {}
+    both_hands_id = raw_slots.get("both_hands")
+    both_hands_item = get_equipment(both_hands_id)
+    if both_hands_item is not None and equipment_occupies_both_hands(both_hands_item):
+        return {"both_hands": both_hands_item.item_id}
+
+    cleaned: Dict[str, str] = {}
+    main_hand_id = raw_slots.get("main_hand")
+    main_hand_item = get_equipment(main_hand_id)
+    if main_hand_item is not None and main_hand_item.slot == "main_hand":
+        cleaned["main_hand"] = main_hand_item.item_id
+
+    off_hand_id = raw_slots.get("off_hand")
+    off_hand_item = get_equipment(off_hand_id)
+    if off_hand_item is not None and off_hand_item.slot == "off_hand":
+        cleaned["off_hand"] = off_hand_item.item_id
+
+    return cleaned
+
+
+def update_legacy_weapon_metadata(actor: Combatant) -> None:
+    slot_map = sanitize_equipment_slot_map(actor.metadata.get("equipment_slots"))
+    primary_item = get_equipment(slot_map.get("both_hands")) or get_equipment(slot_map.get("main_hand"))
+    if primary_item is not None:
+        actor.metadata["weapon_id"] = primary_item.item_id
+        actor.metadata["weapon_name"] = primary_item.display_name
+    else:
+        actor.metadata["weapon_id"] = None
+        actor.metadata["weapon_name"] = "Unarmed"
+
+
+def ensure_actor_equipment_state(actor: Combatant) -> None:
+    if actor.team != "player":
+        return
+    slots = sanitize_equipment_slot_map(actor.metadata.get("equipment_slots"))
+    if not slots:
+        slots = sanitize_equipment_slot_map(starting_equipment_slots_for_character(actor.entity_id))
+    actor.metadata["equipment_slots"] = slots
+    update_legacy_weapon_metadata(actor)
+
+
+def get_character_equipment(actor: Combatant) -> Dict[str, EquipmentItem]:
+    ensure_actor_equipment_state(actor)
+    slot_map = sanitize_equipment_slot_map(actor.metadata.get("equipment_slots"))
+    actor.metadata["equipment_slots"] = slot_map
+    return {
+        slot_name: item
+        for slot_name in EQUIPMENT_SLOTS
+        for item in [get_equipment(slot_map.get(slot_name))]
+        if item is not None
+    }
+
+
+def can_equip_item(actor: Combatant, item: EquipmentItem, slot_name: Optional[str] = None) -> bool:
+    target_slot = item.slot if slot_name is None else str(slot_name)
+    if target_slot != item.slot:
+        return False
+    current_equipment = get_character_equipment(actor)
+    if target_slot == "off_hand" and "both_hands" in current_equipment:
+        return False
+    return True
+
+
+def equip_item(actor: Combatant, item_id: str, slot_name: Optional[str] = None) -> bool:
+    item = get_equipment(item_id)
+    if item is None:
+        return False
+    target_slot = item.slot if slot_name is None else str(slot_name)
+    if not can_equip_item(actor, item, target_slot):
+        return False
+    current_slots = sanitize_equipment_slot_map(actor.metadata.get("equipment_slots"))
+    if target_slot == "both_hands":
+        current_slots = {"both_hands": item.item_id}
+    else:
+        current_slots.pop("both_hands", None)
+        current_slots[target_slot] = item.item_id
+    actor.metadata["equipment_slots"] = sanitize_equipment_slot_map(current_slots)
+    update_legacy_weapon_metadata(actor)
+    return True
+
+
+def equipment_summary_text(actor: Combatant) -> str:
+    equipment = get_character_equipment(actor)
+    both_hands = equipment.get("both_hands")
+    if both_hands is not None:
+        return both_hands.display_name
+    parts = []
+    main_hand = equipment.get("main_hand")
+    off_hand = equipment.get("off_hand")
+    if main_hand is not None:
+        parts.append(main_hand.display_name)
+    if off_hand is not None:
+        parts.append(off_hand.display_name)
+    return " + ".join(parts) if parts else "Unarmed"
+
+
+def starting_equipment_summary(character_id: str) -> str:
+    stub = Combatant(
+        entity_id=character_id,
+        name=character_id,
+        team="player",
+        affinity="neutral",
+        max_hp=1,
+        hp=1,
+        max_guard=0,
+        guard=0,
+        max_break=0,
+        break_meter=0,
+        speed=0,
+        skills=[],
+    )
+    stub.metadata["equipment_slots"] = starting_equipment_slots_for_character(character_id)
+    return equipment_summary_text(stub)
+
+
+def equipment_has_tag(item: Optional[EquipmentItem], tag: str) -> bool:
+    return item is not None and tag in item.tags
+
+
+def merge_equipment_modifier_payload(modifiers: EquipmentModifiers, payload: Dict[str, Any]) -> None:
+    modifiers.base_damage_bonus += int(payload.get("base_damage_bonus", 0))
+    modifiers.damage_multiplier *= float(payload.get("damage_multiplier", 1.0))
+    modifiers.break_multiplier *= float(payload.get("break_multiplier", 1.0))
+    modifiers.hit_bonus += chance_bonus_points(payload.get("hit_bonus", 0))
+    modifiers.crit_bonus += chance_bonus_points(payload.get("crit_bonus", 0))
+    modifiers.guard_bonus += int(payload.get("guard_bonus", 0))
+    modifiers.evasion_bonus += chance_bonus_points(payload.get("evasion_bonus", 0))
+    modifiers.ap_bonus += int(payload.get("ap_bonus", 0))
+    modifiers.healing_multiplier *= float(payload.get("healing_multiplier", 1.0))
+    modifiers.potion_heal_bonus += int(payload.get("potion_heal_bonus", 0))
+    modifiers.status_success_bonus += chance_bonus_points(payload.get("status_success_bonus", 0))
+    modifiers.reaction_bonus += chance_bonus_points(payload.get("reaction_bonus", 0))
+    modifiers.self_guard_cost_delta += int(payload.get("self_guard_cost_delta", 0))
+
+
+def apply_equipment_modifiers(modifiers: EquipmentModifiers, payload: Dict[str, Any]) -> EquipmentModifiers:
+    merge_equipment_modifier_payload(modifiers, payload)
+    return modifiers
+
+
+def class_equipment_bonus_payload(actor: Combatant, action_id: Optional[str] = None) -> Dict[str, Any]:
+    equipment = get_character_equipment(actor)
+    both_hands = equipment.get("both_hands")
+    main_hand = equipment.get("main_hand")
+    off_hand = equipment.get("off_hand")
+    has_shield = equipment_has_tag(off_hand, "shield")
+    mage_weapon = any(equipment_has_tag(item, "mage") for item in equipment.values())
+
+    if actor.entity_id == "vanguard":
+        if both_hands is None and main_hand is not None and has_shield:
+            payload: Dict[str, Any] = {
+                "damage_multiplier": VANGUARD_ONE_HANDED_DAMAGE_MULTIPLIER,
+                "break_multiplier": VANGUARD_ONE_HANDED_BREAK_MULTIPLIER,
+                "guard_bonus": VANGUARD_SHIELD_GUARD_BONUS,
+                "reaction_bonus": VANGUARD_SHIELD_REACTION_BONUS,
+            }
+            if action_id == "charge_slash":
+                payload["break_multiplier"] *= VANGUARD_SHIELD_CHARGE_SLASH_BREAK_MULTIPLIER
+                payload["self_guard_cost_delta"] = VANGUARD_SHIELD_CHARGE_SLASH_GUARD_DELTA
+            return payload
+        if both_hands is None and main_hand is not None and main_hand.handedness == "one_handed":
+            return {
+                "damage_multiplier": VANGUARD_ONE_HANDED_DAMAGE_MULTIPLIER,
+                "break_multiplier": VANGUARD_ONE_HANDED_BREAK_MULTIPLIER,
+            }
+        return {}
+
+    if actor.entity_id == "duelist":
+        if both_hands is not None and both_hands.handedness == "paired":
+            payload = {
+                "hit_bonus": DUELIST_PAIRED_HIT_BONUS,
+                "crit_bonus": DUELIST_PAIRED_CRIT_BONUS,
+            }
+            if action_id == "double_strike":
+                payload["hit_bonus"] += DUELIST_PAIRED_DOUBLE_STRIKE_HIT_BONUS
+                payload["crit_bonus"] += DUELIST_PAIRED_DOUBLE_STRIKE_CRIT_BONUS
+            return payload
+        if both_hands is not None and both_hands.handedness == "two_handed" and "blade" in both_hands.tags:
+            return {
+                "damage_multiplier": DUELIST_TWO_HANDED_BLADE_DAMAGE_MULTIPLIER,
+                "crit_bonus": DUELIST_TWO_HANDED_BLADE_CRIT_BONUS,
+            }
+        return {}
+
+    if actor.entity_id == "cantor" and mage_weapon:
+        return {
+            "hit_bonus": CANTOR_MAGE_HIT_BONUS,
+            "status_success_bonus": CANTOR_MAGE_STATUS_SUCCESS_BONUS,
+            "healing_multiplier": CANTOR_MAGE_HEALING_MULTIPLIER,
+        }
+
+    return {}
+
+
+def get_class_equipment_bonus(actor: Combatant, equipment: Dict[str, EquipmentItem], action_id: Optional[str] = None) -> EquipmentModifiers:
+    modifiers = EquipmentModifiers()
+    merge_equipment_modifier_payload(modifiers, class_equipment_bonus_payload(actor, action_id=action_id))
+    return modifiers
+
+
+def calculate_equipment_modifiers(
+    actor: Combatant,
+    action_id: Optional[str] = None,
+    skill: Optional[Skill] = None,
+) -> EquipmentModifiers:
+    if actor.team != "player":
+        return EquipmentModifiers()
+
+    resolved_action_id = action_id or (skill.effect_id if skill is not None else None)
+    equipment = get_character_equipment(actor)
+    modifiers = EquipmentModifiers()
+    for item in equipment.values():
+        merge_equipment_modifier_payload(
+            modifiers,
+            {
+                "base_damage_bonus": item.base_damage_bonus,
+                "damage_multiplier": item.damage_multiplier,
+                "break_multiplier": item.break_multiplier,
+                "hit_bonus": item.hit_bonus,
+                "crit_bonus": item.crit_bonus,
+                "guard_bonus": item.guard_bonus,
+                "evasion_bonus": item.evasion_bonus,
+                "ap_bonus": item.ap_bonus,
+                "healing_multiplier": item.healing_multiplier,
+                "potion_heal_bonus": item.potion_heal_bonus,
+                "status_success_bonus": item.status_success_bonus,
+                "reaction_bonus": item.reaction_bonus,
+            },
+        )
+        class_payload = item.class_bonuses.get(actor.entity_id, {})
+        if class_payload:
+            merge_equipment_modifier_payload(modifiers, class_payload)
+            if resolved_action_id is not None:
+                merge_equipment_modifier_payload(modifiers, dict(class_payload.get("action_modifiers", {})).get(resolved_action_id, {}))
+        if resolved_action_id is not None:
+            merge_equipment_modifier_payload(modifiers, item.action_modifiers.get(resolved_action_id, {}))
+
+    class_modifiers = get_class_equipment_bonus(actor, equipment, action_id=resolved_action_id)
+    modifiers.base_damage_bonus += class_modifiers.base_damage_bonus
+    modifiers.damage_multiplier *= class_modifiers.damage_multiplier
+    modifiers.break_multiplier *= class_modifiers.break_multiplier
+    modifiers.hit_bonus += class_modifiers.hit_bonus
+    modifiers.crit_bonus += class_modifiers.crit_bonus
+    modifiers.guard_bonus += class_modifiers.guard_bonus
+    modifiers.evasion_bonus += class_modifiers.evasion_bonus
+    modifiers.ap_bonus += class_modifiers.ap_bonus
+    modifiers.healing_multiplier *= class_modifiers.healing_multiplier
+    modifiers.potion_heal_bonus += class_modifiers.potion_heal_bonus
+    modifiers.status_success_bonus += class_modifiers.status_success_bonus
+    modifiers.reaction_bonus += class_modifiers.reaction_bonus
+    modifiers.self_guard_cost_delta += class_modifiers.self_guard_cost_delta
+    return modifiers
+
+
+def equipment_bonus_summary_lines(actor: Combatant) -> List[str]:
+    equipment = get_character_equipment(actor)
+    lines: List[str] = [f"{actor.name} equips {equipment_summary_text(actor)}."]
+    both_hands = equipment.get("both_hands")
+    main_hand = equipment.get("main_hand")
+    off_hand = equipment.get("off_hand")
+    if actor.entity_id == "vanguard" and both_hands is None and main_hand is not None and equipment_has_tag(off_hand, "shield"):
+        lines.append(
+            f"{actor.name} shield discipline: Guard +{VANGUARD_SHIELD_GUARD_BONUS}, "
+            f"reaction +{VANGUARD_SHIELD_REACTION_BONUS}%, Break +5%, Charge Slash Break +10%."
+        )
+    elif actor.entity_id == "duelist" and both_hands is not None and both_hands.handedness == "paired":
+        lines.append(
+            f"{actor.name} paired tempo: Hit +{DUELIST_PAIRED_HIT_BONUS}%, "
+            f"Crit +{DUELIST_PAIRED_CRIT_BONUS}%, Double Strike hit +{DUELIST_PAIRED_DOUBLE_STRIKE_HIT_BONUS}%."
+        )
+    elif actor.entity_id == "cantor" and any(equipment_has_tag(item, "mage") for item in equipment.values()):
+        lines.append(
+            f"{actor.name} mage focus: Hit +{CANTOR_MAGE_HIT_BONUS}%, "
+            f"status +{CANTOR_MAGE_STATUS_SUCCESS_BONUS}%, healing x{CANTOR_MAGE_HEALING_MULTIPLIER:.2f}."
+        )
+    return lines
+
+
+def actor_has_item_equipped(actor: Combatant, item_id: str) -> bool:
+    return any(item.item_id == item_id for item in get_character_equipment(actor).values())
+
+
+def actor_has_shield_equipped(actor: Combatant) -> bool:
+    equipment = get_character_equipment(actor)
+    return equipment_has_tag(equipment.get("off_hand"), "shield")
+
+
+def actor_uses_one_handed_shield_setup(actor: Combatant) -> bool:
+    equipment = get_character_equipment(actor)
+    both_hands = equipment.get("both_hands")
+    main_hand = equipment.get("main_hand")
+    return both_hands is None and main_hand is not None and actor_has_shield_equipped(actor)
+
 # ---------------------------------------------------------------------------
 # Blueprints -> combatant constructors
 # ---------------------------------------------------------------------------
@@ -411,13 +1312,13 @@ def create_player(character_id: str) -> Combatant:
         role=raw["role"],
         is_boss=False,
     )
-    combatant.metadata["weapon_id"] = raw.get("weapon")
-    combatant.metadata["weapon_name"] = WEAPON_DATA.get(raw.get("weapon", ""), {}).get("display_name", raw.get("weapon", ""))
     combatant.metadata["relic_ids"] = list(raw.get("starting_relics", []))
     combatant.metadata["relic_names"] = [
         RELIC_DATA.get(relic_id, {}).get("display_name", relic_id)
         for relic_id in raw.get("starting_relics", [])
     ]
+    combatant.metadata["equipment_slots"] = starting_equipment_slots_for_character(character_id)
+    ensure_actor_equipment_state(combatant)
     return combatant
 
 
@@ -454,6 +1355,7 @@ def create_enemy(enemy_id: str, index: int = 1) -> Combatant:
     )
 
     combatant.metadata["blueprint_id"] = enemy_id
+    combatant.metadata["counts_for_execution"] = True
     if enemy_id == "canal_seraph":
         combatant.add_condition("airborne", 99)
     return combatant
@@ -482,6 +1384,7 @@ def create_boss(boss_id: str) -> Combatant:
         is_boss=True,
     )
     combatant.metadata["blueprint_id"] = boss_id
+    combatant.metadata["counts_for_execution"] = True
     return combatant
 
 
@@ -591,15 +1494,19 @@ class BattleState:
     rng: random.Random
     logger: BattleLogger
     interactive: bool = True
+    balance_mode: str = BALANCE_MODE_STANDARD
+    healing_potions: int = DEFAULT_HEALING_POTIONS_PER_RUN
+    potion_upgrade_ids: List[str] = field(default_factory=list)
+    selected_extra_actions: List[str] = field(default_factory=list)
     round_number: int = 1
     spotlight: int = 0
     spotlight_max: int = 5
     enemy_spotlight: int = 0
     enemy_spotlight_max: int = 5
-    node_axis_scores: Dict[str, int] = field(default_factory=lambda: {"power": 60, "precision": 60, "composure": 60})
+    node_axis_scores: Dict[str, int] = field(default_factory=lambda: {"power": DEFAULT_AXIS_TRIPLET[0], "precision": DEFAULT_AXIS_TRIPLET[1], "composure": DEFAULT_AXIS_TRIPLET[2]})
     player_tempo_meter: int = 0
     bonus_action_rounds: Set[Tuple[int, str]] = field(default_factory=set)
-    last_player_inputs: Tuple[int, int, int] = (60, 60, 60)
+    last_player_inputs: Tuple[int, int, int] = DEFAULT_AXIS_TRIPLET
     relay_target_id: Optional[str] = None
     relay_source_name: Optional[str] = None
     last_successful_reaction: Optional[str] = None
@@ -653,6 +1560,44 @@ class BattleState:
     def change_spotlight(self, amount: int, reason: str) -> None:
         self.change_player_spotlight(amount, reason)
 
+    def party_balance_profile(self) -> PartyBalanceProfile:
+        return get_party_balance_profile(len(self.players), self.balance_mode)
+
+    def apply_enemy_balance(self, enemy: Combatant) -> None:
+        if enemy.team != "enemy":
+            return
+        if bool(enemy.metadata.get("party_balance_applied", False)):
+            return
+        profile = self.party_balance_profile()
+        hp_mult = profile.enemy_hp_mult * (profile.boss_hp_mult if enemy.is_boss else 1.0)
+        guard_mult = profile.enemy_guard_mult * (profile.boss_guard_mult if enemy.is_boss else 1.0)
+        break_mult = profile.enemy_break_mult * (profile.boss_break_mult if enemy.is_boss else 1.0)
+        enemy.max_hp = scaled_amount(enemy.max_hp, hp_mult)
+        enemy.hp = min(enemy.max_hp, scaled_amount(enemy.hp, hp_mult))
+        enemy.max_guard = scaled_amount(enemy.max_guard, guard_mult) if enemy.max_guard > 0 else 0
+        enemy.guard = min(enemy.max_guard, scaled_amount(enemy.guard, guard_mult)) if enemy.max_guard > 0 else 0
+        enemy.max_break = scaled_amount(enemy.max_break, break_mult) if enemy.max_break > 0 else 0
+        enemy.break_meter = min(enemy.max_break, scaled_amount(enemy.break_meter, break_mult)) if enemy.max_break > 0 else 0
+        enemy.metadata["party_balance_applied"] = True
+
+    def initialize_enemy_balance(self) -> None:
+        for enemy in self.enemies:
+            self.apply_enemy_balance(enemy)
+
+    def enemy_pressure_multiplier(self, enemy: Combatant) -> float:
+        profile = self.party_balance_profile()
+        multiplier = profile.enemy_damage_mult
+        if enemy.is_boss:
+            multiplier *= profile.boss_pressure_mult
+        return multiplier
+
+    def reaction_failure_damage_multiplier(self, enemy: Combatant) -> float:
+        profile = self.party_balance_profile()
+        multiplier = profile.reaction_failure_damage_mult
+        if enemy.is_boss:
+            multiplier *= profile.boss_pressure_mult
+        return multiplier
+
     def apply_direct_hp_loss(self, target: Combatant, amount: int, reason: str = "") -> None:
         if not target.alive():
             return
@@ -663,6 +1608,7 @@ class BattleState:
             self.logger.log(self.round_number, f"{target.name} loses {final} HP ({reason}).")
         if target.hp <= 0:
             self.logger.log(self.round_number, f"{target.name} falls.")
+            self.check_end()
 
     def damage_taken_mult(self, target: Combatant) -> float:
         mult = 1.0
@@ -672,6 +1618,8 @@ class BattleState:
             mult *= 1.15
         if target.has_condition("reveal"):
             mult *= 1.05
+        if target.team == "player" and actor_has_relic(target, "kings_wager"):
+            mult *= KINGS_WAGER_INCOMING_DAMAGE_MULT
         return mult
 
     def render_state(self) -> None:
@@ -681,13 +1629,17 @@ class BattleState:
             f"{emoji_label('round', f'ROUND {self.round_number}')} | "
             f"{emoji_label('spotlight', 'Player Spotlight')} {self.spotlight}/{self.spotlight_max} | "
             f"Enemy Spotlight {self.enemy_spotlight}/{self.enemy_spotlight_max} | "
-            f"Tempo {self.player_tempo_meter}/{COMPOSURE_TEMPO_THRESHOLD}"
+            f"Potions {self.healing_potions}"
         )
         print(
             f"Node Axis: Power {axes.get('power', 60)}, "
             f"Precision {axes.get('precision', 60)}, "
             f"Composure {axes.get('composure', 60)}"
         )
+        if self.selected_extra_actions:
+            loadout_names = ", ".join(BATTLE_ACTIONS[action_id].name for action_id in self.selected_extra_actions if action_id in BATTLE_ACTIONS)
+            if loadout_names:
+                print(f"Battle Loadout: {loadout_names}")
         print("-" * 84)
         print(emoji_label("party", "PLAYERS"))
         for idx, unit in enumerate(self.players, start=1):
@@ -872,6 +1824,8 @@ def combatant_from_payload(payload: Dict[str, object]) -> Combatant:
         ),
         metadata=dict(_json_restore_value(payload.get("metadata", {}))),
     )
+    if unit.team == "player":
+        ensure_actor_equipment_state(unit)
     return unit
 
 
@@ -932,6 +1886,10 @@ def reaction_read_cache_from_payload(
 
 def battle_state_to_payload(state: BattleState) -> Dict[str, object]:
     return {
+        "balance_mode": state.balance_mode,
+        "healing_potions": state.healing_potions,
+        "potion_upgrade_ids": list(state.potion_upgrade_ids),
+        "selected_extra_actions": list(state.selected_extra_actions),
         "round_number": state.round_number,
         "spotlight": state.spotlight,
         "spotlight_max": state.spotlight_max,
@@ -972,6 +1930,14 @@ def battle_state_from_payload(
         rng=rng,
         logger=logger,
         interactive=interactive,
+        balance_mode=str(payload.get("balance_mode", BALANCE_MODE_STANDARD)),
+        healing_potions=max(0, int(payload.get("healing_potions", DEFAULT_HEALING_POTIONS_PER_RUN))),
+        potion_upgrade_ids=[str(upgrade_id) for upgrade_id in list(payload.get("potion_upgrade_ids", []))],
+        selected_extra_actions=[
+            str(action_id)
+            for action_id in list(payload.get("selected_extra_actions", []))
+            if str(action_id) in BATTLE_ACTIONS
+        ],
         round_number=int(payload.get("round_number", 1)),
         spotlight=int(payload.get("spotlight", 0)),
         spotlight_max=int(payload.get("spotlight_max", 5)),
@@ -1436,6 +2402,13 @@ def crit_chance(actor: Combatant, skill: Skill, inputs: ResolvedInputs, target: 
     chance = 5
     if actor.team != "player":
         chance += inputs.band_indices["precision"] * 5
+    else:
+        chance += int(round(precision_crit_bonus(inputs.precision) * 100))
+        precision_carry = max(0, current_precision_carry_bonus(actor))
+        if precision_carry > 0:
+            chance += int(round(max(0.0, precision_carry * PRECISION_CRIT_BONUS_PER_POINT * 100)))
+        chance += calculate_equipment_modifiers(actor, action_id=skill.effect_id, skill=skill).crit_bonus
+        chance += mooncleave_crit_bonus(actor)
     if actor.posture == "focus":
         chance += 15
     if target.has_condition("reveal"):
@@ -1451,14 +2424,19 @@ def crit_chance(actor: Combatant, skill: Skill, inputs: ResolvedInputs, target: 
 
 
 def player_hit_chance(actor: Combatant, skill: Skill, inputs: ResolvedInputs, target: Combatant) -> int:
-    precision = inputs.precision
-    chance = 55 + int(precision * 0.40)
+    equipment_modifiers = calculate_equipment_modifiers(actor, action_id=skill.effect_id, skill=skill)
+    chance = PLAYER_ATTACK_BASE_HIT_CHANCE + int(round(precision_hit_bonus(inputs.precision) * 100))
+    precision_carry = max(0, current_precision_carry_bonus(actor))
+    if precision_carry > 0:
+        chance += int(round(precision_carry * PRECISION_HIT_BONUS_PER_POINT * 100))
     if skill.primary_scale == "precision":
-        chance += 8
+        chance += 6
     if skill.secondary_scale == "precision":
-        chance += 4
+        chance += 3
     if target.has_condition("reveal"):
         chance += 5
+    if target.has_condition("rain_mark"):
+        chance += RAIN_MARK_HIT_BONUS
     if target.has_condition("staggered"):
         chance += 10
     if actor.has_condition("snare"):
@@ -1468,15 +2446,16 @@ def player_hit_chance(actor: Combatant, skill: Skill, inputs: ResolvedInputs, ta
     ranged_attack = skill.kind == "ranged_attack" or "ranged" in skill.tags or skill.effect_id == "linebreaker_shot"
     if target.has_condition("airborne"):
         chance += 5 if ranged_attack else -8
-    return clamp_int(chance, 35, 95)
+    if actor.posture == "focus":
+        chance += FOCUS_HIT_BONUS
+        chance = max(chance, FOCUS_MIN_HIT_CHANCE)
+    chance += equipment_modifiers.hit_bonus
+    chance += action_accuracy_modifier(actor)
+    return clamp_int(chance, PLAYER_MIN_HIT_CHANCE, PLAYER_MAX_HIT_CHANCE)
 
 
 def player_power_damage_multiplier(state: BattleState, actor: Combatant, skill: Skill, inputs: ResolvedInputs) -> float:
-    power = inputs.power
-    low = clamp(0.65 + power * 0.0035, 0.65, 1.00)
-    high = clamp(0.95 + power * 0.0070, 0.95, 1.70)
-    mode = clamp(0.80 + power * 0.0055, low, high)
-    return state.rng.triangular(low, high, mode)
+    return power_damage_multiplier(inputs.power)
 
 
 def apply_damage_to_target(
@@ -1528,6 +2507,17 @@ def apply_damage_to_target(
 
     if target.has_condition("reveal"):
         damage = ceil_int(damage * 1.10)
+    if target.has_condition("poisoned_chalice"):
+        break_damage = ceil_int(break_damage * POISONED_CHALICE_BREAK_VULNERABILITY_MULT)
+    if (
+        source.team == "player"
+        and target.has_condition("rain_mark")
+        and bool(target.metadata.get("rain_mark_break_bonus_pending", False))
+        and break_damage > 0
+    ):
+        break_damage = ceil_int(break_damage * RAIN_MARK_BREAK_BONUS_MULT)
+        target.metadata["rain_mark_break_bonus_pending"] = False
+        state.logger.log(state.round_number, f"Rain Mark buckles {target.name}'s footing for extra Break pressure.")
 
     # Special cases.
     if skill.effect_id == "execution_drop" and target.has_condition("staggered"):
@@ -1547,16 +2537,14 @@ def apply_damage_to_target(
     if source.team == "player" and target.team == "enemy" and is_offensive_skill(skill):
         inputs = source.metadata.get("last_inputs")
         if not isinstance(inputs, ResolvedInputs):
-            raw_axes = state.node_axis_scores
             inputs = make_resolved_inputs(
-                int(raw_axes.get("power", 60)),
-                int(raw_axes.get("precision", 60)),
-                int(raw_axes.get("composure", 60)),
+                *current_node_axis_triplet(state),
                 skill,
             )
         hit_chance = player_hit_chance(source, skill, inputs, target)
         roll = state.rng.randint(1, 100)
         margin = roll - hit_chance
+        graze_margin = FOCUS_GRAZE_MARGIN if source.posture == "focus" else 10
         high_risk = (
             skill.effect_id == "anchor_cleave"
             or skill.damage_tier in {"high", "extreme"}
@@ -1565,13 +2553,19 @@ def apply_damage_to_target(
         if roll <= hit_chance:
             result["hit_outcome"] = "hit"
             state.logger.log(state.round_number, f"{source.name} lines up {target.name} [hit roll {roll}/{hit_chance}].")
-        elif margin <= 10:
+        elif margin <= graze_margin:
             result["hit_outcome"] = "graze"
             damage = ceil_int(damage * 0.50)
             break_damage = ceil_int(break_damage * 0.50)
             status_to_apply = None
             can_crit = False
-            state.logger.log(state.round_number, f"{source.name} grazes {target.name} [hit roll {roll}/{hit_chance}].")
+            if source.posture == "focus" and margin > 10:
+                state.logger.log(
+                    state.round_number,
+                    f"{source.name} turns a near miss into a graze on {target.name} [hit roll {roll}/{hit_chance}].",
+                )
+            else:
+                state.logger.log(state.round_number, f"{source.name} grazes {target.name} [hit roll {roll}/{hit_chance}].")
             if high_risk and margin >= 6:
                 state.change_enemy_spotlight(1, f"{source.name} risky graze")
         else:
@@ -1587,8 +2581,9 @@ def apply_damage_to_target(
                 state.change_enemy_spotlight(1, f"{source.name} risky miss")
 
     if source.team == "enemy" and target.team == "player":
-        damage = ceil_int(damage * ENEMY_DAMAGE_MULTIPLIER)
-        break_damage = ceil_int(break_damage * ENEMY_DAMAGE_MULTIPLIER)
+        pressure_mult = state.enemy_pressure_multiplier(source)
+        damage = ceil_int(damage * ENEMY_DAMAGE_MULTIPLIER * pressure_mult)
+        break_damage = ceil_int(break_damage * ENEMY_DAMAGE_MULTIPLIER * pressure_mult)
         if state.enemy_spotlight > 0 and (damage > 0 or break_damage > 0):
             state.change_enemy_spotlight(-1, "cashed for pressure")
             damage = ceil_int(damage * ENEMY_SPOTLIGHT_DAMAGE_MULTIPLIER)
@@ -1605,6 +2600,14 @@ def apply_damage_to_target(
             result["crit"] = True
             damage = ceil_int(damage * 1.50)
             break_damage = ceil_int(break_damage * 1.10)
+
+    if source.posture == "ravage" and target.team == "enemy" and break_damage > 0:
+        finish_threshold = max(1, ceil_int(target.max_break * RAVAGE_BREAK_FINISH_RATIO))
+        if target.break_meter <= finish_threshold:
+            boosted_break = ceil_int(break_damage * RAVAGE_BREAK_FINISH_MULTIPLIER)
+            if boosted_break > break_damage:
+                state.logger.log(state.round_number, f"{source.name}'s Ravage posture bears down on the break line.")
+                break_damage = boosted_break
 
     # Reactions apply only when enemies attack player characters with direct attacks.
     reaction = None
@@ -1684,10 +2687,14 @@ def apply_damage_to_target(
     if target.hp <= 0:
         result["killed"] = True
         state.logger.log(state.round_number, f"{target.name} falls.")
+        if source.team == "player" and target.team == "enemy":
+            handle_kings_wager_execution(state, source, target)
+        state.check_end()
 
     # Status application after damage, if target survived.
     if status_to_apply and target.alive():
         status_name, duration, chance = status_to_apply
+        equipment_modifiers = calculate_equipment_modifiers(source, action_id=skill.effect_id, skill=skill)
         final_chance = chance
         if source.posture == "focus":
             final_chance += 20
@@ -1695,6 +2702,8 @@ def apply_damage_to_target(
             final_chance += 15
         if is_affinity_disadvantage(skill.affinity, target.affinity):
             final_chance -= 15
+        final_chance += equipment_modifiers.status_success_bonus
+        final_chance += black_vial_status_bonus(source)
         final_chance = clamp_int(final_chance, 5, 100)
         if state.rng.randint(1, 100) <= final_chance:
             target.add_condition(status_name, duration)
@@ -1711,9 +2720,22 @@ def apply_damage_to_target(
         if gained:
             state.logger.log(state.round_number, f"{source.name} gains {gained} guard from adapted ranger passive.")
 
+    if source.team == "player" and is_offensive_skill(skill):
+        handle_mooncleave_on_result(state, source, result)
+        if result.get("hit_outcome") in {"hit", "graze"}:
+            handle_anklet_refund_on_result(state, source, result)
+            consume_black_vial_stacks(state, source)
+            if bool(source.metadata.get("blood_vow_status_ready", False)) and target.alive() and result.get("status_applied") is None:
+                target.add_condition("hex", BLOOD_VOW_STATUS_DURATION)
+                result["status_applied"] = "hex"
+                state.logger.log(state.round_number, f"{target.name} is hexed by Blood Vow.")
+
     if source.next_attack_power_bonus and skill.kind not in {"support", "defense", "utility", "stance", "self_buff"}:
         source.next_attack_power_bonus = 0
         state.logger.log(state.round_number, f"{source.name}'s Blood Oath surge is consumed.")
+    if source.team == "player" and is_offensive_skill(skill):
+        consume_next_attack_accuracy_modifiers(source)
+        consume_single_use_offense_flags(source)
 
     if is_affinity_advantage(skill.affinity, target.affinity) and source.team == "player":
         state.change_spotlight(1, f"{source.name} exploited affinity")
@@ -1748,6 +2770,147 @@ def grant_barrier_to_lowest_guard_ally(state: BattleState, source: Combatant, am
 def equipped_relic_ids(actor: Combatant) -> List[str]:
     raw = actor.metadata.get("relic_ids", [])
     return [str(relic_id) for relic_id in raw if str(relic_id) in RELIC_DATA]
+
+
+def actor_has_relic(actor: Combatant, relic_id: str) -> bool:
+    return relic_id in equipped_relic_ids(actor)
+
+
+def battle_has_potion_upgrade(state: BattleState, upgrade_id: str) -> bool:
+    return upgrade_id in state.potion_upgrade_ids
+
+
+def healing_potion_capacity(state: BattleState) -> int:
+    capacity = DEFAULT_HEALING_POTIONS_PER_RUN
+    if battle_has_potion_upgrade(state, "potion_capacity_plus_one"):
+        capacity += POTION_UPGRADE_CAPACITY_BONUS
+    return max(1, capacity)
+
+
+def poisoned_chalice_penalty_mult(state: BattleState) -> float:
+    return CHALICE_TOLERANCE_PENALTY_MULT if battle_has_potion_upgrade(state, "chalice_tolerance") else 1.0
+
+
+def actor_has_mooncleave_weapon(actor: Combatant) -> bool:
+    return actor_has_item_equipped(actor, "mooncleave_sword")
+
+
+def actor_has_fracture_shield(actor: Combatant) -> bool:
+    return actor_has_item_equipped(actor, "fracture_shield")
+
+
+def actor_has_anklet_bell(actor: Combatant) -> bool:
+    return actor_has_relic(actor, "anklet_bell_in_rain")
+
+
+def restore_break_stability(actor: Combatant, amount: int) -> int:
+    if amount <= 0:
+        return 0
+    before = actor.break_meter
+    actor.break_meter = min(actor.max_break, actor.break_meter + amount)
+    return actor.break_meter - before
+
+
+def current_precision_carry_bonus(actor: Combatant) -> int:
+    return int(actor.metadata.get("next_attack_precision_bonus", 0))
+
+
+def mooncleave_crit_bonus(actor: Combatant) -> int:
+    if not actor_has_mooncleave_weapon(actor):
+        return 0
+    stacks = clamp_int(int(actor.metadata.get("mooncleave_stacks", 0)), 0, MOONCLEAVE_MAX_STACKS)
+    return stacks * MOONCLEAVE_CRIT_BONUS_PER_STACK
+
+
+def black_vial_damage_multiplier(actor: Combatant) -> float:
+    if not actor_has_relic(actor, "black_vial_cord"):
+        return 1.0
+    stacks = clamp_int(int(actor.metadata.get("black_vial_stacks", 0)), 0, BLACK_VIAL_MAX_STACKS)
+    return 1.0 + (stacks * BLACK_VIAL_DAMAGE_BONUS_PER_STACK)
+
+
+def black_vial_status_bonus(actor: Combatant) -> int:
+    if not actor_has_relic(actor, "black_vial_cord"):
+        return 0
+    stacks = clamp_int(int(actor.metadata.get("black_vial_stacks", 0)), 0, BLACK_VIAL_MAX_STACKS)
+    return stacks * BLACK_VIAL_STATUS_BONUS_PER_STACK
+
+
+def grant_black_vial_stacks(state: BattleState, actor: Combatant, amount: int, source_text: str) -> None:
+    if amount <= 0 or not actor_has_relic(actor, "black_vial_cord"):
+        return
+    before = clamp_int(int(actor.metadata.get("black_vial_stacks", 0)), 0, BLACK_VIAL_MAX_STACKS)
+    after = clamp_int(before + amount, 0, BLACK_VIAL_MAX_STACKS)
+    if after <= before:
+        return
+    actor.metadata["black_vial_stacks"] = after
+    state.logger.log(state.round_number, f"Black Vial Cord tightens from {source_text}: {after}/{BLACK_VIAL_MAX_STACKS}.")
+
+
+def consume_black_vial_stacks(state: BattleState, actor: Combatant) -> None:
+    stacks = clamp_int(int(actor.metadata.pop("black_vial_stacks", 0)), 0, BLACK_VIAL_MAX_STACKS)
+    if stacks > 0:
+        state.logger.log(state.round_number, f"Black Vial power spills into {actor.name}'s strike and is spent.")
+
+
+def battle_actor_status_lines(state: BattleState, actor: Combatant) -> List[str]:
+    lines: List[str] = []
+    if actor_has_mooncleave_weapon(actor):
+        stacks = clamp_int(int(actor.metadata.get("mooncleave_stacks", 0)), 0, MOONCLEAVE_MAX_STACKS)
+        lines.append(f"Mooncleave: +{stacks * MOONCLEAVE_CRIT_BONUS_PER_STACK}% crit ({stacks}/{MOONCLEAVE_MAX_STACKS})")
+    if actor_has_relic(actor, "black_vial_cord"):
+        stacks = clamp_int(int(actor.metadata.get("black_vial_stacks", 0)), 0, BLACK_VIAL_MAX_STACKS)
+        lines.append(f"Black Vial: {stacks}/{BLACK_VIAL_MAX_STACKS}")
+    if actor_has_relic(actor, "kings_wager"):
+        counter = clamp_int(int(actor.metadata.get("kings_wager_executions", 0)), 0, KINGS_WAGER_EXECUTION_THRESHOLD)
+        lines.append(f"King's Wager: {counter}/{KINGS_WAGER_EXECUTION_THRESHOLD}")
+    composure_turns = clamp_int(
+        int(actor.metadata.get("high_composure_turns_this_combat", 0)),
+        0,
+        TRANCE_REQUIRED_HIGH_COMPOSURE_TURNS,
+    )
+    if int(actor.metadata.get("evasion_penalty_until_next_turn", 0)) > 0 or int(actor.metadata.get("pending_poisoned_chalice_accuracy_penalty", 0)) > 0:
+        lines.append(
+            f"Poisoned Chalice penalty: evade -{int(actor.metadata.get('evasion_penalty_until_next_turn', 0))}, "
+            f"next-turn accuracy -{int(actor.metadata.get('pending_poisoned_chalice_accuracy_penalty', 0))}"
+        )
+    if float(actor.metadata.get("next_healing_multiplier_bonus", 0.0)) > 0:
+        lines.append(f"Next heal +{int(round(float(actor.metadata.get('next_healing_multiplier_bonus', 0.0)) * 100))}%")
+    trance_used = bool(actor.metadata.get("trance_used_this_combat", False))
+    lines.append(
+        f"Trance: {'spent' if trance_used else f'{composure_turns}/{TRANCE_REQUIRED_HIGH_COMPOSURE_TURNS} high-Composure turns'} | "
+        f"Spotlight {state.spotlight}/{state.spotlight_max}"
+    )
+    return lines
+
+
+def reset_actor_combat_metadata(actor: Combatant) -> None:
+    for key in (
+        "high_composure_turns_this_combat",
+        "trance_used_this_combat",
+        "backflip_uses_this_combat",
+        "shield_oath_cooldown",
+        "shield_oath_break_bonus_mult",
+        "mooncleave_stacks",
+        "black_vial_stacks",
+        "anklet_refund_primed",
+        "anklet_refund_used_this_turn",
+        "next_attack_precision_bonus",
+        "next_healing_multiplier_bonus",
+        "pending_poisoned_chalice_accuracy_penalty",
+        "turn_accuracy_penalty",
+        "poisoned_chalice_dot",
+        "evasion_penalty_until_next_turn",
+        "defensive_technique_used_turn",
+        "regain_balance_used_turn",
+        "fracture_shield_overflow_used_turn",
+        "blood_vow_ready",
+        "blood_vow_status_ready",
+        "current_action_accuracy_modifier",
+        "defensive_reaction_bonus_until_next_turn",
+    ):
+        actor.metadata.pop(key, None)
+    actor.remove_condition("blood_vow")
 
 
 def enemy_action_tags(actor: Combatant, action_id: str) -> Tuple[str, ...]:
@@ -2057,6 +3220,14 @@ def finalize_action_resolution(state: BattleState, actor: Combatant, skill: Skil
 # ---------------------------------------------------------------------------
 
 
+def reaction_unavailable_reason(target: Combatant, reaction: str) -> Optional[str]:
+    if reaction == "guard" and bool(target.metadata.get("cannot_guard_next_turn", False)):
+        return "Guard is disabled until your next turn."
+    if reaction == "parry" and bool(target.metadata.get("cannot_parry_next_turn", False)):
+        return "Parry is disabled until your next turn."
+    return None
+
+
 def choose_reaction(
     state: BattleState,
     target: Combatant,
@@ -2066,22 +3237,28 @@ def choose_reaction(
 ) -> str:
     resolved_tags = tuple(str(tag) for tag in incoming_tags)
     has_pressure_tags = any(tag in POSITION_PUNISH_TAGS for tag in resolved_tags)
+    allowed_reactions = [reaction for reaction in ("guard", "dodge", "parry") if reaction_unavailable_reason(target, reaction) is None]
+    if not allowed_reactions:
+        allowed_reactions = ["dodge"]
     if not state.interactive:
         if target.position == "pressing":
-            if target.guard <= 8:
+            if "dodge" in allowed_reactions and target.guard <= 8:
                 return "dodge"
-            if has_pressure_tags:
+            if "parry" in allowed_reactions and has_pressure_tags:
                 return "parry"
         if target.position == "withdrawn":
-            if target.guard <= 8:
+            if "dodge" in allowed_reactions and target.guard <= 8:
                 return "dodge"
-            return "guard"
+            if "guard" in allowed_reactions:
+                return "guard"
         # Auto logic: bastion likes parry, low guard likes dodge, otherwise guard.
-        if target.posture == "bastion" or target.has_condition("feint_circuit"):
+        if "parry" in allowed_reactions and (target.posture == "bastion" or target.has_condition("feint_circuit")):
             return "parry"
-        if target.guard <= 8:
+        if "dodge" in allowed_reactions and target.guard <= 8:
             return "dodge"
-        return "guard"
+        if "guard" in allowed_reactions:
+            return "guard"
+        return allowed_reactions[0]
 
     while True:
         print(f"\nReaction for {target.name}: [g]uard, [d]odge, [p]arry")
@@ -2092,22 +3269,24 @@ def choose_reaction(
         )
         choice = input("> ").strip().lower()
         if choice in {"g", "guard", ""}:
-            return "guard"
+            reason = reaction_unavailable_reason(target, "guard")
+            if reason is None:
+                return "guard"
+            print(reason)
+            continue
         if choice in {"d", "dodge"}:
             return "dodge"
         if choice in {"p", "parry"}:
-            return "parry"
+            reason = reaction_unavailable_reason(target, "parry")
+            if reason is None:
+                return "parry"
+            print(reason)
+            continue
         print("Please type g, d, or p.")
 
 
 def get_current_axis_inputs_for_reaction(state: BattleState, target: Combatant, incoming_skill: Skill) -> ResolvedInputs:
-    raw = state.node_axis_scores
-    return make_resolved_inputs(
-        int(raw.get("power", 60)),
-        int(raw.get("precision", 60)),
-        int(raw.get("composure", 60)),
-        incoming_skill,
-    )
+    return make_resolved_inputs(*current_node_axis_triplet(state), incoming_skill)
 
 
 def spend_guard_for_reaction(target: Combatant, amount: int) -> int:
@@ -2136,6 +3315,8 @@ def resolve_reaction(
     logs: List[str] = []
     prevented = False
     inputs = get_current_axis_inputs_for_reaction(state, target, incoming_skill)
+    equipment_modifiers = calculate_equipment_modifiers(target)
+    defensive_guard_bonus = int(target.metadata.get("defensive_reaction_bonus_until_next_turn", 0))
     incoming_tags_tuple = tuple(str(tag) for tag in incoming_tags)
     tagged_pressure = any(tag in POSITION_PUNISH_TAGS for tag in incoming_tags_tuple)
     defensive_profile = resolve_defensive_read_profile(incoming_tags_tuple)
@@ -2146,7 +3327,7 @@ def resolve_reaction(
             target.metadata["bypass_guard_this_hit"] = True
             state.change_enemy_spotlight(1, f"{target.name} failed guard gate")
             logs.append(f"Guard gate failed: Power {inputs.power} < {GUARD_POWER_REQUIREMENT}.")
-            return incoming_damage, incoming_break, prevented, logs
+            return scale_reaction_failure_damage(state, attacker, incoming_damage), incoming_break, prevented, logs
         logs.append(f"Guard gate success: Power {inputs.power} >= {GUARD_POWER_REQUIREMENT}.")
         hp_spill_mult, guard_break_mult = position_guard_modifiers(target.position)
         if read_tier > 0:
@@ -2159,10 +3340,13 @@ def resolve_reaction(
             logs.append(f"{target.name}'s Brace softens the impact.")
         if target.posture == "bastion":
             hp_spill_mult *= 0.90
+        total_guard_bonus = equipment_modifiers.reaction_bonus + defensive_guard_bonus
+        if total_guard_bonus > 0:
+            hp_spill_mult *= max(0.70, 1.0 - (total_guard_bonus / 100.0))
         # Guard sends damage into guard first, but any spill to HP is reduced by spill multiplier.
         overflow = 0
         if target.guard > 0:
-            overflow = max(0, incoming_damage - target.guard)
+            overflow = max(0, incoming_damage - (target.guard + max(0, equipment_modifiers.guard_bonus)))
             adjusted_overflow = ceil_int(overflow * hp_spill_mult)
             effective_damage = min(incoming_damage, target.guard) + adjusted_overflow
         else:
@@ -2179,6 +3363,7 @@ def resolve_reaction(
             reaction="guard",
             incoming_tags=incoming_tags_tuple,
         )
+        maybe_grant_bastion_guard_reward(state, target)
         step_position_toward_withdrawn(state, target)
         if tagged_pressure:
             step_position_toward_withdrawn(state, attacker, reason="pressure answered")
@@ -2193,7 +3378,7 @@ def resolve_reaction(
             state.change_enemy_spotlight(1, f"{target.name} failed dodge gate")
             logs.append(f"Dodge gate failed: Precision {inputs.precision} < {DODGE_PRECISION_REQUIREMENT}.")
             return (
-                ceil_int(incoming_damage * 1.20),
+                scale_reaction_failure_damage(state, attacker, ceil_int(incoming_damage * 1.20)),
                 incoming_break + DODGE_EXTRA_BREAK_ON_FAIL,
                 prevented,
                 logs,
@@ -2208,6 +3393,10 @@ def resolve_reaction(
         if target.has_condition("soak"):
             chance -= 10
         chance += position_dodge_bonus(target.position)
+        chance += int(target.metadata.get("evasion_bonus_until_next_turn", 0))
+        chance -= int(target.metadata.get("evasion_penalty_until_next_turn", 0))
+        chance += equipment_modifiers.evasion_bonus
+        chance += equipment_modifiers.reaction_bonus
         if before_break <= 0 or spent_break < DODGE_BREAK_COST:
             chance -= 20
             logs.append(f"{target.name}'s empty Break meter makes the dodge shaky.")
@@ -2239,7 +3428,7 @@ def resolve_reaction(
         reduced = ceil_int(incoming_damage * failed_damage_mult)
         state.change_enemy_spotlight(1, f"{target.name} mistimed dodge")
         logs.append(f"{target.name} mistimes the dodge [dodge roll {roll}/{chance}].")
-        return reduced, ceil_int(incoming_break * failed_break_mult), prevented, logs
+        return scale_reaction_failure_damage(state, attacker, reduced), ceil_int(incoming_break * failed_break_mult), prevented, logs
 
     # parry
     spent_guard = spend_guard_for_reaction(target, PARRY_GUARD_COST)
@@ -2254,7 +3443,7 @@ def resolve_reaction(
             f"Break {spent_break}/{PARRY_BREAK_COST}."
         )
         return (
-            ceil_int(incoming_damage * 1.35),
+            scale_reaction_failure_damage(state, attacker, ceil_int(incoming_damage * 1.35)),
             incoming_break + PARRY_EXTRA_BREAK_ON_FAIL,
             prevented,
             logs,
@@ -2272,7 +3461,7 @@ def resolve_reaction(
         state.change_enemy_spotlight(1, f"{target.name} failed parry gate")
         logs.append("Parry gate failed: " + "; ".join(failed_axes) + ".")
         return (
-            ceil_int(incoming_damage * 1.35),
+            scale_reaction_failure_damage(state, attacker, ceil_int(incoming_damage * 1.35)),
             incoming_break + PARRY_EXTRA_BREAK_ON_FAIL,
             prevented,
             logs,
@@ -2293,6 +3482,7 @@ def resolve_reaction(
         chance += 4
     if target.has_condition("feint_circuit"):
         chance += 15
+    chance += equipment_modifiers.reaction_bonus
     chance += parry_bonus
     chance = clamp_int(chance, 10, 92)
     roll = state.rng.randint(1, 100)
@@ -2344,7 +3534,7 @@ def resolve_reaction(
     # Failed parry.
     state.change_enemy_spotlight(1, f"{target.name} missed parry")
     logs.append(f"{target.name} misses the parry [parry roll {roll}/{chance}] and is punished.")
-    return ceil_int(incoming_damage * 1.15), incoming_break + 6, prevented, logs
+    return scale_reaction_failure_damage(state, attacker, ceil_int(incoming_damage * 1.15)), incoming_break + 6, prevented, logs
 
 
 # ---------------------------------------------------------------------------
@@ -2399,6 +3589,408 @@ def prompt_triplet(defaults: Tuple[int, int, int], skill: Skill) -> ResolvedInpu
             return resolved
 
 
+def current_node_axis_triplet(state: BattleState) -> Tuple[int, int, int]:
+    raw = state.node_axis_scores
+    return (
+        clamp_int(int(raw.get("power", DEFAULT_AXIS_TRIPLET[0])), 0, 100),
+        clamp_int(int(raw.get("precision", DEFAULT_AXIS_TRIPLET[1])), 0, 100),
+        clamp_int(int(raw.get("composure", DEFAULT_AXIS_TRIPLET[2])), 0, 100),
+    )
+
+
+def player_action_input_defaults(state: BattleState) -> Tuple[int, int, int]:
+    if state.last_player_inputs != DEFAULT_AXIS_TRIPLET:
+        return state.last_player_inputs
+    return current_node_axis_triplet(state)
+
+
+def power_damage_multiplier(power: int) -> float:
+    return clamp(
+        1.0 + ((clamp_int(power, 0, 100) - 50) * POWER_DAMAGE_MULT_PER_POINT),
+        POWER_DAMAGE_MULT_MIN,
+        POWER_DAMAGE_MULT_MAX,
+    )
+
+
+def power_break_multiplier(power: int) -> float:
+    return clamp(
+        1.0 + ((clamp_int(power, 0, 100) - 50) * POWER_BREAK_MULT_PER_POINT),
+        POWER_BREAK_MULT_MIN,
+        POWER_BREAK_MULT_MAX,
+    )
+
+
+def precision_hit_bonus(precision: int) -> float:
+    return (clamp_int(precision, 0, 100) - 50) * PRECISION_HIT_BONUS_PER_POINT
+
+
+def precision_crit_bonus(precision: int) -> float:
+    return clamp(
+        max(0.0, (clamp_int(precision, 0, 100) - 50) * PRECISION_CRIT_BONUS_PER_POINT),
+        0.0,
+        PRECISION_MAX_CRIT_BONUS,
+    )
+
+
+def composure_to_ap(composure: int) -> int:
+    value = clamp_int(composure, 0, 100)
+    if value < 40:
+        return 1
+    if value < 60:
+        return 2
+    if value < 80:
+        return 3
+    if value < 95:
+        return 4
+    return 5
+
+
+def action_skill_for_actor(actor: Combatant, action: BattleActionDef) -> Skill:
+    return Skill(
+        skill_id=action.action_id,
+        display_name=action.name,
+        owner=actor.entity_id,
+        kind=action.kind,
+        affinity=actor.affinity if action.affinity is None else action.affinity,
+        target=action.target,
+        spotlight_cost=0,
+        primary_scale=action.primary_scale,
+        secondary_scale=action.secondary_scale,
+        damage_tier=action.damage_tier,
+        break_tier=action.break_tier,
+        effect_id=action.action_id,
+        tags=action.tags,
+    )
+
+
+def default_turn_skill(actor: Combatant) -> Skill:
+    for skill_id in actor.skills:
+        skill = SKILLS.get(skill_id)
+        if skill is not None and is_offensive_skill(skill):
+            return skill
+    return SKILLS["standard_strike"]
+
+
+def turn_inputs_for_actor(state: BattleState, actor: Combatant) -> ResolvedInputs:
+    inputs = actor.metadata.get("turn_inputs")
+    if isinstance(inputs, ResolvedInputs):
+        return inputs
+    fallback_skill = default_turn_skill(actor)
+    return make_resolved_inputs(*current_node_axis_triplet(state), fallback_skill)
+
+
+def get_turn_axis_scores(state: BattleState, actor: Combatant, interactive: bool) -> ResolvedInputs:
+    fallback_skill = default_turn_skill(actor)
+    if actor.team == "player" and interactive:
+        defaults = player_action_input_defaults(state)
+        resolved = prompt_triplet(defaults, fallback_skill)
+    else:
+        resolved = make_resolved_inputs(*current_node_axis_triplet(state), fallback_skill)
+    state.last_player_inputs = (resolved.power, resolved.precision, resolved.composure)
+    return resolved
+
+
+def actor_current_ap(actor: Combatant) -> int:
+    return max(0, int(actor.metadata.get("current_ap", 0)))
+
+
+def actor_starting_ap(actor: Combatant) -> int:
+    return max(0, int(actor.metadata.get("starting_ap", 0)))
+
+
+def start_player_turn_ap(state: BattleState, actor: Combatant, axis_scores: ResolvedInputs) -> int:
+    pending_bonus = clamp_int(int(actor.metadata.pop("next_turn_ap_bonus", 0)), 0, NEXT_TURN_AP_BONUS_CAP)
+    equipment_bonus = max(0, calculate_equipment_modifiers(actor).ap_bonus)
+    starting_ap = min(MAX_STARTING_AP, composure_to_ap(axis_scores.composure) + pending_bonus + equipment_bonus)
+    if axis_scores.composure >= 80:
+        actor.metadata["high_composure_turns_this_combat"] = int(actor.metadata.get("high_composure_turns_this_combat", 0)) + 1
+    actor.metadata["turn_inputs"] = axis_scores
+    actor.metadata["last_inputs"] = axis_scores
+    actor.metadata["turn_power"] = axis_scores.power
+    actor.metadata["turn_precision"] = axis_scores.precision
+    actor.metadata["turn_composure"] = axis_scores.composure
+    actor.metadata["starting_ap"] = starting_ap
+    actor.metadata["current_ap"] = starting_ap
+    actor.metadata["used_light_attack_this_turn"] = False
+    if pending_bonus > 0:
+        state.logger.log(state.round_number, f"{actor.name} cashes in +{pending_bonus} AP from last turn's setup.")
+    if equipment_bonus > 0:
+        state.logger.log(state.round_number, f"{actor.name}'s equipment adds +{equipment_bonus} AP.")
+    return starting_ap
+
+
+def spend_actor_ap(actor: Combatant, amount: int) -> None:
+    actor.metadata["current_ap"] = max(0, actor_current_ap(actor) - max(0, int(amount)))
+
+
+def set_actor_ap(actor: Combatant, amount: int) -> None:
+    actor.metadata["current_ap"] = max(0, int(amount))
+
+
+def action_accuracy_modifier(actor: Combatant) -> int:
+    return (
+        int(actor.metadata.get("next_attack_accuracy_bonus", 0))
+        - int(actor.metadata.get("next_attack_accuracy_penalty", 0))
+        - int(actor.metadata.get("turn_accuracy_penalty", 0))
+        + int(actor.metadata.get("current_action_accuracy_modifier", 0))
+    )
+
+
+def consume_next_attack_accuracy_modifiers(actor: Combatant) -> None:
+    actor.metadata.pop("next_attack_accuracy_bonus", None)
+    actor.metadata.pop("next_attack_accuracy_penalty", None)
+    actor.metadata.pop("next_attack_precision_bonus", None)
+    actor.metadata.pop("current_action_accuracy_modifier", None)
+
+
+def consume_single_use_offense_flags(actor: Combatant) -> None:
+    actor.metadata.pop("blood_vow_action_active", None)
+    actor.metadata.pop("blood_vow_status_ready", None)
+    actor.remove_condition("blood_vow")
+
+
+def healing_effect_multiplier(state: BattleState, actor: Combatant, action_id: str) -> tuple[float, int]:
+    equipment_modifiers = calculate_equipment_modifiers(actor, action_id=action_id)
+    multiplier = equipment_modifiers.healing_multiplier
+    flat_bonus = equipment_modifiers.potion_heal_bonus if action_id in {"use_healing_potion", "poisoned_chalice"} else 0
+    if action_id in {"use_healing_potion", "poisoned_chalice"} and battle_has_potion_upgrade(state, "stronger_potions"):
+        multiplier *= POTION_UPGRADE_STRONGER_MULT
+    next_bonus = max(0.0, float(actor.metadata.pop("next_healing_multiplier_bonus", 0.0)))
+    if next_bonus > 0:
+        multiplier *= 1.0 + next_bonus
+        state.logger.log(state.round_number, f"{actor.name}'s next healing bonus is consumed.")
+    return multiplier, flat_bonus
+
+
+def apply_healing_effect(
+    state: BattleState,
+    healer: Combatant,
+    target: Combatant,
+    base_amount: int,
+    source_text: str,
+    action_id: str,
+) -> int:
+    multiplier, flat_bonus = healing_effect_multiplier(state, healer, action_id)
+    amount = max(1, ceil_int(base_amount * multiplier) + flat_bonus)
+    before = target.hp
+    target.hp = min(target.max_hp, target.hp + amount)
+    restored = target.hp - before
+    state.logger.log(state.round_number, f"{target.name} restores {restored} HP from {source_text}.")
+    return restored
+
+
+def apply_potion_side_effects(
+    state: BattleState,
+    actor: Combatant,
+    source_text: str,
+    black_vial_stacks: int,
+) -> None:
+    if battle_has_potion_upgrade(state, "guarding_draught"):
+        gained = actor.restore_guard(ceil_int(actor.max_guard * POTION_UPGRADE_GUARD_RESTORE_RATIO))
+        if gained > 0:
+            state.logger.log(state.round_number, f"{source_text} restores {gained} guard to {actor.name}.")
+    if battle_has_potion_upgrade(state, "spotlight_tonic"):
+        state.change_spotlight(POTION_UPGRADE_SPOTLIGHT_GAIN, f"{actor.name} {source_text}")
+    grant_black_vial_stacks(state, actor, black_vial_stacks, source_text)
+
+
+def consume_healing_potion(
+    state: BattleState,
+    actor: Combatant,
+    source_text: str,
+    black_vial_stacks: int = 1,
+) -> int:
+    if state.healing_potions <= 0:
+        return 0
+    base_amount = max(1, ceil_int(actor.max_hp * HEALING_POTION_HEAL_RATIO))
+    restored = apply_healing_effect(state, actor, actor, base_amount, source_text, action_id="use_healing_potion")
+    state.healing_potions = max(0, state.healing_potions - 1)
+    apply_potion_side_effects(state, actor, source_text, black_vial_stacks)
+    state.logger.log(
+        state.round_number,
+        f"{actor.name} spends a potion. Potions left: {state.healing_potions}/{healing_potion_capacity(state)}.",
+    )
+    return restored
+
+
+def consume_next_break_action_bonus(actor: Combatant) -> float:
+    multiplier = max(1.0, float(actor.metadata.pop("shield_oath_break_bonus_mult", 1.0)))
+    return multiplier
+
+
+def consume_blood_vow_damage_bonus(actor: Combatant) -> float:
+    if not bool(actor.metadata.pop("blood_vow_ready", False)):
+        return 1.0
+    actor.metadata["blood_vow_action_active"] = True
+    actor.metadata["blood_vow_status_ready"] = True
+    return BLOOD_VOW_DAMAGE_BONUS_MULT
+
+
+def prime_anklet_refund(actor: Combatant) -> None:
+    if actor_has_anklet_bell(actor):
+        actor.metadata["anklet_refund_primed"] = True
+
+
+def grant_next_attack_precision_bonus(state: BattleState, actor: Combatant, amount: int) -> None:
+    if amount <= 0:
+        return
+    actor.metadata["next_attack_precision_bonus"] = max(
+        amount,
+        int(actor.metadata.get("next_attack_precision_bonus", 0)),
+    )
+    state.logger.log(state.round_number, f"{actor.name}'s next attack gains +{amount} virtual Precision.")
+
+
+def choose_priority_enemy_target(state: BattleState, actor: Combatant) -> Optional[Combatant]:
+    living_enemies = state.living_enemies()
+    if not living_enemies:
+        return None
+    skill = default_turn_skill(actor)
+    return auto_choose_target(state, actor, skill, living_enemies)
+
+
+def choose_most_wounded_ally(state: BattleState, actor: Combatant) -> Combatant:
+    allies = state.get_allies(actor)
+    if not allies:
+        return actor
+    return min(allies, key=lambda unit: (unit.hp / max(unit.max_hp, 1), unit.hp))
+
+
+def handle_kings_wager_execution(state: BattleState, actor: Combatant, target: Combatant) -> None:
+    if not actor_has_relic(actor, "kings_wager"):
+        return
+    if not bool(target.metadata.get("counts_for_execution", True)):
+        return
+    gained = KINGS_WAGER_BOSS_EXECUTION_VALUE if target.is_boss else 1
+    counter = max(0, int(actor.metadata.get("kings_wager_executions", 0))) + gained
+    if counter >= KINGS_WAGER_EXECUTION_THRESHOLD:
+        actor.metadata["kings_wager_executions"] = 0
+        for ally in state.living_players():
+            ally.hp = ally.max_hp
+        state.logger.log(state.round_number, "King's Wager pays out - the whole party is restored.")
+        return
+    actor.metadata["kings_wager_executions"] = counter
+    state.logger.log(state.round_number, f"King's Wager deepens: {counter}/{KINGS_WAGER_EXECUTION_THRESHOLD}.")
+
+
+def handle_mooncleave_on_result(state: BattleState, actor: Combatant, result: Dict[str, object]) -> None:
+    if not actor_has_mooncleave_weapon(actor):
+        return
+    if result.get("crit"):
+        actor.metadata["mooncleave_stacks"] = 0
+        state.logger.log(state.round_number, "Mooncleave releases on a critical hit.")
+        return
+    if result.get("hit_outcome") not in {"hit", "graze"}:
+        return
+    before = clamp_int(int(actor.metadata.get("mooncleave_stacks", 0)), 0, MOONCLEAVE_MAX_STACKS)
+    after = clamp_int(before + 1, 0, MOONCLEAVE_MAX_STACKS)
+    if after > before:
+        actor.metadata["mooncleave_stacks"] = after
+        state.logger.log(state.round_number, f"Mooncleave sharpens: crit chance rises to +{after * MOONCLEAVE_CRIT_BONUS_PER_STACK}%.")
+
+
+def handle_anklet_refund_on_result(state: BattleState, actor: Combatant, result: Dict[str, object]) -> None:
+    if not actor_has_anklet_bell(actor):
+        return
+    if not bool(actor.metadata.get("anklet_refund_primed", False)):
+        return
+    if bool(actor.metadata.get("anklet_refund_used_this_turn", False)):
+        return
+    if result.get("hit_outcome") not in {"hit", "graze"}:
+        return
+    actor.metadata["anklet_refund_used_this_turn"] = True
+    actor.metadata["anklet_refund_primed"] = False
+    refund_cap = actor_starting_ap(actor) + ANKLET_AP_REFUND_EXTRA_CAP
+    actor.metadata["current_ap"] = min(refund_cap, actor_current_ap(actor) + ANKLET_AP_REFUND)
+    state.logger.log(state.round_number, f"The anklet bell keeps time: {ANKLET_AP_REFUND} AP returns.")
+    if result.get("crit"):
+        grant_next_attack_precision_bonus(state, actor, ANKLET_PRECISION_CARRY_BONUS)
+
+
+def default_auto_loadout(state: BattleState) -> List[str]:
+    actor_ids = {player.entity_id for player in state.players}
+    if len(actor_ids) == 1:
+        solo_actor = next(iter(actor_ids))
+        solo_defaults = {
+            "vanguard": ["charge_slash", "shield_oath", "defensive_technique"],
+            "duelist": ["double_strike", "razor_encore", "backflip"],
+            "cantor": ["quiet_benediction", "regain_balance", "backflip"],
+            "ranger": ["backstep_slash", "rain_mark", "backflip"],
+            "penitent": ["poisoned_chalice", "blood_vow", "backflip"],
+        }
+        if solo_actor in solo_defaults:
+            return solo_defaults[solo_actor]
+
+    recommended: List[str] = []
+    if "vanguard" in actor_ids:
+        recommended.extend(["charge_slash", "shield_oath"])
+    if "duelist" in actor_ids:
+        recommended.extend(["double_strike", "razor_encore"])
+    if "cantor" in actor_ids:
+        recommended.append("quiet_benediction")
+    if "ranger" in actor_ids:
+        recommended.extend(["backstep_slash", "rain_mark"])
+    if "penitent" in actor_ids:
+        recommended.extend(["poisoned_chalice", "blood_vow"])
+    recommended.extend(["defensive_technique", "regain_balance", "backflip", "trance", "feint_rush"])
+    return list(dict.fromkeys(recommended))
+
+
+def ensure_battle_loadout(state: BattleState) -> None:
+    deduped_existing = [action_id for action_id in state.selected_extra_actions if action_id in BATTLE_ACTIONS]
+    deduped_existing = list(dict.fromkeys(deduped_existing))
+    if len(deduped_existing) == EXTRA_ACTION_LOADOUT_SLOTS:
+        state.selected_extra_actions = deduped_existing
+        return
+    state.selected_extra_actions = []
+
+    default_ids = [action_id for action_id in default_auto_loadout(state) if action_id in BATTLE_ACTIONS]
+    if not state.interactive:
+        state.selected_extra_actions = default_ids[:EXTRA_ACTION_LOADOUT_SLOTS]
+        loadout_text = ", ".join(BATTLE_ACTIONS[action_id].name for action_id in state.selected_extra_actions)
+        if loadout_text:
+            state.logger.log(state.round_number, f"Battle loadout: {loadout_text}.")
+        return
+
+    print("\nChoose 3 extra actions for this battle.")
+    print("Press Enter for the recommended loadout shown below.")
+    for idx, action_id in enumerate(EXTRA_BATTLE_ACTION_IDS, start=1):
+        action = BATTLE_ACTIONS[action_id]
+        class_text = ""
+        if action.requires_class:
+            class_text = " [" + "/".join(class_id.title() for class_id in action.requires_class) + " only]"
+        print(f"  {idx}. {action.name:<16} AP {action.ap_cost} - {action.description}{class_text}")
+    recommended = ", ".join(BATTLE_ACTIONS[action_id].name for action_id in default_ids[:EXTRA_ACTION_LOADOUT_SLOTS])
+    print(f"Recommended: {recommended}")
+
+    while True:
+        raw = input("> ").strip()
+        if raw == "":
+            selected = default_ids[:EXTRA_ACTION_LOADOUT_SLOTS]
+            break
+        parts = raw.replace(",", " ").split()
+        if len(parts) != EXTRA_ACTION_LOADOUT_SLOTS:
+            print(f"Choose exactly {EXTRA_ACTION_LOADOUT_SLOTS} action numbers.")
+            continue
+        try:
+            indices = [int(part) for part in parts]
+        except ValueError:
+            print("Enter action numbers such as: 1 2 4")
+            continue
+        if len(set(indices)) != EXTRA_ACTION_LOADOUT_SLOTS:
+            print("Choose 3 different actions.")
+            continue
+        if not all(1 <= idx <= len(EXTRA_BATTLE_ACTION_IDS) for idx in indices):
+            print("One or more action numbers are out of range.")
+            continue
+        selected = [EXTRA_BATTLE_ACTION_IDS[idx - 1] for idx in indices]
+        break
+
+    state.selected_extra_actions = selected
+    loadout_text = ", ".join(BATTLE_ACTIONS[action_id].name for action_id in state.selected_extra_actions)
+    state.logger.log(state.round_number, f"Battle loadout: {loadout_text}.")
+
+
 def auto_triplet_for_skill(user: Combatant, skill: Skill, rng: random.Random) -> ResolvedInputs:
     preferred = {
         "vanguard": ("power", "composure"),
@@ -2442,20 +4034,34 @@ def apply_posture_and_post_action_effects(state: BattleState, actor: Combatant, 
     elif actor.posture == "flow":
         step_position_toward_set(state, actor)
     if actor.posture == "flow":
-        state.change_spotlight(1, f"{actor.name} entered Flow")
-        cleanse_one_debuff(state, actor)
+        last_spotlight_round = int(actor.metadata.get("flow_spotlight_round", -FLOW_SPOTLIGHT_COOLDOWN_ROUNDS))
+        cleansed = cleanse_one_debuff(state, actor)
+        if not cleansed and (state.round_number - last_spotlight_round) >= FLOW_SPOTLIGHT_COOLDOWN_ROUNDS:
+            actor.metadata["flow_spotlight_round"] = state.round_number
+            state.change_spotlight(1, f"{actor.name} entered Flow")
     if actor.entity_id == "vanguard" and actor.posture in {"bastion", "ravage"}:
         restored = actor.restore_guard(max(1, actor.max_guard // 10))
         if restored:
             state.logger.log(state.round_number, f"{actor.name} restores {restored} guard from passive.")
 
 
-def cleanse_one_debuff(state: BattleState, actor: Combatant, source_text: str = "Flow") -> None:
+def cleanse_one_debuff(state: BattleState, actor: Combatant, source_text: str = "Flow") -> bool:
     for status in MINOR_NEGATIVE_STATUSES:
         if actor.has_condition(status):
             actor.remove_condition(status)
             state.logger.log(state.round_number, f"{actor.name} cleanses {status} via {source_text}.")
-            return
+            return True
+    return False
+
+
+def maybe_grant_bastion_guard_reward(state: BattleState, actor: Combatant) -> None:
+    if actor.posture != "bastion":
+        return
+    if int(actor.metadata.get("bastion_guard_reward_round", -1)) == state.round_number:
+        return
+    actor.metadata["bastion_guard_reward_round"] = state.round_number
+    state.change_spotlight(1, f"{actor.name} Bastion guard")
+    state.logger.log(state.round_number, f"{actor.name} turns a Bastion guard into fresh Spotlight.")
 
 
 def choose_player_skill(state: BattleState, actor: Combatant) -> Skill:
@@ -2568,36 +4174,721 @@ def auto_choose_target(state: BattleState, actor: Combatant, skill: Skill, candi
     return min(candidates, key=lambda unit: (unit.hp, unit.guard))
 
 
-def perform_player_action(state: BattleState, actor: Combatant) -> bool:
-    if state.interactive:
-        state.render_state()
-        skill = choose_player_skill(state, actor)
-        targets = choose_target(state, actor, skill)
-    else:
-        skill = auto_choose_player_skill(state, actor)
-        targets = choose_target(state, actor, skill)
+def visible_battle_actions_for_actor(state: BattleState, actor: Combatant) -> List[BattleActionDef]:
+    actions: List[BattleActionDef] = [BATTLE_ACTIONS[action_id] for action_id in BASIC_BATTLE_ACTION_IDS]
+    for action_id in state.selected_extra_actions:
+        action = BATTLE_ACTIONS.get(action_id)
+        if action is None:
+            continue
+        if action.requires_class and actor.entity_id not in action.requires_class:
+            continue
+        actions.append(action)
+    return actions
 
-    raw = state.node_axis_scores
-    resolved_inputs = make_resolved_inputs(
-        int(raw.get("power", 60)),
-        int(raw.get("precision", 60)),
-        int(raw.get("composure", 60)),
-        skill,
+
+def action_ap_label(actor: Combatant, action: BattleActionDef) -> str:
+    if action.requires_full_ap:
+        return "FULL AP"
+    return f"{action.ap_cost} AP"
+
+
+def get_action_lock_reason(state: BattleState, actor: Combatant, action: BattleActionDef) -> Optional[str]:
+    if action.requires_class and actor.entity_id not in action.requires_class:
+        class_text = "/".join(class_id.title() for class_id in action.requires_class)
+        return f"{class_text} only."
+    if action.action_id in {"use_healing_potion", "poisoned_chalice"} and state.healing_potions <= 0:
+        return "No healing potions remaining."
+    if action.action_id == "feint_rush" and not bool(actor.metadata.get("used_light_attack_this_turn", False)):
+        return "Requires Light Attack first."
+    if action.action_id == "trance":
+        if bool(actor.metadata.get("trance_used_this_combat", False)):
+            return "Once per combat."
+        if int(actor.metadata.get("high_composure_turns_this_combat", 0)) < TRANCE_REQUIRED_HIGH_COMPOSURE_TURNS:
+            return f"Requires Composure 80+ on {TRANCE_REQUIRED_HIGH_COMPOSURE_TURNS} turns."
+        if state.spotlight <= 0:
+            return "Requires at least 1 Spotlight."
+    if action.action_id == "backflip" and int(actor.metadata.get("backflip_uses_this_combat", 0)) >= BACKFLIP_MAX_USES_PER_COMBAT:
+        return f"Max {BACKFLIP_MAX_USES_PER_COMBAT} uses per combat."
+    if action.action_id == "defensive_technique" and bool(actor.metadata.get("defensive_technique_used_turn", False)):
+        return "Once per turn."
+    if action.action_id == "regain_balance" and bool(actor.metadata.get("regain_balance_used_turn", False)):
+        return "Once per turn."
+    if action.action_id == "shield_oath":
+        if not actor_has_shield_equipped(actor):
+            return "Requires a shield."
+        cooldown = max(0, int(actor.metadata.get("shield_oath_cooldown", 0)))
+        if cooldown > 0:
+            return f"Recharging for {cooldown} more turn(s)."
+    if action.action_id == "blood_vow" and (bool(actor.metadata.get("blood_vow_ready", False)) or actor.has_condition("blood_vow")):
+        return "Blood Vow is already active."
+    if action.requires_full_ap and actor_current_ap(actor) != actor_starting_ap(actor):
+        return "Requires full AP."
+    if actor_current_ap(actor) < action.ap_cost:
+        return f"Requires {action.ap_cost} AP."
+    return None
+
+
+def actor_can_use_action(state: BattleState, actor: Combatant, action: BattleActionDef) -> bool:
+    return get_action_lock_reason(state, actor, action) is None
+
+
+def unavailable_battle_action_reason(state: BattleState, actor: Combatant, action: BattleActionDef) -> Optional[str]:
+    return get_action_lock_reason(state, actor, action)
+
+
+def choose_player_battle_action(state: BattleState, actor: Combatant) -> Optional[BattleActionDef]:
+    actions = visible_battle_actions_for_actor(state, actor)
+    while True:
+        print(f"\n{actor.name}'s turn. Current AP: {actor_current_ap(actor)}/{actor_starting_ap(actor)}")
+        print(f"Healing Potions: {state.healing_potions}/{healing_potion_capacity(state)}")
+        for line in battle_actor_status_lines(state, actor):
+            print(f"  {line}")
+        for idx, action in enumerate(actions, start=1):
+            reason = unavailable_battle_action_reason(state, actor, action)
+            locked_text = f" (locked: {reason})" if reason else ""
+            print(f"  {idx}. {action.name:<18} [{action_ap_label(actor, action)}] - {action.description}{locked_text}")
+        print(f"  {len(actions) + 1}. End Turn")
+
+        raw = input("> ").strip()
+        if raw == "":
+            return None
+        try:
+            choice = int(raw)
+        except ValueError:
+            print("Choose a number.")
+            continue
+        if choice == len(actions) + 1:
+            return None
+        if not (1 <= choice <= len(actions)):
+            print("That number is out of range.")
+            continue
+        action = actions[choice - 1]
+        reason = unavailable_battle_action_reason(state, actor, action)
+        if reason is not None:
+            print(reason)
+            continue
+        return action
+
+
+def auto_choose_battle_action_and_targets(
+    state: BattleState,
+    actor: Combatant,
+    inputs: ResolvedInputs,
+) -> Tuple[Optional[BattleActionDef], List[Combatant]]:
+    action_map = {action.action_id: action for action in visible_battle_actions_for_actor(state, actor)}
+    living_enemies = state.living_enemies()
+    if not living_enemies:
+        return None, []
+
+    def ready(action_id: str) -> bool:
+        action = action_map.get(action_id)
+        return action is not None and unavailable_battle_action_reason(state, actor, action) is None
+
+    dangerous_target = max(
+        living_enemies,
+        key=lambda unit: (
+            int(unit.is_boss),
+            unit.hp + unit.guard + unit.break_meter,
+            unit.max_hp,
+        ),
     )
-    state.last_player_inputs = (resolved_inputs.power, resolved_inputs.precision, resolved_inputs.composure)
 
-    if state.spotlight < skill.spotlight_cost:
-        state.logger.log(state.round_number, f"{actor.name} lacks the Spotlight for {skill.display_name}.")
-        return False
+    if ready("use_healing_potion") and actor.hp <= ceil_int(actor.max_hp * 0.30):
+        return action_map["use_healing_potion"], [actor]
 
-    state.change_spotlight(-skill.spotlight_cost, f"{actor.name} used {skill.display_name}")
-    actor.metadata["last_inputs"] = resolved_inputs
-    apply_posture_and_post_action_effects(state, actor, resolved_inputs)
-    context = ActionContext(user=actor, skill=skill, targets=targets, inputs=resolved_inputs, spotlight_spent=skill.spotlight_cost)
-    resolve_action(state, context)
-    actor.times_acted += 1
-    actor.last_skill_used = skill.skill_id
-    return True
+    if ready("poisoned_chalice") and actor.hp <= ceil_int(actor.max_hp * 0.45):
+        return action_map["poisoned_chalice"], [dangerous_target]
+
+    if ready("trance") and (dangerous_target.is_boss or dangerous_target.hp <= ceil_int(dangerous_target.max_hp * 0.50)):
+        return action_map["trance"], [dangerous_target]
+
+    if ready("defensive_technique") and actor.guard <= ceil_int(actor.max_guard * 0.35):
+        return action_map["defensive_technique"], [actor]
+
+    if ready("regain_balance") and actor.break_meter <= ceil_int(actor.max_break * REGAIN_BALANCE_LOW_STABILITY_THRESHOLD):
+        return action_map["regain_balance"], [actor]
+
+    if ready("backflip") and (actor.hp <= ceil_int(actor.max_hp * 0.45) or actor.break_meter <= ceil_int(actor.max_break * 0.35)):
+        return action_map["backflip"], [actor]
+
+    if ready("quiet_benediction"):
+        ally = choose_most_wounded_ally(state, actor)
+        if (ally.max_hp - ally.hp) >= max(12, ceil_int(ally.max_hp * 0.18)):
+            return action_map["quiet_benediction"], [actor]
+
+    if ready("shield_oath") and actor.guard <= ceil_int(actor.max_guard * 0.65):
+        return action_map["shield_oath"], [actor]
+
+    if ready("rain_mark"):
+        unmarked = next((unit for unit in living_enemies if not unit.has_condition("rain_mark")), dangerous_target)
+        return action_map["rain_mark"], [unmarked]
+
+    if ready("blood_vow") and actor.hp > max(12, ceil_int(actor.max_hp * 0.30)):
+        return action_map["blood_vow"], [actor]
+
+    if ready("charge_slash"):
+        target = max(living_enemies, key=lambda unit: (unit.break_meter, unit.max_break, unit.hp))
+        if target.break_meter >= max(8, ceil_int(target.max_break * 0.33)):
+            return action_map["charge_slash"], [target]
+
+    if ready("razor_encore"):
+        return action_map["razor_encore"], [dangerous_target]
+
+    if ready("double_strike"):
+        skill = action_skill_for_actor(actor, action_map["double_strike"])
+        target = auto_choose_target(state, actor, skill, living_enemies)
+        return action_map["double_strike"], [target]
+
+    if ready("heavy_attack") and inputs.power >= HEAVY_ATTACK_POWER_REQUIREMENT:
+        skill = action_skill_for_actor(actor, action_map["heavy_attack"])
+        target = auto_choose_target(state, actor, skill, living_enemies)
+        return action_map["heavy_attack"], [target]
+
+    if ready("light_attack"):
+        skill = action_skill_for_actor(actor, action_map["light_attack"])
+        target = auto_choose_target(state, actor, skill, living_enemies)
+        return action_map["light_attack"], [target]
+
+    return None, []
+
+
+def choose_targets_for_battle_action(state: BattleState, actor: Combatant, action: BattleActionDef) -> List[Combatant]:
+    if action.target == "self":
+        return [actor]
+    skill = action_skill_for_actor(actor, action)
+    return choose_target(state, actor, skill)
+
+
+def log_player_action_inputs_once(state: BattleState, actor: Combatant, inputs: ResolvedInputs, starting_ap: int) -> None:
+    if int(actor.metadata.get("action_input_logged_round", -1)) == state.round_number:
+        return
+    actor.metadata["action_input_logged_round"] = state.round_number
+    state.logger.log(
+        state.round_number,
+        f"Turn input: Power {inputs.power} / Precision {inputs.precision} / Composure {inputs.composure} -> "
+        f"{inputs.posture.title()}, {starting_ap} AP",
+    )
+
+
+def prepare_attack_action(
+    state: BattleState,
+    actor: Combatant,
+    action: BattleActionDef,
+    inputs: ResolvedInputs,
+    damage_multiplier: float = 1.0,
+    break_multiplier: float = 1.0,
+) -> Tuple[Skill, int, int]:
+    skill = action_skill_for_actor(actor, action)
+    equipment_modifiers = calculate_equipment_modifiers(actor, action_id=action.action_id, skill=skill)
+    before_damage_mult, before_break_mult = process_relic_trigger(
+        state=state,
+        actor=actor,
+        trigger="before_offense",
+        skill=skill,
+    )
+    counterphrase_damage_mult, counterphrase_break_mult = consume_counterphrase_bonus(state, actor, skill)
+    base_damage = max(0, DAMAGE_TIERS[skill.damage_tier] + equipment_modifiers.base_damage_bonus)
+    base_break = max(0, BREAK_TIERS[skill.break_tier])
+    blood_vow_damage_mult = consume_blood_vow_damage_bonus(actor)
+    black_vial_mult = black_vial_damage_multiplier(actor)
+    next_break_action_mult = consume_next_break_action_bonus(actor) if base_break > 0 else 1.0
+    damage = ceil_int(
+        base_damage
+        * damage_multiplier
+        * before_damage_mult
+        * counterphrase_damage_mult
+        * blood_vow_damage_mult
+        * black_vial_mult
+        * power_damage_multiplier(inputs.power)
+        * equipment_modifiers.damage_multiplier
+    )
+    break_damage = ceil_int(
+        base_break
+        * break_multiplier
+        * before_break_mult
+        * counterphrase_break_mult
+        * next_break_action_mult
+        * power_break_multiplier(inputs.power)
+        * equipment_modifiers.break_multiplier
+    )
+    state.logger.log(
+        state.round_number,
+        f"{actor.name} uses {action.name} "
+        f"[P:{inputs.power}/{inputs.band_names['power']}, "
+        f"R:{inputs.precision}/{inputs.band_names['precision']}, "
+        f"C:{inputs.composure}/{inputs.band_names['composure']}]",
+    )
+    state.logger.log(
+        state.round_number,
+        f"Power output x{power_damage_multiplier(inputs.power):.2f} damage / "
+        f"x{power_break_multiplier(inputs.power):.2f} break from Power {inputs.power}.",
+    )
+    if blood_vow_damage_mult > 1.0:
+        state.logger.log(state.round_number, f"Blood Vow surges through {action.name}.")
+    if black_vial_mult > 1.0:
+        state.logger.log(state.round_number, f"Black Vial empowers {action.name} x{black_vial_mult:.2f}.")
+    if next_break_action_mult > 1.0:
+        state.logger.log(state.round_number, f"Shield Oath sharpens the next Break action x{next_break_action_mult:.2f}.")
+    return skill, damage, break_damage
+
+
+def heal_with_potion(state: BattleState, actor: Combatant) -> None:
+    consume_healing_potion(state, actor, "Healing Potion", black_vial_stacks=1)
+    finalize_action_resolution(state, actor, action_skill_for_actor(actor, BATTLE_ACTIONS["use_healing_potion"]))
+
+
+def resolve_light_attack(state: BattleState, actor: Combatant, target: Combatant, inputs: ResolvedInputs) -> None:
+    action = BATTLE_ACTIONS["light_attack"]
+    skill, damage, break_damage = prepare_attack_action(state, actor, action, inputs)
+    apply_damage_to_target(
+        state=state,
+        source=actor,
+        target=target,
+        damage=damage,
+        break_damage=break_damage,
+        skill=skill,
+        can_crit=True,
+    )
+    actor.metadata["used_light_attack_this_turn"] = True
+    finalize_offensive_resolution(state, actor, skill)
+
+
+def resolve_heavy_attack(state: BattleState, actor: Combatant, target: Combatant, inputs: ResolvedInputs) -> None:
+    action = BATTLE_ACTIONS["heavy_attack"]
+    if inputs.power < HEAVY_ATTACK_POWER_REQUIREMENT:
+        state.logger.log(state.round_number, "Heavy Attack falters: Power below 60.")
+        expire_counterphrase_if_unused(state, actor, action_skill_for_actor(actor, action))
+        return
+    damage_multiplier = HEAVY_ATTACK_DAMAGE_MULTIPLIER
+    break_multiplier = HEAVY_ATTACK_BREAK_MULTIPLIER
+    if inputs.power >= HEAVY_ATTACK_POWER_SURGE_THRESHOLD:
+        damage_multiplier *= HEAVY_ATTACK_POWER_SURGE_DAMAGE_MULT
+        break_multiplier *= HEAVY_ATTACK_POWER_SURGE_BREAK_MULT
+    skill, damage, break_damage = prepare_attack_action(state, actor, action, inputs, damage_multiplier=damage_multiplier, break_multiplier=break_multiplier)
+    apply_damage_to_target(
+        state=state,
+        source=actor,
+        target=target,
+        damage=damage,
+        break_damage=break_damage,
+        skill=skill,
+        can_crit=True,
+        attack_tags=("heavy",),
+    )
+    finalize_offensive_resolution(state, actor, skill)
+
+
+def resolve_feint_rush(state: BattleState, actor: Combatant) -> None:
+    actor.metadata["next_attack_accuracy_bonus"] = max(int(actor.metadata.get("next_attack_accuracy_bonus", 0)), FEINT_RUSH_ACCURACY_BONUS)
+    state.logger.log(state.round_number, "Feint Rush sets up the next strike: accuracy increased.")
+    finalize_action_resolution(state, actor, action_skill_for_actor(actor, BATTLE_ACTIONS["feint_rush"]))
+
+
+def resolve_double_strike(state: BattleState, actor: Combatant, target: Combatant, inputs: ResolvedInputs) -> None:
+    action = BATTLE_ACTIONS["double_strike"]
+    skill, damage, break_damage = prepare_attack_action(
+        state,
+        actor,
+        action,
+        inputs,
+        damage_multiplier=DOUBLE_STRIKE_DAMAGE_MULTIPLIER,
+        break_multiplier=DOUBLE_STRIKE_BREAK_MULTIPLIER,
+    )
+    hits_landed = 0
+    for hit_index in range(1, 3):
+        if not target.alive():
+            break
+        result = apply_damage_to_target(
+            state=state,
+            source=actor,
+            target=target,
+            damage=damage,
+            break_damage=break_damage,
+            skill=skill,
+            can_crit=True,
+        ) or {}
+        if result.get("hit_outcome") in {"hit", "graze"}:
+            hits_landed += 1
+        state.logger.log(state.round_number, f"Double Strike hit {hit_index}/2 resolves.")
+    if hits_landed == 2 and target.alive():
+        apply_break_damage(state, target, DOUBLE_STRIKE_BOTH_HITS_BREAK_BONUS)
+        state.logger.log(state.round_number, "Double Strike piles on extra Break pressure.")
+    actor.metadata["cannot_guard_next_turn"] = True
+    actor.metadata["cannot_parry_next_turn"] = True
+    state.logger.log(state.round_number, f"{actor.name} is left open: Guard and Parry are disabled until the next turn.")
+    finalize_offensive_resolution(state, actor, skill)
+
+
+def backstep_slash_evasion_bonus(actor: Combatant) -> int:
+    if actor.entity_id == "ranger":
+        return BACKSTEP_SLASH_RANGER_EVASION_BONUS
+    return BACKSTEP_SLASH_DUELIST_EVASION_BONUS
+
+
+def resolve_backstep_slash(state: BattleState, actor: Combatant, target: Combatant, inputs: ResolvedInputs) -> None:
+    action = BATTLE_ACTIONS["backstep_slash"]
+    skill, damage, break_damage = prepare_attack_action(
+        state,
+        actor,
+        action,
+        inputs,
+        damage_multiplier=BACKSTEP_SLASH_DAMAGE_MULTIPLIER,
+        break_multiplier=BACKSTEP_SLASH_DAMAGE_MULTIPLIER,
+    )
+    apply_damage_to_target(
+        state=state,
+        source=actor,
+        target=target,
+        damage=damage,
+        break_damage=break_damage,
+        skill=skill,
+        can_crit=True,
+    )
+    actor.metadata["evasion_bonus_until_next_turn"] = max(
+        int(actor.metadata.get("evasion_bonus_until_next_turn", 0)),
+        backstep_slash_evasion_bonus(actor),
+    )
+    actor.metadata["next_attack_accuracy_penalty"] = max(
+        int(actor.metadata.get("next_attack_accuracy_penalty", 0)),
+        BACKSTEP_SLASH_ACCURACY_PENALTY,
+    )
+    prime_anklet_refund(actor)
+    state.logger.log(
+        state.round_number,
+        f"Backstep Slash grants +{backstep_slash_evasion_bonus(actor)} dodge chance until the next turn, "
+        f"but the next attack loses {BACKSTEP_SLASH_ACCURACY_PENALTY} hit chance.",
+    )
+    finalize_offensive_resolution(state, actor, skill)
+
+
+def resolve_charge_slash(state: BattleState, actor: Combatant, target: Combatant, inputs: ResolvedInputs) -> None:
+    action = BATTLE_ACTIONS["charge_slash"]
+    had_staggered = target.has_condition("staggered")
+    equipment_modifiers = calculate_equipment_modifiers(actor, action_id="charge_slash")
+    guard_cost = max(0, CHARGE_SLASH_SELF_GUARD_COST + equipment_modifiers.self_guard_cost_delta)
+    spent_guard = min(actor.guard, guard_cost)
+    actor.guard = max(0, actor.guard - spent_guard)
+    state.logger.log(state.round_number, f"{actor.name} spends {spent_guard} guard to wind up Charge Slash.")
+    skill, damage, break_damage = prepare_attack_action(
+        state,
+        actor,
+        action,
+        inputs,
+        damage_multiplier=CHARGE_SLASH_DAMAGE_MULTIPLIER,
+        break_multiplier=CHARGE_SLASH_BREAK_MULTIPLIER,
+    )
+    result = apply_damage_to_target(
+        state=state,
+        source=actor,
+        target=target,
+        damage=damage,
+        break_damage=break_damage,
+        skill=skill,
+        can_crit=True,
+        attack_tags=("heavy", "burst_start"),
+    ) or {}
+    state.logger.log(state.round_number, "Charge Slash batters the enemy's Break.")
+    if not had_staggered and target.has_condition("staggered"):
+        actor.metadata["next_turn_ap_bonus"] = min(
+            NEXT_TURN_AP_BONUS_CAP,
+            max(int(actor.metadata.get("next_turn_ap_bonus", 0)), 1),
+        )
+        state.logger.log(state.round_number, "The enemy staggers - Vanguard gains +1 AP next turn.")
+    finalize_offensive_resolution(state, actor, skill)
+
+
+def resolve_trance(state: BattleState, actor: Combatant, target: Combatant, inputs: ResolvedInputs) -> None:
+    action = BATTLE_ACTIONS["trance"]
+    spotlight_spent = max(1, state.spotlight)
+    state.change_spotlight(-spotlight_spent, f"{actor.name} Trance")
+    actor.metadata["trance_used_this_combat"] = True
+    state.logger.log(state.round_number, "Trance begins: Spotlight is burned into motion.")
+    skill, base_damage, base_break = prepare_attack_action(
+        state,
+        actor,
+        action,
+        inputs,
+        damage_multiplier=1.0 + (spotlight_spent * TRANCE_SPOTLIGHT_DAMAGE_BONUS_PER),
+        break_multiplier=1.0 + (spotlight_spent * 0.02),
+    )
+    max_hits = TRANCE_BOSS_MAX_HITS if target.is_boss else TRANCE_NORMAL_MAX_HITS
+    for hit_index in range(1, max_hits + 1):
+        if not target.alive():
+            break
+        actor.metadata["current_action_accuracy_modifier"] = (spotlight_spent * TRANCE_SPOTLIGHT_HIT_BONUS) - (
+            (hit_index - 1) * TRANCE_CHAIN_HIT_PENALTY_PER_HIT
+        )
+        hit_damage = base_damage
+        if target.is_boss and hit_index > 1:
+            hit_damage = ceil_int(base_damage * (TRANCE_BOSS_FOLLOWUP_DAMAGE_MULT ** (hit_index - 1)))
+        result = apply_damage_to_target(
+            state=state,
+            source=actor,
+            target=target,
+            damage=hit_damage,
+            break_damage=base_break,
+            skill=skill,
+            can_crit=True,
+            attack_tags=("combo", "heavy"),
+        ) or {}
+        if result.get("hit_outcome") not in {"hit", "graze"}:
+            state.logger.log(state.round_number, f"Trance falters on hit {hit_index}.")
+            break
+        state.logger.log(state.round_number, f"Trance chain hit {hit_index} lands.")
+    actor.metadata.pop("current_action_accuracy_modifier", None)
+    finalize_offensive_resolution(state, actor, skill)
+
+
+def resolve_poisoned_chalice(state: BattleState, actor: Combatant, target: Combatant, inputs: ResolvedInputs) -> None:
+    action = BATTLE_ACTIONS["poisoned_chalice"]
+    consume_healing_potion(state, actor, "Poisoned Chalice", black_vial_stacks=2)
+    penalty_mult = poisoned_chalice_penalty_mult(state)
+    evasion_penalty = ceil_int(POISONED_CHALICE_EVASION_PENALTY * penalty_mult)
+    accuracy_penalty = ceil_int(POISONED_CHALICE_ACCURACY_PENALTY * penalty_mult)
+    actor.metadata["evasion_penalty_until_next_turn"] = max(
+        int(actor.metadata.get("evasion_penalty_until_next_turn", 0)),
+        evasion_penalty,
+    )
+    actor.metadata["pending_poisoned_chalice_accuracy_penalty"] = max(
+        int(actor.metadata.get("pending_poisoned_chalice_accuracy_penalty", 0)),
+        accuracy_penalty,
+    )
+    boosted_dot = POISONED_CHALICE_MIN_DOT + ceil_int(inputs.power * 0.12)
+    boosted_duration = POISONED_CHALICE_DURATION
+    if bool(actor.metadata.get("blood_vow_ready", False)):
+        boosted_dot += 2
+        boosted_duration += 1
+    skill, damage, break_damage = prepare_attack_action(
+        state,
+        actor,
+        action,
+        inputs,
+        damage_multiplier=POISONED_CHALICE_DAMAGE_MULTIPLIER,
+        break_multiplier=POISONED_CHALICE_DAMAGE_MULTIPLIER,
+    )
+    result = apply_damage_to_target(
+        state=state,
+        source=actor,
+        target=target,
+        damage=damage,
+        break_damage=break_damage,
+        skill=skill,
+        can_crit=True,
+        status_to_apply=("poisoned_chalice", boosted_duration, 90),
+    ) or {}
+    if result.get("status_applied") == "poisoned_chalice":
+        target.metadata["poisoned_chalice_dot"] = boosted_dot
+        state.logger.log(state.round_number, "The chalice strike poisons the opening.")
+    state.logger.log(state.round_number, "Poisoned Chalice burns as it heals.")
+    state.logger.log(state.round_number, "Next turn: evasion and accuracy are impaired.")
+    finalize_offensive_resolution(state, actor, skill)
+
+
+def resolve_backflip(state: BattleState, actor: Combatant) -> None:
+    uses = int(actor.metadata.get("backflip_uses_this_combat", 0)) + 1
+    actor.metadata["backflip_uses_this_combat"] = uses
+    actor.metadata["evasion_bonus_until_next_turn"] = max(
+        int(actor.metadata.get("evasion_bonus_until_next_turn", 0)),
+        BACKFLIP_EVASION_BONUS,
+    )
+    recovered = restore_break_stability(actor, ceil_int(actor.max_break * BACKFLIP_BREAK_RECOVERY_RATIO))
+    actor.metadata["next_healing_multiplier_bonus"] = max(
+        float(actor.metadata.get("next_healing_multiplier_bonus", 0.0)),
+        BACKFLIP_NEXT_HEALING_BONUS,
+    )
+    prime_anklet_refund(actor)
+    state.logger.log(state.round_number, "Backflip resets the rhythm: evasion rises.")
+    state.logger.log(state.round_number, f"Break pressure eases by {recovered}.")
+    state.logger.log(state.round_number, "The next healing effect will be stronger.")
+    finalize_action_resolution(state, actor, action_skill_for_actor(actor, BATTLE_ACTIONS["backflip"]))
+
+
+def resolve_defensive_technique(state: BattleState, actor: Combatant) -> None:
+    recovery_ratio = DEFENSIVE_TECHNIQUE_GUARD_RECOVERY_RATIO
+    if actor.posture == "bastion":
+        recovery_ratio += DEFENSIVE_TECHNIQUE_BASTION_BONUS
+    if actor_has_shield_equipped(actor):
+        recovery_ratio += DEFENSIVE_TECHNIQUE_SHIELD_BONUS
+    if actor.entity_id == "vanguard" and actor_uses_one_handed_shield_setup(actor):
+        recovery_ratio += DEFENSIVE_TECHNIQUE_VANGUARD_SHIELD_BONUS
+    if actor_has_fracture_shield(actor):
+        recovery_ratio *= FRACTURE_SHIELD_GUARD_RECOVERY_MULT
+    attempted = ceil_int(actor.max_guard * recovery_ratio)
+    before_guard = actor.guard
+    gained = actor.restore_guard(attempted)
+    actor.metadata["defensive_technique_used_turn"] = True
+    actor.metadata["defensive_reaction_bonus_until_next_turn"] = max(
+        int(actor.metadata.get("defensive_reaction_bonus_until_next_turn", 0)),
+        DEFENSIVE_TECHNIQUE_REACTION_BONUS,
+    )
+    state.logger.log(state.round_number, f"Defensive Technique restores {gained} guard.")
+    excess = max(0, before_guard + attempted - actor.max_guard)
+    if actor_has_fracture_shield(actor) and excess > 0 and not bool(actor.metadata.get("fracture_shield_overflow_used_turn", False)):
+        spill_target = choose_priority_enemy_target(state, actor)
+        if spill_target is not None:
+            actor.metadata["fracture_shield_overflow_used_turn"] = True
+            spill_break = ceil_int(excess * FRACTURE_SHIELD_EXCESS_BREAK_RATIO)
+            apply_break_damage(state, spill_target, spill_break)
+            state.logger.log(state.round_number, "Fracture Shield turns excess Guard into Break pressure.")
+    finalize_action_resolution(state, actor, action_skill_for_actor(actor, BATTLE_ACTIONS["defensive_technique"]))
+
+
+def resolve_regain_balance(state: BattleState, actor: Combatant, inputs: ResolvedInputs) -> None:
+    recovery_ratio = REGAIN_BALANCE_BREAK_RECOVERY_RATIO
+    if actor.break_meter <= ceil_int(actor.max_break * REGAIN_BALANCE_LOW_STABILITY_THRESHOLD):
+        recovery_ratio += REGAIN_BALANCE_LOW_STABILITY_BONUS
+    if inputs.composure >= REGAIN_BALANCE_COMPOSURE_THRESHOLD:
+        recovery_ratio += REGAIN_BALANCE_COMPOSURE_BONUS
+    if actor.posture in {"flow", "bastion"}:
+        recovery_ratio += REGAIN_BALANCE_STANCE_BONUS
+    recovered = restore_break_stability(actor, ceil_int(actor.max_break * recovery_ratio))
+    actor.metadata["regain_balance_used_turn"] = True
+    state.logger.log(state.round_number, f"Regain Balance steadies the line and restores {recovered} Break.")
+    finalize_action_resolution(state, actor, action_skill_for_actor(actor, BATTLE_ACTIONS["regain_balance"]))
+
+
+def resolve_shield_oath(state: BattleState, actor: Combatant) -> None:
+    gained = actor.restore_guard(ceil_int(actor.max_guard * SHIELD_OATH_GUARD_RECOVERY_RATIO))
+    actor.metadata["shield_oath_break_bonus_mult"] = max(
+        float(actor.metadata.get("shield_oath_break_bonus_mult", 1.0)),
+        SHIELD_OATH_BREAK_BONUS_MULT,
+    )
+    actor.metadata["shield_oath_cooldown"] = SHIELD_OATH_COOLDOWN_TURNS
+    state.logger.log(state.round_number, f"Shield Oath restores {gained} guard and strengthens the next Break action.")
+    if actor.posture == "bastion":
+        state.change_spotlight(1, f"{actor.name} Shield Oath")
+    finalize_action_resolution(state, actor, action_skill_for_actor(actor, BATTLE_ACTIONS["shield_oath"]))
+
+
+def resolve_razor_encore(state: BattleState, actor: Combatant, target: Combatant, inputs: ResolvedInputs) -> None:
+    action = BATTLE_ACTIONS["razor_encore"]
+    skill, damage, break_damage = prepare_attack_action(state, actor, action, inputs)
+    result = apply_damage_to_target(
+        state=state,
+        source=actor,
+        target=target,
+        damage=damage,
+        break_damage=break_damage,
+        skill=skill,
+        can_crit=True,
+    ) or {}
+    if result.get("crit") and target.alive():
+        apply_damage_to_target(
+            state=state,
+            source=actor,
+            target=target,
+            damage=ceil_int(damage * RAZOR_ENCORE_FOLLOWUP_DAMAGE_MULTIPLIER),
+            break_damage=ceil_int(break_damage * RAZOR_ENCORE_FOLLOWUP_DAMAGE_MULTIPLIER),
+            skill=skill,
+            can_crit=True,
+        )
+        state.logger.log(state.round_number, "Razor Encore follows through on the critical opening.")
+    actor.metadata["cannot_parry_next_turn"] = True
+    finalize_offensive_resolution(state, actor, skill)
+
+
+def resolve_quiet_benediction(state: BattleState, actor: Combatant) -> None:
+    target = choose_most_wounded_ally(state, actor)
+    base_heal = max(1, ceil_int(target.max_hp * QUIET_BENEDICTION_HEAL_RATIO))
+    apply_healing_effect(state, actor, target, base_heal, "Quiet Benediction", action_id="quiet_benediction")
+    cleanse_one_debuff(state, target, source_text="Quiet Benediction")
+    if any(equipment_has_tag(item, "mage") for item in get_character_equipment(actor).values()):
+        state.change_spotlight(1, f"{actor.name} Quiet Benediction")
+    finalize_action_resolution(state, actor, action_skill_for_actor(actor, BATTLE_ACTIONS["quiet_benediction"]))
+
+
+def resolve_rain_mark(state: BattleState, actor: Combatant, target: Combatant) -> None:
+    target.add_condition("rain_mark", RAIN_MARK_DURATION)
+    target.metadata["rain_mark_break_bonus_pending"] = True
+    state.logger.log(state.round_number, f"{target.name} is marked by rain for {RAIN_MARK_DURATION} turns.")
+    finalize_action_resolution(state, actor, action_skill_for_actor(actor, BATTLE_ACTIONS["rain_mark"]))
+
+
+def resolve_blood_vow(state: BattleState, actor: Combatant) -> None:
+    current_cost = ceil_int(actor.hp * BLOOD_VOW_CURRENT_HP_COST_RATIO)
+    max_cost = ceil_int(actor.max_hp * BLOOD_VOW_MAX_HP_COST_RATIO)
+    hp_cost = max(1, min(current_cost, max_cost))
+    actor.hp = max(1, actor.hp - hp_cost)
+    actor.metadata["blood_vow_ready"] = True
+    actor.add_condition("blood_vow", BLOOD_VOW_STATUS_DURATION)
+    state.logger.log(state.round_number, f"{actor.name} pays {hp_cost} HP for Blood Vow.")
+    finalize_action_resolution(state, actor, action_skill_for_actor(actor, BATTLE_ACTIONS["blood_vow"]))
+
+
+def resolve_battle_action(state: BattleState, actor: Combatant, action: BattleActionDef, targets: List[Combatant]) -> bool:
+    inputs = turn_inputs_for_actor(state, actor)
+    if action.consumes_all_ap:
+        set_actor_ap(actor, 0)
+    else:
+        spend_actor_ap(actor, action.ap_cost)
+
+    force_turn_end = action.force_turn_end or actor_current_ap(actor) <= 0
+    if action.action_id == "use_healing_potion":
+        heal_with_potion(state, actor)
+    elif action.action_id == "light_attack":
+        resolve_light_attack(state, actor, targets[0], inputs)
+    elif action.action_id == "heavy_attack":
+        resolve_heavy_attack(state, actor, targets[0], inputs)
+    elif action.action_id == "feint_rush":
+        resolve_feint_rush(state, actor)
+    elif action.action_id == "double_strike":
+        resolve_double_strike(state, actor, targets[0], inputs)
+    elif action.action_id == "backstep_slash":
+        resolve_backstep_slash(state, actor, targets[0], inputs)
+    elif action.action_id == "charge_slash":
+        resolve_charge_slash(state, actor, targets[0], inputs)
+    elif action.action_id == "trance":
+        resolve_trance(state, actor, targets[0], inputs)
+    elif action.action_id == "poisoned_chalice":
+        resolve_poisoned_chalice(state, actor, targets[0], inputs)
+    elif action.action_id == "backflip":
+        resolve_backflip(state, actor)
+    elif action.action_id == "defensive_technique":
+        resolve_defensive_technique(state, actor)
+    elif action.action_id == "regain_balance":
+        resolve_regain_balance(state, actor, inputs)
+    elif action.action_id == "shield_oath":
+        resolve_shield_oath(state, actor)
+    elif action.action_id == "razor_encore":
+        resolve_razor_encore(state, actor, targets[0], inputs)
+    elif action.action_id == "quiet_benediction":
+        resolve_quiet_benediction(state, actor)
+    elif action.action_id == "rain_mark":
+        resolve_rain_mark(state, actor, targets[0])
+    elif action.action_id == "blood_vow":
+        resolve_blood_vow(state, actor)
+    actor.last_skill_used = action.action_id
+    return force_turn_end or state.check_end()
+
+
+def perform_player_action(state: BattleState, actor: Combatant) -> bool:
+    turn_inputs = get_turn_axis_scores(state, actor, interactive=state.interactive)
+    starting_ap = start_player_turn_ap(state, actor, turn_inputs)
+    log_player_action_inputs_once(state, actor, turn_inputs, starting_ap)
+    apply_posture_and_post_action_effects(state, actor, turn_inputs)
+
+    acted = False
+    while actor.alive() and actor_current_ap(actor) > 0 and not state.battle_over:
+        if state.interactive:
+            state.render_state()
+            action = choose_player_battle_action(state, actor)
+            if action is None:
+                break
+            targets = choose_targets_for_battle_action(state, actor, action)
+        else:
+            action, targets = auto_choose_battle_action_and_targets(state, actor, turn_inputs)
+            if action is None:
+                break
+
+        if not targets:
+            state.check_end()
+            break
+        acted = True
+        if resolve_battle_action(state, actor, action, targets):
+            break
+    actor.metadata.pop("turn_accuracy_penalty", None)
+    actor.metadata.pop("current_action_accuracy_modifier", None)
+    return acted
 
 
 def resolve_action(state: BattleState, context: ActionContext) -> None:
@@ -2624,9 +4915,13 @@ def resolve_action(state: BattleState, context: ActionContext) -> None:
         counterphrase_damage_mult, counterphrase_break_mult = consume_counterphrase_bonus(state, actor, skill)
         if actor.team == "player":
             power_damage_mult = player_power_damage_multiplier(state, actor, skill, inputs)
-            power_break_mult = 1.0 + (power_damage_mult - 1.0) * 0.50
-            state.logger.log(state.round_number, f"Power output x{power_damage_mult:.2f} from Power {inputs.power}.")
+            power_break_mult = power_break_multiplier(inputs.power)
+            state.logger.log(
+                state.round_number,
+                f"Power output x{power_damage_mult:.2f} damage / x{power_break_mult:.2f} break from Power {inputs.power}.",
+            )
     self_risk_reduction = current_self_risk_reduction(state, actor, skill)
+    equipment_modifiers = calculate_equipment_modifiers(actor, action_id=skill.effect_id, skill=skill)
 
     state.logger.log(
         state.round_number,
@@ -2678,10 +4973,30 @@ def resolve_action(state: BattleState, context: ActionContext) -> None:
         return
 
     # Most direct skills are resolved through attack / effect application.
-    base_damage = DAMAGE_TIERS[skill.damage_tier]
-    base_break = BREAK_TIERS[skill.break_tier]
-    damage = ceil_int(base_damage * scale * before_damage_mult * counterphrase_damage_mult * power_damage_mult)
-    break_damage = ceil_int(base_break * scale * before_break_mult * counterphrase_break_mult * power_break_mult)
+    base_damage = max(0, DAMAGE_TIERS[skill.damage_tier] + equipment_modifiers.base_damage_bonus)
+    base_break = max(0, BREAK_TIERS[skill.break_tier])
+    blood_vow_damage_mult = consume_blood_vow_damage_bonus(actor) if offensive_skill else 1.0
+    black_vial_mult = black_vial_damage_multiplier(actor) if offensive_skill else 1.0
+    next_break_action_mult = consume_next_break_action_bonus(actor) if offensive_skill and base_break > 0 else 1.0
+    damage = ceil_int(
+        base_damage
+        * scale
+        * before_damage_mult
+        * counterphrase_damage_mult
+        * blood_vow_damage_mult
+        * black_vial_mult
+        * power_damage_mult
+        * equipment_modifiers.damage_multiplier
+    )
+    break_damage = ceil_int(
+        base_break
+        * scale
+        * before_break_mult
+        * counterphrase_break_mult
+        * next_break_action_mult
+        * power_break_mult
+        * equipment_modifiers.break_multiplier
+    )
 
     # Multi-hit skills handled explicitly.
     if skill.effect_id == "glass_reprise":
@@ -2851,7 +5166,7 @@ def resolve_action(state: BattleState, context: ActionContext) -> None:
             # Very light baseline chance for affinity-themed attacks.
             status_payload = None
 
-        apply_damage_to_target(
+        result = apply_damage_to_target(
             state=state,
             source=actor,
             target=target,
@@ -2860,7 +5175,7 @@ def resolve_action(state: BattleState, context: ActionContext) -> None:
             skill=skill,
             can_crit=skill.kind not in {"support", "utility"},
             status_to_apply=status_payload,
-        )
+        ) or {}
 
         if (
             skill.effect_id == "read_opening"
@@ -2929,8 +5244,29 @@ def maybe_grant_composure_bonus_action(state: BattleState, actor: Combatant, inp
 # ---------------------------------------------------------------------------
 
 
-def enemy_choose_target(state: BattleState, actor: Combatant) -> Combatant:
+def enemy_action_should_stop(state: BattleState) -> bool:
+    return state.check_end()
+
+
+def choose_low_guard_player_target(state: BattleState) -> Optional[Combatant]:
     players = state.living_players()
+    if not players:
+        state.check_end()
+        return None
+    return min(players, key=lambda unit: (unit.guard, unit.hp))
+
+
+def scale_reaction_failure_damage(state: BattleState, attacker: Combatant, damage: int) -> int:
+    if damage <= 0 or attacker.team != "enemy":
+        return max(0, damage)
+    return ceil_int(damage * state.reaction_failure_damage_multiplier(attacker))
+
+
+def enemy_choose_target(state: BattleState, actor: Combatant) -> Optional[Combatant]:
+    players = state.living_players()
+    if not players:
+        state.check_end()
+        return None
     taunted = [unit for unit in players if unit.has_condition("taunt")]
     if taunted:
         return taunted[0]
@@ -2944,6 +5280,8 @@ def enemy_choose_target(state: BattleState, actor: Combatant) -> Combatant:
 
 
 def enemy_action_template(state: BattleState, actor: Combatant) -> None:
+    if enemy_action_should_stop(state):
+        return
     if actor.entity_id.startswith("rustbound_pilgrim"):
         return enemy_rustbound_pilgrim(state, actor)
     if actor.entity_id.startswith("ivy_strangler"):
@@ -2985,6 +5323,8 @@ def enemy_action_template(state: BattleState, actor: Combatant) -> None:
 
     # Fallback basic attack.
     target = enemy_choose_target(state, actor)
+    if target is None:
+        return
     inputs = make_resolved_inputs(*virtual_enemy_inputs(actor), SKILLS["standard_strike"])
     actor.metadata["last_inputs"] = inputs
     apply_posture_and_post_action_effects(state, actor, inputs)
@@ -3002,6 +5342,8 @@ def enemy_action_template(state: BattleState, actor: Combatant) -> None:
 
 def enemy_rustbound_pilgrim(state: BattleState, actor: Combatant) -> None:
     target = enemy_choose_target(state, actor)
+    if target is None:
+        return
     if actor.has_condition("delayed_overhead"):
         actor.remove_condition("delayed_overhead")
         inputs = make_resolved_inputs(88, 38, 52, SKILLS["standard_strike"])
@@ -3027,6 +5369,8 @@ def enemy_rustbound_pilgrim(state: BattleState, actor: Combatant) -> None:
 
 def enemy_ivy_strangler(state: BattleState, actor: Combatant) -> None:
     target = enemy_choose_target(state, actor)
+    if target is None:
+        return
     inputs = make_resolved_inputs(42, 72, 54, SKILLS["standard_strike"])
     actor.metadata["last_inputs"] = inputs
     apply_posture_and_post_action_effects(state, actor, inputs)
@@ -3045,6 +5389,8 @@ def enemy_ivy_strangler(state: BattleState, actor: Combatant) -> None:
 
 def enemy_flood_acolyte(state: BattleState, actor: Combatant) -> None:
     target = enemy_choose_target(state, actor)
+    if target is None:
+        return
     inputs = make_resolved_inputs(36, 68, 62, SKILLS["standard_strike"])
     actor.metadata["last_inputs"] = inputs
     apply_posture_and_post_action_effects(state, actor, inputs)
@@ -3075,6 +5421,8 @@ def enemy_flood_acolyte(state: BattleState, actor: Combatant) -> None:
 
 def enemy_switchblade_drone(state: BattleState, actor: Combatant) -> None:
     target = enemy_choose_target(state, actor)
+    if target is None:
+        return
     inputs = make_resolved_inputs(68, 78, 46, SKILLS["standard_strike"])
     actor.metadata["last_inputs"] = inputs
     apply_posture_and_post_action_effects(state, actor, inputs)
@@ -3093,12 +5441,16 @@ def enemy_switchblade_drone(state: BattleState, actor: Combatant) -> None:
             can_crit=False,
             attack_tags=enemy_action_tags(actor, "flurry"),
         )
+        if enemy_action_should_stop(state):
+            return
         if not target.alive():
             break
 
 
 def enemy_veil_leech(state: BattleState, actor: Combatant) -> None:
     target = enemy_choose_target(state, actor)
+    if target is None:
+        return
     inputs = make_resolved_inputs(54, 66, 74, SKILLS["standard_strike"])
     actor.metadata["last_inputs"] = inputs
     apply_posture_and_post_action_effects(state, actor, inputs)
@@ -3131,6 +5483,8 @@ def enemy_lamp_witness(state: BattleState, actor: Combatant) -> None:
         state.logger.log(state.round_number, f"{actor.name} cleanses {debuffed_ally.name}.")
     else:
         target = enemy_choose_target(state, actor)
+        if target is None:
+            return
         state.logger.log(state.round_number, f"{actor.name} judges {target.name} with burning light.")
         apply_damage_to_target(
             state=state,
@@ -3146,6 +5500,8 @@ def enemy_lamp_witness(state: BattleState, actor: Combatant) -> None:
 
 def enemy_toll_knight(state: BattleState, actor: Combatant) -> None:
     target = enemy_choose_target(state, actor)
+    if target is None:
+        return
     inputs = make_resolved_inputs(82, 34, 60, SKILLS["standard_strike"])
     actor.metadata["last_inputs"] = inputs
     apply_posture_and_post_action_effects(state, actor, inputs)
@@ -3168,6 +5524,8 @@ def enemy_toll_knight(state: BattleState, actor: Combatant) -> None:
 
 def enemy_root_jury(state: BattleState, actor: Combatant) -> None:
     target = enemy_choose_target(state, actor)
+    if target is None:
+        return
     inputs = make_resolved_inputs(46, 70, 58, SKILLS["standard_strike"])
     actor.metadata["last_inputs"] = inputs
     apply_posture_and_post_action_effects(state, actor, inputs)
@@ -3187,6 +5545,8 @@ def enemy_root_jury(state: BattleState, actor: Combatant) -> None:
 
 def enemy_canal_seraph(state: BattleState, actor: Combatant) -> None:
     target = enemy_choose_target(state, actor)
+    if target is None:
+        return
     inputs = make_resolved_inputs(40, 68, 64, SKILLS["standard_strike"])
     actor.metadata["last_inputs"] = inputs
     apply_posture_and_post_action_effects(state, actor, inputs)
@@ -3225,8 +5585,12 @@ def enemy_static_chorister(state: BattleState, actor: Combatant) -> None:
                 can_crit=False,
                 status_to_apply=("jolt", 1, 85),
             )
+            if enemy_action_should_stop(state):
+                return
     else:
         target = enemy_choose_target(state, actor)
+        if target is None:
+            return
         state.logger.log(state.round_number, f"{actor.name} snaps a charge into {target.name}.")
         apply_damage_to_target(
             state=state,
@@ -3242,6 +5606,8 @@ def enemy_static_chorister(state: BattleState, actor: Combatant) -> None:
 
 def enemy_archive_shade(state: BattleState, actor: Combatant) -> None:
     target = enemy_choose_target(state, actor)
+    if target is None:
+        return
     # Copy the target posture for one turn.
     actor.posture = target.posture
     state.logger.log(state.round_number, f"{actor.name} mirrors {target.name}'s {target.posture} posture.")
@@ -3258,7 +5624,9 @@ def enemy_archive_shade(state: BattleState, actor: Combatant) -> None:
 
 
 def enemy_glass_hound(state: BattleState, actor: Combatant) -> None:
-    target = min(state.living_players(), key=lambda unit: (unit.guard, unit.hp))
+    target = choose_low_guard_player_target(state)
+    if target is None:
+        return
     inputs = make_resolved_inputs(66, 80, 44, SKILLS["standard_strike"])
     actor.metadata["last_inputs"] = inputs
     apply_posture_and_post_action_effects(state, actor, inputs)
@@ -3359,6 +5727,8 @@ def boss_moraine_bailiff(state: BattleState, actor: Combatant) -> None:
             status_to_apply=("soak", 2, 80),
             attack_tags=enemy_action_tags(actor, "spillway_release"),
         )
+        if enemy_action_should_stop(state):
+            return
         clean_answers = 1 if _reaction_answered_cleanly(main_result) else 0
         side_targets = [unit for unit in state.living_players() if unit.entity_id != marked_target.entity_id]
         if side_targets:
@@ -3374,6 +5744,8 @@ def boss_moraine_bailiff(state: BattleState, actor: Combatant) -> None:
                 can_crit=False,
                 attack_tags=enemy_action_tags(actor, "spillway_release"),
             )
+            if enemy_action_should_stop(state):
+                return
             if _reaction_answered_cleanly(lane_result):
                 clean_answers += 1
         if clean_answers >= 1:
@@ -3395,7 +5767,9 @@ def boss_moraine_bailiff(state: BattleState, actor: Combatant) -> None:
 
     cycle = actor.times_acted % 3
     if cycle == 1:
-        mark_target = min(state.living_players(), key=lambda unit: (unit.guard, unit.hp))
+        mark_target = choose_low_guard_player_target(state)
+        if mark_target is None:
+            return
         inputs = make_resolved_inputs(66, 44, 88, SKILLS["standard_strike"])
         actor.metadata["last_inputs"] = inputs
         apply_posture_and_post_action_effects(state, actor, inputs)
@@ -3424,6 +5798,8 @@ def boss_moraine_bailiff(state: BattleState, actor: Combatant) -> None:
                 status_to_apply=("soak", 1, 55 if phase_two else 40),
                 attack_tags=enemy_action_tags(actor, "breakwater_sweep"),
             )
+            if enemy_action_should_stop(state):
+                return
             if _reaction_answered_cleanly(result):
                 clean_reads += 1
         if clean_reads >= 2:
@@ -3438,6 +5814,8 @@ def boss_moraine_bailiff(state: BattleState, actor: Combatant) -> None:
         return
 
     target = enemy_choose_target(state, actor)
+    if target is None:
+        return
     inputs = make_resolved_inputs(82 if phase_two else 78, 42, 80 if not phase_two else 66, SKILLS["standard_strike"])
     actor.metadata["last_inputs"] = inputs
     apply_posture_and_post_action_effects(state, actor, inputs)
@@ -3490,6 +5868,8 @@ def boss_bellglass_precentor(state: BattleState, actor: Combatant) -> None:
             status_to_apply=("hex", 1, 60),
             attack_tags=enemy_action_tags(actor, "final_cadence"),
         )
+        if enemy_action_should_stop(state):
+            return
         if phase_two and marked_target.alive():
             state.logger.log(state.round_number, "A single echo follows the cadence.")
             apply_damage_to_target(
@@ -3502,6 +5882,8 @@ def boss_bellglass_precentor(state: BattleState, actor: Combatant) -> None:
                 can_crit=False,
                 attack_tags=enemy_action_tags(actor, "final_cadence"),
             )
+            if enemy_action_should_stop(state):
+                return
         if _reaction_answered_cleanly(finale_result):
             _open_punish_window(
                 state=state,
@@ -3517,6 +5899,8 @@ def boss_bellglass_precentor(state: BattleState, actor: Combatant) -> None:
 
     cycle = actor.times_acted % 4
     target = enemy_choose_target(state, actor)
+    if target is None:
+        return
     if cycle == 1:
         inputs = make_resolved_inputs(56, 84, 76, SKILLS["standard_strike"])
         actor.metadata["last_inputs"] = inputs
@@ -3543,6 +5927,8 @@ def boss_bellglass_precentor(state: BattleState, actor: Combatant) -> None:
             can_crit=False,
             attack_tags=enemy_action_tags(actor, "sentence_of_glass"),
         )
+        if enemy_action_should_stop(state):
+            return
         state.logger.log(state.round_number, "The count snaps to two.")
         apply_damage_to_target(
             state=state,
@@ -3554,6 +5940,8 @@ def boss_bellglass_precentor(state: BattleState, actor: Combatant) -> None:
             can_crit=False,
             attack_tags=enemy_action_tags(actor, "amen_cut"),
         )
+        if enemy_action_should_stop(state):
+            return
         state.logger.log(state.round_number, "The final note comes late.")
         apply_damage_to_target(
             state=state,
@@ -3566,6 +5954,8 @@ def boss_bellglass_precentor(state: BattleState, actor: Combatant) -> None:
             status_to_apply=("hex", 1, 55),
             attack_tags=enemy_action_tags(actor, "final_cadence"),
         )
+        if enemy_action_should_stop(state):
+            return
         if phase_two and target.alive():
             state.logger.log(state.round_number, "A glass echo answers the finisher.")
             apply_damage_to_target(
@@ -3578,6 +5968,8 @@ def boss_bellglass_precentor(state: BattleState, actor: Combatant) -> None:
                 can_crit=False,
                 attack_tags=enemy_action_tags(actor, "final_cadence"),
             )
+            if enemy_action_should_stop(state):
+                return
         _open_punish_window(
             state=state,
             actor=actor,
@@ -3603,6 +5995,8 @@ def boss_bellglass_precentor(state: BattleState, actor: Combatant) -> None:
             can_crit=False,
             attack_tags=enemy_action_tags(actor, "amen_cut"),
         )
+        if enemy_action_should_stop(state):
+            return
         if _reaction_answered_cleanly(result):
             _open_punish_window(
                 state=state,
@@ -3715,6 +6109,8 @@ def boss_orison_last_toll(state: BattleState, actor: Combatant) -> None:
         state.logger.log(state.round_number, f"{actor.name} enters Quiet Relay cadence.")
 
     target = enemy_choose_target(state, actor)
+    if target is None:
+        return
     if hp_ratio <= 0.35 and actor.times_acted % 3 == 2:
         inputs = make_resolved_inputs(84, 72, 84, SKILLS["standard_strike"])
         actor.metadata["last_inputs"] = inputs
@@ -3724,11 +6120,17 @@ def boss_orison_last_toll(state: BattleState, actor: Combatant) -> None:
         first_toll = cycle[actor.times_acted % len(cycle)]
         second_toll = next((name for name in cycle if name != first_toll), cycle[(actor.times_acted + 1) % len(cycle)])
         result_one = _orison_execute_toll(state, actor, target, first_toll, in_quiet_relay=True)
+        if enemy_action_should_stop(state):
+            return
         if target.alive():
             result_two = _orison_execute_toll(state, actor, target, second_toll, in_quiet_relay=True)
         else:
             spill_target = enemy_choose_target(state, actor)
+            if spill_target is None:
+                return
             result_two = _orison_execute_toll(state, actor, spill_target, second_toll, in_quiet_relay=True)
+        if enemy_action_should_stop(state):
+            return
         if _reaction_answered_cleanly(result_one) or _reaction_answered_cleanly(result_two):
             _open_punish_window(
                 state=state,
@@ -3764,6 +6166,8 @@ def boss_orison_last_toll(state: BattleState, actor: Combatant) -> None:
             can_crit=False,
             attack_tags=enemy_action_tags(actor, "tower_step"),
         )
+        if enemy_action_should_stop(state):
+            return
         if _reaction_answered_cleanly(result):
             _open_punish_window(
                 state=state,
@@ -3785,6 +6189,8 @@ def boss_orison_last_toll(state: BattleState, actor: Combatant) -> None:
     actor.metadata["last_inputs"] = inputs
     apply_posture_and_post_action_effects(state, actor, inputs)
     result = _orison_execute_toll(state, actor, target, toll_id, in_quiet_relay=False)
+    if enemy_action_should_stop(state):
+        return
     if _reaction_answered_cleanly(result):
         _open_punish_window(
             state=state,
@@ -3799,6 +6205,8 @@ def boss_orison_last_toll(state: BattleState, actor: Combatant) -> None:
 def boss_bell_warden(state: BattleState, actor: Combatant) -> None:
     hp_ratio = actor.hp / actor.max_hp
     target = enemy_choose_target(state, actor)
+    if target is None:
+        return
     if hp_ratio <= 0.35:
         # Desperation: burn its own guard for aggression.
         burned = min(actor.guard, 15)
@@ -3828,6 +6236,8 @@ def boss_bell_warden(state: BattleState, actor: Combatant) -> None:
                 status_to_apply=("scorch", 2, 70 if hit == total_hits else 35),
                 attack_tags=enemy_action_tags(actor, "cathedral_toll"),
             )
+            if enemy_action_should_stop(state):
+                return
             state.logger.log(state.round_number, f"Cathedral Toll hit {hit}/3 lands.")
         return
 
@@ -3859,6 +6269,8 @@ def boss_flood_archivist(state: BattleState, actor: Combatant) -> None:
     idx = (actor.times_acted // 2) % len(AFFINITY_ORDER)
     actor.affinity = AFFINITY_ORDER[idx]
     target = enemy_choose_target(state, actor)
+    if target is None:
+        return
     inputs = make_resolved_inputs(44, 72, 68, SKILLS["standard_strike"])
     actor.metadata["last_inputs"] = inputs
     apply_posture_and_post_action_effects(state, actor, inputs)
@@ -3880,6 +6292,8 @@ def boss_flood_archivist(state: BattleState, actor: Combatant) -> None:
                     status_to_apply=("soak", 2, 80),
                     attack_tags=enemy_action_tags(actor, "rewrite_surge"),
                 )
+                if enemy_action_should_stop(state):
+                    return
         else:
             apply_damage_to_target(
                 state=state,
@@ -3907,13 +6321,17 @@ def boss_flood_archivist(state: BattleState, actor: Combatant) -> None:
 
 
 def boss_glass_hound_matriarch(state: BattleState, actor: Combatant) -> None:
-    target = min(state.living_players(), key=lambda unit: (unit.guard, unit.hp))
+    target = choose_low_guard_player_target(state)
+    if target is None:
+        return
     inputs = make_resolved_inputs(74, 82, 48, SKILLS["standard_strike"])
     actor.metadata["last_inputs"] = inputs
     apply_posture_and_post_action_effects(state, actor, inputs)
     if actor.times_acted % 3 == 1 and len(state.living_enemies()) < 3:
         # Summon one hound in terminal prototype.
         summon = create_enemy("glass_hound", index=len([e for e in state.enemies if e.entity_id.startswith('glass_hound')]) + 1)
+        summon.metadata["counts_for_execution"] = False
+        state.apply_enemy_balance(summon)
         state.enemies.append(summon)
         state.logger.log(state.round_number, f"{actor.name} summons a Glass Hound!")
     state.logger.log(state.round_number, f"{actor.name} launches a mirrored pounce at {target.name}.")
@@ -3930,6 +6348,8 @@ def boss_glass_hound_matriarch(state: BattleState, actor: Combatant) -> None:
 
 def boss_quiet_magistrate(state: BattleState, actor: Combatant) -> None:
     target = enemy_choose_target(state, actor)
+    if target is None:
+        return
     repeated = False
     recent_skills = [player.last_skill_used for player in state.players if player.last_skill_used]
     if recent_skills:
@@ -3972,10 +6392,17 @@ def ensure_round_ready(state: BattleState) -> None:
         return
 
     if not state.cursor.battle_started:
+        ensure_battle_loadout(state)
         for unit in state.everyone():
             unit.position = POSITION_DEFAULT
+            reset_actor_combat_metadata(unit)
         state.cursor.battle_started = True
         state.logger.log(state.round_number, "Battle begins.")
+        for player in state.players:
+            for line in equipment_bonus_summary_lines(player):
+                state.logger.log(state.round_number, line)
+            if actor_has_relic(player, "kings_wager"):
+                state.logger.log(state.round_number, f"{player.name} bears King's Wager. Incoming damage is doubled.")
         axes = state.node_axis_scores
         state.logger.log(
             state.round_number,
@@ -4012,13 +6439,11 @@ def process_turn(state: BattleState, actor: Combatant) -> None:
         state.logger.log(state.round_number, f"{actor.name} recovers {recovered} guard.")
 
     if actor.team == "player":
-        acted = perform_player_action(state, actor)
-        if acted and not state.check_end():
-            inputs = actor.metadata.get("last_inputs")
-            if isinstance(inputs, ResolvedInputs) and maybe_grant_composure_bonus_action(state, actor, inputs):
-                if actor.alive() and not state.battle_over:
-                    perform_player_action(state, actor)
+        perform_player_action(state, actor)
+        actor.times_acted += 1
     else:
+        if state.check_end():
+            return
         enemy_action_template(state, actor)
         actor.times_acted += 1
 
@@ -4064,6 +6489,73 @@ def run_battle(
 # ---------------------------------------------------------------------------
 # Scenario building
 # ---------------------------------------------------------------------------
+
+
+def scaled_amount(value: int, multiplier: float, minimum: int = 1) -> int:
+    if value <= 0:
+        return 0
+    return max(minimum, ceil_int(value * multiplier))
+
+
+# Party-size balance profiles keep solo expeditions survivable and
+# three-person parties from steamrolling every battle.
+def get_party_balance_profile(party_size: int, mode: str = BALANCE_MODE_STANDARD) -> PartyBalanceProfile:
+    normalized_size = max(1, int(party_size))
+    normalized_mode = BALANCE_MODE_EXPEDITION if mode == BALANCE_MODE_EXPEDITION else BALANCE_MODE_STANDARD
+    if normalized_size <= 1 and normalized_mode == BALANCE_MODE_EXPEDITION:
+        return PartyBalanceProfile(
+            party_size=normalized_size,
+            mode=normalized_mode,
+            enemy_hp_mult=0.82,
+            enemy_guard_mult=0.86,
+            enemy_break_mult=0.84,
+            enemy_damage_mult=0.90,
+            boss_hp_mult=0.92,
+            boss_guard_mult=0.92,
+            boss_break_mult=0.90,
+            boss_pressure_mult=0.92,
+            reaction_failure_damage_mult=0.85,
+            healing_reward_mult=1.28,
+            recovery_heal_mult=1.30,
+        )
+    if normalized_size <= 1:
+        return PartyBalanceProfile(
+            party_size=normalized_size,
+            mode=normalized_mode,
+            enemy_hp_mult=0.88,
+            enemy_guard_mult=0.90,
+            enemy_break_mult=0.88,
+            enemy_damage_mult=0.93,
+            boss_hp_mult=0.96,
+            boss_guard_mult=0.95,
+            boss_break_mult=0.94,
+            boss_pressure_mult=0.95,
+            reaction_failure_damage_mult=0.90,
+            healing_reward_mult=1.20,
+            recovery_heal_mult=1.22,
+        )
+    if normalized_size == 2:
+        return PartyBalanceProfile(
+            party_size=normalized_size,
+            mode=normalized_mode,
+            enemy_hp_mult=0.97,
+            enemy_guard_mult=0.98,
+            enemy_break_mult=0.98,
+            reaction_failure_damage_mult=0.95,
+            healing_reward_mult=1.08,
+            recovery_heal_mult=1.10,
+        )
+    return PartyBalanceProfile(
+        party_size=normalized_size,
+        mode=normalized_mode,
+        enemy_hp_mult=1.12,
+        enemy_guard_mult=1.08,
+        enemy_break_mult=1.10,
+        boss_hp_mult=1.08,
+        boss_guard_mult=1.08,
+        boss_break_mult=1.10,
+        boss_pressure_mult=1.06,
+    )
 
 
 def build_party(party_ids: Sequence[str]) -> List[Combatant]:
@@ -4150,8 +6642,9 @@ def print_intro(args: argparse.Namespace, party_ids: Sequence[str]) -> None:
     print(f"{emoji_label('continue', 'Mode')}: {'AUTO' if args.auto else 'INTERACTIVE'}")
     print(f"{emoji_label('load', 'Content')}: {CONTENT.base_dir}")
     print("=" * 60)
-    print(emoji_label("inspect", "Tip: player actions require manual Power Precision Composure inputs such as: 72 61 84"))
+    print(emoji_label("inspect", "Tip: each player turn starts with one Power Precision Composure input such as: 72 61 84"))
     if not args.auto:
+        print("Manual battles also ask for a 3-action extra loadout at battle start.")
         print("Enemy attacks will ask for Guard / Dodge / Parry reactions.")
         print("Some heavy, channel, or burst-start attacks may offer a Pattern Read after that choice.")
     print()
@@ -4180,6 +6673,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         logger=logger,
         interactive=not args.auto,
     )
+    state.initialize_enemy_balance()
 
     print_intro(args, party_ids)
     winner = run_battle(state)

@@ -1,0 +1,214 @@
+[Round 01] Battle loadout: Charge Slash, Shield Oath, Defensive Technique.
+[Round 01] Battle begins.
+[Round 01] Vanguard equips Iron Sword + Wooden Shield.
+[Round 01] Vanguard shield discipline: Guard +2, reaction +5%, Break +5%, Charge Slash Break +10%.
+[Round 01] Node axis scores: Power 80, Precision 80, Composure 80.
+[Round 01] Turn order: Moraine, Bailiff of the Sluice, Vanguard
+[Round 01] Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+[Round 01] Moraine, Bailiff of the Sluice withdraws behind the guard.
+[Round 01] Moraine, Bailiff of the Sluice slams a gate stamp into Vanguard.
+[Round 01] Vanguard withdraws behind the guard.
+[Round 01] Guard gate success: Power 80 >= 55.
+[Round 01] Vanguard reads the weight and hardens the guard.
+[Round 01] Vanguard loses 11 break.
+[Round 01] Moraine, Bailiff of the Sluice hits Vanguard for 20 guard.
+[Round 01] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+[Round 01] Vanguard enters flow posture (balanced spread).
+[Round 01] Vanguard recenters to set footing.
+[Round 01] Shield Oath restores 15 guard and strengthens the next Break action.
+[Round 01] Vanguard spends 9 guard to wind up Charge Slash.
+[Round 01] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 01] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 01] Shield Oath sharpens the next Break action x1.15.
+[Round 01] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 37/95].
+[Round 01] Moraine, Bailiff of the Sluice loses 111 break.
+[Round 01] Vanguard hits Moraine, Bailiff of the Sluice for 23 guard.
+[Round 01] Charge Slash batters the enemy's Break.
+[Round 01] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 01] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 01] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 19/95].
+[Round 01] Moraine, Bailiff of the Sluice loses 9 break.
+[Round 01] Moraine, Bailiff of the Sluice is staggered!
+[Round 01] Vanguard hits Moraine, Bailiff of the Sluice for 24 guard.
+[Round 02] ------------------------------------------------------------
+[Round 02] Turn order: Moraine, Bailiff of the Sluice, Vanguard
+[Round 02] Moraine, Bailiff of the Sluice is staggered and loses the turn.
+[Round 02] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+[Round 02] Vanguard enters flow posture (balanced spread).
+[Round 02] Vanguard spends 9 guard to wind up Charge Slash.
+[Round 02] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 02] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 02] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 4/95].
+[Round 02] Moraine, Bailiff of the Sluice loses 97 break.
+[Round 02] Vanguard hits Moraine, Bailiff of the Sluice for 23 guard.
+[Round 02] Charge Slash batters the enemy's Break.
+[Round 02] Defensive Technique restores 33 guard.
+[Round 02] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 02] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 02] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 48/95].
+[Round 02] Moraine, Bailiff of the Sluice loses 14 break.
+[Round 02] Vanguard hits Moraine, Bailiff of the Sluice for 24 guard.
+[Round 03] ------------------------------------------------------------
+[Round 03] Turn order: Moraine, Bailiff of the Sluice, Vanguard
+[Round 03] Moraine, Bailiff of the Sluice recovers 3 guard.
+[Round 03] Moraine, Bailiff of the Sluice enters flow posture (balanced spread).
+[Round 03] Moraine, Bailiff of the Sluice recenters to set footing.
+[Round 03] Player Spotlight +1 (Moraine, Bailiff of the Sluice entered Flow) -> 2/5
+[Round 03] Moraine, Bailiff of the Sluice sweeps the breakwater across every lane.
+[Round 03] Vanguard withdraws behind the guard.
+[Round 03] Moraine, Bailiff of the Sluice withdraws behind the guard (pressure answered).
+[Round 03] Guard gate success: Power 80 >= 55.
+[Round 03] Vanguard reads the weight and hardens the guard.
+[Round 03] Vanguard loses 6 break.
+[Round 03] Moraine, Bailiff of the Sluice hits Vanguard for 12 guard.
+[Round 03] Vanguard gains soak (1).
+[Round 03] Vanguard is no longer affected by soak.
+[Round 03] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+[Round 03] Vanguard enters flow posture (balanced spread).
+[Round 03] Vanguard recenters to set footing.
+[Round 03] Shield Oath restores 15 guard and strengthens the next Break action.
+[Round 03] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 03] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 03] Shield Oath sharpens the next Break action x1.15.
+[Round 03] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 55/95].
+[Round 03] Moraine, Bailiff of the Sluice loses 9 break.
+[Round 03] Moraine, Bailiff of the Sluice is staggered!
+[Round 03] Vanguard hits Moraine, Bailiff of the Sluice for 11 guard, 13 hp.
+[Round 03] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 03] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 03] Vanguard grazes Moraine, Bailiff of the Sluice [hit roll 97/95].
+[Round 03] Vanguard hits Moraine, Bailiff of the Sluice for 16 hp.
+[Round 03] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 03] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 03] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 77/95].
+[Round 03] Vanguard hits Moraine, Bailiff of the Sluice for 32 hp.
+[Round 04] ------------------------------------------------------------
+[Round 04] Turn order: Moraine, Bailiff of the Sluice, Vanguard
+[Round 04] Moraine, Bailiff of the Sluice is staggered and loses the turn.
+[Round 04] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+[Round 04] Vanguard enters flow posture (balanced spread).
+[Round 04] Vanguard spends 9 guard to wind up Charge Slash.
+[Round 04] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 04] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 04] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 54/95].
+[Round 04] Moraine, Bailiff of the Sluice loses 97 break.
+[Round 04] Vanguard hits Moraine, Bailiff of the Sluice for 23 hp.
+[Round 04] Charge Slash batters the enemy's Break.
+[Round 04] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 04] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 04] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 62/95].
+[Round 04] Moraine, Bailiff of the Sluice loses 14 break.
+[Round 04] Vanguard hits Moraine, Bailiff of the Sluice for 24 hp.
+[Round 04] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 04] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 04] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 67/95].
+[Round 04] Moraine, Bailiff of the Sluice loses 9 break.
+[Round 04] Moraine, Bailiff of the Sluice is staggered!
+[Round 04] Vanguard hits Moraine, Bailiff of the Sluice for 36 hp. CRIT!
+[Round 05] ------------------------------------------------------------
+[Round 05] Turn order: Moraine, Bailiff of the Sluice, Vanguard
+[Round 05] Moraine, Bailiff of the Sluice is staggered and loses the turn.
+[Round 05] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+[Round 05] Vanguard enters flow posture (balanced spread).
+[Round 05] Vanguard spends 9 guard to wind up Charge Slash.
+[Round 05] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 05] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 05] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 7/95].
+[Round 05] Moraine, Bailiff of the Sluice loses 97 break.
+[Round 05] Vanguard hits Moraine, Bailiff of the Sluice for 23 hp.
+[Round 05] Charge Slash batters the enemy's Break.
+[Round 05] Shield Oath restores 15 guard and strengthens the next Break action.
+[Round 05] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 05] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 05] Shield Oath sharpens the next Break action x1.15.
+[Round 05] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 67/95].
+[Round 05] Moraine, Bailiff of the Sluice loses 15 break.
+[Round 05] Vanguard hits Moraine, Bailiff of the Sluice for 24 hp.
+[Round 06] ------------------------------------------------------------
+[Round 06] Turn order: Moraine, Bailiff of the Sluice, Vanguard
+[Round 06] Moraine, Bailiff of the Sluice recovers 3 guard.
+[Round 06] Moraine, Bailiff of the Sluice abandons the lockstep rhythm and slides into a faster flow.
+[Round 06] Moraine, Bailiff of the Sluice enters flow posture (balanced spread).
+[Round 06] Moraine, Bailiff of the Sluice recenters to set footing.
+[Round 06] Player Spotlight +1 (Moraine, Bailiff of the Sluice entered Flow) -> 3/5
+[Round 06] Moraine, Bailiff of the Sluice sweeps the breakwater across every lane.
+[Round 06] Vanguard withdraws behind the guard.
+[Round 06] Moraine, Bailiff of the Sluice withdraws behind the guard (pressure answered).
+[Round 06] Guard gate success: Power 80 >= 55.
+[Round 06] Vanguard reads the weight and hardens the guard.
+[Round 06] Vanguard loses 8 break.
+[Round 06] Moraine, Bailiff of the Sluice hits Vanguard for 14 guard.
+[Round 06] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+[Round 06] Vanguard enters flow posture (balanced spread).
+[Round 06] Vanguard recenters to set footing.
+[Round 06] Player Spotlight +1 (Vanguard entered Flow) -> 4/5
+[Round 06] Vanguard uses Heavy Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 06] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 06] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 30/95].
+[Round 06] Moraine, Bailiff of the Sluice loses 8 break.
+[Round 06] Moraine, Bailiff of the Sluice is staggered!
+[Round 06] Vanguard hits Moraine, Bailiff of the Sluice for 3 guard, 73 hp.
+[Round 07] ------------------------------------------------------------
+[Round 07] Turn order: Moraine, Bailiff of the Sluice, Vanguard
+[Round 07] Moraine, Bailiff of the Sluice is staggered and loses the turn.
+[Round 07] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+[Round 07] Vanguard enters flow posture (balanced spread).
+[Round 07] Shield Oath restores 15 guard and strengthens the next Break action.
+[Round 07] Vanguard spends 9 guard to wind up Charge Slash.
+[Round 07] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 07] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 07] Shield Oath sharpens the next Break action x1.15.
+[Round 07] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 61/95].
+[Round 07] Moraine, Bailiff of the Sluice loses 111 break.
+[Round 07] Vanguard hits Moraine, Bailiff of the Sluice for 23 hp.
+[Round 07] Charge Slash batters the enemy's Break.
+[Round 07] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 07] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 07] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 70/95].
+[Round 07] Moraine, Bailiff of the Sluice loses 9 break.
+[Round 07] Moraine, Bailiff of the Sluice is staggered!
+[Round 07] Vanguard hits Moraine, Bailiff of the Sluice for 24 hp.
+[Round 08] ------------------------------------------------------------
+[Round 08] Turn order: Moraine, Bailiff of the Sluice, Vanguard
+[Round 08] Moraine, Bailiff of the Sluice is staggered and loses the turn.
+[Round 08] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+[Round 08] Vanguard enters flow posture (balanced spread).
+[Round 08] Player Spotlight +1 (Vanguard entered Flow) -> 5/5
+[Round 08] Vanguard spends 9 guard to wind up Charge Slash.
+[Round 08] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 08] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 08] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 40/95].
+[Round 08] Moraine, Bailiff of the Sluice loses 97 break.
+[Round 08] Vanguard hits Moraine, Bailiff of the Sluice for 23 hp.
+[Round 08] Charge Slash batters the enemy's Break.
+[Round 08] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 08] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 08] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 83/95].
+[Round 08] Moraine, Bailiff of the Sluice loses 14 break.
+[Round 08] Vanguard hits Moraine, Bailiff of the Sluice for 24 hp.
+[Round 08] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 08] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 08] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 90/95].
+[Round 08] Moraine, Bailiff of the Sluice loses 9 break.
+[Round 08] Moraine, Bailiff of the Sluice is staggered!
+[Round 08] Vanguard hits Moraine, Bailiff of the Sluice for 24 hp.
+[Round 09] ------------------------------------------------------------
+[Round 09] Turn order: Moraine, Bailiff of the Sluice, Vanguard
+[Round 09] Moraine, Bailiff of the Sluice is staggered and loses the turn.
+[Round 09] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+[Round 09] Vanguard enters flow posture (balanced spread).
+[Round 09] Shield Oath restores 15 guard and strengthens the next Break action.
+[Round 09] Vanguard spends 9 guard to wind up Charge Slash.
+[Round 09] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 09] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 09] Shield Oath sharpens the next Break action x1.15.
+[Round 09] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 26/95].
+[Round 09] Moraine, Bailiff of the Sluice loses 111 break.
+[Round 09] Vanguard hits Moraine, Bailiff of the Sluice for 23 hp.
+[Round 09] Charge Slash batters the enemy's Break.
+[Round 09] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 09] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 09] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 35/95].
+[Round 09] Vanguard hits Moraine, Bailiff of the Sluice for 36 hp. CRIT!
+[Round 09] Moraine, Bailiff of the Sluice falls.
+[Round 09] Players win the battle.

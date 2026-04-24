@@ -47,6 +47,8 @@ ALLOWED_RELIC_EFFECTS = {
     "store_charge_bonus",
     "consume_stored_charge_bonus",
 }
+ALLOWED_EQUIPMENT_HANDEDNESS = {"one_handed", "two_handed", "paired"}
+ALLOWED_EQUIPMENT_SLOTS = {"main_hand", "off_hand", "both_hands"}
 
 
 class ContentError(ValueError):
@@ -410,6 +412,29 @@ def _validate_characters(
         for relic_id in raw.get("starting_relics", []):
             if relic_id not in relics:
                 raise ContentError(f"Character '{char_id}' references unknown relic '{relic_id}'.")
+        starting_equipment = raw.get("starting_equipment")
+        if starting_equipment is not None:
+            if not isinstance(starting_equipment, dict) or not starting_equipment:
+                raise ContentError(f"Character '{char_id}' starting_equipment must be a non-empty object when present.")
+            unknown_slots = [slot for slot in starting_equipment.keys() if slot not in ALLOWED_EQUIPMENT_SLOTS]
+            if unknown_slots:
+                raise ContentError(f"Character '{char_id}' uses invalid starting equipment slots: {unknown_slots}")
+            if "both_hands" in starting_equipment and ("main_hand" in starting_equipment or "off_hand" in starting_equipment):
+                raise ContentError(f"Character '{char_id}' cannot mix both_hands with main_hand/off_hand in starting_equipment.")
+            for slot_name, item_id in starting_equipment.items():
+                if item_id not in weapons:
+                    raise ContentError(f"Character '{char_id}' references unknown starting equipment '{item_id}'.")
+                item_raw = weapons[item_id]
+                item_slot = str(item_raw.get("slot", ""))
+                if item_slot != slot_name:
+                    raise ContentError(
+                        f"Character '{char_id}' equips '{item_id}' in {slot_name}, "
+                        f"but the item declares slot '{item_slot}'."
+                    )
+            if "both_hands" in starting_equipment and str(raw.get("weapon", "")) != str(starting_equipment["both_hands"]):
+                raise ContentError(f"Character '{char_id}' weapon must match both_hands starting equipment.")
+            if "both_hands" not in starting_equipment and "main_hand" in starting_equipment and str(raw.get("weapon", "")) != str(starting_equipment["main_hand"]):
+                raise ContentError(f"Character '{char_id}' weapon must match main_hand starting equipment.")
 
 
 def _validate_enemies(enemies: Mapping[str, Any], valid_affinities: Set[str], rules: Mapping[str, Any]) -> None:
@@ -471,6 +496,61 @@ def _validate_weapons(weapons: Mapping[str, Any], valid_affinities: Set[str]) ->
             raise ContentError(f"Weapon '{weapon_id}' has invalid affinity_hint '{affinity_hint}'.")
         if "display_name" not in raw:
             raise ContentError(f"Weapon '{weapon_id}' is missing display_name.")
+        type_name = raw.get("type")
+        if not isinstance(type_name, str) or not type_name.strip():
+            raise ContentError(f"Weapon '{weapon_id}' must define a non-empty type.")
+        handedness = raw.get("handedness")
+        if handedness not in ALLOWED_EQUIPMENT_HANDEDNESS:
+            raise ContentError(f"Weapon '{weapon_id}' has invalid handedness '{handedness}'.")
+        slot_name = raw.get("slot")
+        if slot_name not in ALLOWED_EQUIPMENT_SLOTS:
+            raise ContentError(f"Weapon '{weapon_id}' has invalid slot '{slot_name}'.")
+        if handedness in {"two_handed", "paired"} and slot_name != "both_hands":
+            raise ContentError(f"Weapon '{weapon_id}' must use both_hands for handedness '{handedness}'.")
+        if handedness == "one_handed" and slot_name == "both_hands":
+            raise ContentError(f"Weapon '{weapon_id}' cannot be one_handed and both_hands.")
+        tags = raw.get("tags")
+        if not isinstance(tags, list) or not all(isinstance(tag, str) and tag for tag in tags):
+            raise ContentError(f"Weapon '{weapon_id}' tags must be a list of non-empty strings.")
+        description = raw.get("description")
+        if not isinstance(description, str) or not description.strip():
+            raise ContentError(f"Weapon '{weapon_id}' must define a non-empty description.")
+        for field_name in (
+            "base_damage_bonus",
+            "damage_multiplier",
+            "break_multiplier",
+            "hit_bonus",
+            "crit_bonus",
+            "guard_bonus",
+            "evasion_bonus",
+            "ap_bonus",
+            "healing_multiplier",
+            "status_success_bonus",
+            "reaction_bonus",
+        ):
+            value = raw.get(field_name)
+            if value is None:
+                continue
+            if not isinstance(value, (int, float)) or isinstance(value, bool):
+                raise ContentError(f"Weapon '{weapon_id}' field '{field_name}' must be numeric when present.")
+        action_modifiers = raw.get("action_modifiers")
+        if action_modifiers is not None:
+            if not isinstance(action_modifiers, dict):
+                raise ContentError(f"Weapon '{weapon_id}' action_modifiers must be an object when present.")
+            for action_id, modifier_payload in action_modifiers.items():
+                if not isinstance(action_id, str) or not action_id:
+                    raise ContentError(f"Weapon '{weapon_id}' action_modifiers keys must be non-empty strings.")
+                if not isinstance(modifier_payload, dict):
+                    raise ContentError(f"Weapon '{weapon_id}' action_modifiers.{action_id} must be an object.")
+        class_bonuses = raw.get("class_bonuses")
+        if class_bonuses is not None:
+            if not isinstance(class_bonuses, dict):
+                raise ContentError(f"Weapon '{weapon_id}' class_bonuses must be an object when present.")
+            for class_id, modifier_payload in class_bonuses.items():
+                if not isinstance(class_id, str) or not class_id:
+                    raise ContentError(f"Weapon '{weapon_id}' class_bonuses keys must be non-empty strings.")
+                if not isinstance(modifier_payload, dict):
+                    raise ContentError(f"Weapon '{weapon_id}' class_bonuses.{class_id} must be an object.")
 
 
 def _validate_relics(relics: Mapping[str, Any]) -> None:

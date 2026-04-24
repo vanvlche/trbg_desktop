@@ -1,0 +1,283 @@
+
+🕯️ Quiet Relay: 2026 - Terminal Combat Core
+============================================================
+⛭ Party: vanguard, duelist, cantor
+⚔️ Scenario: skirmish
+▶️ Mode: AUTO
+📂 Content: /mnt/c/Users/kim50/projects/trbg_desktop/quiet_relay_content
+============================================================
+🔎 Tip: each player turn starts with one Power Precision Composure input such as: 72 61 84
+
+Battle loadout: Feint Rush, Double Strike, Charge Slash.
+Battle begins.
+Vanguard equips Iron Sword + Wooden Shield.
+Vanguard shield discipline: Guard +2, reaction +5%, Break +5%, Charge Slash Break +10%.
+Duelist equips Dual Machetes.
+Duelist paired tempo: Hit +5%, Crit +3%, Double Strike hit +5%.
+Cantor equips Fortune-Teller's Staff.
+Cantor mage focus: Hit +3%, status +5%, healing x1.10.
+Node axis scores: Power 60, Precision 60, Composure 60.
+Turn order: Duelist, Cantor, Flood Acolyte, Ivy Strangler, Rustbound Pilgrim, Vanguard
+Turn input: Power 60 / Precision 60 / Composure 60 -> Flow, 3 AP
+Duelist enters flow posture (balanced spread).
+Player Spotlight +1 (Duelist entered Flow) -> 1/5
+Duelist uses Double Strike [P:60/fierce, R:60/fierce, C:60/fierce]
+Power output x1.10 damage / x1.08 break from Power 60.
+Duelist lines up Rustbound Pilgrim [hit roll 77/95].
+Rustbound Pilgrim loses 10 break.
+Duelist hits Rustbound Pilgrim for 19 guard.
+Player Spotlight +1 (Duelist exploited affinity) -> 2/5
+Double Strike hit 1/2 resolves.
+Duelist lines up Rustbound Pilgrim [hit roll 72/95].
+Rustbound Pilgrim loses 10 break.
+Duelist hits Rustbound Pilgrim for 12 guard, 7 hp.
+Player Spotlight +1 (Duelist exploited affinity) -> 3/5
+Double Strike hit 2/2 resolves.
+Rustbound Pilgrim loses 6 break.
+Double Strike piles on extra Break pressure.
+Duelist is left open: Guard and Parry are disabled until the next turn.
+Duelist uses Light Attack [P:60/fierce, R:60/fierce, C:60/fierce]
+Power output x1.10 damage / x1.08 break from Power 60.
+Duelist lines up Rustbound Pilgrim [hit roll 74/88].
+Rustbound Pilgrim loses 14 break.
+Duelist hits Rustbound Pilgrim for 25 hp.
+Player Spotlight +1 (Duelist exploited affinity) -> 4/5
+Turn input: Power 60 / Precision 60 / Composure 60 -> Flow, 3 AP
+Cantor enters flow posture (balanced spread).
+Player Spotlight +1 (Cantor entered Flow) -> 5/5
+Cantor uses Double Strike [P:60/fierce, R:60/fierce, C:60/fierce]
+Power output x1.10 damage / x1.08 break from Power 60.
+Cantor grazes Flood Acolyte [hit roll 94/89].
+Flood Acolyte loses 5 break.
+Cantor hits Flood Acolyte for 7 guard.
+Double Strike hit 1/2 resolves.
+Cantor misses Flood Acolyte [hit roll 100/89].
+Flood Acolyte loses 2 break.
+Double Strike hit 2/2 resolves.
+Cantor is left open: Guard and Parry are disabled until the next turn.
+Cantor uses Light Attack [P:60/fierce, R:60/fierce, C:60/fierce]
+Power output x1.10 damage / x1.08 break from Power 60.
+Cantor misses Flood Acolyte [hit roll 99/86].
+Flood Acolyte loses 3 break.
+Flood Acolyte recovers 3 guard.
+Flood Acolyte enters focus posture (precision dominant).
+Flood Acolyte presses the line.
+Flood Acolyte drenches Vanguard.
+Vanguard withdraws behind the guard.
+Guard gate success: Power 60 >= 55.
+Vanguard loses 8 break.
+Flood Acolyte hits Vanguard for 12 guard.
+Vanguard gains soak (2).
+Ivy Strangler enters flow posture (balanced spread).
+Ivy Strangler lashes thorn-vines at Duelist.
+Enemy Spotlight +1 (Duelist failed dodge gate) -> 1/5
+Duelist spends 8/8 Break to dodge.
+Dodge gate failed: Precision 60 < 62.
+Duelist loses 20 break.
+Ivy Strangler hits Duelist for 18 hp.
+Rustbound Pilgrim recovers 3 guard.
+Rustbound Pilgrim raises its weapon and begins charging a heavy overhead.
+Turn input: Power 60 / Precision 60 / Composure 60 -> Flow, 3 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard recenters to set footing.
+Vanguard cleanses soak via Flow.
+Vanguard spends 9 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:60/fierce, R:60/fierce, C:60/fierce]
+Power output x1.10 damage / x1.08 break from Power 60.
+Vanguard misses Ivy Strangler [hit roll 99/80].
+Enemy Spotlight +1 (Vanguard risky miss) -> 2/5
+Ivy Strangler loses 19 break.
+Charge Slash batters the enemy's Break.
+Vanguard uses Light Attack [P:60/fierce, R:60/fierce, C:60/fierce]
+Power output x1.10 damage / x1.08 break from Power 60.
+Vanguard lines up Ivy Strangler [hit roll 76/83].
+Ivy Strangler loses 14 break.
+Vanguard hits Ivy Strangler for 25 guard.
+------------------------------------------------------------
+Turn order: Duelist, Flood Acolyte, Ivy Strangler, Cantor, Rustbound Pilgrim, Vanguard
+Turn input: Power 60 / Precision 60 / Composure 60 -> Flow, 3 AP
+Duelist enters flow posture (balanced spread).
+Duelist uses Double Strike [P:60/fierce, R:60/fierce, C:60/fierce]
+Power output x1.10 damage / x1.08 break from Power 60.
+Duelist lines up Rustbound Pilgrim [hit roll 88/95].
+Rustbound Pilgrim loses 11 break.
+Duelist hits Rustbound Pilgrim for 9 guard, 10 hp.
+Double Strike hit 1/2 resolves.
+Duelist lines up Rustbound Pilgrim [hit roll 87/95].
+Rustbound Pilgrim loses 11 break.
+Duelist hits Rustbound Pilgrim for 19 hp.
+Double Strike hit 2/2 resolves.
+Rustbound Pilgrim loses 6 break.
+Double Strike piles on extra Break pressure.
+Duelist is left open: Guard and Parry are disabled until the next turn.
+Duelist uses Light Attack [P:60/fierce, R:60/fierce, C:60/fierce]
+Power output x1.10 damage / x1.08 break from Power 60.
+Duelist lines up Rustbound Pilgrim [hit roll 27/88].
+Rustbound Pilgrim loses 3 break.
+Rustbound Pilgrim withdraws behind the guard (staggered).
+Rustbound Pilgrim is staggered!
+Duelist hits Rustbound Pilgrim for 25 hp.
+Flood Acolyte recovers 3 guard.
+Flood Acolyte enters focus posture (precision dominant).
+Flood Acolyte drenches Vanguard.
+Enemy Spotlight -1 (cashed for pressure) -> 1/5
+Enemy Spotlight is cashed for pressure.
+Vanguard withdraws behind the guard.
+Guard gate success: Power 60 >= 55.
+Vanguard loses 10 break.
+Flood Acolyte hits Vanguard for 14 guard.
+Vanguard gains soak (2).
+Ivy Strangler recovers 3 guard.
+Ivy Strangler enters flow posture (balanced spread).
+Ivy Strangler lashes thorn-vines at Duelist.
+Enemy Spotlight -1 (cashed for pressure) -> 0/5
+Enemy Spotlight is cashed for pressure.
+Enemy Spotlight +1 (Duelist failed dodge gate) -> 1/5
+Duelist spends 8/8 Break to dodge.
+Dodge gate failed: Precision 60 < 62.
+Duelist loses 6 break.
+Duelist withdraws behind the guard (staggered).
+Duelist is staggered!
+Enemy Spotlight +1 (Ivy Strangler staggered Duelist) -> 2/5
+Ivy Strangler hits Duelist for 22 hp.
+Duelist gains snare (2).
+Turn input: Power 60 / Precision 60 / Composure 60 -> Flow, 3 AP
+Cantor enters flow posture (balanced spread).
+Cantor uses Double Strike [P:60/fierce, R:60/fierce, C:60/fierce]
+Power output x1.10 damage / x1.08 break from Power 60.
+Cantor lines up Rustbound Pilgrim [hit roll 46/95].
+Cantor hits Rustbound Pilgrim for 19 hp.
+Double Strike hit 1/2 resolves.
+Cantor grazes Rustbound Pilgrim [hit roll 96/95].
+Cantor hits Rustbound Pilgrim for 10 hp.
+Double Strike hit 2/2 resolves.
+Double Strike piles on extra Break pressure.
+Cantor is left open: Guard and Parry are disabled until the next turn.
+Cantor uses Light Attack [P:60/fierce, R:60/fierce, C:60/fierce]
+Power output x1.10 damage / x1.08 break from Power 60.
+Cantor lines up Rustbound Pilgrim [hit roll 66/95].
+Cantor hits Rustbound Pilgrim for 24 hp.
+Rustbound Pilgrim falls.
+Turn input: Power 60 / Precision 60 / Composure 60 -> Flow, 3 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard recenters to set footing.
+Vanguard cleanses soak via Flow.
+Vanguard spends 9 guard to wind up Charge Slash.
+Vanguard uses Charge Slash [P:60/fierce, R:60/fierce, C:60/fierce]
+Power output x1.10 damage / x1.08 break from Power 60.
+Vanguard lines up Flood Acolyte [hit roll 10/80].
+Flood Acolyte loses 37 break.
+Flood Acolyte withdraws behind the guard (staggered).
+Flood Acolyte is staggered!
+Vanguard hits Flood Acolyte for 19 guard.
+Charge Slash batters the enemy's Break.
+The enemy staggers - Vanguard gains +1 AP next turn.
+Vanguard uses Light Attack [P:60/fierce, R:60/fierce, C:60/fierce]
+Power output x1.10 damage / x1.08 break from Power 60.
+Vanguard lines up Flood Acolyte [hit roll 44/93].
+Vanguard hits Flood Acolyte for 11 guard, 15 hp.
+------------------------------------------------------------
+Turn order: Ivy Strangler, Duelist, Flood Acolyte, Cantor, Vanguard
+Ivy Strangler recovers 3 guard.
+Ivy Strangler enters flow posture (balanced spread).
+Ivy Strangler lashes thorn-vines at Duelist.
+Enemy Spotlight -1 (cashed for pressure) -> 1/5
+Enemy Spotlight is cashed for pressure.
+Enemy Spotlight +1 (Duelist failed dodge gate) -> 2/5
+Duelist spends 0/8 Break to dodge.
+Dodge gate failed: Precision 60 < 62.
+Ivy Strangler hits Duelist for 28 hp.
+Duelist gains snare (2).
+Duelist is staggered and loses the turn.
+Flood Acolyte is staggered and loses the turn.
+Turn input: Power 60 / Precision 60 / Composure 60 -> Flow, 3 AP
+Cantor enters flow posture (balanced spread).
+Cantor uses Double Strike [P:60/fierce, R:60/fierce, C:60/fierce]
+Power output x1.10 damage / x1.08 break from Power 60.
+Cantor lines up Flood Acolyte [hit roll 40/89].
+Flood Acolyte loses 10 break.
+Cantor hits Flood Acolyte for 21 hp. CRIT!
+Double Strike hit 1/2 resolves.
+Cantor grazes Flood Acolyte [hit roll 91/89].
+Flood Acolyte loses 5 break.
+Cantor hits Flood Acolyte for 7 hp.
+Double Strike hit 2/2 resolves.
+Flood Acolyte loses 6 break.
+Double Strike piles on extra Break pressure.
+Cantor is left open: Guard and Parry are disabled until the next turn.
+Cantor uses Light Attack [P:60/fierce, R:60/fierce, C:60/fierce]
+Power output x1.10 damage / x1.08 break from Power 60.
+Cantor lines up Flood Acolyte [hit roll 48/86].
+Flood Acolyte loses 11 break.
+Cantor hits Flood Acolyte for 18 hp.
+Vanguard cashes in +1 AP from last turn's setup.
+Turn input: Power 60 / Precision 60 / Composure 60 -> Flow, 4 AP
+Vanguard enters flow posture (balanced spread).
+Vanguard uses Double Strike [P:60/fierce, R:60/fierce, C:60/fierce]
+Power output x1.10 damage / x1.08 break from Power 60.
+Vanguard lines up Ivy Strangler [hit roll 60/86].
+Ivy Strangler loses 10 break.
+Vanguard hits Ivy Strangler for 19 guard.
+Double Strike hit 1/2 resolves.
+Vanguard lines up Ivy Strangler [hit roll 12/86].
+Ivy Strangler loses 4 break.
+Ivy Strangler withdraws behind the guard (staggered).
+Ivy Strangler is staggered!
+Vanguard hits Ivy Strangler for 12 guard, 7 hp.
+Double Strike hit 2/2 resolves.
+Double Strike piles on extra Break pressure.
+Vanguard is left open: Guard and Parry are disabled until the next turn.
+Vanguard uses Double Strike [P:60/fierce, R:60/fierce, C:60/fierce]
+Power output x1.10 damage / x1.08 break from Power 60.
+Vanguard lines up Ivy Strangler [hit roll 75/95].
+Vanguard hits Ivy Strangler for 25 hp.
+Double Strike hit 1/2 resolves.
+Vanguard lines up Ivy Strangler [hit roll 64/95].
+Vanguard hits Ivy Strangler for 25 hp.
+Double Strike hit 2/2 resolves.
+Double Strike piles on extra Break pressure.
+Vanguard is left open: Guard and Parry are disabled until the next turn.
+------------------------------------------------------------
+Turn order: Duelist, Ivy Strangler, Cantor, Flood Acolyte, Vanguard
+Duelist is no longer affected by snare.
+Turn input: Power 60 / Precision 60 / Composure 60 -> Flow, 3 AP
+Duelist enters flow posture (balanced spread).
+Duelist recenters to set footing.
+Duelist uses Double Strike [P:60/fierce, R:60/fierce, C:60/fierce]
+Power output x1.10 damage / x1.08 break from Power 60.
+Duelist lines up Ivy Strangler [hit roll 68/95].
+Duelist hits Ivy Strangler for 20 hp.
+Double Strike hit 1/2 resolves.
+Duelist lines up Ivy Strangler [hit roll 54/95].
+Duelist hits Ivy Strangler for 20 hp.
+Double Strike hit 2/2 resolves.
+Double Strike piles on extra Break pressure.
+Duelist is left open: Guard and Parry are disabled until the next turn.
+Duelist uses Light Attack [P:60/fierce, R:60/fierce, C:60/fierce]
+Power output x1.10 damage / x1.08 break from Power 60.
+Duelist lines up Ivy Strangler [hit roll 62/95].
+Duelist hits Ivy Strangler for 26 hp.
+Ivy Strangler falls.
+Turn input: Power 60 / Precision 60 / Composure 60 -> Flow, 3 AP
+Cantor enters flow posture (balanced spread).
+Cantor uses Double Strike [P:60/fierce, R:60/fierce, C:60/fierce]
+Power output x1.10 damage / x1.08 break from Power 60.
+Cantor lines up Flood Acolyte [hit roll 67/89].
+Flood Acolyte loses 10 break.
+Cantor hits Flood Acolyte for 21 hp. CRIT!
+Double Strike hit 1/2 resolves.
+Cantor lines up Flood Acolyte [hit roll 74/89].
+Flood Acolyte loses 5 break.
+Flood Acolyte is staggered!
+Cantor hits Flood Acolyte for 14 hp.
+Double Strike hit 2/2 resolves.
+Double Strike piles on extra Break pressure.
+Cantor is left open: Guard and Parry are disabled until the next turn.
+Cantor uses Light Attack [P:60/fierce, R:60/fierce, C:60/fierce]
+Power output x1.10 damage / x1.08 break from Power 60.
+Cantor grazes Flood Acolyte [hit roll 99/95].
+Cantor hits Flood Acolyte for 12 hp.
+Flood Acolyte falls.
+Players win the battle.
+
+Battle log written to: quiet_relay_last_battle_log_datadriven.txt

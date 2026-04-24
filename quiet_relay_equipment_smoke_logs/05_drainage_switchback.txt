@@ -1,0 +1,124 @@
+[Round 01] Battle loadout: Feint Rush, Double Strike, Charge Slash.
+[Round 01] Battle begins.
+[Round 01] Vanguard equips Iron Sword + Wooden Shield.
+[Round 01] Vanguard shield discipline: Guard +2, reaction +5%, Break +5%, Charge Slash Break +10%.
+[Round 01] Node axis scores: Power 80, Precision 80, Composure 80.
+[Round 01] Turn order: Ivy Strangler, Veil Leech #2, Vanguard
+[Round 01] Ivy Strangler enters flow posture (balanced spread).
+[Round 01] Player Spotlight +1 (Ivy Strangler entered Flow) -> 2/5
+[Round 01] Ivy Strangler lashes thorn-vines at Vanguard.
+[Round 01] Player Spotlight +2 (Slip Ledger) -> 4/5
+[Round 01] Slip Ledger steadies Vanguard's next offensive risk.
+[Round 01] Vanguard spends 8/8 Break to dodge.
+[Round 01] Vanguard dodges cleanly [dodge roll 5/70].
+[Round 01] Veil Leech #2 enters flow posture (balanced spread).
+[Round 01] Player Spotlight +1 (Veil Leech #2 entered Flow) -> 5/5
+[Round 01] Veil Leech #2 siphons warding light from Vanguard.
+[Round 01] Slip Ledger steadies Vanguard's next offensive risk.
+[Round 01] Vanguard spends 8/8 Break to dodge.
+[Round 01] Vanguard dodges cleanly [dodge roll 20/70].
+[Round 01] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+[Round 01] Vanguard enters flow posture (balanced spread).
+[Round 01] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 01] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 01] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 01] Vanguard lines up Ivy Strangler [hit roll 84/95].
+[Round 01] Ivy Strangler loses 36 break.
+[Round 01] Ivy Strangler withdraws behind the guard (staggered).
+[Round 01] Ivy Strangler is staggered!
+[Round 01] Vanguard hits Ivy Strangler for 29 guard.
+[Round 01] Charge Slash batters the enemy's Break.
+[Round 01] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 01] Vanguard's slip window closes.
+[Round 01] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 01] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 01] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 01] Vanguard lines up Veil Leech #2 [hit roll 59/95].
+[Round 01] Veil Leech #2 loses 36 break.
+[Round 01] Veil Leech #2 withdraws behind the guard (staggered).
+[Round 01] Veil Leech #2 is staggered!
+[Round 01] Vanguard hits Veil Leech #2 for 23 guard.
+[Round 01] Charge Slash batters the enemy's Break.
+[Round 01] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 02] ------------------------------------------------------------
+[Round 02] Turn order: Ivy Strangler, Veil Leech #2, Vanguard
+[Round 02] Ivy Strangler is staggered and loses the turn.
+[Round 02] Veil Leech #2 is staggered and loses the turn.
+[Round 02] Vanguard cashes in +1 AP from last turn's setup.
+[Round 02] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+[Round 02] Vanguard enters flow posture (balanced spread).
+[Round 02] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 02] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 02] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 02] Vanguard lines up Ivy Strangler [hit roll 89/95].
+[Round 02] Ivy Strangler loses 36 break.
+[Round 02] Ivy Strangler is staggered!
+[Round 02] Vanguard hits Ivy Strangler for 11 guard, 18 hp.
+[Round 02] Charge Slash batters the enemy's Break.
+[Round 02] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 02] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 02] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 02] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 02] Vanguard lines up Veil Leech #2 [hit roll 60/95].
+[Round 02] Veil Leech #2 loses 36 break.
+[Round 02] Veil Leech #2 is staggered!
+[Round 02] Vanguard hits Veil Leech #2 for 17 guard, 6 hp.
+[Round 02] Charge Slash batters the enemy's Break.
+[Round 02] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 02] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 02] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 02] Vanguard grazes Ivy Strangler [hit roll 99/95].
+[Round 02] Vanguard hits Ivy Strangler for 20 hp.
+[Round 03] ------------------------------------------------------------
+[Round 03] Turn order: Ivy Strangler, Veil Leech #2, Vanguard
+[Round 03] Ivy Strangler is staggered and loses the turn.
+[Round 03] Veil Leech #2 is staggered and loses the turn.
+[Round 03] Vanguard cashes in +1 AP from last turn's setup.
+[Round 03] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+[Round 03] Vanguard enters flow posture (balanced spread).
+[Round 03] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 03] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 03] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 03] Vanguard lines up Veil Leech #2 [hit roll 5/95].
+[Round 03] Veil Leech #2 loses 36 break.
+[Round 03] Veil Leech #2 is staggered!
+[Round 03] Vanguard hits Veil Leech #2 for 23 hp.
+[Round 03] Charge Slash batters the enemy's Break.
+[Round 03] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 03] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 03] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 03] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 03] Vanguard lines up Ivy Strangler [hit roll 41/95].
+[Round 03] Ivy Strangler loses 36 break.
+[Round 03] Ivy Strangler is staggered!
+[Round 03] Vanguard hits Ivy Strangler for 29 hp.
+[Round 03] Charge Slash batters the enemy's Break.
+[Round 03] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 03] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 03] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 03] Vanguard lines up Ivy Strangler [hit roll 13/95].
+[Round 03] Vanguard hits Ivy Strangler for 39 hp.
+[Round 03] Ivy Strangler falls.
+[Round 04] ------------------------------------------------------------
+[Round 04] Turn order: Veil Leech #2, Vanguard
+[Round 04] Veil Leech #2 is staggered and loses the turn.
+[Round 04] Vanguard cashes in +1 AP from last turn's setup.
+[Round 04] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+[Round 04] Vanguard enters flow posture (balanced spread).
+[Round 04] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 04] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 04] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 04] Vanguard lines up Veil Leech #2 [hit roll 66/95].
+[Round 04] Veil Leech #2 loses 36 break.
+[Round 04] Veil Leech #2 is staggered!
+[Round 04] Vanguard hits Veil Leech #2 for 23 hp.
+[Round 04] Charge Slash batters the enemy's Break.
+[Round 04] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 04] Vanguard uses Double Strike [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 04] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 04] Vanguard lines up Veil Leech #2 [hit roll 58/95].
+[Round 04] Vanguard hits Veil Leech #2 for 24 hp.
+[Round 04] Veil Leech #2 falls.
+[Round 04] Double Strike hit 1/2 resolves.
+[Round 04] Vanguard is left open: Guard and Parry are disabled until the next turn.
+[Round 04] Players win the battle.

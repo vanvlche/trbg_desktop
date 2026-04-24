@@ -1,0 +1,124 @@
+[Round 01] Battle loadout: Feint Rush, Double Strike, Charge Slash.
+[Round 01] Battle begins.
+[Round 01] Node axis scores: Power 80, Precision 80, Composure 80.
+[Round 01] Turn order: Ivy Strangler #2, Rustbound Pilgrim, Vanguard
+[Round 01] Ivy Strangler #2 enters flow posture (balanced spread).
+[Round 01] Player Spotlight +1 (Ivy Strangler #2 entered Flow) -> 1/5
+[Round 01] Ivy Strangler #2 lashes thorn-vines at Vanguard.
+[Round 01] Vanguard withdraws behind the guard.
+[Round 01] Guard gate success: Power 80 >= 55.
+[Round 01] Vanguard loses 9 break.
+[Round 01] Ivy Strangler #2 hits Vanguard for 14 guard.
+[Round 01] Vanguard gains snare (2).
+[Round 01] Rustbound Pilgrim raises its weapon and begins charging a heavy overhead.
+[Round 01] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+[Round 01] Vanguard enters flow posture (balanced spread).
+[Round 01] Vanguard recenters to set footing.
+[Round 01] Vanguard cleanses snare via Flow.
+[Round 01] Vanguard spends 10 guard to wind up Charge Slash.
+[Round 01] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 01] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 01] Vanguard lines up Rustbound Pilgrim [hit roll 29/94].
+[Round 01] Rustbound Pilgrim loses 54 break.
+[Round 01] Rustbound Pilgrim withdraws behind the guard (staggered).
+[Round 01] Rustbound Pilgrim is staggered!
+[Round 01] Vanguard hits Rustbound Pilgrim for 20 guard.
+[Round 01] Charge Slash batters the enemy's Break.
+[Round 01] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 01] Vanguard spends 10 guard to wind up Charge Slash.
+[Round 01] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 01] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 01] Vanguard lines up Ivy Strangler #2 [hit roll 80/94].
+[Round 01] Ivy Strangler #2 loses 36 break.
+[Round 01] Ivy Strangler #2 withdraws behind the guard (staggered).
+[Round 01] Ivy Strangler #2 is staggered!
+[Round 01] Vanguard hits Ivy Strangler #2 for 25 guard.
+[Round 01] Player Spotlight +1 (Vanguard exploited affinity) -> 2/5
+[Round 01] Charge Slash batters the enemy's Break.
+[Round 01] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 02] ------------------------------------------------------------
+[Round 02] Turn order: Ivy Strangler #2, Rustbound Pilgrim, Vanguard
+[Round 02] Ivy Strangler #2 is staggered and loses the turn.
+[Round 02] Rustbound Pilgrim is staggered and loses the turn.
+[Round 02] Vanguard cashes in +1 AP from last turn's setup.
+[Round 02] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+[Round 02] Vanguard enters flow posture (balanced spread).
+[Round 02] Player Spotlight +1 (Vanguard entered Flow) -> 3/5
+[Round 02] Vanguard spends 10 guard to wind up Charge Slash.
+[Round 02] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 02] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 02] Vanguard grazes Rustbound Pilgrim [hit roll 100/94].
+[Round 02] Enemy Spotlight +1 (Vanguard risky graze) -> 1/5
+[Round 02] Rustbound Pilgrim loses 47 break.
+[Round 02] Vanguard hits Rustbound Pilgrim for 5 guard, 5 hp.
+[Round 02] Charge Slash batters the enemy's Break.
+[Round 02] Vanguard spends 10 guard to wind up Charge Slash.
+[Round 02] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 02] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 02] Vanguard grazes Ivy Strangler #2 [hit roll 99/94].
+[Round 02] Ivy Strangler #2 loses 36 break.
+[Round 02] Ivy Strangler #2 is staggered!
+[Round 02] Vanguard hits Ivy Strangler #2 for 13 guard.
+[Round 02] Player Spotlight +1 (Vanguard exploited affinity) -> 4/5
+[Round 02] Charge Slash batters the enemy's Break.
+[Round 02] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 02] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 02] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 02] Vanguard lines up Ivy Strangler #2 [hit roll 63/95].
+[Round 02] Vanguard hits Ivy Strangler #2 for 2 guard, 34 hp.
+[Round 02] Player Spotlight +1 (Vanguard exploited affinity) -> 5/5
+[Round 03] ------------------------------------------------------------
+[Round 03] Turn order: Ivy Strangler #2, Vanguard, Rustbound Pilgrim
+[Round 03] Ivy Strangler #2 is staggered and loses the turn.
+[Round 03] Vanguard cashes in +1 AP from last turn's setup.
+[Round 03] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+[Round 03] Vanguard enters flow posture (balanced spread).
+[Round 03] Vanguard spends 10 guard to wind up Charge Slash.
+[Round 03] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 03] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 03] Vanguard lines up Ivy Strangler #2 [hit roll 11/94].
+[Round 03] Ivy Strangler #2 loses 36 break.
+[Round 03] Ivy Strangler #2 is staggered!
+[Round 03] Vanguard hits Ivy Strangler #2 for 25 hp.
+[Round 03] Charge Slash batters the enemy's Break.
+[Round 03] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 03] Vanguard uses Double Strike [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 03] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 03] Vanguard lines up Ivy Strangler #2 [hit roll 37/95].
+[Round 03] Vanguard hits Ivy Strangler #2 for 39 hp. CRIT!
+[Round 03] Ivy Strangler #2 falls.
+[Round 03] Double Strike hit 1/2 resolves.
+[Round 03] Vanguard is left open: Guard and Parry are disabled until the next turn.
+[Round 03] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 03] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 03] Vanguard lines up Rustbound Pilgrim [hit roll 58/95].
+[Round 03] Rustbound Pilgrim loses 7 break.
+[Round 03] Rustbound Pilgrim is staggered!
+[Round 03] Vanguard hits Rustbound Pilgrim for 32 hp. CRIT!
+[Round 03] Rustbound Pilgrim is staggered and loses the turn.
+[Round 03] Rustbound Pilgrim is no longer affected by delayed_overhead.
+[Round 04] ------------------------------------------------------------
+[Round 04] Turn order: Vanguard, Rustbound Pilgrim
+[Round 04] Vanguard cashes in +1 AP from last turn's setup.
+[Round 04] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+[Round 04] Vanguard enters flow posture (balanced spread).
+[Round 04] Vanguard spends 8 guard to wind up Charge Slash.
+[Round 04] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 04] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 04] Vanguard lines up Rustbound Pilgrim [hit roll 87/94].
+[Round 04] Rustbound Pilgrim loses 54 break.
+[Round 04] Rustbound Pilgrim is staggered!
+[Round 04] Vanguard hits Rustbound Pilgrim for 20 hp.
+[Round 04] Charge Slash batters the enemy's Break.
+[Round 04] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 04] Vanguard uses Double Strike [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 04] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 04] Vanguard lines up Rustbound Pilgrim [hit roll 27/95].
+[Round 04] Vanguard hits Rustbound Pilgrim for 21 hp.
+[Round 04] Double Strike hit 1/2 resolves.
+[Round 04] Vanguard lines up Rustbound Pilgrim [hit roll 33/95].
+[Round 04] Vanguard hits Rustbound Pilgrim for 21 hp.
+[Round 04] Rustbound Pilgrim falls.
+[Round 04] Double Strike hit 2/2 resolves.
+[Round 04] Vanguard is left open: Guard and Parry are disabled until the next turn.
+[Round 04] Players win the battle.

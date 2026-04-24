@@ -1,0 +1,70 @@
+[Round 01] Battle begins.
+[Round 01] Turn order: Duelist, Switchblade Drone #2, Cantor, Vanguard, Lamp Witness
+[Round 01] Duelist enters focus posture (precision dominant).
+[Round 01] Duelist presses the line.
+[Round 01] Duelist uses Mark Lunge [P:41/keen, R:83/exalted, C:69/fierce]
+[Round 01] Switchblade Drone #2 loses 18 break.
+[Round 01] Duelist hits Switchblade Drone #2 for 28 guard, 16 hp. CRIT!
+[Round 01] Spotlight +1 (Duelist passive crit) -> 2/5
+[Round 01] Switchblade Drone #2 gains reveal (2).
+[Round 01] Switchblade Drone #2 recovers 3 guard.
+[Round 01] Switchblade Drone #2 enters flow posture (balanced spread).
+[Round 01] Spotlight +1 (Switchblade Drone #2 entered Flow) -> 3/5
+[Round 01] Switchblade Drone #2 cleanses reveal via Flow.
+[Round 01] Switchblade Drone #2 darts in with a switchblade flurry.
+[Round 01] Duelist misses the parry and is punished.
+[Round 01] Duelist loses 6 break.
+[Round 01] Switchblade Drone #2 hits Duelist for 12 guard.
+[Round 01] Duelist holds the same burst start Pattern Read.
+[Round 01] Switchblade Drone #2 loses 24 break.
+[Round 01] Switchblade Drone #2 withdraws behind the guard (staggered).
+[Round 01] Switchblade Drone #2 is staggered!
+[Round 01] Spotlight +1 (Duelist parry) -> 4/5
+[Round 01] Applause Knot stores a charge.
+[Round 01] Parry! Duelist rings the bell-note false.
+[Round 01] Duelist catches the Pattern Read cleanly. Counterphrase stores a stronger answer.
+[Round 01] Switchblade Drone #2 is revealed by the parry opening.
+[Round 01] Counterphrase stored.
+[Round 01] Spotlight -2 (Cantor used Final Verse) -> 2/5
+[Round 01] Cantor enters flow posture (balanced spread).
+[Round 01] Spotlight +1 (Cantor entered Flow) -> 3/5
+[Round 01] Cantor uses Final Verse [P:52/keen, R:70/fierce, C:58/keen]
+[Round 01] Spotlight +1 (Cantor Final Verse) -> 4/5
+[Round 01] Final Verse crescendos on an exposed target.
+[Round 01] Cantor hits Switchblade Drone #2 for 3 guard, 66 hp.
+[Round 01] Spotlight -2 (Vanguard used Execution Drop) -> 2/5
+[Round 01] Vanguard enters ravage posture (power dominant).
+[Round 01] Vanguard presses the line.
+[Round 01] Vanguard uses Execution Drop [P:85/exalted, R:57/keen, C:60/fierce]
+[Round 01] Vanguard hits Switchblade Drone #2 for 166 hp.
+[Round 01] Switchblade Drone #2 falls.
+[Round 01] Lamp Witness enters bastion posture (composure dominant).
+[Round 01] Lamp Witness withdraws behind the guard.
+[Round 01] Lamp Witness judges Vanguard with burning light.
+[Round 01] Vanguard recenters to set footing.
+[Round 01] Vanguard loses 6 break.
+[Round 01] Lamp Witness hits Vanguard for 9 guard.
+[Round 01] Vanguard gains reveal (1).
+[Round 02] ------------------------------------------------------------
+[Round 02] Turn order: Duelist, Cantor, Lamp Witness, Vanguard
+[Round 02] Duelist recovers 4 guard.
+[Round 02] Duelist enters focus posture (precision dominant).
+[Round 02] Applause Knot is consumed by the next offense.
+[Round 02] Mark Lunge consumes Counterphrase.
+[Round 02] Mark Lunge cashes Counterphrase from pressing position.
+[Round 02] Duelist uses Mark Lunge [P:49/keen, R:92/exalted, C:78/fierce]
+[Round 02] Lamp Witness loses 42 break.
+[Round 02] Lamp Witness is staggered!
+[Round 02] Duelist hits Lamp Witness for 46 guard, 50 hp. CRIT!
+[Round 02] Spotlight +1 (Duelist passive crit) -> 3/5
+[Round 02] Lamp Witness gains reveal (2).
+[Round 02] Spotlight -2 (Cantor used Final Verse) -> 1/5
+[Round 02] Cantor enters flow posture (balanced spread).
+[Round 02] Spotlight +1 (Cantor entered Flow) -> 2/5
+[Round 02] Cantor uses Final Verse [P:56/keen, R:78/fierce, C:79/fierce]
+[Round 02] Spotlight +1 (Cantor Final Verse) -> 3/5
+[Round 02] Final Verse crescendos on an exposed target.
+[Round 02] Cantor hits Lamp Witness for 107 hp.
+[Round 02] Lamp Witness falls.
+[Round 02] Spotlight +1 (Cantor exploited affinity) -> 4/5
+[Round 02] Players win the battle.

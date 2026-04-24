@@ -1,0 +1,189 @@
+[Round 01] Battle begins.
+[Round 01] Node axis scores: Power 60, Precision 60, Composure 60.
+[Round 01] Turn order: Switchblade Drone #2, Ivy Strangler, Vanguard
+[Round 01] Switchblade Drone #2 enters flow posture (balanced spread).
+[Round 01] Player Spotlight +1 (Switchblade Drone #2 entered Flow) -> 1/5
+[Round 01] Switchblade Drone #2 darts in with a switchblade flurry.
+[Round 01] Vanguard withdraws behind the guard.
+[Round 01] Switchblade Drone #2 withdraws behind the guard (pressure answered).
+[Round 01] Guard gate success: Power 60 >= 55.
+[Round 01] Vanguard reads the burst and hardens the guard.
+[Round 01] Vanguard loses 5 break.
+[Round 01] Switchblade Drone #2 hits Vanguard for 12 guard.
+[Round 01] Vanguard holds the same burst start Pattern Read.
+[Round 01] Guard gate success: Power 60 >= 55.
+[Round 01] Vanguard reads the burst and hardens the guard.
+[Round 01] Vanguard loses 4 break.
+[Round 01] Switchblade Drone #2 hits Vanguard for 12 guard.
+[Round 01] Ivy Strangler enters flow posture (balanced spread).
+[Round 01] Player Spotlight +1 (Ivy Strangler entered Flow) -> 2/5
+[Round 01] Ivy Strangler lashes thorn-vines at Vanguard.
+[Round 01] Guard gate success: Power 60 >= 55.
+[Round 01] Vanguard loses 9 break.
+[Round 01] Ivy Strangler hits Vanguard for 14 guard.
+[Round 01] Vanguard gains snare (2).
+[Round 01] Vanguard enters flow posture (balanced spread).
+[Round 01] Vanguard recenters to set footing.
+[Round 01] Vanguard cleanses snare via Flow.
+[Round 01] Power output x1.07 from Power 60.
+[Round 01] Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+[Round 01] Vanguard misses Ivy Strangler [hit roll 93/79].
+[Round 01] Enemy Spotlight +1 (Vanguard risky miss) -> 1/5
+[Round 01] Ivy Strangler loses 7 break.
+[Round 01] Player Spotlight +1 (Vanguard exploited affinity) -> 3/5
+[Round 01] Vanguard loses 2 guard from Anchor Cleave.
+[Round 01] Composure tempo 60/160.
+[Round 02] ------------------------------------------------------------
+[Round 02] Turn order: Switchblade Drone #2, Ivy Strangler, Vanguard
+[Round 02] Switchblade Drone #2 enters flow posture (balanced spread).
+[Round 02] Switchblade Drone #2 recenters to set footing.
+[Round 02] Switchblade Drone #2 darts in with a switchblade flurry.
+[Round 02] Enemy Spotlight -1 (cashed for pressure) -> 0/5
+[Round 02] Enemy Spotlight is cashed for pressure.
+[Round 02] Vanguard withdraws behind the guard.
+[Round 02] Switchblade Drone #2 withdraws behind the guard (pressure answered).
+[Round 02] Guard gate success: Power 60 >= 55.
+[Round 02] Vanguard reads the burst and hardens the guard.
+[Round 02] Vanguard loses 6 break.
+[Round 02] Switchblade Drone #2 hits Vanguard for 14 guard.
+[Round 02] Vanguard holds the same burst start Pattern Read.
+[Round 02] Guard gate success: Power 60 >= 55.
+[Round 02] Vanguard reads the burst and hardens the guard.
+[Round 02] Vanguard loses 4 break.
+[Round 02] Switchblade Drone #2 hits Vanguard for 12 guard.
+[Round 02] Ivy Strangler enters flow posture (balanced spread).
+[Round 02] Ivy Strangler lashes thorn-vines at Vanguard.
+[Round 02] Enemy Spotlight +1 (Vanguard failed dodge gate) -> 1/5
+[Round 02] Vanguard spends 8/8 Break to dodge.
+[Round 02] Dodge gate failed: Precision 60 < 62.
+[Round 02] Vanguard loses 19 break.
+[Round 02] Ivy Strangler hits Vanguard for 15 hp.
+[Round 02] Vanguard gains snare (2).
+[Round 02] Vanguard enters flow posture (balanced spread).
+[Round 02] Vanguard recenters to set footing.
+[Round 02] Vanguard cleanses snare via Flow.
+[Round 02] Power output x1.04 from Power 60.
+[Round 02] Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+[Round 02] Vanguard grazes Ivy Strangler [hit roll 84/79].
+[Round 02] Ivy Strangler loses 16 break.
+[Round 02] Vanguard hits Ivy Strangler for 16 guard.
+[Round 02] Player Spotlight +1 (Vanguard exploited affinity) -> 4/5
+[Round 02] Vanguard loses 1 guard from Anchor Cleave.
+[Round 02] Composure tempo 120/160.
+[Round 03] ------------------------------------------------------------
+[Round 03] Turn order: Switchblade Drone #2, Ivy Strangler, Vanguard
+[Round 03] Switchblade Drone #2 enters flow posture (balanced spread).
+[Round 03] Switchblade Drone #2 recenters to set footing.
+[Round 03] Player Spotlight +1 (Switchblade Drone #2 entered Flow) -> 5/5
+[Round 03] Switchblade Drone #2 darts in with a switchblade flurry.
+[Round 03] Enemy Spotlight -1 (cashed for pressure) -> 0/5
+[Round 03] Enemy Spotlight is cashed for pressure.
+[Round 03] Enemy Spotlight +1 (Vanguard failed dodge gate) -> 1/5
+[Round 03] Vanguard spends 8/8 Break to dodge.
+[Round 03] Dodge gate failed: Precision 60 < 62.
+[Round 03] Vanguard loses 19 break.
+[Round 03] Switchblade Drone #2 hits Vanguard for 15 hp.
+[Round 03] Enemy Spotlight -1 (cashed for pressure) -> 0/5
+[Round 03] Enemy Spotlight is cashed for pressure.
+[Round 03] Vanguard holds the same burst start Pattern Read.
+[Round 03] Enemy Spotlight +1 (Vanguard failed dodge gate) -> 1/5
+[Round 03] Vanguard spends 8/8 Break to dodge.
+[Round 03] Dodge gate failed: Precision 60 < 62.
+[Round 03] Vanguard withdraws behind the guard (staggered).
+[Round 03] Vanguard is staggered!
+[Round 03] Enemy Spotlight +1 (Switchblade Drone #2 staggered Vanguard) -> 2/5
+[Round 03] Switchblade Drone #2 hits Vanguard for 15 hp.
+[Round 03] Ivy Strangler recovers 3 guard.
+[Round 03] Ivy Strangler enters flow posture (balanced spread).
+[Round 03] Ivy Strangler lashes thorn-vines at Vanguard.
+[Round 03] Enemy Spotlight -1 (cashed for pressure) -> 1/5
+[Round 03] Enemy Spotlight is cashed for pressure.
+[Round 03] Enemy Spotlight +1 (Vanguard failed dodge gate) -> 2/5
+[Round 03] Vanguard spends 0/8 Break to dodge.
+[Round 03] Dodge gate failed: Precision 60 < 62.
+[Round 03] Ivy Strangler hits Vanguard for 23 hp.
+[Round 03] Vanguard gains snare (2).
+[Round 03] Vanguard is staggered and loses the turn.
+[Round 04] ------------------------------------------------------------
+[Round 04] Turn order: Switchblade Drone #2, Ivy Strangler, Vanguard
+[Round 04] Switchblade Drone #2 enters flow posture (balanced spread).
+[Round 04] Switchblade Drone #2 darts in with a switchblade flurry.
+[Round 04] Enemy Spotlight -1 (cashed for pressure) -> 1/5
+[Round 04] Enemy Spotlight is cashed for pressure.
+[Round 04] Enemy Spotlight +1 (Vanguard failed dodge gate) -> 2/5
+[Round 04] Vanguard spends 8/8 Break to dodge.
+[Round 04] Dodge gate failed: Precision 60 < 62.
+[Round 04] Vanguard loses 19 break.
+[Round 04] Switchblade Drone #2 hits Vanguard for 15 hp.
+[Round 04] Enemy Spotlight -1 (cashed for pressure) -> 1/5
+[Round 04] Enemy Spotlight is cashed for pressure.
+[Round 04] Vanguard holds the same burst start Pattern Read.
+[Round 04] Enemy Spotlight +1 (Vanguard failed dodge gate) -> 2/5
+[Round 04] Vanguard spends 8/8 Break to dodge.
+[Round 04] Dodge gate failed: Precision 60 < 62.
+[Round 04] Vanguard loses 19 break.
+[Round 04] Switchblade Drone #2 hits Vanguard for 15 hp.
+[Round 04] Ivy Strangler recovers 3 guard.
+[Round 04] Ivy Strangler enters flow posture (balanced spread).
+[Round 04] Ivy Strangler lashes thorn-vines at Vanguard.
+[Round 04] Enemy Spotlight -1 (cashed for pressure) -> 1/5
+[Round 04] Enemy Spotlight is cashed for pressure.
+[Round 04] Enemy Spotlight +1 (Vanguard failed dodge gate) -> 2/5
+[Round 04] Vanguard spends 8/8 Break to dodge.
+[Round 04] Dodge gate failed: Precision 60 < 62.
+[Round 04] Vanguard loses 21 break.
+[Round 04] Ivy Strangler hits Vanguard for 18 hp.
+[Round 04] Vanguard gains snare (2).
+[Round 04] Vanguard enters flow posture (balanced spread).
+[Round 04] Vanguard recenters to set footing.
+[Round 04] Vanguard cleanses snare via Flow.
+[Round 04] Power output x1.14 from Power 60.
+[Round 04] Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+[Round 04] Vanguard misses Ivy Strangler [hit roll 97/79].
+[Round 04] Enemy Spotlight +1 (Vanguard risky miss) -> 3/5
+[Round 04] Ivy Strangler loses 7 break.
+[Round 04] Vanguard loses 1 guard from Anchor Cleave.
+[Round 04] Vanguard keeps tempo from Composure 60: bonus action.
+[Round 04] Vanguard enters flow posture (balanced spread).
+[Round 04] Power output x1.20 from Power 60.
+[Round 04] Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+[Round 04] Vanguard lines up Ivy Strangler [hit roll 38/79].
+[Round 04] Ivy Strangler loses 6 break.
+[Round 04] Ivy Strangler withdraws behind the guard (staggered).
+[Round 04] Ivy Strangler is staggered!
+[Round 04] Vanguard hits Ivy Strangler for 30 guard, 7 hp.
+[Round 04] Vanguard loses 1 guard from Anchor Cleave.
+[Round 05] ------------------------------------------------------------
+[Round 05] Turn order: Switchblade Drone #2, Ivy Strangler, Vanguard
+[Round 05] Switchblade Drone #2 enters flow posture (balanced spread).
+[Round 05] Switchblade Drone #2 darts in with a switchblade flurry.
+[Round 05] Enemy Spotlight -1 (cashed for pressure) -> 2/5
+[Round 05] Enemy Spotlight is cashed for pressure.
+[Round 05] Enemy Spotlight +1 (Vanguard failed dodge gate) -> 3/5
+[Round 05] Vanguard spends 7/8 Break to dodge.
+[Round 05] Dodge gate failed: Precision 60 < 62.
+[Round 05] Vanguard withdraws behind the guard (staggered).
+[Round 05] Vanguard is staggered!
+[Round 05] Enemy Spotlight +1 (Switchblade Drone #2 staggered Vanguard) -> 4/5
+[Round 05] Switchblade Drone #2 hits Vanguard for 15 hp.
+[Round 05] Enemy Spotlight -1 (cashed for pressure) -> 3/5
+[Round 05] Enemy Spotlight is cashed for pressure.
+[Round 05] Vanguard holds the same burst start Pattern Read.
+[Round 05] Enemy Spotlight +1 (Vanguard failed dodge gate) -> 4/5
+[Round 05] Vanguard spends 0/8 Break to dodge.
+[Round 05] Dodge gate failed: Precision 60 < 62.
+[Round 05] Switchblade Drone #2 hits Vanguard for 19 hp.
+[Round 05] Ivy Strangler is staggered and loses the turn.
+[Round 05] Vanguard is staggered and loses the turn.
+[Round 06] ------------------------------------------------------------
+[Round 06] Turn order: Switchblade Drone #2, Ivy Strangler, Vanguard
+[Round 06] Switchblade Drone #2 enters flow posture (balanced spread).
+[Round 06] Switchblade Drone #2 darts in with a switchblade flurry.
+[Round 06] Enemy Spotlight -1 (cashed for pressure) -> 3/5
+[Round 06] Enemy Spotlight is cashed for pressure.
+[Round 06] Enemy Spotlight +1 (Vanguard failed dodge gate) -> 4/5
+[Round 06] Vanguard spends 8/8 Break to dodge.
+[Round 06] Dodge gate failed: Precision 60 < 62.
+[Round 06] Switchblade Drone #2 hits Vanguard for 15 hp.
+[Round 06] Vanguard falls.
+[Round 06] Enemies win the battle.

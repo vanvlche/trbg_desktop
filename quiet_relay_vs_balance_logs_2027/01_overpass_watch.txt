@@ -1,0 +1,105 @@
+[Round 01] Battle begins.
+[Round 01] Node axis scores: Power 80, Precision 80, Composure 80.
+[Round 01] Turn order: Ivy Strangler #2, Vanguard, Rustbound Pilgrim
+[Round 01] Ivy Strangler #2 enters flow posture (balanced spread).
+[Round 01] Player Spotlight +1 (Ivy Strangler #2 entered Flow) -> 1/5
+[Round 01] Ivy Strangler #2 lashes thorn-vines at Vanguard.
+[Round 01] Vanguard withdraws behind the guard.
+[Round 01] Guard gate success: Power 80 >= 55.
+[Round 01] Vanguard loses 9 break.
+[Round 01] Ivy Strangler #2 hits Vanguard for 14 guard.
+[Round 01] Vanguard gains snare (2).
+[Round 01] Vanguard enters flow posture (balanced spread).
+[Round 01] Vanguard recenters to set footing.
+[Round 01] Vanguard cleanses snare via Flow.
+[Round 01] Power output x1.27 from Power 80.
+[Round 01] Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 01] Vanguard lines up Ivy Strangler #2 [hit roll 24/87].
+[Round 01] Ivy Strangler #2 loses 36 break.
+[Round 01] Ivy Strangler #2 withdraws behind the guard (staggered).
+[Round 01] Ivy Strangler #2 is staggered!
+[Round 01] Vanguard hits Ivy Strangler #2 for 39 guard.
+[Round 01] Player Spotlight +1 (Vanguard exploited affinity) -> 2/5
+[Round 01] Vanguard loses 3 guard from Anchor Cleave.
+[Round 01] Composure tempo 80/160.
+[Round 01] Rustbound Pilgrim raises its weapon and begins charging a heavy overhead.
+[Round 02] ------------------------------------------------------------
+[Round 02] Turn order: Ivy Strangler #2, Rustbound Pilgrim, Vanguard
+[Round 02] Ivy Strangler #2 is staggered and loses the turn.
+[Round 02] Rustbound Pilgrim enters ravage posture (power dominant).
+[Round 02] Rustbound Pilgrim presses the line.
+[Round 02] Rustbound Pilgrim brings down a rusted overhead on Vanguard.
+[Round 02] Vanguard withdraws behind the guard.
+[Round 02] Rustbound Pilgrim recenters to set footing (pressure answered).
+[Round 02] Guard gate success: Power 80 >= 55.
+[Round 02] Vanguard reads the weight and hardens the guard.
+[Round 02] Vanguard loses 21 break.
+[Round 02] Rustbound Pilgrim hits Vanguard for 36 guard.
+[Round 02] Vanguard enters flow posture (balanced spread).
+[Round 02] Vanguard recenters to set footing.
+[Round 02] Player Spotlight +1 (Vanguard entered Flow) -> 3/5
+[Round 02] Power output x1.28 from Power 80.
+[Round 02] Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 02] Vanguard lines up Ivy Strangler #2 [hit roll 39/87].
+[Round 02] Ivy Strangler #2 loses 36 break.
+[Round 02] Ivy Strangler #2 is staggered!
+[Round 02] Vanguard hits Ivy Strangler #2 for 1 guard, 38 hp.
+[Round 02] Player Spotlight +1 (Vanguard exploited affinity) -> 4/5
+[Round 02] Vanguard loses 1 guard from Anchor Cleave.
+[Round 02] Vanguard keeps tempo from Composure 80: bonus action.
+[Round 02] Player Spotlight -2 (Vanguard used Execution Drop) -> 2/5
+[Round 02] Vanguard enters flow posture (balanced spread).
+[Round 02] Power output x1.14 from Power 80.
+[Round 02] Vanguard uses Execution Drop [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 02] Vanguard grazes Ivy Strangler #2 [hit roll 97/95].
+[Round 02] Vanguard hits Ivy Strangler #2 for 48 hp.
+[Round 02] Ivy Strangler #2 falls.
+[Round 02] Player Spotlight +1 (Vanguard exploited affinity) -> 3/5
+[Round 03] ------------------------------------------------------------
+[Round 03] Turn order: Vanguard, Rustbound Pilgrim
+[Round 03] Vanguard enters flow posture (balanced spread).
+[Round 03] Power output x1.14 from Power 80.
+[Round 03] Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 03] Vanguard lines up Rustbound Pilgrim [hit roll 65/87].
+[Round 03] Rustbound Pilgrim loses 31 break.
+[Round 03] Vanguard hits Rustbound Pilgrim for 25 guard, 3 hp.
+[Round 03] Vanguard loses 1 guard from Anchor Cleave.
+[Round 03] Composure tempo 80/160.
+[Round 03] Rustbound Pilgrim recovers 3 guard.
+[Round 03] Rustbound Pilgrim raises its weapon and begins charging a heavy overhead.
+[Round 04] ------------------------------------------------------------
+[Round 04] Turn order: Rustbound Pilgrim, Vanguard
+[Round 04] Rustbound Pilgrim recovers 3 guard.
+[Round 04] Rustbound Pilgrim enters ravage posture (power dominant).
+[Round 04] Rustbound Pilgrim presses the line.
+[Round 04] Rustbound Pilgrim brings down a rusted overhead on Vanguard.
+[Round 04] Vanguard withdraws behind the guard.
+[Round 04] Rustbound Pilgrim recenters to set footing (pressure answered).
+[Round 04] Guard gate success: Power 80 >= 55.
+[Round 04] Vanguard reads the weight and hardens the guard.
+[Round 04] Vanguard loses 21 break.
+[Round 04] Rustbound Pilgrim hits Vanguard for 17 guard, 14 hp.
+[Round 04] Vanguard gains scorch (2).
+[Round 04] Vanguard is scorched for 8 damage.
+[Round 04] Vanguard loses 8 HP (scorch).
+[Round 04] Vanguard enters flow posture (balanced spread).
+[Round 04] Vanguard recenters to set footing.
+[Round 04] Vanguard cleanses scorch via Flow.
+[Round 04] Power output x1.22 from Power 80.
+[Round 04] Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 04] Vanguard lines up Rustbound Pilgrim [hit roll 21/87].
+[Round 04] Rustbound Pilgrim loses 23 break.
+[Round 04] Rustbound Pilgrim withdraws behind the guard (staggered).
+[Round 04] Rustbound Pilgrim is staggered!
+[Round 04] Vanguard hits Rustbound Pilgrim for 12 guard, 18 hp.
+[Round 04] Vanguard loses 0 guard from Anchor Cleave.
+[Round 04] Vanguard keeps tempo from Composure 80: bonus action.
+[Round 04] Player Spotlight -2 (Vanguard used Execution Drop) -> 1/5
+[Round 04] Vanguard enters flow posture (balanced spread).
+[Round 04] Player Spotlight +1 (Vanguard entered Flow) -> 2/5
+[Round 04] Power output x1.19 from Power 80.
+[Round 04] Vanguard uses Execution Drop [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 04] Vanguard lines up Rustbound Pilgrim [hit roll 95/95].
+[Round 04] Vanguard hits Rustbound Pilgrim for 81 hp.
+[Round 04] Rustbound Pilgrim falls.
+[Round 04] Players win the battle.

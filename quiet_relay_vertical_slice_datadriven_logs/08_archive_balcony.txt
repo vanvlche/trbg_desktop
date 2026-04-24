@@ -1,0 +1,54 @@
+[Round 01] Battle begins.
+[Round 01] Turn order: Duelist, Archive Shade, Cantor, Vanguard
+[Round 01] Duelist enters flow posture (balanced spread).
+[Round 01] Spotlight +1 (Duelist entered Flow) -> 2/5
+[Round 01] Duelist uses Mark Lunge [P:42/keen, R:68/fierce, C:59/keen]
+[Round 01] Archive Shade loses 15 break.
+[Round 01] Duelist hits Archive Shade for 19 guard.
+[Round 01] Archive Shade recovers 3 guard.
+[Round 01] Archive Shade mirrors Vanguard's flow posture.
+[Round 01] Vanguard withdraws behind the guard.
+[Round 01] Vanguard loses 12 break.
+[Round 01] Archive Shade hits Vanguard for 16 guard.
+[Round 01] Vanguard gains hex (1).
+[Round 01] Cantor enters focus posture (precision dominant).
+[Round 01] Cantor presses the line.
+[Round 01] Cantor uses Salt Psalm [P:49/keen, R:84/exalted, C:73/fierce]
+[Round 01] Archive Shade loses 19 break.
+[Round 01] Cantor hits Archive Shade for 29 guard. CRIT!
+[Round 01] Archive Shade gains hex (2).
+[Round 01] Vanguard gains 8 barrier from Cantor's passive.
+[Round 01] Vanguard is no longer affected by hex.
+[Round 01] Vanguard recovers 4 guard.
+[Round 01] Vanguard enters ravage posture (power dominant).
+[Round 01] Vanguard recenters to set footing.
+[Round 01] Vanguard restores 7 guard from passive.
+[Round 01] Vanguard uses Anchor Cleave [P:90/exalted, R:52/keen, C:73/fierce]
+[Round 01] Archive Shade loses 46 break.
+[Round 01] Archive Shade withdraws behind the guard (staggered).
+[Round 01] Archive Shade is staggered!
+[Round 01] Vanguard hits Archive Shade for 12 guard, 42 hp.
+[Round 01] Vanguard loses 7 guard from Anchor Cleave.
+[Round 02] ------------------------------------------------------------
+[Round 02] Turn order: Duelist, Archive Shade, Cantor, Vanguard
+[Round 02] Spotlight -2 (Duelist used Glass Reprise) -> 0/5
+[Round 02] Duelist enters flow posture (balanced spread).
+[Round 02] Spotlight +1 (Duelist entered Flow) -> 1/5
+[Round 02] Duelist uses Glass Reprise [P:48/keen, R:69/fierce, C:67/fierce]
+[Round 02] Duelist hits Archive Shade for 24 hp.
+[Round 02] Glass Reprise hit 1/3 lands.
+[Round 02] Duelist hits Archive Shade for 36 hp. CRIT!
+[Round 02] Spotlight +1 (Duelist passive crit) -> 2/5
+[Round 02] Glass Reprise hit 2/3 lands.
+[Round 02] Duelist hits Archive Shade for 24 hp.
+[Round 02] Glass Reprise hit 3/3 lands.
+[Round 02] Archive Shade is staggered and loses the turn.
+[Round 02] Spotlight -1 (Cantor used Hex Burst) -> 1/5
+[Round 02] Cantor enters flow posture (balanced spread).
+[Round 02] Cantor recenters to set footing.
+[Round 02] Spotlight +1 (Cantor entered Flow) -> 2/5
+[Round 02] Cantor uses Hex Burst [P:63/fierce, R:90/exalted, C:80/exalted]
+[Round 02] Hex Burst consumes hex for bonus damage.
+[Round 02] Cantor hits Archive Shade for 38 hp.
+[Round 02] Archive Shade falls.
+[Round 02] Players win the battle.

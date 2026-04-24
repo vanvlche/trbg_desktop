@@ -1,47 +1,195 @@
 {
-  "greatblade": {
-    "display_name": "Anchor Greatblade",
-    "class": "greatblade",
-    "damage_profile": "high",
-    "break_profile": "very_high",
-    "speed_profile": "low",
-    "special_modifier": "break_skills_plus_15_percent",
-    "description": "A bell-steel slab built for decisive stagger pressure."
+  "iron_sword": {
+    "display_name": "Iron Sword",
+    "type": "weapon",
+    "handedness": "one_handed",
+    "slot": "main_hand",
+    "tags": ["sword", "blade", "light", "vanguard_favored"],
+    "base_damage_bonus": 1,
+    "damage_multiplier": 1.02,
+    "break_multiplier": 1.00,
+    "hit_bonus": 0.02,
+    "description": "A plain sword with reliable weight."
   },
-  "rapier": {
-    "display_name": "Relay Rapier",
-    "class": "rapier",
-    "damage_profile": "medium",
-    "break_profile": "low",
-    "speed_profile": "high",
-    "special_modifier": "counter_crit_plus_10",
-    "description": "A narrow dueling blade tuned for feints, reveals, and ripostes."
+  "wooden_shield": {
+    "display_name": "Wooden Shield",
+    "type": "shield",
+    "handedness": "one_handed",
+    "slot": "off_hand",
+    "tags": ["shield", "light", "vanguard_favored"],
+    "guard_bonus": 2,
+    "reaction_bonus": 0.03,
+    "description": "A simple shield that steadies guard timing."
   },
-  "chime_staff": {
-    "display_name": "Undertow Chime Staff",
-    "class": "staff",
-    "damage_profile": "low",
-    "break_profile": "medium",
-    "speed_profile": "medium",
-    "special_modifier": "status_accuracy_plus_10",
-    "description": "A resonant staff that binds prayer, barriers, and hexes."
+  "dual_machetes": {
+    "display_name": "Dual Machetes",
+    "type": "weapon",
+    "handedness": "paired",
+    "slot": "both_hands",
+    "tags": ["paired", "blade", "light", "duelist_favored"],
+    "base_damage_bonus": 1,
+    "damage_multiplier": 1.05,
+    "break_multiplier": 1.02,
+    "hit_bonus": 0.02,
+    "crit_bonus": 0.03,
+    "description": "A matched pair tuned for fast cross-cuts."
   },
-  "signal_rifle": {
-    "display_name": "Signal Rifle",
-    "class": "rifle",
-    "damage_profile": "high",
-    "break_profile": "medium",
-    "speed_profile": "high",
-    "special_modifier": "reveal_bonus_plus_10_percent",
-    "description": "A long rifle built to expose weak points through the rain."
+  "fortune_tellers_staff": {
+    "display_name": "Fortune-Teller's Staff",
+    "type": "weapon",
+    "handedness": "one_handed",
+    "slot": "main_hand",
+    "tags": ["staff", "mage", "cantor_favored"],
+    "hit_bonus": 0.02,
+    "healing_multiplier": 1.10,
+    "status_success_bonus": 0.05,
+    "description": "A lacquered staff used to guide readings and low rites."
   },
-  "chain_blade": {
-    "display_name": "Penitent Chain-Blade",
-    "class": "chain_blade",
-    "damage_profile": "high",
-    "break_profile": "high",
-    "speed_profile": "medium",
-    "special_modifier": "low_hp_finishers_plus_15_percent",
-    "description": "A hooked chain weapon that trades blood for terrifying finishers."
+  "wooden_bow": {
+    "display_name": "Wooden Bow",
+    "type": "weapon",
+    "handedness": "two_handed",
+    "slot": "both_hands",
+    "tags": ["bow", "two_handed", "light"],
+    "damage_multiplier": 1.05,
+    "hit_bonus": 0.03,
+    "description": "A field bow that favors clean, steady shots."
+  },
+  "penitents_dagger": {
+    "display_name": "Penitent's Dagger",
+    "type": "weapon",
+    "handedness": "one_handed",
+    "slot": "main_hand",
+    "tags": ["dagger", "blade", "light"],
+    "damage_multiplier": 1.03,
+    "hit_bonus": 0.03,
+    "crit_bonus": 0.02,
+    "description": "A severe little blade built for close confessions."
+  },
+  "weathered_buckler": {
+    "display_name": "Weathered Buckler",
+    "type": "shield",
+    "handedness": "one_handed",
+    "slot": "off_hand",
+    "tags": ["shield", "light", "vanguard_favored"],
+    "guard_bonus": 1,
+    "reaction_bonus": 0.05,
+    "evasion_bonus": 0.03,
+    "description": "A light buckler that trades raw cover for a livelier guard."
+  },
+  "gatekeepers_sabre": {
+    "display_name": "Gatekeeper's Sabre",
+    "type": "weapon",
+    "handedness": "one_handed",
+    "slot": "main_hand",
+    "tags": ["sword", "blade", "vanguard_favored"],
+    "base_damage_bonus": 2,
+    "damage_multiplier": 1.03,
+    "break_multiplier": 1.08,
+    "description": "A checkpoint sabre that leans into disciplined break pressure."
+  },
+  "bell_iron_kite_shield": {
+    "display_name": "Bell-Iron Kite Shield",
+    "type": "shield",
+    "handedness": "one_handed",
+    "slot": "off_hand",
+    "tags": ["shield", "heavy", "vanguard_favored"],
+    "guard_bonus": 3,
+    "reaction_bonus": 0.02,
+    "evasion_bonus": -0.02,
+    "description": "A heavy kite shield that turns aside force at the cost of agility."
+  },
+  "tollguard_axe": {
+    "display_name": "Tollguard Axe",
+    "type": "weapon",
+    "handedness": "one_handed",
+    "slot": "main_hand",
+    "tags": ["axe", "blade", "heavy", "vanguard_favored"],
+    "base_damage_bonus": 2,
+    "damage_multiplier": 1.04,
+    "break_multiplier": 1.12,
+    "hit_bonus": -0.03,
+    "description": "A toll-line axe that lands hard but asks for stronger aim."
+  },
+  "serrated_twinblades": {
+    "display_name": "Serrated Twinblades",
+    "type": "weapon",
+    "handedness": "paired",
+    "slot": "both_hands",
+    "tags": ["paired", "blade", "duelist_favored"],
+    "base_damage_bonus": 1,
+    "damage_multiplier": 1.06,
+    "break_multiplier": 1.03,
+    "crit_bonus": 0.05,
+    "description": "Twin edges that reward relentless, accurate pressure."
+  },
+  "glass_machetes": {
+    "display_name": "Glass Machetes",
+    "type": "weapon",
+    "handedness": "paired",
+    "slot": "both_hands",
+    "tags": ["paired", "blade", "light", "duelist_favored"],
+    "damage_multiplier": 1.04,
+    "hit_bonus": 0.01,
+    "crit_bonus": 0.07,
+    "description": "Fragile-looking cutters with wicked finishing angles."
+  },
+  "rain_script_wand": {
+    "display_name": "Rain-Script Wand",
+    "type": "weapon",
+    "handedness": "one_handed",
+    "slot": "main_hand",
+    "tags": ["mage", "staff", "cantor_favored"],
+    "hit_bonus": 0.03,
+    "healing_multiplier": 1.10,
+    "status_success_bonus": 0.08,
+    "description": "A wand of lacquered script used to trace precise invocations."
+  },
+  "choirwood_staff": {
+    "display_name": "Choirwood Staff",
+    "type": "weapon",
+    "handedness": "two_handed",
+    "slot": "both_hands",
+    "tags": ["staff", "mage", "two_handed", "cantor_favored"],
+    "damage_multiplier": 1.03,
+    "break_multiplier": 1.05,
+    "hit_bonus": 0.02,
+    "healing_multiplier": 1.18,
+    "status_success_bonus": 0.08,
+    "description": "A long choir staff that amplifies support work through both hands."
+  },
+  "oracle_bell": {
+    "display_name": "Oracle Bell",
+    "type": "focus",
+    "handedness": "one_handed",
+    "slot": "off_hand",
+    "tags": ["mage", "relic", "cantor_favored"],
+    "hit_bonus": 0.02,
+    "reaction_bonus": 0.02,
+    "healing_multiplier": 1.05,
+    "status_success_bonus": 0.05,
+    "description": "A hand bell whose resonance sharpens readings and support rites."
+  },
+  "mooncleave_sword": {
+    "display_name": "Mooncleave Sword",
+    "type": "weapon",
+    "handedness": "one_handed",
+    "slot": "main_hand",
+    "tags": ["sword", "blade", "crit", "duelist_favored"],
+    "base_damage_bonus": 2,
+    "damage_multiplier": 1.04,
+    "hit_bonus": 0.02,
+    "crit_bonus": 0.02,
+    "description": "A rare crescent blade that stores missed crescendos into a deadlier next cut."
+  },
+  "fracture_shield": {
+    "display_name": "Fracture Shield",
+    "type": "shield",
+    "handedness": "one_handed",
+    "slot": "off_hand",
+    "tags": ["shield", "guard", "break", "vanguard_favored"],
+    "guard_bonus": 3,
+    "reaction_bonus": 0.04,
+    "description": "A cracked shield that turns excess defensive rhythm into a splintering break pulse."
   }
 }

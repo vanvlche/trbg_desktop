@@ -1,0 +1,238 @@
+[Round 01] Battle begins.
+[Round 01] Node axis scores: Power 60, Precision 60, Composure 60.
+[Round 01] Turn order: Moraine, Bailiff of the Sluice, Vanguard
+[Round 01] Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+[Round 01] Moraine, Bailiff of the Sluice withdraws behind the guard.
+[Round 01] Moraine, Bailiff of the Sluice slams a gate stamp into Vanguard.
+[Round 01] Enemy Spotlight +1 (Vanguard failed dodge gate) -> 1/5
+[Round 01] Vanguard spends 8/8 Break to dodge.
+[Round 01] Dodge gate failed: Precision 60 < 62.
+[Round 01] Vanguard loses 27 break.
+[Round 01] Moraine, Bailiff of the Sluice hits Vanguard for 19 hp.
+[Round 01] Vanguard enters flow posture (balanced spread).
+[Round 01] Power output x1.13 from Power 60.
+[Round 01] Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+[Round 01] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 4/79].
+[Round 01] Moraine, Bailiff of the Sluice loses 30 break.
+[Round 01] Vanguard hits Moraine, Bailiff of the Sluice for 28 guard.
+[Round 01] Vanguard loses 0 guard from Anchor Cleave.
+[Round 01] Composure tempo 60/160.
+[Round 02] ------------------------------------------------------------
+[Round 02] Turn order: Moraine, Bailiff of the Sluice, Vanguard
+[Round 02] Moraine, Bailiff of the Sluice recovers 3 guard.
+[Round 02] Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+[Round 02] Moraine plants the flood-key.
+[Round 02] The sluice pressure rises behind Vanguard.
+[Round 02] Vanguard enters flow posture (balanced spread).
+[Round 02] Power output x0.94 from Power 60.
+[Round 02] Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+[Round 02] Vanguard misses Moraine, Bailiff of the Sluice [hit roll 91/79].
+[Round 02] Enemy Spotlight +1 (Vanguard risky miss) -> 2/5
+[Round 02] Moraine, Bailiff of the Sluice loses 7 break.
+[Round 02] Vanguard loses 0 guard from Anchor Cleave.
+[Round 02] Composure tempo 120/160.
+[Round 03] ------------------------------------------------------------
+[Round 03] Turn order: Moraine, Bailiff of the Sluice, Vanguard
+[Round 03] Moraine, Bailiff of the Sluice recovers 3 guard.
+[Round 03] Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+[Round 03] The spillway screams open.
+[Round 03] Enemy Spotlight -1 (cashed for pressure) -> 1/5
+[Round 03] Enemy Spotlight is cashed for pressure.
+[Round 03] Enemy Spotlight +1 (Vanguard failed dodge gate) -> 2/5
+[Round 03] Vanguard spends 8/8 Break to dodge.
+[Round 03] Dodge gate failed: Precision 60 < 62.
+[Round 03] Vanguard loses 31 break.
+[Round 03] Moraine, Bailiff of the Sluice hits Vanguard for 24 hp.
+[Round 03] Vanguard gains soak (2).
+[Round 03] Moraine, Bailiff of the Sluice catches the recoil and restores 6 guard.
+[Round 03] Vanguard enters flow posture (balanced spread).
+[Round 03] Vanguard cleanses soak via Flow.
+[Round 03] Power output x1.00 from Power 60.
+[Round 03] Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+[Round 03] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 30/79].
+[Round 03] Moraine, Bailiff of the Sluice loses 29 break.
+[Round 03] Vanguard hits Moraine, Bailiff of the Sluice for 25 guard.
+[Round 03] Vanguard loses 0 guard from Anchor Cleave.
+[Round 03] Vanguard keeps tempo from Composure 60: bonus action.
+[Round 03] Vanguard enters flow posture (balanced spread).
+[Round 03] Power output x1.16 from Power 60.
+[Round 03] Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+[Round 03] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 59/79].
+[Round 03] Moraine, Bailiff of the Sluice loses 31 break.
+[Round 03] Vanguard hits Moraine, Bailiff of the Sluice for 28 guard.
+[Round 03] Vanguard loses 0 guard from Anchor Cleave.
+[Round 04] ------------------------------------------------------------
+[Round 04] Turn order: Moraine, Bailiff of the Sluice, Vanguard
+[Round 04] Moraine, Bailiff of the Sluice recovers 3 guard.
+[Round 04] Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+[Round 04] Moraine, Bailiff of the Sluice slams a gate stamp into Vanguard.
+[Round 04] Enemy Spotlight -1 (cashed for pressure) -> 1/5
+[Round 04] Enemy Spotlight is cashed for pressure.
+[Round 04] Enemy Spotlight +1 (Vanguard failed dodge gate) -> 2/5
+[Round 04] Vanguard spends 8/8 Break to dodge.
+[Round 04] Dodge gate failed: Precision 60 < 62.
+[Round 04] Vanguard loses 8 break.
+[Round 04] Vanguard withdraws behind the guard (staggered).
+[Round 04] Vanguard is staggered!
+[Round 04] Enemy Spotlight +1 (Moraine, Bailiff of the Sluice staggered Vanguard) -> 3/5
+[Round 04] Moraine, Bailiff of the Sluice hits Vanguard for 22 hp.
+[Round 04] Vanguard is staggered and loses the turn.
+[Round 05] ------------------------------------------------------------
+[Round 05] Turn order: Moraine, Bailiff of the Sluice, Vanguard
+[Round 05] Moraine, Bailiff of the Sluice recovers 3 guard.
+[Round 05] Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+[Round 05] Moraine plants the flood-key.
+[Round 05] The sluice pressure rises behind Vanguard.
+[Round 05] Vanguard enters flow posture (balanced spread).
+[Round 05] Vanguard recenters to set footing.
+[Round 05] Power output x1.07 from Power 60.
+[Round 05] Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+[Round 05] Vanguard grazes Moraine, Bailiff of the Sluice [hit roll 83/79].
+[Round 05] Moraine, Bailiff of the Sluice loses 16 break.
+[Round 05] Vanguard hits Moraine, Bailiff of the Sluice for 13 guard.
+[Round 05] Vanguard loses 0 guard from Anchor Cleave.
+[Round 05] Composure tempo 80/160.
+[Round 06] ------------------------------------------------------------
+[Round 06] Turn order: Moraine, Bailiff of the Sluice, Vanguard
+[Round 06] Moraine, Bailiff of the Sluice recovers 3 guard.
+[Round 06] Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+[Round 06] The spillway screams open.
+[Round 06] Enemy Spotlight -1 (cashed for pressure) -> 2/5
+[Round 06] Enemy Spotlight is cashed for pressure.
+[Round 06] Enemy Spotlight +1 (Vanguard failed dodge gate) -> 3/5
+[Round 06] Vanguard spends 8/8 Break to dodge.
+[Round 06] Dodge gate failed: Precision 60 < 62.
+[Round 06] Vanguard loses 31 break.
+[Round 06] Moraine, Bailiff of the Sluice hits Vanguard for 24 hp.
+[Round 06] Vanguard gains soak (2).
+[Round 06] Moraine, Bailiff of the Sluice catches the recoil and restores 6 guard.
+[Round 06] Vanguard enters flow posture (balanced spread).
+[Round 06] Vanguard cleanses soak via Flow.
+[Round 06] Power output x1.06 from Power 60.
+[Round 06] Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+[Round 06] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 35/79].
+[Round 06] Moraine, Bailiff of the Sluice loses 7 break.
+[Round 06] Moraine, Bailiff of the Sluice is staggered!
+[Round 06] Vanguard hits Moraine, Bailiff of the Sluice for 35 guard, 4 hp. CRIT!
+[Round 06] Vanguard loses 0 guard from Anchor Cleave.
+[Round 06] Composure tempo 140/160.
+[Round 07] ------------------------------------------------------------
+[Round 07] Turn order: Moraine, Bailiff of the Sluice, Vanguard
+[Round 07] Moraine, Bailiff of the Sluice is staggered and loses the turn.
+[Round 07] Vanguard enters flow posture (balanced spread).
+[Round 07] Power output x1.15 from Power 60.
+[Round 07] Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+[Round 07] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 59/79].
+[Round 07] Moraine, Bailiff of the Sluice loses 31 break.
+[Round 07] Vanguard hits Moraine, Bailiff of the Sluice for 28 hp.
+[Round 07] Vanguard loses 0 guard from Anchor Cleave.
+[Round 07] Vanguard keeps tempo from Composure 60: bonus action.
+[Round 07] Vanguard enters flow posture (balanced spread).
+[Round 07] Power output x1.28 from Power 60.
+[Round 07] Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+[Round 07] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 47/79].
+[Round 07] Moraine, Bailiff of the Sluice loses 32 break.
+[Round 07] Vanguard hits Moraine, Bailiff of the Sluice for 31 hp.
+[Round 07] Vanguard loses 0 guard from Anchor Cleave.
+[Round 08] ------------------------------------------------------------
+[Round 08] Turn order: Moraine, Bailiff of the Sluice, Vanguard
+[Round 08] Moraine, Bailiff of the Sluice recovers 3 guard.
+[Round 08] Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+[Round 08] Moraine plants the flood-key.
+[Round 08] The sluice pressure rises behind Vanguard.
+[Round 08] Vanguard enters flow posture (balanced spread).
+[Round 08] Power output x1.13 from Power 60.
+[Round 08] Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+[Round 08] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 64/79].
+[Round 08] Moraine, Bailiff of the Sluice loses 33 break.
+[Round 08] Vanguard hits Moraine, Bailiff of the Sluice for 3 guard, 25 hp.
+[Round 08] Vanguard loses 0 guard from Anchor Cleave.
+[Round 08] Composure tempo 100/160.
+[Round 09] ------------------------------------------------------------
+[Round 09] Turn order: Moraine, Bailiff of the Sluice, Vanguard
+[Round 09] Moraine, Bailiff of the Sluice recovers 3 guard.
+[Round 09] Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+[Round 09] The spillway screams open.
+[Round 09] Enemy Spotlight -1 (cashed for pressure) -> 2/5
+[Round 09] Enemy Spotlight is cashed for pressure.
+[Round 09] Enemy Spotlight +1 (Vanguard failed dodge gate) -> 3/5
+[Round 09] Vanguard spends 8/8 Break to dodge.
+[Round 09] Dodge gate failed: Precision 60 < 62.
+[Round 09] Vanguard loses 31 break.
+[Round 09] Moraine, Bailiff of the Sluice hits Vanguard for 24 hp.
+[Round 09] Vanguard gains soak (2).
+[Round 09] Moraine, Bailiff of the Sluice catches the recoil and restores 6 guard.
+[Round 09] Vanguard enters flow posture (balanced spread).
+[Round 09] Vanguard cleanses soak via Flow.
+[Round 09] Power output x1.27 from Power 60.
+[Round 09] Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+[Round 09] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 13/79].
+[Round 09] Moraine, Bailiff of the Sluice loses 24 break.
+[Round 09] Moraine, Bailiff of the Sluice is staggered!
+[Round 09] Vanguard hits Moraine, Bailiff of the Sluice for 9 guard, 22 hp.
+[Round 09] Vanguard loses 0 guard from Anchor Cleave.
+[Round 09] Vanguard keeps tempo from Composure 60: bonus action.
+[Round 09] Vanguard enters flow posture (balanced spread).
+[Round 09] Player Spotlight +1 (Vanguard entered Flow) -> 1/5
+[Round 09] Power output x1.17 from Power 60.
+[Round 09] Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+[Round 09] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 66/89].
+[Round 09] Vanguard hits Moraine, Bailiff of the Sluice for 38 hp.
+[Round 09] Vanguard loses 0 guard from Anchor Cleave.
+[Round 10] ------------------------------------------------------------
+[Round 10] Turn order: Moraine, Bailiff of the Sluice, Vanguard
+[Round 10] Moraine, Bailiff of the Sluice is staggered and loses the turn.
+[Round 10] Vanguard enters flow posture (balanced spread).
+[Round 10] Power output x1.31 from Power 60.
+[Round 10] Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+[Round 10] Vanguard misses Moraine, Bailiff of the Sluice [hit roll 94/79].
+[Round 10] Enemy Spotlight +1 (Vanguard risky miss) -> 4/5
+[Round 10] Moraine, Bailiff of the Sluice loses 7 break.
+[Round 10] Vanguard loses 0 guard from Anchor Cleave.
+[Round 10] Composure tempo 60/160.
+[Round 11] ------------------------------------------------------------
+[Round 11] Turn order: Moraine, Bailiff of the Sluice, Vanguard
+[Round 11] Moraine, Bailiff of the Sluice recovers 3 guard.
+[Round 11] Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+[Round 11] Moraine plants the flood-key.
+[Round 11] The sluice pressure rises behind Vanguard.
+[Round 11] Vanguard enters flow posture (balanced spread).
+[Round 11] Player Spotlight +1 (Vanguard entered Flow) -> 2/5
+[Round 11] Power output x1.05 from Power 60.
+[Round 11] Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+[Round 11] Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 64/79].
+[Round 11] Moraine, Bailiff of the Sluice loses 32 break.
+[Round 11] Vanguard hits Moraine, Bailiff of the Sluice for 3 guard, 23 hp.
+[Round 11] Vanguard loses 0 guard from Anchor Cleave.
+[Round 11] Composure tempo 120/160.
+[Round 12] ------------------------------------------------------------
+[Round 12] Turn order: Moraine, Bailiff of the Sluice, Vanguard
+[Round 12] Moraine, Bailiff of the Sluice recovers 3 guard.
+[Round 12] Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+[Round 12] The spillway screams open.
+[Round 12] Enemy Spotlight -1 (cashed for pressure) -> 3/5
+[Round 12] Enemy Spotlight is cashed for pressure.
+[Round 12] Enemy Spotlight +1 (Vanguard failed dodge gate) -> 4/5
+[Round 12] Vanguard spends 8/8 Break to dodge.
+[Round 12] Dodge gate failed: Precision 60 < 62.
+[Round 12] Vanguard loses 4 break.
+[Round 12] Vanguard withdraws behind the guard (staggered).
+[Round 12] Vanguard is staggered!
+[Round 12] Enemy Spotlight +1 (Moraine, Bailiff of the Sluice staggered Vanguard) -> 5/5
+[Round 12] Moraine, Bailiff of the Sluice hits Vanguard for 24 hp.
+[Round 12] Vanguard gains soak (2).
+[Round 12] Moraine, Bailiff of the Sluice catches the recoil and restores 6 guard.
+[Round 12] Vanguard is staggered and loses the turn.
+[Round 13] ------------------------------------------------------------
+[Round 13] Turn order: Moraine, Bailiff of the Sluice, Vanguard
+[Round 13] Moraine, Bailiff of the Sluice recovers 3 guard.
+[Round 13] Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+[Round 13] Moraine, Bailiff of the Sluice slams a gate stamp into Vanguard.
+[Round 13] Enemy Spotlight -1 (cashed for pressure) -> 4/5
+[Round 13] Enemy Spotlight is cashed for pressure.
+[Round 13] Enemy Spotlight +1 (Vanguard failed dodge gate) -> 5/5
+[Round 13] Vanguard spends 8/8 Break to dodge.
+[Round 13] Dodge gate failed: Precision 60 < 62.
+[Round 13] Moraine, Bailiff of the Sluice hits Vanguard for 22 hp.
+[Round 13] Vanguard falls.
+[Round 13] Enemies win the battle.

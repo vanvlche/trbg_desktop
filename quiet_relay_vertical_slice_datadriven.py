@@ -27,7 +27,7 @@ from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 import quiet_relay_terminal_datadriven as qr
 
-SAVE_VERSION = 5
+SAVE_VERSION = 7
 RUNTIME_DATA_ROOT = "/mnt/data" if os.path.isdir("/mnt/data") else os.path.dirname(os.path.abspath(__file__))
 DEFAULT_SAVE_FILE = os.path.join(RUNTIME_DATA_ROOT, "quiet_relay_vertical_slice_datadriven_save.json")
 DEFAULT_RUN_REPORT = os.path.join(RUNTIME_DATA_ROOT, "quiet_relay_vertical_slice_datadriven_last_run.txt")
@@ -83,10 +83,24 @@ UI_ICONS = {
 }
 
 
+def stdout_supports_text(text: str) -> bool:
+    if not text:
+        return True
+    encoding = getattr(sys.stdout, "encoding", None) or "utf-8"
+    if "utf" not in encoding.lower() and not text.isascii():
+        return False
+    try:
+        text.encode(encoding)
+    except (LookupError, UnicodeEncodeError):
+        return False
+    return True
+
+
 def ui_icon(key: str) -> str:
     if not ENABLE_SEMANTIC_EMOJI_UI:
         return ""
-    return UI_ICONS.get(key, "")
+    icon = UI_ICONS.get(key, "")
+    return icon if stdout_supports_text(icon) else ""
 
 
 def emoji_label(key: str, text: str) -> str:
@@ -214,6 +228,9 @@ class CampaignState:
     cleared_node_ids: List[str] = field(default_factory=list)
     recovery_charges: int = 3
     max_recovery_charges: int = 3
+    healing_potions: int = qr.DEFAULT_HEALING_POTIONS_PER_RUN
+    potion_upgrade_ids: List[str] = field(default_factory=list)
+    boss_refill_used: bool = False
     starting_spotlight: int = 0
     prebattle_barrier: int = 0
     boss_guard_penalty: int = 0
@@ -241,6 +258,40 @@ class CampaignState:
 # ---------------------------------------------------------------------------
 # Content parsing
 # ---------------------------------------------------------------------------
+
+
+def campaign_has_potion_upgrade(campaign: CampaignState, upgrade_id: str) -> bool:
+    return upgrade_id in campaign.potion_upgrade_ids
+
+
+def campaign_potion_capacity(campaign: CampaignState) -> int:
+    capacity = qr.DEFAULT_HEALING_POTIONS_PER_RUN
+    if campaign_has_potion_upgrade(campaign, "potion_capacity_plus_one"):
+        capacity += qr.POTION_UPGRADE_CAPACITY_BONUS
+    return max(1, capacity)
+
+
+def grant_potion_upgrade(campaign: CampaignState, upgrade_id: str) -> Tuple[str, bool]:
+    if campaign_has_potion_upgrade(campaign, upgrade_id):
+        return "The route kit already carries that potion upgrade.", False
+    campaign.potion_upgrade_ids.append(upgrade_id)
+    if upgrade_id == "potion_capacity_plus_one":
+        before = campaign.healing_potions
+        campaign.healing_potions = min(campaign_potion_capacity(campaign), campaign.healing_potions + 1)
+        gained = campaign.healing_potions - before
+        return f"The route kit adds one more bottle slot. Potion capacity rises, and current potions increase by {gained}.", True
+    if upgrade_id == "stronger_potions":
+        return "The team concentrates the route draughts. Healing potions become 20% stronger.", True
+    if upgrade_id == "boss_refill":
+        campaign.boss_refill_used = False
+        return "A sealed reserve is packed for the final bell. The next boss can restore 1 potion if the team is dry.", True
+    if upgrade_id == "guarding_draught":
+        return "Guarding Draught is added to the route kit. Potions now restore Guard as well as HP.", True
+    if upgrade_id == "spotlight_tonic":
+        return "Spotlight Tonic is bottled for the route. Potion use now grants +1 Spotlight.", True
+    if upgrade_id == "chalice_tolerance":
+        return "The team learns to stomach the bitter mix. Poisoned Chalice penalties are reduced.", True
+    return f"{upgrade_id} is added to the route kit.", True
 
 
 def _parse_reward_options() -> Dict[str, RewardOptionDef]:
@@ -624,7 +675,9 @@ def base_player_payload(player: qr.Combatant) -> Dict[str, object]:
 
 def player_from_payload(payload: Dict[str, object]) -> qr.Combatant:
     if "name" in payload and "team" in payload:
-        return qr.combatant_from_payload(payload)
+        player = qr.combatant_from_payload(payload)
+        qr.ensure_actor_equipment_state(player)
+        return player
 
     entity_id = str(payload["entity_id"])
     player = qr.create_player(entity_id)
@@ -650,6 +703,7 @@ def player_from_payload(payload: Dict[str, object]) -> qr.Combatant:
     merged_metadata.update(dict(payload.get("metadata", {})))
     merged_metadata.pop("last_inputs", None)
     player.metadata = merged_metadata
+    qr.ensure_actor_equipment_state(player)
     return player
 
 
@@ -679,6 +733,9 @@ def campaign_to_dict(campaign: CampaignState) -> Dict[str, object]:
         "cleared_node_ids": list(campaign.cleared_node_ids),
         "recovery_charges": campaign.recovery_charges,
         "max_recovery_charges": campaign.max_recovery_charges,
+        "healing_potions": campaign.healing_potions,
+        "potion_upgrade_ids": list(campaign.potion_upgrade_ids),
+        "boss_refill_used": campaign.boss_refill_used,
         "starting_spotlight": campaign.starting_spotlight,
         "prebattle_barrier": campaign.prebattle_barrier,
         "boss_guard_penalty": campaign.boss_guard_penalty,
@@ -745,7 +802,7 @@ def _normalize_saved_nodes(
 
 def campaign_from_dict(payload: Dict[str, object]) -> CampaignState:
     version = int(payload.get("save_version", 0))
-    if version not in {1, 2, 3, 4, SAVE_VERSION}:
+    if version not in {1, 2, 3, 4, 5, 6, SAVE_VERSION}:
         raise ValueError(f"Unsupported save version: {version}")
 
     players = [player_from_payload(item) for item in list(payload["players"])]
@@ -804,6 +861,9 @@ def campaign_from_dict(payload: Dict[str, object]) -> CampaignState:
         cleared_node_ids=cleared_node_ids,
         recovery_charges=int(payload.get("recovery_charges", 3)),
         max_recovery_charges=int(payload.get("max_recovery_charges", 3)),
+        healing_potions=max(0, int(payload.get("healing_potions", qr.DEFAULT_HEALING_POTIONS_PER_RUN))),
+        potion_upgrade_ids=[str(upgrade_id) for upgrade_id in list(payload.get("potion_upgrade_ids", []))],
+        boss_refill_used=bool(payload.get("boss_refill_used", False)),
         starting_spotlight=int(payload.get("starting_spotlight", 0)),
         prebattle_barrier=int(payload.get("prebattle_barrier", 0)),
         boss_guard_penalty=int(payload.get("boss_guard_penalty", 0)),
@@ -856,6 +916,9 @@ def reset_party_for_new_expedition(campaign: CampaignState, district_id: str = D
     campaign.node_axis_history = {}
     campaign.recovery_charges = 3
     campaign.max_recovery_charges = 3
+    campaign.healing_potions = qr.DEFAULT_HEALING_POTIONS_PER_RUN
+    campaign.potion_upgrade_ids = []
+    campaign.boss_refill_used = False
     campaign.starting_spotlight = 0
     campaign.prebattle_barrier = 0
     campaign.boss_guard_penalty = 0
@@ -873,6 +936,46 @@ def clear_battle_only_state(player: qr.Combatant) -> None:
     player.next_attack_power_bonus = 0
     player.crit_spotlight_used_this_turn = False
     player.times_acted = 0
+    for key in (
+        "turn_inputs",
+        "turn_power",
+        "turn_precision",
+        "turn_composure",
+        "starting_ap",
+        "current_ap",
+        "used_light_attack_this_turn",
+        "next_attack_accuracy_bonus",
+        "next_attack_accuracy_penalty",
+        "next_attack_precision_bonus",
+        "evasion_bonus_until_next_turn",
+        "evasion_penalty_until_next_turn",
+        "cannot_guard_next_turn",
+        "cannot_parry_next_turn",
+        "next_turn_ap_bonus",
+        "action_input_logged_round",
+        "high_composure_turns_this_combat",
+        "trance_used_this_combat",
+        "backflip_uses_this_combat",
+        "shield_oath_cooldown",
+        "shield_oath_break_bonus_mult",
+        "mooncleave_stacks",
+        "black_vial_stacks",
+        "anklet_refund_primed",
+        "anklet_refund_used_this_turn",
+        "next_healing_multiplier_bonus",
+        "pending_poisoned_chalice_accuracy_penalty",
+        "turn_accuracy_penalty",
+        "poisoned_chalice_dot",
+        "defensive_technique_used_turn",
+        "regain_balance_used_turn",
+        "fracture_shield_overflow_used_turn",
+        "blood_vow_ready",
+        "blood_vow_action_active",
+        "blood_vow_status_ready",
+        "current_action_accuracy_modifier",
+        "defensive_reaction_bonus_until_next_turn",
+    ):
+        player.metadata.pop(key, None)
     player.last_skill_used = None
     preserved_metadata = {key: value for key, value in player.metadata.items() if key not in {"last_inputs"}}
     player.metadata = preserved_metadata
@@ -885,7 +988,21 @@ def normalize_party_between_battles(campaign: CampaignState) -> None:
         clear_battle_only_state(player)
 
 
+def campaign_balance_profile(campaign: CampaignState) -> qr.PartyBalanceProfile:
+    party_size = len(campaign.selected_party_ids) or len(campaign.players) or 1
+    return qr.get_party_balance_profile(party_size, mode=qr.BALANCE_MODE_EXPEDITION)
+
+
+def scaled_healing_reward(campaign: CampaignState, amount: int) -> int:
+    return qr.scaled_amount(amount, campaign_balance_profile(campaign).healing_reward_mult)
+
+
+def scaled_recovery_heal(campaign: CampaignState, amount: int) -> int:
+    return qr.scaled_amount(amount, campaign_balance_profile(campaign).recovery_heal_mult)
+
+
 def heal_party(campaign: CampaignState, amount: int) -> int:
+    amount = scaled_healing_reward(campaign, amount)
     total = 0
     for player in campaign.players:
         before = player.hp
@@ -940,6 +1057,7 @@ def apply_option(campaign: CampaignState, option_id: str) -> Tuple[str, bool]:
         restore_current = bool(option.params.get("restore_current_on_gain", False))
         refill_to_max = bool(option.params.get("refill_to_max", False))
         heal_amount = int(option.params.get("heal_amount", 0))
+        scaled_heal_amount = scaled_healing_reward(campaign, heal_amount) if heal_amount > 0 else 0
 
         if stat == "max_guard":
             for player in campaign.players:
@@ -960,8 +1078,8 @@ def apply_option(campaign: CampaignState, option_id: str) -> Tuple[str, bool]:
             for player in campaign.players:
                 player.max_hp += amount
                 before = player.hp
-                if heal_amount > 0:
-                    player.hp = min(player.max_hp, player.hp + heal_amount)
+                if scaled_heal_amount > 0:
+                    player.hp = min(player.max_hp, player.hp + scaled_heal_amount)
                 total_healed += player.hp - before
             campaign.boons.append(option_id)
             return f"Red salt steadies the body. Max HP rises for all allies and the party restores {total_healed} total HP.", True
@@ -1027,6 +1145,13 @@ def apply_option(campaign: CampaignState, option_id: str) -> Tuple[str, bool]:
             return f"The team secures {relic_name}. Its combat trigger is now active for this run.", True
         return f"{relic_name} was already equipped by the current team.", False
 
+    if option.effect_type == "grant_potion_upgrade":
+        upgrade_id = str(option.params["upgrade_id"])
+        result, applied = grant_potion_upgrade(campaign, upgrade_id)
+        if applied:
+            campaign.boons.append(option_id)
+        return result, applied
+
     raise ValueError(f"Unsupported reward effect_type: {option.effect_type}")
 
 
@@ -1044,9 +1169,9 @@ def render_party(campaign: CampaignState) -> None:
     ]
     print(emoji_label("route", "Selected for next expedition: ") + ", ".join(selected_names))
     for idx, player in enumerate(campaign.players, start=1):
-        weapon_name = str(player.metadata.get("weapon_name", "Unknown Weapon"))
+        gear_name = qr.equipment_summary_text(player)
         relic_names = [str(name) for name in player.metadata.get("relic_names", [])]
-        extra_bits = [f"weapon={weapon_name}"]
+        extra_bits = [f"gear={gear_name}"]
         if relic_names:
             extra_bits.append(f"{emoji_label('relic', 'relics')}=" + ", ".join(relic_names))
         character_icon = emoji_for_character_id(player.entity_id)
@@ -1055,10 +1180,15 @@ def render_party(campaign: CampaignState) -> None:
     print("-" * 84)
     print(
         f"{emoji_label('recovery', 'Recovery Charges')}: {campaign.recovery_charges}/{campaign.max_recovery_charges} | "
+        f"Healing Potions: {campaign.healing_potions}/{campaign_potion_capacity(campaign)} | "
         f"{emoji_label('spotlight', 'Start Spotlight')}: {campaign.starting_spotlight} | "
         f"{emoji_label('barrier', 'Prebattle Barrier')}: {campaign.prebattle_barrier} | "
         f"{emoji_label('boss', 'Boss Guard Penalty')}: {campaign.boss_guard_penalty}"
     )
+    if campaign.potion_upgrade_ids:
+        upgrade_names = [REWARD_OPTIONS[option_id].name for option_id in campaign.boons if option_id in REWARD_OPTIONS and REWARD_OPTIONS[option_id].effect_type == "grant_potion_upgrade"]
+        if upgrade_names:
+            print("Potion Upgrades: " + ", ".join(upgrade_names))
     print(f"{emoji_label('shards', 'Echo Shards')}: {campaign.run_shards}")
     if campaign.expedition_active:
         axes = normalize_axis_scores(campaign.current_node_axis_scores)
@@ -1080,11 +1210,10 @@ def render_party(campaign: CampaignState) -> None:
 
 def format_character_option(character_id: str) -> str:
     raw = qr.CHARACTER_BLUEPRINTS[character_id]
-    weapon_id = str(raw.get("weapon", ""))
-    weapon_name = str(qr.WEAPON_DATA.get(weapon_id, {}).get("display_name", weapon_id))
+    equipment_name = qr.starting_equipment_summary(character_id)
     role = str(raw.get("role", ""))
     affinity = str(raw.get("default_affinity", "neutral"))
-    return f"{raw.get('display_name', character_id)} [{character_id}] - {role}, {affinity}, {weapon_name}"
+    return f"{raw.get('display_name', character_id)} [{character_id}] - {role}, {affinity}, {equipment_name}"
 
 
 def configure_party(campaign: CampaignState) -> None:
@@ -1342,7 +1471,12 @@ def resume_battle_from_snapshot(
         logger=logger,
         interactive=not auto,
     )
+    state.balance_mode = qr.BALANCE_MODE_EXPEDITION
+    if not state.potion_upgrade_ids:
+        state.potion_upgrade_ids = list(campaign.potion_upgrade_ids)
+    state.initialize_enemy_balance()
     state.cursor = qr.battle_cursor_from_payload(dict(snapshot["cursor"]))
+    campaign.healing_potions = state.healing_potions
     campaign.players = state.players
     campaign.rng = state.rng
     return state
@@ -1356,6 +1490,7 @@ def save_battle_snapshot(
 ) -> None:
     campaign.players = state.players
     campaign.rng = state.rng
+    campaign.healing_potions = state.healing_potions
     campaign.current_node_axis_scores = normalize_axis_scores(state.node_axis_scores)
     campaign.node_axis_history[node.node_id] = normalize_axis_scores(state.node_axis_scores)
     campaign.battle_snapshot = create_battle_snapshot(campaign, node, state)
@@ -1400,6 +1535,15 @@ def shop_option_unavailable_reason(
         relic_id = str(option.params["relic_id"])
         if party_has_relic(campaign, relic_id):
             return "already carried"
+    if option.effect_type == "grant_potion_upgrade":
+        upgrade_id = str(option.params["upgrade_id"])
+        if campaign_has_potion_upgrade(campaign, upgrade_id):
+            return "already carried"
+    if option.effect_type == "campaign_counter_boost":
+        counter = str(option.params.get("counter", ""))
+        max_value = option.params.get("max_value")
+        if counter and max_value is not None and int(getattr(campaign, counter, 0)) >= int(max_value):
+            return "at cap"
     cost = option_cost(option)
     if cost > campaign.run_shards:
         missing = cost - campaign.run_shards
@@ -1457,6 +1601,17 @@ def auto_choose_shop_purchase(
 
     def available(option_id: str) -> bool:
         return option_id in option_ids and option_is_shop_available(campaign, option_id, bought_option_ids)
+
+    for preferred_id in (
+        "potion_capacity_plus_one",
+        "stronger_potions",
+        "boss_refill",
+        "guarding_draught",
+        "chalice_tolerance",
+        "spotlight_tonic",
+    ):
+        if available(preferred_id):
+            return preferred_id
 
     if table.table_id == "service_niche_rewards":
         if available("maintenance_harness_kit"):
@@ -1580,6 +1735,7 @@ def offer_rewards(campaign: CampaignState, reward_table_id: Optional[str], auto:
 
 
 def choose_recovery_target(campaign: CampaignState, auto: bool) -> Optional[qr.Combatant]:
+    recovery_amount = scaled_recovery_heal(campaign, 45)
     candidates = [
         player
         for player in campaign.players
@@ -1601,7 +1757,7 @@ def choose_recovery_target(campaign: CampaignState, auto: bool) -> Optional[qr.C
     options = [
         (
             str(idx),
-            f"{player.name} - heal 45 HP, restore Guard/Break "
+            f"{player.name} - heal {recovery_amount} HP, restore Guard/Break "
             f"(HP {player.hp}/{player.max_hp}, Guard {player.guard}/{player.max_guard}, Break {player.break_meter}/{player.max_break})",
         )
         for idx, player in enumerate(candidates, start=1)
@@ -1635,7 +1791,7 @@ def use_recovery_charge(campaign: CampaignState, auto: bool) -> None:
         else:
             print("Recovery canceled.")
         return
-    healed = heal_one_player(target, 45)
+    healed = heal_one_player(target, scaled_recovery_heal(campaign, 45))
     target.guard = target.max_guard
     target.break_meter = target.max_break
     campaign.recovery_charges -= 1
@@ -1765,6 +1921,16 @@ def resolve_battle_node(
         save_campaign(campaign, save_file)
         enemies = create_slice_enemies(node, encounter_ids)
         prepare_enemies_for_battle(campaign, node, enemies)
+        if (
+            any(enemy.is_boss for enemy in enemies)
+            and campaign_has_potion_upgrade(campaign, "boss_refill")
+            and not campaign.boss_refill_used
+            and campaign.healing_potions < 1
+        ):
+            campaign.healing_potions = 1
+            campaign.boss_refill_used = True
+            print("Boss Refill restores 1 Healing Potion before the bell toll.")
+            campaign.record("Boss Refill restores 1 Healing Potion before the boss.")
 
         logger = qr.BattleLogger(echo=True)
         state = qr.BattleState(
@@ -1773,9 +1939,13 @@ def resolve_battle_node(
             rng=campaign.rng,
             logger=logger,
             interactive=not auto,
+            balance_mode=qr.BALANCE_MODE_EXPEDITION,
+            healing_potions=campaign.healing_potions,
+            potion_upgrade_ids=list(campaign.potion_upgrade_ids),
             spotlight=campaign.starting_spotlight,
             node_axis_scores=axis_scores,
         )
+        state.initialize_enemy_balance()
         print(f"Battle setup: starting Spotlight {campaign.starting_spotlight}, prebattle barrier {campaign.prebattle_barrier}.")
         print(
             f"Node axis scores: Power {axis_scores['power']}, "
@@ -1799,6 +1969,7 @@ def resolve_battle_node(
     campaign.battle_snapshot = None
     campaign.players = state.players
     campaign.rng = state.rng
+    campaign.healing_potions = state.healing_potions
 
     os.makedirs(log_dir, exist_ok=True)
     district = get_district(campaign.district_id)
@@ -2016,6 +2187,9 @@ def hub_menu(
             campaign.cleared_node_ids = loaded.cleared_node_ids
             campaign.recovery_charges = loaded.recovery_charges
             campaign.max_recovery_charges = loaded.max_recovery_charges
+            campaign.healing_potions = loaded.healing_potions
+            campaign.potion_upgrade_ids = loaded.potion_upgrade_ids
+            campaign.boss_refill_used = loaded.boss_refill_used
             campaign.starting_spotlight = loaded.starting_spotlight
             campaign.prebattle_barrier = loaded.prebattle_barrier
             campaign.boss_guard_penalty = loaded.boss_guard_penalty

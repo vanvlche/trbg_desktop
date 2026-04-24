@@ -1,0 +1,1148 @@
+
+====================================================================================
+🕯️ Quiet Relay: 2026 - Operations Base [Fully Data-Driven]
+------------------------------------------------------------------------------------
+Late 2026. Rain ticks against emergency floodlights while the expedition team
+regroups in a ruined signal base. Beyond the shutters waits the Rain Toll
+Corridor, a short but hostile district warped by bells, transit steel, and ash.
+
+🧭 District: District 03: Rain Toll Corridor
+Last result: No expeditions yet.
+Record: 0 wins / 0 losses | Best nodes cleared: 0
+💾 Save file: quiet_relay_vs_balance_2026.json
+↩️ No expedition currently active.
+
+⛭ PARTY STATUS
+------------------------------------------------------------------------------------
+🧭 Selected for next expedition: Vanguard
+1. 🛡️ Vanguard           HP 160/160  GUARD  72/72   BREAK  90/90   ash    posture=flow    pos=set       | weapon=Anchor Greatblade | 🧿 relics=Iron Vow
+------------------------------------------------------------------------------------
+🩹 Recovery Charges: 3/3 | ☀️ Start Spotlight: 0 | 🛡️ Prebattle Barrier: 0 | 👑 Boss Guard Penalty: 0
+💠 Echo Shards: 0
+📂 Content Pack: /mnt/c/Users/kim50/projects/trbg_desktop/quiet_relay_content
+✦ Run Boons: none
+
+
+====================================================================================
+🧭 District 03: Rain Toll Corridor
+◈ Overpass Watch -- Battle -- Shared route -- 🟡 Medium risk -- [guard, spotlight, recovery]
+Route Step 1
+💠 Echo Shards on hand: 0
+------------------------------------------------------------------------------------
+An elevated roadway buckles under cathedral stone. A Rustbound Pilgrim drags its
+bell-metal blade through the rain while ivy crawls across the guardrail.
+
+Battle setup: starting Spotlight 0, prebattle barrier 0.
+Node axis scores: Power 80, Precision 80, Composure 80.
+Encounter variant: pilgrim_ivy_watch (rustbound_pilgrim, ivy_strangler)
+Battle begins.
+Node axis scores: Power 80, Precision 80, Composure 80.
+Turn order: Ivy Strangler #2, Rustbound Pilgrim, Vanguard
+Ivy Strangler #2 enters flow posture (balanced spread).
+Player Spotlight +1 (Ivy Strangler #2 entered Flow) -> 1/5
+Ivy Strangler #2 lashes thorn-vines at Vanguard.
+Vanguard withdraws behind the guard.
+Guard gate success: Power 80 >= 55.
+Vanguard loses 9 break.
+Ivy Strangler #2 hits Vanguard for 14 guard.
+Vanguard gains snare (2).
+Rustbound Pilgrim raises its weapon and begins charging a heavy overhead.
+Vanguard enters flow posture (balanced spread).
+Vanguard recenters to set footing.
+Vanguard cleanses snare via Flow.
+Power output x1.38 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Ivy Strangler #2 [hit roll 77/87].
+Ivy Strangler #2 loses 36 break.
+Ivy Strangler #2 withdraws behind the guard (staggered).
+Ivy Strangler #2 is staggered!
+Vanguard hits Ivy Strangler #2 for 40 guard, 3 hp.
+Player Spotlight +1 (Vanguard exploited affinity) -> 2/5
+Vanguard loses 3 guard from Anchor Cleave.
+Composure tempo 80/160.
+------------------------------------------------------------
+Turn order: Ivy Strangler #2, Rustbound Pilgrim, Vanguard
+Ivy Strangler #2 is staggered and loses the turn.
+Rustbound Pilgrim enters ravage posture (power dominant).
+Rustbound Pilgrim presses the line.
+Rustbound Pilgrim brings down a rusted overhead on Vanguard.
+Vanguard withdraws behind the guard.
+Rustbound Pilgrim recenters to set footing (pressure answered).
+Guard gate success: Power 80 >= 55.
+Vanguard reads the weight and hardens the guard.
+Vanguard loses 21 break.
+Rustbound Pilgrim hits Vanguard for 36 guard.
+Vanguard gains scorch (2).
+Vanguard is scorched for 8 damage.
+Vanguard loses 8 HP (scorch).
+Vanguard enters flow posture (balanced spread).
+Vanguard recenters to set footing.
+Vanguard cleanses scorch via Flow.
+Power output x0.95 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Ivy Strangler #2 [hit roll 11/87].
+Ivy Strangler #2 loses 31 break.
+Vanguard hits Ivy Strangler #2 for 29 hp.
+Player Spotlight +1 (Vanguard exploited affinity) -> 3/5
+Vanguard loses 1 guard from Anchor Cleave.
+Vanguard keeps tempo from Composure 80: bonus action.
+Vanguard enters flow posture (balanced spread).
+Player Spotlight +1 (Vanguard entered Flow) -> 4/5
+Power output x1.16 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Ivy Strangler #2 [hit roll 13/87].
+Ivy Strangler #2 loses 5 break.
+Ivy Strangler #2 is staggered!
+Vanguard hits Ivy Strangler #2 for 35 hp.
+Player Spotlight +1 (Vanguard exploited affinity) -> 5/5
+Vanguard loses 1 guard from Anchor Cleave.
+------------------------------------------------------------
+Turn order: Ivy Strangler #2, Rustbound Pilgrim, Vanguard
+Ivy Strangler #2 is staggered and loses the turn.
+Rustbound Pilgrim raises its weapon and begins charging a heavy overhead.
+Vanguard enters flow posture (balanced spread).
+Power output x1.17 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Ivy Strangler #2 [hit roll 51/87].
+Vanguard hits Ivy Strangler #2 for 37 hp.
+Ivy Strangler #2 falls.
+Vanguard loses 1 guard from Anchor Cleave.
+Composure tempo 80/160.
+------------------------------------------------------------
+Turn order: Rustbound Pilgrim, Vanguard
+Rustbound Pilgrim enters ravage posture (power dominant).
+Rustbound Pilgrim presses the line.
+Rustbound Pilgrim brings down a rusted overhead on Vanguard.
+Vanguard withdraws behind the guard.
+Rustbound Pilgrim recenters to set footing (pressure answered).
+Guard gate success: Power 80 >= 55.
+Vanguard reads the weight and hardens the guard.
+Vanguard loses 21 break.
+Rustbound Pilgrim hits Vanguard for 16 guard, 14 hp.
+Vanguard enters flow posture (balanced spread).
+Vanguard recenters to set footing.
+Power output x1.23 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Rustbound Pilgrim [hit roll 10/87].
+Rustbound Pilgrim loses 32 break.
+Vanguard hits Rustbound Pilgrim for 25 guard, 5 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+Vanguard keeps tempo from Composure 80: bonus action.
+Vanguard enters flow posture (balanced spread).
+Power output x1.18 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Rustbound Pilgrim [hit roll 72/87].
+Rustbound Pilgrim loses 22 break.
+Rustbound Pilgrim withdraws behind the guard (staggered).
+Rustbound Pilgrim is staggered!
+Vanguard hits Rustbound Pilgrim for 29 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+------------------------------------------------------------
+Turn order: Rustbound Pilgrim, Vanguard
+Rustbound Pilgrim is staggered and loses the turn.
+Vanguard enters flow posture (balanced spread).
+Power output x1.37 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard grazes Rustbound Pilgrim [hit roll 91/87].
+Rustbound Pilgrim loses 17 break.
+Vanguard hits Rustbound Pilgrim for 17 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+Composure tempo 80/160.
+------------------------------------------------------------
+Turn order: Vanguard, Rustbound Pilgrim
+Vanguard enters flow posture (balanced spread).
+Power output x1.36 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Rustbound Pilgrim [hit roll 48/87].
+Rustbound Pilgrim loses 33 break.
+Vanguard hits Rustbound Pilgrim for 33 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+Vanguard keeps tempo from Composure 80: bonus action.
+Vanguard enters flow posture (balanced spread).
+Power output x1.22 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Rustbound Pilgrim [hit roll 12/87].
+Vanguard hits Rustbound Pilgrim for 30 hp.
+Rustbound Pilgrim falls.
+Vanguard loses 0 guard from Anchor Cleave.
+Players win the battle.
+Battle log written to: quiet_relay_vs_balance_logs_2026/01_overpass_watch.txt
+Victory. Echo shards gained: 1. Echo shards on hand: 1
+Choose 1 reward from Overpass Watch Rewards:
+  1. Iron Mesh - +12 max guard to all allies, and restore 12 guard.
+  2. Stage Light - +1 starting Spotlight for future battles this run (max 3).
+  3. Field Dressing - Heal all allies for 18 HP.
+The team rehearses the opening beat. Starting Spotlight increases by 1.
+🧭 Choose the next route:
+  1. 🔧 Flooded Arcade -- Boss -- Maintenance route -- 🟢 Low risk -- [sustain, barrier, dodge]
+     Safer maintenance route with recovery and guard rewards. Likely rewards:
+     sustain, barrier, dodge.
+  2. 🕯️ Witness Chapel -- Boss -- Chapel route -- 🟡 Medium risk -- [parry, reveal, break]
+     Sharper chapel route with parry tempo and reveal rewards. Likely rewards:
+     parry, reveal, break.
+▶️ Auto route choice: Flooded Arcade
+
+====================================================================================
+🧭 District 03: Rain Toll Corridor
+🔧 Flooded Arcade -- Boss -- Maintenance route -- 🟢 Low risk -- [sustain, barrier, dodge]
+Route Step 2
+💠 Echo Shards on hand: 1
+------------------------------------------------------------------------------------
+Neon signage flickers beneath rising water as Moraine, Bailiff of the Sluice,
+locks a flood-key into place. Bell-marked channels throb under the tiles,
+warning that one mistimed read will drag someone under.
+
+Battle setup: starting Spotlight 1, prebattle barrier 0.
+Node axis scores: Power 80, Precision 80, Composure 80.
+Battle begins.
+Node axis scores: Power 80, Precision 80, Composure 80.
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+Moraine, Bailiff of the Sluice withdraws behind the guard.
+Moraine, Bailiff of the Sluice slams a gate stamp into Vanguard.
+Vanguard spends 8/8 Break to dodge.
+Vanguard dodges cleanly [dodge roll 65/68].
+Vanguard reads the weight and slips clear.
+Vanguard enters flow posture (balanced spread).
+Power output x1.33 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 77/87].
+Moraine, Bailiff of the Sluice loses 33 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 33 guard.
+Vanguard loses 0 guard from Anchor Cleave.
+Composure tempo 80/160.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice recovers 3 guard.
+Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+Moraine plants the flood-key.
+The sluice pressure rises behind Vanguard.
+Vanguard enters flow posture (balanced spread).
+Power output x1.35 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 73/87].
+Moraine, Bailiff of the Sluice loses 37 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 33 guard.
+Vanguard loses 0 guard from Anchor Cleave.
+Vanguard keeps tempo from Composure 80: bonus action.
+Vanguard enters flow posture (balanced spread).
+Power output x1.23 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 4/87].
+Moraine, Bailiff of the Sluice loses 36 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 30 guard.
+Vanguard loses 0 guard from Anchor Cleave.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice recovers 3 guard.
+Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+The spillway screams open.
+Enemy Spotlight +1 (Vanguard mistimed dodge) -> 1/5
+Vanguard spends 8/8 Break to dodge.
+Vanguard mistimes the dodge [dodge roll 92/68].
+Vanguard loses 14 break.
+Moraine, Bailiff of the Sluice hits Vanguard for 13 hp.
+Vanguard gains soak (2).
+Moraine, Bailiff of the Sluice catches the recoil and restores 6 guard.
+Vanguard enters flow posture (balanced spread).
+Vanguard cleanses soak via Flow.
+Power output x1.21 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 19/87].
+Moraine, Bailiff of the Sluice loses 14 break.
+Moraine, Bailiff of the Sluice is staggered!
+Vanguard hits Moraine, Bailiff of the Sluice for 18 guard, 11 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+Composure tempo 80/160.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice is staggered and loses the turn.
+Vanguard enters flow posture (balanced spread).
+Power output x1.08 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard grazes Moraine, Bailiff of the Sluice [hit roll 90/87].
+Moraine, Bailiff of the Sluice loses 15 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 13 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+Vanguard keeps tempo from Composure 80: bonus action.
+Vanguard enters flow posture (balanced spread).
+Power output x1.22 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 61/87].
+Moraine, Bailiff of the Sluice loses 32 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 30 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice recovers 3 guard.
+Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+Moraine plants the flood-key.
+The sluice pressure rises behind Vanguard.
+Vanguard enters flow posture (balanced spread).
+Power output x1.24 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 72/87].
+Moraine, Bailiff of the Sluice loses 36 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 3 guard, 27 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+Composure tempo 80/160.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice recovers 3 guard.
+Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+The spillway screams open.
+Enemy Spotlight -1 (cashed for pressure) -> 0/5
+Enemy Spotlight is cashed for pressure.
+Vanguard spends 8/8 Break to dodge.
+Vanguard dodges cleanly [dodge roll 52/68].
+Vanguard reads the weight and slips clear.
+Moraine, Bailiff of the Sluice loses 16 break.
+The sluice overcommits and leaves Moraine exposed.
+Vanguard enters flow posture (balanced spread).
+Power output x1.21 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 38/92].
+Moraine, Bailiff of the Sluice loses 21 break.
+Moraine, Bailiff of the Sluice is staggered!
+Vanguard hits Moraine, Bailiff of the Sluice for 35 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+Vanguard keeps tempo from Composure 80: bonus action.
+Vanguard enters flow posture (balanced spread).
+Power output x0.97 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 20/95].
+Vanguard hits Moraine, Bailiff of the Sluice for 38 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice is staggered and loses the turn.
+Moraine, Bailiff of the Sluice is no longer affected by reveal.
+Vanguard enters flow posture (balanced spread).
+Power output x1.33 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 63/87].
+Moraine, Bailiff of the Sluice loses 33 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 33 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+Composure tempo 80/160.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice recovers 3 guard.
+Moraine, Bailiff of the Sluice abandons the lockstep rhythm and slides into a faster flow.
+Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+Moraine plants the flood-key.
+The sluice pressure rises behind Vanguard.
+Vanguard enters flow posture (balanced spread).
+Player Spotlight +1 (Vanguard entered Flow) -> 2/5
+Power output x1.23 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 66/87].
+Moraine, Bailiff of the Sluice loses 36 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 3 guard, 27 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+Vanguard keeps tempo from Composure 80: bonus action.
+Vanguard enters flow posture (balanced spread).
+Power output x1.35 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 56/87].
+Moraine, Bailiff of the Sluice loses 37 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 33 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice recovers 3 guard.
+Moraine, Bailiff of the Sluice enters ravage posture (power dominant).
+Moraine, Bailiff of the Sluice recenters to set footing.
+The spillway screams open.
+Enemy Spotlight +1 (Vanguard mistimed dodge) -> 1/5
+Vanguard spends 1/8 Break to dodge.
+Vanguard's empty Break meter makes the dodge shaky.
+Vanguard mistimes the dodge [dodge roll 59/48].
+Vanguard withdraws behind the guard (staggered).
+Vanguard is staggered!
+Enemy Spotlight +1 (Moraine, Bailiff of the Sluice staggered Vanguard) -> 2/5
+Moraine, Bailiff of the Sluice hits Vanguard for 21 hp.
+Vanguard gains soak (2).
+Moraine, Bailiff of the Sluice catches the recoil and restores 6 guard.
+Vanguard is staggered and loses the turn.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice recovers 3 guard.
+Moraine, Bailiff of the Sluice enters ravage posture (power dominant).
+Moraine, Bailiff of the Sluice presses the line.
+Moraine, Bailiff of the Sluice slams a gate stamp into Vanguard.
+Enemy Spotlight -1 (cashed for pressure) -> 1/5
+Enemy Spotlight is cashed for pressure.
+Vanguard recenters to set footing.
+Moraine, Bailiff of the Sluice recenters to set footing (pressure answered).
+Vanguard spends 8/8 Break to dodge.
+Vanguard dodges cleanly [dodge roll 58/68].
+Vanguard reads the weight and slips clear.
+Vanguard slips wide from withdrawn footing.
+Vanguard is no longer affected by soak.
+Vanguard enters flow posture (balanced spread).
+Player Spotlight +1 (Vanguard entered Flow) -> 3/5
+Power output x1.40 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 24/87].
+Moraine, Bailiff of the Sluice loses 14 break.
+Moraine, Bailiff of the Sluice withdraws behind the guard (staggered).
+Moraine, Bailiff of the Sluice is staggered!
+Vanguard hits Moraine, Bailiff of the Sluice for 12 guard, 22 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+Composure tempo 80/160.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice is staggered and loses the turn.
+Vanguard enters flow posture (balanced spread).
+Power output x1.04 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 35/87].
+Moraine, Bailiff of the Sluice loses 29 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 25 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+Vanguard keeps tempo from Composure 80: bonus action.
+Vanguard enters flow posture (balanced spread).
+Power output x1.19 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 25/87].
+Moraine, Bailiff of the Sluice loses 31 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 29 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice recovers 3 guard.
+Moraine, Bailiff of the Sluice enters flow posture (balanced spread).
+Moraine, Bailiff of the Sluice recenters to set footing.
+Player Spotlight +1 (Moraine, Bailiff of the Sluice entered Flow) -> 4/5
+Moraine, Bailiff of the Sluice sweeps the breakwater across every lane.
+Enemy Spotlight -1 (cashed for pressure) -> 0/5
+Enemy Spotlight is cashed for pressure.
+Moraine, Bailiff of the Sluice withdraws behind the guard (pressure answered).
+Vanguard spends 8/8 Break to dodge.
+Vanguard dodges cleanly [dodge roll 1/68].
+Vanguard reads the weight and slips clear.
+Vanguard enters flow posture (balanced spread).
+Player Spotlight +1 (Vanguard entered Flow) -> 5/5
+Power output x1.21 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 70/87].
+Moraine, Bailiff of the Sluice loses 32 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 3 guard, 27 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+Composure tempo 80/160.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice recovers 3 guard.
+Moraine, Bailiff of the Sluice enters ravage posture (power dominant).
+Moraine, Bailiff of the Sluice recenters to set footing.
+Moraine, Bailiff of the Sluice slams a gate stamp into Vanguard.
+Enemy Spotlight +1 (Vanguard mistimed dodge) -> 1/5
+Vanguard spends 8/8 Break to dodge.
+Vanguard mistimes the dodge [dodge roll 97/68].
+Vanguard loses 18 break.
+Moraine, Bailiff of the Sluice hits Vanguard for 19 hp.
+Vanguard enters flow posture (balanced spread).
+Power output x1.24 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 35/87].
+Moraine, Bailiff of the Sluice loses 28 break.
+Moraine, Bailiff of the Sluice withdraws behind the guard (staggered).
+Moraine, Bailiff of the Sluice is staggered!
+Vanguard hits Moraine, Bailiff of the Sluice for 3 guard, 27 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+Vanguard keeps tempo from Composure 80: bonus action.
+Player Spotlight -2 (Vanguard used Execution Drop) -> 3/5
+Vanguard enters flow posture (balanced spread).
+Power output x1.32 from Power 80.
+Vanguard uses Execution Drop [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 46/95].
+Vanguard hits Moraine, Bailiff of the Sluice for 89 hp.
+Moraine, Bailiff of the Sluice falls.
+Players win the battle.
+Battle log written to: quiet_relay_vs_balance_logs_2026/02_flooded_arcade.txt
+Victory. Echo shards gained: 1. Echo shards on hand: 2
+Choose 1 reward from Flooded Arcade Rewards:
+  1. Maintenance Harness - Grant the Maintenance Harness relic to the current party.
+  2. Floodgate Loop - Grant the Floodgate Loop relic to the current party.
+  3. Supply Cache - +1 recovery charge, up to 5.
+The team secures Maintenance Harness. Its combat trigger is now active for this
+run.
+🧭 Choose the next route:
+  1. 🔧 Service Niche -- Event -- Maintenance route -- 🟢 Low risk -- [shop, recovery, sustain]
+     Spend shards to stabilize before the maintenance follow-through. Likely
+     rewards: sustain, barrier, recovery.
+  2. 🔧 Sluice Jury -- Battle -- Maintenance route -- 🔴 High risk -- [elite, shards, break]
+     Detour into an elite fight for extra shards and stronger break prep. Likely
+     rewards: elite, break, boss_prep.
+▶️ Auto route choice: Service Niche
+
+====================================================================================
+🧭 District 03: Rain Toll Corridor
+🔧 Service Niche -- Event -- Maintenance route -- 🟢 Low risk -- [shop, recovery, sustain]
+Route Step 3
+💠 Echo Shards on hand: 2
+------------------------------------------------------------------------------------
+You find a dry maintenance recess behind a humming panel. The team can patch
+wounds, rewire defenses, or prepare for the toll plaza ahead.
+
+
+Service Niche Bench. Echo Shards on hand: 2
+Spend up to 1 purchase here, or press Enter to leave.
+Auto shop choice: Slip Ledger
+The team secures Slip Ledger. Its combat trigger is now active for this run.
+Echo Shards remaining: 0
+The team closes the route kit and moves on.
+
+====================================================================================
+🧭 District 03: Rain Toll Corridor
+🔧 Drainage Switchback -- Battle -- Maintenance route -- 🟢 Low risk -- [sustain, guard, recovery]
+Route Step 4
+💠 Echo Shards on hand: 0
+------------------------------------------------------------------------------------
+A service stair drops into a pump channel where the waterline rises and falls by
+bell pulse. A Flood Acolyte tries to soak the lane while a Veil Leech chews at
+exposed guard, turning the maintenance route into a practical test of staying
+patched together.
+
+Battle setup: starting Spotlight 1, prebattle barrier 0.
+Node axis scores: Power 80, Precision 80, Composure 80.
+Encounter variant: flood_veil_siphon (flood_acolyte, veil_leech)
+Battle begins.
+Node axis scores: Power 80, Precision 80, Composure 80.
+Turn order: Veil Leech #2, Flood Acolyte, Vanguard
+Veil Leech #2 enters flow posture (balanced spread).
+Player Spotlight +1 (Veil Leech #2 entered Flow) -> 2/5
+Veil Leech #2 siphons warding light from Vanguard.
+Enemy Spotlight +1 (Vanguard mistimed dodge) -> 1/5
+Vanguard spends 8/8 Break to dodge.
+Vanguard mistimes the dodge [dodge roll 63/62].
+Vanguard loses 7 break.
+Veil Leech #2 hits Vanguard for 8 hp.
+Flood Acolyte enters focus posture (precision dominant).
+Flood Acolyte presses the line.
+Flood Acolyte drenches Vanguard.
+Enemy Spotlight -1 (cashed for pressure) -> 0/5
+Enemy Spotlight is cashed for pressure.
+Enemy Spotlight +1 (Vanguard mistimed dodge) -> 1/5
+Vanguard spends 8/8 Break to dodge.
+Vanguard mistimes the dodge [dodge roll 93/62].
+Vanguard loses 7 break.
+Flood Acolyte hits Vanguard for 9 hp.
+Vanguard gains soak (2).
+Vanguard enters flow posture (balanced spread).
+Vanguard cleanses soak via Flow.
+Power output x1.24 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Flood Acolyte [hit roll 61/87].
+Flood Acolyte loses 32 break.
+Vanguard hits Flood Acolyte for 25 guard, 5 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+Composure tempo 80/160.
+------------------------------------------------------------
+Turn order: Veil Leech #2, Flood Acolyte, Vanguard
+Veil Leech #2 enters flow posture (balanced spread).
+Veil Leech #2 siphons warding light from Vanguard.
+Enemy Spotlight -1 (cashed for pressure) -> 0/5
+Enemy Spotlight is cashed for pressure.
+Player Spotlight +2 (Slip Ledger) -> 4/5
+Slip Ledger steadies Vanguard's next offensive risk.
+Vanguard spends 8/8 Break to dodge.
+Vanguard dodges cleanly [dodge roll 38/62].
+Flood Acolyte recovers 3 guard.
+Flood Acolyte enters focus posture (precision dominant).
+Flood Acolyte drenches Vanguard.
+Player Spotlight +1 (Slip Ledger) -> 5/5
+Slip Ledger steadies Vanguard's next offensive risk.
+Vanguard spends 8/8 Break to dodge.
+Vanguard dodges cleanly [dodge roll 11/62].
+Vanguard enters flow posture (balanced spread).
+Power output x1.20 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Flood Acolyte [hit roll 21/87].
+Flood Acolyte loses 4 break.
+Flood Acolyte withdraws behind the guard (staggered).
+Flood Acolyte is staggered!
+Vanguard hits Flood Acolyte for 3 guard, 26 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+Vanguard's slip window closes.
+Vanguard keeps tempo from Composure 80: bonus action.
+Player Spotlight -2 (Vanguard used Execution Drop) -> 3/5
+Vanguard enters flow posture (balanced spread).
+Power output x1.33 from Power 80.
+Vanguard uses Execution Drop [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Flood Acolyte [hit roll 76/95].
+Vanguard hits Flood Acolyte for 90 hp.
+Flood Acolyte falls.
+------------------------------------------------------------
+Turn order: Veil Leech #2, Vanguard
+Veil Leech #2 enters flow posture (balanced spread).
+Player Spotlight +1 (Veil Leech #2 entered Flow) -> 4/5
+Veil Leech #2 siphons warding light from Vanguard.
+Player Spotlight +1 (Slip Ledger) -> 5/5
+Slip Ledger steadies Vanguard's next offensive risk.
+Vanguard spends 2/8 Break to dodge.
+Vanguard's empty Break meter makes the dodge shaky.
+Vanguard dodges cleanly [dodge roll 20/42].
+Vanguard enters flow posture (balanced spread).
+Power output x1.24 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Veil Leech #2 [hit roll 26/87].
+Veil Leech #2 loses 32 break.
+Vanguard hits Veil Leech #2 for 30 guard.
+Vanguard loses 0 guard from Anchor Cleave.
+Vanguard's slip window closes.
+Composure tempo 80/160.
+------------------------------------------------------------
+Turn order: Veil Leech #2, Vanguard
+Veil Leech #2 recovers 3 guard.
+Veil Leech #2 enters flow posture (balanced spread).
+Veil Leech #2 siphons warding light from Vanguard.
+Slip Ledger steadies Vanguard's next offensive risk.
+Vanguard spends 0/8 Break to dodge.
+Vanguard's empty Break meter makes the dodge shaky.
+Vanguard dodges cleanly [dodge roll 10/42].
+Vanguard enters flow posture (balanced spread).
+Power output x1.03 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Veil Leech #2 [hit roll 45/87].
+Veil Leech #2 loses 4 break.
+Veil Leech #2 withdraws behind the guard (staggered).
+Veil Leech #2 is staggered!
+Vanguard hits Veil Leech #2 for 13 guard, 12 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+Vanguard's slip window closes.
+Vanguard keeps tempo from Composure 80: bonus action.
+Player Spotlight -2 (Vanguard used Execution Drop) -> 3/5
+Vanguard enters flow posture (balanced spread).
+Power output x1.18 from Power 80.
+Vanguard uses Execution Drop [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard grazes Veil Leech #2 [hit roll 99/95].
+Vanguard hits Veil Leech #2 for 41 hp.
+------------------------------------------------------------
+Turn order: Veil Leech #2, Vanguard
+Veil Leech #2 is staggered and loses the turn.
+Vanguard enters flow posture (balanced spread).
+Power output x1.22 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard grazes Veil Leech #2 [hit roll 88/87].
+Veil Leech #2 loses 16 break.
+Vanguard hits Veil Leech #2 for 15 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+Composure tempo 80/160.
+------------------------------------------------------------
+Turn order: Veil Leech #2, Vanguard
+Veil Leech #2 recovers 3 guard.
+Veil Leech #2 enters flow posture (balanced spread).
+Veil Leech #2 recenters to set footing.
+Player Spotlight +1 (Veil Leech #2 entered Flow) -> 4/5
+Veil Leech #2 siphons warding light from Vanguard.
+Player Spotlight +1 (Slip Ledger) -> 5/5
+Slip Ledger steadies Vanguard's next offensive risk.
+Vanguard spends 0/8 Break to dodge.
+Vanguard's empty Break meter makes the dodge shaky.
+Vanguard dodges cleanly [dodge roll 16/42].
+Vanguard enters flow posture (balanced spread).
+Power output x1.23 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Veil Leech #2 [hit roll 60/87].
+Vanguard hits Veil Leech #2 for 3 guard, 27 hp.
+Veil Leech #2 falls.
+Vanguard loses 0 guard from Anchor Cleave.
+Vanguard's slip window closes.
+Players win the battle.
+Battle log written to: quiet_relay_vs_balance_logs_2026/05_drainage_switchback.txt
+Victory. Echo shards gained: 1. Echo shards on hand: 1
+Choose 1 reward from Drainage Switchback Rewards:
+  1. Floodgate Loop - Grant the Floodgate Loop relic to the current party.
+  2. Steady Chimes - +10 max break to all allies.
+  3. Field Dressing - Heal all allies for 18 HP.
+The team secures Floodgate Loop. Its combat trigger is now active for this run.
+Vanguard restores 59 HP, Guard, and Break.
+
+====================================================================================
+🧭 District 03: Rain Toll Corridor
+◈ Toll Plaza -- Battle -- Shared route -- 🔴 High risk -- [break, recovery, cadence]
+Route Step 5
+💠 Echo Shards on hand: 1
+------------------------------------------------------------------------------------
+The lanes narrow into a dead checkpoint under immense bells. A Toll Knight waits
+motionless among cracked barriers and drowned ticket booths.
+
+Battle setup: starting Spotlight 1, prebattle barrier 0.
+Node axis scores: Power 80, Precision 80, Composure 80.
+Encounter variant: toll_knight_checkpoint (toll_knight)
+Battle begins.
+Node axis scores: Power 80, Precision 80, Composure 80.
+Turn order: Toll Knight, Vanguard
+Toll Knight enters ravage posture (power dominant).
+Toll Knight presses the line.
+Toll Knight crashes a bell-forged halberd into Vanguard.
+Maintenance Harness grants Vanguard 6 barrier.
+Vanguard withdraws behind the guard.
+Toll Knight recenters to set footing (pressure answered).
+Guard gate success: Power 80 >= 55.
+Vanguard reads the weight and hardens the guard.
+Vanguard's barrier absorbs 6 damage.
+Vanguard loses 19 break.
+Toll Knight hits Vanguard for 25 guard.
+Vanguard enters flow posture (balanced spread).
+Vanguard recenters to set footing.
+Power output x1.22 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Toll Knight [hit roll 30/87].
+Toll Knight loses 32 break.
+Vanguard hits Toll Knight for 30 guard.
+Vanguard loses 3 guard from Anchor Cleave.
+Composure tempo 80/160.
+------------------------------------------------------------
+Turn order: Toll Knight, Vanguard
+Toll Knight recovers 3 guard.
+Toll Knight enters ravage posture (power dominant).
+Toll Knight presses the line.
+Toll Knight crashes a bell-forged halberd into Vanguard.
+Maintenance Harness restores 10 guard to Vanguard.
+Maintenance Harness grants Vanguard 6 barrier.
+Vanguard withdraws behind the guard.
+Toll Knight recenters to set footing (pressure answered).
+Guard gate success: Power 80 >= 55.
+Vanguard reads the weight and hardens the guard.
+Vanguard's barrier absorbs 6 damage.
+Vanguard loses 19 break.
+Toll Knight hits Vanguard for 25 guard.
+Vanguard enters flow posture (balanced spread).
+Vanguard recenters to set footing.
+Power output x1.27 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Toll Knight [hit roll 23/87].
+Toll Knight loses 32 break.
+Vanguard hits Toll Knight for 31 guard.
+Vanguard loses 2 guard from Anchor Cleave.
+Vanguard keeps tempo from Composure 80: bonus action.
+Vanguard enters flow posture (balanced spread).
+Power output x1.28 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Toll Knight [hit roll 7/87].
+Toll Knight loses 31 break.
+Toll Knight withdraws behind the guard (staggered).
+Toll Knight is staggered!
+Vanguard hits Toll Knight for 20 guard, 11 hp.
+Vanguard loses 2 guard from Anchor Cleave.
+------------------------------------------------------------
+Turn order: Toll Knight, Vanguard
+Toll Knight is staggered and loses the turn.
+Vanguard enters flow posture (balanced spread).
+Power output x1.22 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Toll Knight [hit roll 87/87].
+Toll Knight loses 36 break.
+Vanguard hits Toll Knight for 45 hp. CRIT!
+Vanguard loses 2 guard from Anchor Cleave.
+Composure tempo 80/160.
+------------------------------------------------------------
+Turn order: Toll Knight, Vanguard
+Toll Knight recovers 3 guard.
+Toll Knight enters ravage posture (power dominant).
+Toll Knight recenters to set footing.
+Toll Knight crashes a bell-forged halberd into Vanguard.
+Maintenance Harness restores 10 guard to Vanguard.
+Maintenance Harness grants Vanguard 6 barrier.
+Vanguard withdraws behind the guard.
+Toll Knight withdraws behind the guard (pressure answered).
+Guard gate success: Power 80 >= 55.
+Vanguard reads the weight and hardens the guard.
+Vanguard's barrier absorbs 6 damage.
+Vanguard loses 17 break.
+Toll Knight hits Vanguard for 20 guard.
+Vanguard enters flow posture (balanced spread).
+Vanguard recenters to set footing.
+Power output x1.10 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Toll Knight [hit roll 24/87].
+Toll Knight loses 30 break.
+Vanguard hits Toll Knight for 3 guard, 24 hp.
+Vanguard loses 1 guard from Anchor Cleave.
+Vanguard keeps tempo from Composure 80: bonus action.
+Vanguard enters flow posture (balanced spread).
+Power output x1.15 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Toll Knight [hit roll 69/87].
+Toll Knight loses 29 break.
+Toll Knight is staggered!
+Vanguard hits Toll Knight for 28 hp.
+Vanguard loses 1 guard from Anchor Cleave.
+------------------------------------------------------------
+Turn order: Toll Knight, Vanguard
+Toll Knight is staggered and loses the turn.
+Vanguard enters flow posture (balanced spread).
+Power output x1.11 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Toll Knight [hit roll 23/87].
+Toll Knight loses 30 break.
+Vanguard hits Toll Knight for 27 hp.
+Vanguard loses 1 guard from Anchor Cleave.
+Composure tempo 80/160.
+------------------------------------------------------------
+Turn order: Toll Knight, Vanguard
+Toll Knight recovers 3 guard.
+Toll Knight enters ravage posture (power dominant).
+Toll Knight recenters to set footing.
+Toll Knight tightens its stance and restores 12 guard.
+Vanguard enters flow posture (balanced spread).
+Power output x1.34 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Toll Knight [hit roll 37/87].
+Toll Knight loses 33 break.
+Vanguard hits Toll Knight for 15 guard, 18 hp.
+Vanguard loses 1 guard from Anchor Cleave.
+Vanguard keeps tempo from Composure 80: bonus action.
+Vanguard enters flow posture (balanced spread).
+Power output x1.11 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Toll Knight [hit roll 67/87].
+Vanguard hits Toll Knight for 27 hp.
+Toll Knight falls.
+Vanguard loses 1 guard from Anchor Cleave.
+Players win the battle.
+Battle log written to: quiet_relay_vs_balance_logs_2026/10_toll_plaza.txt
+Victory. Echo shards gained: 2. Echo shards on hand: 3
+
+Toll Plaza Preparations. Echo Shards on hand: 3
+Spend up to 2 purchases before the bell tower.
+Auto shop choice: Field Dressing
+Field dressings are applied. The party restores 24 total HP.
+Echo Shards remaining: 2
+
+Toll Plaza Preparations. Echo Shards on hand: 2
+Spend up to 2 purchases before the bell tower.
+Auto shop choice: Bellbreaker Oil
+Bellbreaker oil is brushed onto blades. Boss guard penalty increases by 25.
+Echo Shards remaining: 0
+The team closes the route kit and moves on.
+🧭 Choose the next route:
+  1. ◈ Undertone Landing -- Event -- Shared route -- 🟢 Low risk -- [recovery, break, boss_prep]
+     Shared boss-prep stop with two final preparations. Likely rewards:
+     recovery, break, boss_prep.
+  2. ◈ Tollgate Surge -- Battle -- Shared route -- 🔴 High risk -- [risk, shards, boss_prep]
+     Skip the safe landing for a final elite payoff before Orison. Likely
+     rewards: risk, shards, boss_prep.
+▶️ Auto route choice: Undertone Landing
+
+====================================================================================
+🧭 District 03: Rain Toll Corridor
+◈ Undertone Landing -- Event -- Shared route -- 🟢 Low risk -- [recovery, break, boss_prep]
+Route Step 6
+💠 Echo Shards on hand: 0
+------------------------------------------------------------------------------------
+A landing below the bell tower hums with three debts braided into one undertone.
+The route behind you colors the echo: sluice-weight and guard on one side,
+chapel aim and late chimes on the other. There is time for two final
+preparations before Orison answers.
+
+Choose 2 rewards from Undertone Landing Preparations:
+Pick 1/2 (2 picks remaining):
+  1. Ward Flares - All allies start future battles with 10 barrier.
+  2. Steady Chimes - +10 max break to all allies.
+  3. Field Dressing - Heal all allies for 18 HP.
+  4. Bellbreaker Oil - Bosses start with 25 less guard.
+Bellbreaker oil is brushed onto blades. Boss guard penalty increases by 25.
+Pick 2/2 (1 pick remaining):
+  1. Ward Flares - All allies start future battles with 10 barrier.
+  2. Steady Chimes - +10 max break to all allies.
+  3. Field Dressing - Heal all allies for 18 HP.
+Ward flares are packed for the route. Future battles start with +10 barrier.
+
+====================================================================================
+🧭 District 03: Rain Toll Corridor
+◈ Bell Tower Threshold -- Boss -- Shared route -- 🔴 High risk -- [boss, break, parry]
+Route Step 7
+💠 Echo Shards on hand: 0
+------------------------------------------------------------------------------------
+At the district heart, Orison, Vicar of the Last Toll, steps from the tower
+shadow and names three debts: force, aim, and nerve. The first bellflash is
+clear, but the second toll waits after the breath.
+
+Battle setup: starting Spotlight 1, prebattle barrier 10.
+Node axis scores: Power 80, Precision 80, Composure 80.
+Battle begins.
+Node axis scores: Power 80, Precision 80, Composure 80.
+Turn order: Orison, Vicar of the Last Toll, Vanguard
+Orison weighs the party like flood-forged debt.
+Orison, Vicar of the Last Toll enters ravage posture (power dominant).
+Orison, Vicar of the Last Toll presses the line.
+Orison, Vicar of the Last Toll drives a tower step through Vanguard.
+Player Spotlight +2 (Slip Ledger) -> 3/5
+Slip Ledger steadies Vanguard's next offensive risk.
+Vanguard spends 8/8 Break to dodge.
+Vanguard dodges cleanly [dodge roll 36/62].
+Orison, Vicar of the Last Toll loses 10 break.
+Orison oversteps into an exposed beat.
+Vanguard enters flow posture (balanced spread).
+Power output x1.34 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 28/92].
+Orison, Vicar of the Last Toll loses 33 break.
+Vanguard hits Orison, Vicar of the Last Toll for 37 guard.
+Vanguard loses 1 guard from Anchor Cleave.
+Vanguard's slip window closes.
+Composure tempo 80/160.
+------------------------------------------------------------
+Turn order: Orison, Vicar of the Last Toll, Vanguard
+Orison, Vicar of the Last Toll is no longer affected by reveal.
+Orison, Vicar of the Last Toll recovers 3 guard.
+Orison, Vicar of the Last Toll enters flow posture (balanced spread).
+Orison, Vicar of the Last Toll recenters to set footing.
+Player Spotlight +1 (Orison, Vicar of the Last Toll entered Flow) -> 4/5
+Orison tolls for nerve; the pressure lands after the breath.
+Vanguard's barrier is sheared by 10.
+Player Spotlight +1 (Slip Ledger) -> 5/5
+Slip Ledger steadies Vanguard's next offensive risk.
+Floodgate Loop inflicts soak on Orison, Vicar of the Last Toll.
+Orison, Vicar of the Last Toll withdraws behind the guard (pressure answered).
+Vanguard spends 8/8 Break to dodge.
+Vanguard dodges cleanly [dodge roll 53/80].
+Vanguard reads the channel beat and slips clear.
+Orison, Vicar of the Last Toll loses 9 break.
+The toll is answered cleanly and Orison yields ground.
+Vanguard enters flow posture (balanced spread).
+Power output x1.24 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 86/92].
+Orison, Vicar of the Last Toll loses 36 break.
+Vanguard hits Orison, Vicar of the Last Toll for 33 guard.
+Vanguard loses 1 guard from Anchor Cleave.
+Vanguard's slip window closes.
+Vanguard keeps tempo from Composure 80: bonus action.
+Vanguard enters flow posture (balanced spread).
+Power output x1.43 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 46/92].
+Orison, Vicar of the Last Toll loses 39 break.
+Vanguard hits Orison, Vicar of the Last Toll for 28 guard, 12 hp.
+Vanguard loses 1 guard from Anchor Cleave.
+------------------------------------------------------------
+Turn order: Orison, Vicar of the Last Toll, Vanguard
+Orison, Vicar of the Last Toll is no longer affected by soak.
+Orison, Vicar of the Last Toll is no longer affected by reveal.
+Orison, Vicar of the Last Toll recovers 3 guard.
+Orison, Vicar of the Last Toll enters flow posture (balanced spread).
+Orison, Vicar of the Last Toll recenters to set footing.
+Only one bellflash is true.
+A false flash skims high before the true cut arrives.
+Slip Ledger steadies Vanguard's next offensive risk.
+Floodgate Loop inflicts soak on Orison, Vicar of the Last Toll.
+Orison, Vicar of the Last Toll withdraws behind the guard (pressure answered).
+Vanguard spends 8/8 Break to dodge.
+Vanguard dodges cleanly [dodge roll 15/68].
+Vanguard reads the burst and slips clear.
+Orison, Vicar of the Last Toll loses 9 break.
+The toll is answered cleanly and Orison yields ground.
+Vanguard enters flow posture (balanced spread).
+Power output x1.27 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 36/92].
+Orison, Vicar of the Last Toll loses 23 break.
+Orison, Vicar of the Last Toll is staggered!
+Vanguard hits Orison, Vicar of the Last Toll for 37 hp.
+Vanguard loses 1 guard from Anchor Cleave.
+Vanguard's slip window closes.
+Composure tempo 80/160.
+------------------------------------------------------------
+Turn order: Orison, Vicar of the Last Toll, Vanguard
+Orison, Vicar of the Last Toll is staggered and loses the turn.
+Orison, Vicar of the Last Toll is no longer affected by soak.
+Orison, Vicar of the Last Toll is no longer affected by reveal.
+Vanguard enters flow posture (balanced spread).
+Power output x1.25 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 73/87].
+Orison, Vicar of the Last Toll loses 32 break.
+Vanguard hits Orison, Vicar of the Last Toll for 31 hp.
+Vanguard loses 1 guard from Anchor Cleave.
+Vanguard keeps tempo from Composure 80: bonus action.
+Vanguard enters flow posture (balanced spread).
+Power output x1.28 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 17/87].
+Orison, Vicar of the Last Toll loses 32 break.
+Vanguard hits Orison, Vicar of the Last Toll for 31 hp.
+Vanguard loses 1 guard from Anchor Cleave.
+------------------------------------------------------------
+Turn order: Orison, Vicar of the Last Toll, Vanguard
+Orison, Vicar of the Last Toll recovers 3 guard.
+Orison, Vicar of the Last Toll enters ravage posture (power dominant).
+Orison, Vicar of the Last Toll recenters to set footing.
+Orison, Vicar of the Last Toll drives a tower step through Vanguard.
+Slip Ledger steadies Vanguard's next offensive risk.
+Vanguard spends 8/8 Break to dodge.
+Vanguard dodges cleanly [dodge roll 56/62].
+Orison, Vicar of the Last Toll loses 10 break.
+Orison oversteps into an exposed beat.
+Vanguard enters flow posture (balanced spread).
+Power output x1.11 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 88/92].
+Orison, Vicar of the Last Toll loses 33 break.
+Vanguard hits Orison, Vicar of the Last Toll for 48 hp. CRIT!
+Vanguard loses 1 guard from Anchor Cleave.
+Vanguard's slip window closes.
+Composure tempo 80/160.
+------------------------------------------------------------
+Turn order: Orison, Vicar of the Last Toll, Vanguard
+Orison, Vicar of the Last Toll is no longer affected by reveal.
+Orison, Vicar of the Last Toll recovers 3 guard.
+Orison, Vicar of the Last Toll enters flow posture (balanced spread).
+Only one bellflash is true.
+A false flash skims high before the true cut arrives.
+Enemy Spotlight +1 (Vanguard mistimed dodge) -> 1/5
+Vanguard spends 3/8 Break to dodge.
+Vanguard's empty Break meter makes the dodge shaky.
+Vanguard mistimes the dodge [dodge roll 65/48].
+Vanguard withdraws behind the guard (staggered).
+Vanguard is staggered!
+Enemy Spotlight +1 (Orison, Vicar of the Last Toll staggered Vanguard) -> 2/5
+Orison, Vicar of the Last Toll hits Vanguard for 1 guard, 14 hp.
+Vanguard gains reveal (1).
+Enemy Spotlight +1 (Orison, Vicar of the Last Toll applied reveal) -> 3/5
+Vanguard is staggered and loses the turn.
+Vanguard is no longer affected by reveal.
+------------------------------------------------------------
+Turn order: Orison, Vicar of the Last Toll, Vanguard
+Orison, Vicar of the Last Toll recovers 3 guard.
+Orison, Vicar of the Last Toll enters ravage posture (power dominant).
+Orison, Vicar of the Last Toll presses the line.
+The tower tolls red.
+Enemy Spotlight -1 (cashed for pressure) -> 2/5
+Enemy Spotlight is cashed for pressure.
+Slip Ledger steadies Vanguard's next offensive risk.
+Floodgate Loop inflicts soak on Orison, Vicar of the Last Toll.
+Vanguard recenters to set footing.
+Orison, Vicar of the Last Toll recenters to set footing (pressure answered).
+Vanguard spends 8/8 Break to dodge.
+Vanguard dodges cleanly [dodge roll 21/78].
+Vanguard reads the weight and slips clear.
+Vanguard slips wide from withdrawn footing.
+Orison, Vicar of the Last Toll loses 9 break.
+The toll is answered cleanly and Orison yields ground.
+Vanguard enters flow posture (balanced spread).
+Power output x1.15 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 9/92].
+Orison, Vicar of the Last Toll loses 35 break.
+Vanguard hits Orison, Vicar of the Last Toll for 50 hp. CRIT!
+Vanguard loses 0 guard from Anchor Cleave.
+Vanguard's slip window closes.
+Vanguard keeps tempo from Composure 80: bonus action.
+Vanguard enters flow posture (balanced spread).
+Power output x1.20 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard grazes Orison, Vicar of the Last Toll [hit roll 100/92].
+Enemy Spotlight +1 (Vanguard risky graze) -> 3/5
+Orison, Vicar of the Last Toll loses 8 break.
+Orison, Vicar of the Last Toll withdraws behind the guard (staggered).
+Orison, Vicar of the Last Toll is staggered!
+Vanguard hits Orison, Vicar of the Last Toll for 17 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+------------------------------------------------------------
+Turn order: Orison, Vicar of the Last Toll, Vanguard
+Orison, Vicar of the Last Toll is staggered and loses the turn.
+Orison, Vicar of the Last Toll is no longer affected by soak.
+Orison, Vicar of the Last Toll is no longer affected by reveal.
+Vanguard enters flow posture (balanced spread).
+Power output x1.03 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 31/87].
+Orison, Vicar of the Last Toll loses 32 break.
+Vanguard hits Orison, Vicar of the Last Toll for 38 hp. CRIT!
+Vanguard loses 0 guard from Anchor Cleave.
+Composure tempo 80/160.
+------------------------------------------------------------
+Turn order: Orison, Vicar of the Last Toll, Vanguard
+Orison, Vicar of the Last Toll recovers 3 guard.
+Orison, Vicar of the Last Toll enters ravage posture (power dominant).
+Orison, Vicar of the Last Toll recenters to set footing.
+Orison, Vicar of the Last Toll drives a tower step through Vanguard.
+Enemy Spotlight -1 (cashed for pressure) -> 2/5
+Enemy Spotlight is cashed for pressure.
+Enemy Spotlight +1 (Vanguard mistimed dodge) -> 3/5
+Vanguard spends 8/8 Break to dodge.
+Vanguard mistimes the dodge [dodge roll 72/62].
+Vanguard loses 20 break.
+Orison, Vicar of the Last Toll hits Vanguard for 20 hp.
+Vanguard enters flow posture (balanced spread).
+Power output x1.25 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 45/87].
+Orison, Vicar of the Last Toll loses 32 break.
+Vanguard hits Orison, Vicar of the Last Toll for 3 guard, 28 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+Vanguard keeps tempo from Composure 80: bonus action.
+Vanguard enters flow posture (balanced spread).
+Power output x1.32 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 78/87].
+Orison, Vicar of the Last Toll loses 33 break.
+Vanguard hits Orison, Vicar of the Last Toll for 32 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+------------------------------------------------------------
+Turn order: Orison, Vicar of the Last Toll, Vanguard
+Orison, Vicar of the Last Toll recovers 3 guard.
+Orison, Vicar of the Last Toll enters ravage posture (power dominant).
+Orison, Vicar of the Last Toll presses the line.
+The tower tolls red.
+Enemy Spotlight -1 (cashed for pressure) -> 2/5
+Enemy Spotlight is cashed for pressure.
+Enemy Spotlight +1 (Vanguard mistimed dodge) -> 3/5
+Vanguard spends 8/8 Break to dodge.
+Vanguard mistimes the dodge [dodge roll 78/68].
+Vanguard loses 28 break.
+Orison, Vicar of the Last Toll hits Vanguard for 24 hp.
+Vanguard gains scorch (1).
+Vanguard is scorched for 8 damage.
+Vanguard loses 8 HP (scorch).
+Vanguard is no longer affected by scorch.
+Vanguard enters flow posture (balanced spread).
+Power output x1.26 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 55/87].
+Orison, Vicar of the Last Toll loses 32 break.
+Vanguard hits Orison, Vicar of the Last Toll for 3 guard, 28 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+Composure tempo 80/160.
+------------------------------------------------------------
+Turn order: Orison, Vicar of the Last Toll, Vanguard
+Orison, Vicar of the Last Toll recovers 3 guard.
+Orison, Vicar of the Last Toll enters Quiet Relay cadence.
+Orison, Vicar of the Last Toll enters flow posture (balanced spread).
+Orison, Vicar of the Last Toll recenters to set footing.
+Orison tolls for nerve; the pressure lands after the breath.
+Enemy Spotlight -1 (cashed for pressure) -> 2/5
+Enemy Spotlight is cashed for pressure.
+Slip Ledger steadies Vanguard's next offensive risk.
+Floodgate Loop inflicts soak on Orison, Vicar of the Last Toll.
+Orison, Vicar of the Last Toll withdraws behind the guard (pressure answered).
+Vanguard spends 8/8 Break to dodge.
+Vanguard dodges cleanly [dodge roll 50/80].
+Vanguard reads the channel beat and slips clear.
+Orison, Vicar of the Last Toll loses 9 break.
+The toll is answered cleanly and Orison yields ground.
+Vanguard enters flow posture (balanced spread).
+Power output x1.16 from Power 80.
+Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 46/92].
+Orison, Vicar of the Last Toll loses 21 break.
+Orison, Vicar of the Last Toll is staggered!
+Vanguard hits Orison, Vicar of the Last Toll for 50 hp. CRIT!
+Vanguard loses 0 guard from Anchor Cleave.
+Vanguard's slip window closes.
+Vanguard keeps tempo from Composure 80: bonus action.
+Player Spotlight -2 (Vanguard used Execution Drop) -> 3/5
+Vanguard enters flow posture (balanced spread).
+Power output x1.31 from Power 80.
+Vanguard uses Execution Drop [P:80/exalted, R:80/exalted, C:80/exalted]
+Vanguard lines up Orison, Vicar of the Last Toll [hit roll 56/95].
+Vanguard hits Orison, Vicar of the Last Toll for 155 hp. CRIT!
+Orison, Vicar of the Last Toll falls.
+Players win the battle.
+Battle log written to: quiet_relay_vs_balance_logs_2026/13_bell_tower.txt
+Victory. Echo shards gained: 4. Echo shards on hand: 4

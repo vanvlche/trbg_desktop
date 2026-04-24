@@ -1,0 +1,412 @@
+
+====================================================================================
+🕯️ Quiet Relay: 2026 - Operations Base [Fully Data-Driven]
+------------------------------------------------------------------------------------
+Late 2026. Rain ticks against emergency floodlights while the expedition team
+regroups in a ruined signal base. Beyond the shutters waits the Rain Toll
+Corridor, a short but hostile district warped by bells, transit steel, and ash.
+
+🧭 District: District 03: Rain Toll Corridor
+Last result: No expeditions yet.
+Record: 0 wins / 0 losses | Best nodes cleared: 0
+💾 Save file: quiet_relay_vs_606060_2027.json
+↩️ No expedition currently active.
+
+⛭ PARTY STATUS
+------------------------------------------------------------------------------------
+🧭 Selected for next expedition: Vanguard
+1. 🛡️ Vanguard           HP 160/160  GUARD  72/72   BREAK  90/90   ash    posture=flow    pos=set       | weapon=Anchor Greatblade | 🧿 relics=Iron Vow
+------------------------------------------------------------------------------------
+🩹 Recovery Charges: 3/3 | ☀️ Start Spotlight: 0 | 🛡️ Prebattle Barrier: 0 | 👑 Boss Guard Penalty: 0
+💠 Echo Shards: 0
+📂 Content Pack: /mnt/c/Users/kim50/projects/trbg_desktop/quiet_relay_content
+✦ Run Boons: none
+
+
+====================================================================================
+🧭 District 03: Rain Toll Corridor
+◈ Overpass Watch -- Battle -- Shared route -- 🟡 Medium risk -- [guard, spotlight, recovery]
+Route Step 1
+💠 Echo Shards on hand: 0
+------------------------------------------------------------------------------------
+An elevated roadway buckles under cathedral stone. A Rustbound Pilgrim drags its
+bell-metal blade through the rain while ivy crawls across the guardrail.
+
+Battle setup: starting Spotlight 0, prebattle barrier 0.
+Node axis scores: Power 60, Precision 60, Composure 60.
+Encounter variant: pilgrim_ivy_watch (rustbound_pilgrim, ivy_strangler)
+Battle begins.
+Node axis scores: Power 60, Precision 60, Composure 60.
+Turn order: Ivy Strangler #2, Vanguard, Rustbound Pilgrim
+Ivy Strangler #2 enters flow posture (balanced spread).
+Player Spotlight +1 (Ivy Strangler #2 entered Flow) -> 1/5
+Ivy Strangler #2 lashes thorn-vines at Vanguard.
+Vanguard withdraws behind the guard.
+Guard gate success: Power 60 >= 55.
+Vanguard loses 9 break.
+Ivy Strangler #2 hits Vanguard for 14 guard.
+Vanguard gains snare (2).
+Vanguard enters flow posture (balanced spread).
+Vanguard recenters to set footing.
+Vanguard cleanses snare via Flow.
+Power output x1.16 from Power 60.
+Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+Vanguard lines up Ivy Strangler #2 [hit roll 24/79].
+Ivy Strangler #2 loses 35 break.
+Vanguard hits Ivy Strangler #2 for 35 guard.
+Player Spotlight +1 (Vanguard exploited affinity) -> 2/5
+Vanguard loses 3 guard from Anchor Cleave.
+Composure tempo 60/160.
+Rustbound Pilgrim raises its weapon and begins charging a heavy overhead.
+------------------------------------------------------------
+Turn order: Ivy Strangler #2, Rustbound Pilgrim, Vanguard
+Ivy Strangler #2 recovers 3 guard.
+Ivy Strangler #2 enters flow posture (balanced spread).
+Ivy Strangler #2 lashes thorn-vines at Vanguard.
+Vanguard withdraws behind the guard.
+Guard gate success: Power 60 >= 55.
+Vanguard loses 9 break.
+Ivy Strangler #2 hits Vanguard for 14 guard.
+Rustbound Pilgrim enters ravage posture (power dominant).
+Rustbound Pilgrim presses the line.
+Rustbound Pilgrim brings down a rusted overhead on Vanguard.
+Rustbound Pilgrim recenters to set footing (pressure answered).
+Guard gate success: Power 60 >= 55.
+Vanguard reads the weight and hardens the guard.
+Vanguard loses 19 break.
+Rustbound Pilgrim hits Vanguard for 36 guard.
+Vanguard enters flow posture (balanced spread).
+Vanguard recenters to set footing.
+Player Spotlight +1 (Vanguard entered Flow) -> 3/5
+Power output x1.17 from Power 60.
+Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+Vanguard lines up Ivy Strangler #2 [hit roll 39/79].
+Ivy Strangler #2 loses 1 break.
+Ivy Strangler #2 withdraws behind the guard (staggered).
+Ivy Strangler #2 is staggered!
+Vanguard hits Ivy Strangler #2 for 8 guard, 27 hp.
+Player Spotlight +1 (Vanguard exploited affinity) -> 4/5
+Vanguard loses 1 guard from Anchor Cleave.
+Composure tempo 120/160.
+------------------------------------------------------------
+Turn order: Ivy Strangler #2, Rustbound Pilgrim, Vanguard
+Ivy Strangler #2 is staggered and loses the turn.
+Rustbound Pilgrim raises its weapon and begins charging a heavy overhead.
+Vanguard enters flow posture (balanced spread).
+Power output x1.24 from Power 60.
+Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+Vanguard lines up Ivy Strangler #2 [hit roll 55/79].
+Ivy Strangler #2 loses 36 break.
+Ivy Strangler #2 is staggered!
+Vanguard hits Ivy Strangler #2 for 38 hp.
+Player Spotlight +1 (Vanguard exploited affinity) -> 5/5
+Vanguard loses 1 guard from Anchor Cleave.
+Vanguard keeps tempo from Composure 60: bonus action.
+Player Spotlight -2 (Vanguard used Execution Drop) -> 3/5
+Vanguard enters flow posture (balanced spread).
+Power output x1.04 from Power 60.
+Vanguard uses Execution Drop [P:60/fierce, R:60/fierce, C:60/fierce]
+Vanguard grazes Ivy Strangler #2 [hit roll 94/93].
+Vanguard hits Ivy Strangler #2 for 45 hp.
+Ivy Strangler #2 falls.
+Player Spotlight +1 (Vanguard exploited affinity) -> 4/5
+------------------------------------------------------------
+Turn order: Vanguard, Rustbound Pilgrim
+Vanguard enters flow posture (balanced spread).
+Player Spotlight +1 (Vanguard entered Flow) -> 5/5
+Power output x1.29 from Power 60.
+Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+Vanguard lines up Rustbound Pilgrim [hit roll 51/79].
+Rustbound Pilgrim loses 37 break.
+Vanguard hits Rustbound Pilgrim for 25 guard, 6 hp.
+Vanguard loses 1 guard from Anchor Cleave.
+Composure tempo 80/160.
+Rustbound Pilgrim recovers 3 guard.
+Rustbound Pilgrim enters ravage posture (power dominant).
+Rustbound Pilgrim presses the line.
+Rustbound Pilgrim brings down a rusted overhead on Vanguard.
+Enemy Spotlight +1 (Vanguard failed dodge gate) -> 1/5
+Vanguard spends 8/8 Break to dodge.
+Dodge gate failed: Precision 60 < 62.
+Vanguard loses 44 break.
+Rustbound Pilgrim hits Vanguard for 38 hp.
+Vanguard gains scorch (2).
+------------------------------------------------------------
+Turn order: Rustbound Pilgrim, Vanguard
+Rustbound Pilgrim recovers 3 guard.
+Rustbound Pilgrim raises its weapon and begins charging a heavy overhead.
+Vanguard is scorched for 8 damage.
+Vanguard loses 8 HP (scorch).
+Vanguard enters flow posture (balanced spread).
+Vanguard cleanses scorch via Flow.
+Power output x1.07 from Power 60.
+Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+Vanguard lines up Rustbound Pilgrim [hit roll 16/79].
+Rustbound Pilgrim loses 17 break.
+Rustbound Pilgrim withdraws behind the guard (staggered).
+Rustbound Pilgrim is staggered!
+Vanguard hits Rustbound Pilgrim for 12 guard, 14 hp.
+Vanguard loses 1 guard from Anchor Cleave.
+Composure tempo 140/160.
+------------------------------------------------------------
+Turn order: Vanguard, Rustbound Pilgrim
+Player Spotlight -2 (Vanguard used Execution Drop) -> 3/5
+Vanguard enters flow posture (balanced spread).
+Player Spotlight +1 (Vanguard entered Flow) -> 4/5
+Power output x1.20 from Power 60.
+Vanguard uses Execution Drop [P:60/fierce, R:60/fierce, C:60/fierce]
+Vanguard lines up Rustbound Pilgrim [hit roll 42/93].
+Vanguard hits Rustbound Pilgrim for 81 hp.
+Rustbound Pilgrim falls.
+Players win the battle.
+Battle log written to: quiet_relay_vs_606060_logs_2027/01_overpass_watch.txt
+Victory. Echo shards gained: 1. Echo shards on hand: 1
+Choose 1 reward from Overpass Watch Rewards:
+  1. Iron Mesh - +12 max guard to all allies, and restore 12 guard.
+  2. Stage Light - +1 starting Spotlight for future battles this run (max 3).
+  3. Field Dressing - Heal all allies for 18 HP.
+Field dressings are applied. The party restores 24 total HP.
+🧭 Choose the next route:
+  1. 🔧 Flooded Arcade -- Boss -- Maintenance route -- 🟢 Low risk -- [sustain, barrier, dodge]
+     Safer maintenance route with recovery and guard rewards. Likely rewards:
+     sustain, barrier, dodge.
+  2. 🕯️ Witness Chapel -- Boss -- Chapel route -- 🟡 Medium risk -- [parry, reveal, break]
+     Sharper chapel route with parry tempo and reveal rewards. Likely rewards:
+     parry, reveal, break.
+▶️ Auto route choice: Flooded Arcade
+
+====================================================================================
+🧭 District 03: Rain Toll Corridor
+🔧 Flooded Arcade -- Boss -- Maintenance route -- 🟢 Low risk -- [sustain, barrier, dodge]
+Route Step 2
+💠 Echo Shards on hand: 1
+------------------------------------------------------------------------------------
+Neon signage flickers beneath rising water as Moraine, Bailiff of the Sluice,
+locks a flood-key into place. Bell-marked channels throb under the tiles,
+warning that one mistimed read will drag someone under.
+
+Battle setup: starting Spotlight 0, prebattle barrier 0.
+Node axis scores: Power 60, Precision 60, Composure 60.
+Battle begins.
+Node axis scores: Power 60, Precision 60, Composure 60.
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+Moraine, Bailiff of the Sluice withdraws behind the guard.
+Moraine, Bailiff of the Sluice slams a gate stamp into Vanguard.
+Enemy Spotlight +1 (Vanguard failed dodge gate) -> 1/5
+Vanguard spends 1/8 Break to dodge.
+Dodge gate failed: Precision 60 < 62.
+Vanguard withdraws behind the guard (staggered).
+Vanguard is staggered!
+Enemy Spotlight +1 (Moraine, Bailiff of the Sluice staggered Vanguard) -> 2/5
+Moraine, Bailiff of the Sluice hits Vanguard for 19 hp.
+Vanguard is staggered and loses the turn.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+Moraine plants the flood-key.
+The sluice pressure rises behind Vanguard.
+Vanguard enters flow posture (balanced spread).
+Vanguard recenters to set footing.
+Power output x1.05 from Power 60.
+Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 10/79].
+Moraine, Bailiff of the Sluice loses 32 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 26 guard.
+Vanguard loses 1 guard from Anchor Cleave.
+Composure tempo 60/160.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice recovers 3 guard.
+Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+The spillway screams open.
+Enemy Spotlight -1 (cashed for pressure) -> 1/5
+Enemy Spotlight is cashed for pressure.
+Enemy Spotlight +1 (Vanguard failed dodge gate) -> 2/5
+Vanguard spends 8/8 Break to dodge.
+Dodge gate failed: Precision 60 < 62.
+Vanguard loses 31 break.
+Moraine, Bailiff of the Sluice hits Vanguard for 24 hp.
+Vanguard gains soak (2).
+Moraine, Bailiff of the Sluice catches the recoil and restores 6 guard.
+Vanguard enters flow posture (balanced spread).
+Vanguard cleanses soak via Flow.
+Power output x1.12 from Power 60.
+Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 28/79].
+Moraine, Bailiff of the Sluice loses 33 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 41 guard. CRIT!
+Vanguard loses 0 guard from Anchor Cleave.
+Composure tempo 120/160.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice recovers 3 guard.
+Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+Moraine, Bailiff of the Sluice slams a gate stamp into Vanguard.
+Enemy Spotlight -1 (cashed for pressure) -> 1/5
+Enemy Spotlight is cashed for pressure.
+Enemy Spotlight +1 (Vanguard failed dodge gate) -> 2/5
+Vanguard spends 8/8 Break to dodge.
+Dodge gate failed: Precision 60 < 62.
+Vanguard loses 30 break.
+Moraine, Bailiff of the Sluice hits Vanguard for 22 hp.
+Vanguard enters flow posture (balanced spread).
+Power output x1.13 from Power 60.
+Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 75/79].
+Moraine, Bailiff of the Sluice loses 30 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 28 guard.
+Vanguard loses 0 guard from Anchor Cleave.
+Vanguard keeps tempo from Composure 60: bonus action.
+Vanguard enters flow posture (balanced spread).
+Power output x0.99 from Power 60.
+Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 17/79].
+Moraine, Bailiff of the Sluice loses 25 break.
+Moraine, Bailiff of the Sluice is staggered!
+Vanguard hits Moraine, Bailiff of the Sluice for 19 guard, 5 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice is staggered and loses the turn.
+Vanguard enters flow posture (balanced spread).
+Power output x0.89 from Power 60.
+Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 43/79].
+Moraine, Bailiff of the Sluice loses 27 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 22 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+Composure tempo 80/160.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice recovers 3 guard.
+Moraine, Bailiff of the Sluice enters flow posture (balanced spread).
+Moraine, Bailiff of the Sluice recenters to set footing.
+Player Spotlight +1 (Moraine, Bailiff of the Sluice entered Flow) -> 1/5
+Moraine, Bailiff of the Sluice sweeps the breakwater across every lane.
+Enemy Spotlight -1 (cashed for pressure) -> 1/5
+Enemy Spotlight is cashed for pressure.
+Enemy Spotlight +1 (Vanguard failed dodge gate) -> 2/5
+Vanguard spends 8/8 Break to dodge.
+Dodge gate failed: Precision 60 < 62.
+Vanguard loses 5 break.
+Vanguard withdraws behind the guard (staggered).
+Vanguard is staggered!
+Enemy Spotlight +1 (Moraine, Bailiff of the Sluice staggered Vanguard) -> 3/5
+Moraine, Bailiff of the Sluice hits Vanguard for 14 hp.
+Vanguard is staggered and loses the turn.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice recovers 3 guard.
+Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+Moraine, Bailiff of the Sluice withdraws behind the guard.
+Moraine, Bailiff of the Sluice slams a gate stamp into Vanguard.
+Enemy Spotlight -1 (cashed for pressure) -> 2/5
+Enemy Spotlight is cashed for pressure.
+Enemy Spotlight +1 (Vanguard failed dodge gate) -> 3/5
+Vanguard spends 8/8 Break to dodge.
+Dodge gate failed: Precision 60 < 62.
+Vanguard loses 30 break.
+Moraine, Bailiff of the Sluice hits Vanguard for 22 hp.
+Vanguard enters flow posture (balanced spread).
+Vanguard recenters to set footing.
+Power output x1.26 from Power 60.
+Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 35/79].
+Moraine, Bailiff of the Sluice loses 32 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 6 guard, 25 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+Composure tempo 140/160.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice recovers 3 guard.
+Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+Moraine plants the flood-key.
+The sluice pressure rises behind Vanguard.
+Vanguard enters flow posture (balanced spread).
+Player Spotlight +1 (Vanguard entered Flow) -> 2/5
+Power output x1.21 from Power 60.
+Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+Vanguard grazes Moraine, Bailiff of the Sluice [hit roll 82/79].
+Moraine, Bailiff of the Sluice loses 18 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 3 guard, 12 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+Vanguard keeps tempo from Composure 60: bonus action.
+Vanguard enters flow posture (balanced spread).
+Power output x1.17 from Power 60.
+Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 72/79].
+Moraine, Bailiff of the Sluice loses 35 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 29 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice recovers 3 guard.
+Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+The spillway screams open.
+Enemy Spotlight -1 (cashed for pressure) -> 2/5
+Enemy Spotlight is cashed for pressure.
+Enemy Spotlight +1 (Vanguard failed dodge gate) -> 3/5
+Vanguard spends 8/8 Break to dodge.
+Dodge gate failed: Precision 60 < 62.
+Vanguard loses 31 break.
+Moraine, Bailiff of the Sluice hits Vanguard for 24 hp.
+Vanguard gains soak (2).
+Moraine, Bailiff of the Sluice catches the recoil and restores 6 guard.
+Vanguard enters flow posture (balanced spread).
+Vanguard cleanses soak via Flow.
+Power output x1.07 from Power 60.
+Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 55/79].
+Moraine, Bailiff of the Sluice loses 8 break.
+Moraine, Bailiff of the Sluice is staggered!
+Vanguard hits Moraine, Bailiff of the Sluice for 9 guard, 17 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+Composure tempo 100/160.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice is staggered and loses the turn.
+Vanguard enters flow posture (balanced spread).
+Player Spotlight +1 (Vanguard entered Flow) -> 3/5
+Power output x1.31 from Power 60.
+Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 33/79].
+Moraine, Bailiff of the Sluice loses 33 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 32 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+Vanguard keeps tempo from Composure 60: bonus action.
+Vanguard enters flow posture (balanced spread).
+Power output x1.15 from Power 60.
+Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+Vanguard lines up Moraine, Bailiff of the Sluice [hit roll 35/79].
+Moraine, Bailiff of the Sluice loses 31 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 28 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice recovers 3 guard.
+Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+Moraine plants the flood-key.
+The sluice pressure rises behind Vanguard.
+Vanguard enters flow posture (balanced spread).
+Power output x1.10 from Power 60.
+Vanguard uses Anchor Cleave [P:60/fierce, R:60/fierce, C:60/fierce]
+Vanguard grazes Moraine, Bailiff of the Sluice [hit roll 84/79].
+Moraine, Bailiff of the Sluice loses 17 break.
+Vanguard hits Moraine, Bailiff of the Sluice for 3 guard, 11 hp.
+Vanguard loses 0 guard from Anchor Cleave.
+Composure tempo 60/160.
+------------------------------------------------------------
+Turn order: Moraine, Bailiff of the Sluice, Vanguard
+Moraine, Bailiff of the Sluice recovers 3 guard.
+Moraine, Bailiff of the Sluice enters bastion posture (composure dominant).
+The spillway screams open.
+Enemy Spotlight -1 (cashed for pressure) -> 2/5
+Enemy Spotlight is cashed for pressure.
+Enemy Spotlight +1 (Vanguard failed dodge gate) -> 3/5
+Vanguard spends 8/8 Break to dodge.
+Dodge gate failed: Precision 60 < 62.
+Moraine, Bailiff of the Sluice hits Vanguard for 24 hp.
+Vanguard falls.
+Enemies win the battle.
+Battle log written to: quiet_relay_vs_606060_logs_2027/02_flooded_arcade.txt

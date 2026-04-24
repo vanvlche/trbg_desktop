@@ -1,0 +1,121 @@
+[Round 01] Battle loadout: Feint Rush, Double Strike, Charge Slash.
+[Round 01] Battle begins.
+[Round 01] Node axis scores: Power 80, Precision 80, Composure 80.
+[Round 01] Turn order: Toll Knight, Vanguard
+[Round 01] Toll Knight enters ravage posture (power dominant).
+[Round 01] Toll Knight presses the line.
+[Round 01] Toll Knight tightens its stance and restores 0 guard.
+[Round 01] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+[Round 01] Vanguard enters flow posture (balanced spread).
+[Round 01] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 01] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 01] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 01] Vanguard lines up Toll Knight [hit roll 58/94].
+[Round 01] Toll Knight loses 93 break.
+[Round 01] Vanguard hits Toll Knight for 30 guard. CRIT!
+[Round 01] Charge Slash batters the enemy's Break.
+[Round 01] Vanguard uses Double Strike [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 01] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 01] Vanguard lines up Toll Knight [hit roll 12/95].
+[Round 01] Toll Knight loses 2 break.
+[Round 01] Toll Knight withdraws behind the guard (staggered).
+[Round 01] Toll Knight is staggered!
+[Round 01] Vanguard hits Toll Knight for 24 guard. CRIT!
+[Round 01] Double Strike hit 1/2 resolves.
+[Round 01] Vanguard lines up Toll Knight [hit roll 58/95].
+[Round 01] Vanguard hits Toll Knight for 21 guard.
+[Round 01] Double Strike hit 2/2 resolves.
+[Round 01] Double Strike piles on extra Break pressure.
+[Round 01] Vanguard is left open: Guard and Parry are disabled until the next turn.
+[Round 02] ------------------------------------------------------------
+[Round 02] Turn order: Toll Knight, Vanguard
+[Round 02] Toll Knight is staggered and loses the turn.
+[Round 02] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+[Round 02] Vanguard enters flow posture (balanced spread).
+[Round 02] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 02] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 02] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 02] Vanguard lines up Toll Knight [hit roll 79/94].
+[Round 02] Toll Knight loses 84 break.
+[Round 02] Vanguard hits Toll Knight for 3 guard, 17 hp.
+[Round 02] Charge Slash batters the enemy's Break.
+[Round 02] Vanguard uses Double Strike [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 02] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 02] Vanguard lines up Toll Knight [hit roll 32/95].
+[Round 02] Toll Knight loses 10 break.
+[Round 02] Vanguard hits Toll Knight for 16 hp.
+[Round 02] Double Strike hit 1/2 resolves.
+[Round 02] Vanguard lines up Toll Knight [hit roll 80/95].
+[Round 02] Toll Knight loses 1 break.
+[Round 02] Toll Knight is staggered!
+[Round 02] Vanguard hits Toll Knight for 24 hp. CRIT!
+[Round 02] Double Strike hit 2/2 resolves.
+[Round 02] Double Strike piles on extra Break pressure.
+[Round 02] Vanguard is left open: Guard and Parry are disabled until the next turn.
+[Round 03] ------------------------------------------------------------
+[Round 03] Turn order: Toll Knight, Vanguard
+[Round 03] Toll Knight is staggered and loses the turn.
+[Round 03] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+[Round 03] Vanguard enters flow posture (balanced spread).
+[Round 03] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 03] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 03] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 03] Vanguard lines up Toll Knight [hit roll 86/94].
+[Round 03] Toll Knight loses 84 break.
+[Round 03] Vanguard hits Toll Knight for 20 hp.
+[Round 03] Charge Slash batters the enemy's Break.
+[Round 03] Vanguard uses Double Strike [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 03] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 03] Vanguard lines up Toll Knight [hit roll 82/95].
+[Round 03] Toll Knight loses 10 break.
+[Round 03] Vanguard hits Toll Knight for 16 hp.
+[Round 03] Double Strike hit 1/2 resolves.
+[Round 03] Vanguard lines up Toll Knight [hit roll 20/95].
+[Round 03] Toll Knight loses 1 break.
+[Round 03] Toll Knight is staggered!
+[Round 03] Vanguard hits Toll Knight for 24 hp. CRIT!
+[Round 03] Double Strike hit 2/2 resolves.
+[Round 03] Double Strike piles on extra Break pressure.
+[Round 03] Vanguard is left open: Guard and Parry are disabled until the next turn.
+[Round 04] ------------------------------------------------------------
+[Round 04] Turn order: Toll Knight, Vanguard
+[Round 04] Toll Knight is staggered and loses the turn.
+[Round 04] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+[Round 04] Vanguard enters flow posture (balanced spread).
+[Round 04] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 04] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 04] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 04] Vanguard grazes Toll Knight [hit roll 99/94].
+[Round 04] Toll Knight loses 42 break.
+[Round 04] Vanguard hits Toll Knight for 10 hp.
+[Round 04] Charge Slash batters the enemy's Break.
+[Round 04] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 04] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 04] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 04] Vanguard lines up Toll Knight [hit roll 63/94].
+[Round 04] Toll Knight loses 53 break.
+[Round 04] Toll Knight is staggered!
+[Round 04] Vanguard hits Toll Knight for 20 hp.
+[Round 04] Charge Slash batters the enemy's Break.
+[Round 04] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 05] ------------------------------------------------------------
+[Round 05] Turn order: Toll Knight, Vanguard
+[Round 05] Toll Knight is staggered and loses the turn.
+[Round 05] Vanguard cashes in +1 AP from last turn's setup.
+[Round 05] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+[Round 05] Vanguard enters flow posture (balanced spread).
+[Round 05] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 05] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 05] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 05] Vanguard lines up Toll Knight [hit roll 29/94].
+[Round 05] Toll Knight loses 84 break.
+[Round 05] Vanguard hits Toll Knight for 20 hp.
+[Round 05] Charge Slash batters the enemy's Break.
+[Round 05] Vanguard uses Double Strike [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 05] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 05] Vanguard lines up Toll Knight [hit roll 76/95].
+[Round 05] Vanguard hits Toll Knight for 16 hp.
+[Round 05] Toll Knight falls.
+[Round 05] Double Strike hit 1/2 resolves.
+[Round 05] Vanguard is left open: Guard and Parry are disabled until the next turn.
+[Round 05] Players win the battle.

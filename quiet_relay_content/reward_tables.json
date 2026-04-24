@@ -109,6 +109,69 @@
       "cost": 2,
       "effect_type": "grant_relic",
       "relic_id": "applause_knot"
+    },
+    "potion_capacity_plus_one": {
+      "display_name": "Potion Capacity +1",
+      "description": "Max healing potions per run +1, and gain 1 potion now.",
+      "cost": 2,
+      "effect_type": "grant_potion_upgrade",
+      "upgrade_id": "potion_capacity_plus_one"
+    },
+    "stronger_potions": {
+      "display_name": "Stronger Potions",
+      "description": "Healing potions restore 20% more HP.",
+      "cost": 2,
+      "effect_type": "grant_potion_upgrade",
+      "upgrade_id": "stronger_potions"
+    },
+    "boss_refill": {
+      "display_name": "Boss Refill",
+      "description": "Before a boss battle, restore 1 potion if the party has none left.",
+      "cost": 2,
+      "effect_type": "grant_potion_upgrade",
+      "upgrade_id": "boss_refill"
+    },
+    "guarding_draught": {
+      "display_name": "Guarding Draught",
+      "description": "Potion use now restores some Guard as well as HP.",
+      "cost": 1,
+      "effect_type": "grant_potion_upgrade",
+      "upgrade_id": "guarding_draught"
+    },
+    "spotlight_tonic": {
+      "display_name": "Spotlight Tonic",
+      "description": "Potion use now grants +1 Spotlight.",
+      "cost": 2,
+      "effect_type": "grant_potion_upgrade",
+      "upgrade_id": "spotlight_tonic"
+    },
+    "chalice_tolerance": {
+      "display_name": "Chalice Tolerance",
+      "description": "Poisoned Chalice penalties are reduced by half.",
+      "cost": 1,
+      "effect_type": "grant_potion_upgrade",
+      "upgrade_id": "chalice_tolerance"
+    },
+    "kings_wager_kit": {
+      "display_name": "King's Wager",
+      "description": "Grant the King's Wager relic to the current party.",
+      "cost": 2,
+      "effect_type": "grant_relic",
+      "relic_id": "kings_wager"
+    },
+    "black_vial_cord_kit": {
+      "display_name": "Black Vial Cord",
+      "description": "Grant the Black Vial Cord relic to the current party.",
+      "cost": 2,
+      "effect_type": "grant_relic",
+      "relic_id": "black_vial_cord"
+    },
+    "anklet_bell_in_rain_kit": {
+      "display_name": "Anklet Bell in Rain",
+      "description": "Grant the Anklet Bell in Rain relic to the current party.",
+      "cost": 3,
+      "effect_type": "grant_relic",
+      "relic_id": "anklet_bell_in_rain"
     }
   },
   "tables": {
@@ -156,7 +219,10 @@
       "options": [
         "maintenance_harness_kit",
         "slip_ledger_kit",
-        "ward_flares"
+        "ward_flares",
+        "potion_capacity_plus_one",
+        "stronger_potions",
+        "guarding_draught"
       ]
     },
     "sluice_jury_rewards": {
@@ -218,7 +284,9 @@
       "options": [
         "bellglass_notch_kit",
         "applause_knot_kit",
-        "stage_light"
+        "stage_light",
+        "spotlight_tonic",
+        "anklet_bell_in_rain_kit"
       ]
     },
     "archive_balcony_rewards": {
@@ -265,7 +333,11 @@
       "options": [
         "field_dressing",
         "bellbreaker_oil",
-        "bellglass_notch_kit"
+        "bellglass_notch_kit",
+        "boss_refill",
+        "chalice_tolerance",
+        "black_vial_cord_kit",
+        "kings_wager_kit"
       ]
     },
     "undertone_landing_rewards": {

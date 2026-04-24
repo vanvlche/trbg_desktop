@@ -1,0 +1,146 @@
+[Round 01] Battle begins.
+[Round 01] Node axis scores: Power 80, Precision 80, Composure 80.
+[Round 01] Turn order: Veil Leech #2, Ivy Strangler, Vanguard
+[Round 01] Veil Leech #2 enters flow posture (balanced spread).
+[Round 01] Player Spotlight +1 (Veil Leech #2 entered Flow) -> 2/5
+[Round 01] Veil Leech #2 siphons warding light from Vanguard.
+[Round 01] Enemy Spotlight +1 (Vanguard mistimed dodge) -> 1/5
+[Round 01] Vanguard spends 7/8 Break to dodge.
+[Round 01] Vanguard's empty Break meter makes the dodge shaky.
+[Round 01] Vanguard mistimes the dodge [dodge roll 78/42].
+[Round 01] Vanguard withdraws behind the guard (staggered).
+[Round 01] Vanguard is staggered!
+[Round 01] Enemy Spotlight +1 (Veil Leech #2 staggered Vanguard) -> 2/5
+[Round 01] Veil Leech #2 hits Vanguard for 8 hp.
+[Round 01] Vanguard gains hex (2).
+[Round 01] Enemy Spotlight +1 (Veil Leech #2 applied hex) -> 3/5
+[Round 01] Ivy Strangler enters flow posture (balanced spread).
+[Round 01] Player Spotlight +1 (Ivy Strangler entered Flow) -> 3/5
+[Round 01] Ivy Strangler lashes thorn-vines at Vanguard.
+[Round 01] Enemy Spotlight -1 (cashed for pressure) -> 2/5
+[Round 01] Enemy Spotlight is cashed for pressure.
+[Round 01] Player Spotlight +2 (Slip Ledger) -> 5/5
+[Round 01] Slip Ledger steadies Vanguard's next offensive risk.
+[Round 01] Vanguard recenters to set footing.
+[Round 01] Vanguard spends 0/8 Break to dodge.
+[Round 01] Vanguard's empty Break meter makes the dodge shaky.
+[Round 01] Vanguard dodges cleanly [dodge roll 35/52].
+[Round 01] Vanguard slips wide from withdrawn footing.
+[Round 01] Vanguard is staggered and loses the turn.
+[Round 02] ------------------------------------------------------------
+[Round 02] Turn order: Veil Leech #2, Ivy Strangler, Vanguard
+[Round 02] Veil Leech #2 enters flow posture (balanced spread).
+[Round 02] Veil Leech #2 siphons warding light from Vanguard.
+[Round 02] Enemy Spotlight -1 (cashed for pressure) -> 1/5
+[Round 02] Enemy Spotlight is cashed for pressure.
+[Round 02] Slip Ledger steadies Vanguard's next offensive risk.
+[Round 02] Vanguard spends 8/8 Break to dodge.
+[Round 02] Vanguard dodges cleanly [dodge roll 53/62].
+[Round 02] Ivy Strangler enters flow posture (balanced spread).
+[Round 02] Ivy Strangler lashes thorn-vines at Vanguard.
+[Round 02] Enemy Spotlight -1 (cashed for pressure) -> 0/5
+[Round 02] Enemy Spotlight is cashed for pressure.
+[Round 02] Enemy Spotlight +1 (Vanguard mistimed dodge) -> 1/5
+[Round 02] Vanguard spends 8/8 Break to dodge.
+[Round 02] Vanguard mistimes the dodge [dodge roll 84/62].
+[Round 02] Vanguard loses 9 break.
+[Round 02] Ivy Strangler hits Vanguard for 14 hp.
+[Round 02] Vanguard gains snare (2).
+[Round 02] Vanguard is no longer affected by hex.
+[Round 02] Vanguard enters flow posture (balanced spread).
+[Round 02] Vanguard cleanses snare via Flow.
+[Round 02] Power output x1.37 from Power 80.
+[Round 02] Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 02] Vanguard grazes Ivy Strangler [hit roll 96/87].
+[Round 02] Enemy Spotlight +1 (Vanguard risky graze) -> 2/5
+[Round 02] Ivy Strangler loses 19 break.
+[Round 02] Vanguard hits Ivy Strangler for 21 guard.
+[Round 02] Vanguard loses 0 guard from Anchor Cleave.
+[Round 02] Vanguard's slip window closes.
+[Round 02] Composure tempo 80/160.
+[Round 03] ------------------------------------------------------------
+[Round 03] Turn order: Veil Leech #2, Ivy Strangler, Vanguard
+[Round 03] Veil Leech #2 enters flow posture (balanced spread).
+[Round 03] Veil Leech #2 siphons warding light from Vanguard.
+[Round 03] Enemy Spotlight -1 (cashed for pressure) -> 1/5
+[Round 03] Enemy Spotlight is cashed for pressure.
+[Round 03] Slip Ledger steadies Vanguard's next offensive risk.
+[Round 03] Vanguard spends 8/8 Break to dodge.
+[Round 03] Vanguard dodges cleanly [dodge roll 38/62].
+[Round 03] Ivy Strangler recovers 3 guard.
+[Round 03] Ivy Strangler enters flow posture (balanced spread).
+[Round 03] Ivy Strangler lashes thorn-vines at Vanguard.
+[Round 03] Enemy Spotlight -1 (cashed for pressure) -> 0/5
+[Round 03] Enemy Spotlight is cashed for pressure.
+[Round 03] Slip Ledger steadies Vanguard's next offensive risk.
+[Round 03] Vanguard spends 8/8 Break to dodge.
+[Round 03] Vanguard dodges cleanly [dodge roll 22/62].
+[Round 03] Vanguard enters flow posture (balanced spread).
+[Round 03] Power output x1.09 from Power 80.
+[Round 03] Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 03] Vanguard lines up Ivy Strangler [hit roll 76/87].
+[Round 03] Ivy Strangler loses 17 break.
+[Round 03] Ivy Strangler withdraws behind the guard (staggered).
+[Round 03] Ivy Strangler is staggered!
+[Round 03] Vanguard hits Ivy Strangler for 22 guard, 12 hp.
+[Round 03] Vanguard loses 0 guard from Anchor Cleave.
+[Round 03] Vanguard's slip window closes.
+[Round 03] Vanguard keeps tempo from Composure 80: bonus action.
+[Round 03] Player Spotlight -2 (Vanguard used Execution Drop) -> 3/5
+[Round 03] Vanguard enters flow posture (balanced spread).
+[Round 03] Power output x1.12 from Power 80.
+[Round 03] Vanguard uses Execution Drop [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 03] Vanguard lines up Ivy Strangler [hit roll 46/95].
+[Round 03] Vanguard hits Ivy Strangler for 96 hp.
+[Round 03] Ivy Strangler falls.
+[Round 03] Player Spotlight +1 (Vanguard exploited affinity) -> 4/5
+[Round 04] ------------------------------------------------------------
+[Round 04] Turn order: Veil Leech #2, Vanguard
+[Round 04] Veil Leech #2 enters flow posture (balanced spread).
+[Round 04] Veil Leech #2 siphons warding light from Vanguard.
+[Round 04] Enemy Spotlight +1 (Vanguard mistimed dodge) -> 1/5
+[Round 04] Vanguard spends 8/8 Break to dodge.
+[Round 04] Vanguard mistimes the dodge [dodge roll 88/62].
+[Round 04] Vanguard loses 7 break.
+[Round 04] Veil Leech #2 hits Vanguard for 8 hp.
+[Round 04] Vanguard gains hex (2).
+[Round 04] Enemy Spotlight +1 (Veil Leech #2 applied hex) -> 2/5
+[Round 04] Vanguard enters flow posture (balanced spread).
+[Round 04] Vanguard cleanses hex via Flow.
+[Round 04] Power output x1.34 from Power 80.
+[Round 04] Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 04] Vanguard lines up Veil Leech #2 [hit roll 25/87].
+[Round 04] Veil Leech #2 loses 33 break.
+[Round 04] Vanguard hits Veil Leech #2 for 33 guard.
+[Round 04] Vanguard loses 0 guard from Anchor Cleave.
+[Round 04] Composure tempo 80/160.
+[Round 05] ------------------------------------------------------------
+[Round 05] Turn order: Veil Leech #2, Vanguard
+[Round 05] Veil Leech #2 recovers 3 guard.
+[Round 05] Veil Leech #2 enters flow posture (balanced spread).
+[Round 05] Player Spotlight +1 (Veil Leech #2 entered Flow) -> 5/5
+[Round 05] Veil Leech #2 siphons warding light from Vanguard.
+[Round 05] Enemy Spotlight -1 (cashed for pressure) -> 1/5
+[Round 05] Enemy Spotlight is cashed for pressure.
+[Round 05] Slip Ledger steadies Vanguard's next offensive risk.
+[Round 05] Vanguard spends 8/8 Break to dodge.
+[Round 05] Vanguard dodges cleanly [dodge roll 12/62].
+[Round 05] Vanguard enters flow posture (balanced spread).
+[Round 05] Power output x0.98 from Power 80.
+[Round 05] Vanguard uses Anchor Cleave [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 05] Vanguard lines up Veil Leech #2 [hit roll 6/87].
+[Round 05] Veil Leech #2 loses 3 break.
+[Round 05] Veil Leech #2 withdraws behind the guard (staggered).
+[Round 05] Veil Leech #2 is staggered!
+[Round 05] Vanguard hits Veil Leech #2 for 10 guard, 14 hp.
+[Round 05] Vanguard loses 0 guard from Anchor Cleave.
+[Round 05] Vanguard's slip window closes.
+[Round 05] Vanguard keeps tempo from Composure 80: bonus action.
+[Round 05] Player Spotlight -2 (Vanguard used Execution Drop) -> 3/5
+[Round 05] Vanguard enters flow posture (balanced spread).
+[Round 05] Power output x1.31 from Power 80.
+[Round 05] Vanguard uses Execution Drop [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 05] Vanguard lines up Veil Leech #2 [hit roll 2/95].
+[Round 05] Vanguard hits Veil Leech #2 for 89 hp.
+[Round 05] Veil Leech #2 falls.
+[Round 05] Players win the battle.

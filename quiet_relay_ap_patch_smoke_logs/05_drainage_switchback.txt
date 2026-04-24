@@ -1,0 +1,125 @@
+[Round 01] Battle loadout: Feint Rush, Double Strike, Charge Slash.
+[Round 01] Battle begins.
+[Round 01] Node axis scores: Power 80, Precision 80, Composure 80.
+[Round 01] Turn order: Flood Acolyte, Lamp Witness #2, Vanguard
+[Round 01] Flood Acolyte enters focus posture (precision dominant).
+[Round 01] Flood Acolyte presses the line.
+[Round 01] Flood Acolyte drenches Vanguard.
+[Round 01] Player Spotlight +2 (Slip Ledger) -> 3/5
+[Round 01] Slip Ledger steadies Vanguard's next offensive risk.
+[Round 01] Vanguard spends 8/8 Break to dodge.
+[Round 01] Vanguard dodges cleanly [dodge roll 59/62].
+[Round 01] Lamp Witness #2 enters bastion posture (composure dominant).
+[Round 01] Lamp Witness #2 withdraws behind the guard.
+[Round 01] Lamp Witness #2 judges Vanguard with burning light.
+[Round 01] Enemy Spotlight +1 (Vanguard mistimed dodge) -> 1/5
+[Round 01] Vanguard spends 8/8 Break to dodge.
+[Round 01] Vanguard mistimes the dodge [dodge roll 67/62].
+[Round 01] Vanguard loses 5 break.
+[Round 01] Lamp Witness #2 hits Vanguard for 8 hp.
+[Round 01] Vanguard gains reveal (1).
+[Round 01] Enemy Spotlight +1 (Lamp Witness #2 applied reveal) -> 2/5
+[Round 01] Vanguard is no longer affected by reveal.
+[Round 01] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 4 AP
+[Round 01] Vanguard enters flow posture (balanced spread).
+[Round 01] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 01] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 01] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 01] Vanguard lines up Flood Acolyte [hit roll 47/94].
+[Round 01] Flood Acolyte loses 36 break.
+[Round 01] Flood Acolyte withdraws behind the guard (staggered).
+[Round 01] Flood Acolyte is staggered!
+[Round 01] Vanguard hits Flood Acolyte for 20 guard.
+[Round 01] Charge Slash batters the enemy's Break.
+[Round 01] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 01] Vanguard's slip window closes.
+[Round 01] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 01] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 01] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 01] Vanguard lines up Lamp Witness #2 [hit roll 34/94].
+[Round 01] Lamp Witness #2 loses 36 break.
+[Round 01] Lamp Witness #2 is staggered!
+[Round 01] Vanguard hits Lamp Witness #2 for 16 guard.
+[Round 01] Charge Slash batters the enemy's Break.
+[Round 01] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 02] ------------------------------------------------------------
+[Round 02] Turn order: Flood Acolyte, Lamp Witness #2, Vanguard
+[Round 02] Flood Acolyte is staggered and loses the turn.
+[Round 02] Lamp Witness #2 is staggered and loses the turn.
+[Round 02] Vanguard cashes in +1 AP from last turn's setup.
+[Round 02] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+[Round 02] Vanguard enters flow posture (balanced spread).
+[Round 02] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 02] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 02] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 02] Vanguard lines up Flood Acolyte [hit roll 56/94].
+[Round 02] Flood Acolyte loses 36 break.
+[Round 02] Flood Acolyte is staggered!
+[Round 02] Vanguard hits Flood Acolyte for 5 guard, 15 hp.
+[Round 02] Charge Slash batters the enemy's Break.
+[Round 02] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 02] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 02] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 02] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 02] Vanguard lines up Lamp Witness #2 [hit roll 85/94].
+[Round 02] Lamp Witness #2 loses 36 break.
+[Round 02] Lamp Witness #2 is staggered!
+[Round 02] Vanguard hits Lamp Witness #2 for 24 guard. CRIT!
+[Round 02] Charge Slash batters the enemy's Break.
+[Round 02] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 02] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 02] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 02] Vanguard lines up Flood Acolyte [hit roll 38/95].
+[Round 02] Vanguard hits Flood Acolyte for 28 hp.
+[Round 03] ------------------------------------------------------------
+[Round 03] Turn order: Flood Acolyte, Vanguard, Lamp Witness #2
+[Round 03] Flood Acolyte is staggered and loses the turn.
+[Round 03] Vanguard cashes in +1 AP from last turn's setup.
+[Round 03] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+[Round 03] Vanguard enters flow posture (balanced spread).
+[Round 03] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 03] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 03] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 03] Vanguard lines up Flood Acolyte [hit roll 92/94].
+[Round 03] Flood Acolyte loses 36 break.
+[Round 03] Flood Acolyte is staggered!
+[Round 03] Vanguard hits Flood Acolyte for 20 hp.
+[Round 03] Charge Slash batters the enemy's Break.
+[Round 03] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 03] Vanguard uses Double Strike [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 03] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 03] Vanguard lines up Flood Acolyte [hit roll 34/95].
+[Round 03] Vanguard hits Flood Acolyte for 21 hp.
+[Round 03] Flood Acolyte falls.
+[Round 03] Double Strike hit 1/2 resolves.
+[Round 03] Vanguard is left open: Guard and Parry are disabled until the next turn.
+[Round 03] Vanguard uses Light Attack [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 03] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 03] Vanguard lines up Lamp Witness #2 [hit roll 24/95].
+[Round 03] Vanguard hits Lamp Witness #2 for 23 hp.
+[Round 03] Lamp Witness #2 is staggered and loses the turn.
+[Round 04] ------------------------------------------------------------
+[Round 04] Turn order: Vanguard, Lamp Witness #2
+[Round 04] Vanguard cashes in +1 AP from last turn's setup.
+[Round 04] Turn input: Power 80 / Precision 80 / Composure 80 -> Flow, 5 AP
+[Round 04] Vanguard enters flow posture (balanced spread).
+[Round 04] Vanguard spends 0 guard to wind up Charge Slash.
+[Round 04] Vanguard uses Charge Slash [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 04] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 04] Vanguard lines up Lamp Witness #2 [hit roll 9/94].
+[Round 04] Lamp Witness #2 loses 36 break.
+[Round 04] Lamp Witness #2 is staggered!
+[Round 04] Vanguard hits Lamp Witness #2 for 16 hp.
+[Round 04] Charge Slash batters the enemy's Break.
+[Round 04] The enemy staggers - Vanguard gains +1 AP next turn.
+[Round 04] Vanguard uses Double Strike [P:80/exalted, R:80/exalted, C:80/exalted]
+[Round 04] Power output x1.30 damage / x1.24 break from Power 80.
+[Round 04] Vanguard lines up Lamp Witness #2 [hit roll 35/95].
+[Round 04] Vanguard hits Lamp Witness #2 for 17 hp.
+[Round 04] Double Strike hit 1/2 resolves.
+[Round 04] Vanguard lines up Lamp Witness #2 [hit roll 48/95].
+[Round 04] Vanguard hits Lamp Witness #2 for 26 hp. CRIT!
+[Round 04] Lamp Witness #2 falls.
+[Round 04] Double Strike hit 2/2 resolves.
+[Round 04] Vanguard is left open: Guard and Parry are disabled until the next turn.
+[Round 04] Players win the battle.
