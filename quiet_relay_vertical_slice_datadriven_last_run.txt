@@ -6,22 +6,22 @@ Wins/Losses: 1/0
 Best nodes cleared: 7
 
 Recent events:
-- Created new campaign with seed 2026 in district district_03_rain_toll_corridor.
+- Created new campaign with seed 1 in district district_03_rain_toll_corridor.
 - Started a new expedition in District 03: Rain Toll Corridor.
-- Battle at Overpass Watch: player. Log: quiet_relay_content_patch_smoke_logs\01_overpass_watch.txt
+- Battle at Overpass Watch: player. Log: tmp_smoke_logs/01_overpass_watch.txt
 - Cleared Overpass Watch. Echo Shards balance: 1.
 - Reward chosen: Stage Light.
 - Route chosen: Flooded Arcade -- Boss -- Maintenance route -- Low risk -- [sustain, barrier, dodge] | Safer maintenance route with recovery and guard rewards. Likely rewards: sustain, barrier, dodge.
-- Battle at Flooded Arcade: player. Log: quiet_relay_content_patch_smoke_logs\02_flooded_arcade.txt
+- Battle at Flooded Arcade: player. Log: tmp_smoke_logs/02_flooded_arcade.txt
 - Cleared Flooded Arcade. Echo Shards balance: 2.
 - Reward chosen: Maintenance Harness.
 - Route chosen: Service Niche -- Event -- Maintenance route -- Low risk -- [shop, recovery, sustain] | Spend shards to stabilize before the maintenance follow-through. Likely rewards: sustain, barrier, recovery.
 - Shop purchase: Potion Capacity +1 for 2 Echo Shards. Balance: 0.
 - Resolved event node: Service Niche.
-- Battle at Drainage Switchback: player. Log: quiet_relay_content_patch_smoke_logs\05_drainage_switchback.txt
+- Battle at Drainage Switchback: player. Log: tmp_smoke_logs/05_drainage_switchback.txt
 - Cleared Drainage Switchback. Echo Shards balance: 1.
 - Reward chosen: Floodgate Loop.
-- Battle at Toll Plaza: player. Log: quiet_relay_content_patch_smoke_logs\10_toll_plaza.txt
+- Battle at Toll Plaza: player. Log: tmp_smoke_logs/10_toll_plaza.txt
 - Cleared Toll Plaza. Echo Shards balance: 3.
 - Shop purchase: Boss Refill for 2 Echo Shards. Balance: 1.
 - Shop purchase: Chalice Tolerance for 1 Echo Shards. Balance: 0.
@@ -29,6 +29,6 @@ Recent events:
 - Reward chosen: Bellbreaker Oil.
 - Reward chosen: Ward Flares.
 - Resolved event node: Undertone Landing.
-- Battle at Bell Tower Threshold: player. Log: quiet_relay_content_patch_smoke_logs\13_bell_tower.txt
+- Battle at Bell Tower Threshold: player. Log: tmp_smoke_logs/13_bell_tower.txt
 - Cleared Bell Tower Threshold. Echo Shards balance: 4.
 - Victory in District 03: Rain Toll Corridor. Echo shards carried out: 4.

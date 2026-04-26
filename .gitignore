@@ -10,3 +10,47 @@ venv/
 *.pkl
 *.npz
 *.log
+
+# Windows alternate data stream metadata imported as files.
+*Zone.Identifier
+*:Zone.Identifier
+*#Uf03aZone.Identifier
+
+# Local smoke-test output.
+tmp_smoke/
+tmp_smoke_save.json
+tmp_smoke_logs/
+
+# Web runtime session data.
+runtime/
+
+# Local web server / OS noise
+.DS_Store
+Thumbs.db
+
+# Python virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local runtime outputs
+tmp_*/
+tmp*.json
+*_save.json
+*_logs/
+logs/
+reports/
+results/
+runs/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+*Zone.Identifier

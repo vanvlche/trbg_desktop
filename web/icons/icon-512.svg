@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Quiet Relay icon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101925"/>
+      <stop offset="0.5" stop-color="#080b10"/>
+      <stop offset="1" stop-color="#1a2e32"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="34%" r="58%">
+      <stop offset="0" stop-color="#7ee7df" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#7ee7df" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bell" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe1a0"/>
+      <stop offset="0.45" stop-color="#e4b85a"/>
+      <stop offset="1" stop-color="#8d6123"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect width="512" height="512" rx="112" fill="url(#halo)"/>
+  <path d="M96 326h320" stroke="#31445b" stroke-width="22" stroke-linecap="round"/>
+  <path d="M171 314c0-83 30-144 85-144s85 61 85 144l34 43H137l34-43Z" fill="url(#bell)" stroke="#fff0bf" stroke-width="11"/>
+  <path d="M207 357h98c0 28-20 49-49 49s-49-21-49-49Z" fill="#101925" stroke="#fff0bf" stroke-width="11"/>
+  <path d="M116 186h60M336 186h60M256 91v55" stroke="#7ee7df" stroke-width="19" stroke-linecap="round"/>
+  <circle cx="256" cy="279" r="30" fill="#080b10" stroke="#7ee7df" stroke-width="14"/>
+  <path d="M256 212v38M256 309v23" stroke="#7ee7df" stroke-width="12" stroke-linecap="round"/>
+</svg>

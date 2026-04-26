@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192" role="img" aria-label="Quiet Relay icon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101925"/>
+      <stop offset="0.55" stop-color="#080b10"/>
+      <stop offset="1" stop-color="#1a2e32"/>
+    </linearGradient>
+    <linearGradient id="bell" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0c96a"/>
+      <stop offset="1" stop-color="#9f7028"/>
+    </linearGradient>
+  </defs>
+  <rect width="192" height="192" rx="42" fill="url(#bg)"/>
+  <path d="M36 122h120" stroke="#31445b" stroke-width="8" stroke-linecap="round"/>
+  <path d="M64 118c0-31 11-54 32-54s32 23 32 54l12 16H52l12-16Z" fill="url(#bell)" stroke="#ffe1a0" stroke-width="4"/>
+  <path d="M78 134h36c0 10-7 18-18 18s-18-8-18-18Z" fill="#101925" stroke="#ffe1a0" stroke-width="4"/>
+  <path d="M43 70h22M127 70h22M96 34v18" stroke="#7ee7df" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="96" cy="104" r="11" fill="#080b10" stroke="#7ee7df" stroke-width="5"/>
+</svg>

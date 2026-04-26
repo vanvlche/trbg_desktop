@@ -279,10 +279,30 @@ UI_ICONS = {
     "party": "⛭",
     "enemies": "◬",
     "round": "⏱️",
+    "power": "💥",
+    "precision": "🎯",
+    "composure": "🧘",
+    "turn_axis": "🎛️",
+    "flow": "🌊",
+    "ravage": "🔥",
+    "focus": "🎯",
+    "bastion": "🛡️",
     "spotlight": "☀️",
+    "guard": "🛡️",
+    "break": "⚡",
+    "barrier": "✨",
+    "hp": "❤",
+    "player_turn": "▶️",
+    "enemy_turn": "⚠️",
+    "victory": "🏆",
+    "defeat": "💀",
+    "save": "💾",
     "load": "📂",
     "continue": "▶️",
     "inspect": "🔎",
+    "route": "🧭",
+    "relic": "🧿",
+    "shards": "💠",
 }
 
 
@@ -1632,7 +1652,7 @@ class BattleState:
             f"Potions {self.healing_potions}"
         )
         print(
-            f"Node Axis: Power {axes.get('power', 60)}, "
+            f"{emoji_label('route', 'Route Baseline Axis')}: Power {axes.get('power', 60)}, "
             f"Precision {axes.get('precision', 60)}, "
             f"Composure {axes.get('composure', 60)}"
         )
@@ -3561,7 +3581,7 @@ def prompt_int(prompt_text: str, default: Optional[int] = None, low: int = 0, hi
 def prompt_triplet(defaults: Tuple[int, int, int], skill: Skill) -> ResolvedInputs:
     while True:
         raw = input(
-            f"Enter power precision composure [default {defaults[0]} {defaults[1]} {defaults[2]}] > "
+            f"{emoji_label('turn_axis', 'Turn Axis')} - enter Power Precision Composure [default {defaults[0]} {defaults[1]} {defaults[2]}] > "
         ).strip()
         if raw == "":
             power, precision, composure = defaults
@@ -3578,10 +3598,10 @@ def prompt_triplet(defaults: Tuple[int, int, int], skill: Skill) -> ResolvedInpu
 
         resolved = make_resolved_inputs(power, precision, composure, skill)
         preview = (
-            f"Preview -> Power {describe_band(power)}, "
-            f"Precision {describe_band(precision)}, "
-            f"Composure {describe_band(composure)} | "
-            f"Posture: {resolved.posture} ({resolved.posture_reason})"
+            f"Preview -> {emoji_label('power', 'Power')} {describe_band(power)}, "
+            f"{emoji_label('precision', 'Precision')} {describe_band(precision)}, "
+            f"{emoji_label('composure', 'Composure')} {describe_band(composure)} | "
+            f"Posture: {emoji_label(resolved.posture, resolved.posture)} ({resolved.posture_reason})"
         )
         print(preview)
         confirm = input("Press Enter to confirm or type r to re-enter > ").strip().lower()
@@ -6406,7 +6426,7 @@ def ensure_round_ready(state: BattleState) -> None:
         axes = state.node_axis_scores
         state.logger.log(
             state.round_number,
-            f"Node axis scores: Power {axes.get('power', 60)}, Precision {axes.get('precision', 60)}, Composure {axes.get('composure', 60)}.",
+            f"Route baseline axis scores: Power {axes.get('power', 60)}, Precision {axes.get('precision', 60)}, Composure {axes.get('composure', 60)}.",
         )
 
     if state.cursor.turn_order_ids and state.cursor.next_actor_index < len(state.cursor.turn_order_ids):
@@ -6642,7 +6662,7 @@ def print_intro(args: argparse.Namespace, party_ids: Sequence[str]) -> None:
     print(f"{emoji_label('continue', 'Mode')}: {'AUTO' if args.auto else 'INTERACTIVE'}")
     print(f"{emoji_label('load', 'Content')}: {CONTENT.base_dir}")
     print("=" * 60)
-    print(emoji_label("inspect", "Tip: each player turn starts with one Power Precision Composure input such as: 72 61 84"))
+    print(emoji_label("turn_axis", "Tip: each player turn starts with one Power Precision Composure input such as: 72 61 84"))
     if not args.auto:
         print("Manual battles also ask for a 3-action extra loadout at battle start.")
         print("Enemy attacks will ask for Guard / Dodge / Parry reactions.")

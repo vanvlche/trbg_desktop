@@ -1,0 +1,375 @@
+{
+  "options": {
+    "iron_mesh": {
+      "display_name": "Iron Mesh",
+      "description": "+12 max guard to all allies, and restore 12 guard.",
+      "effect_type": "party_stat_boost",
+      "stat": "max_guard",
+      "amount": 12,
+      "restore_current_on_gain": true
+    },
+    "stage_light": {
+      "display_name": "Stage Light",
+      "description": "+1 starting Spotlight for future battles this run (max 3).",
+      "cost": 1,
+      "effect_type": "campaign_counter_boost",
+      "counter": "starting_spotlight",
+      "amount": 1,
+      "max_value": 3
+    },
+    "field_dressing": {
+      "display_name": "Field Dressing",
+      "description": "Heal all allies for 18 HP.",
+      "cost": 1,
+      "effect_type": "party_heal",
+      "amount": 18
+    },
+    "supply_cache": {
+      "display_name": "Supply Cache",
+      "description": "+1 recovery charge, up to 5.",
+      "effect_type": "recovery_charge_boost",
+      "amount": 1,
+      "max_cap": 5
+    },
+    "keen_wires": {
+      "display_name": "Keen Wires",
+      "description": "+2 speed to all allies.",
+      "effect_type": "party_stat_boost",
+      "stat": "speed",
+      "amount": 2
+    },
+    "red_salt": {
+      "display_name": "Red Salt Tonics",
+      "description": "+12 max HP to all allies and heal 12 HP.",
+      "effect_type": "party_stat_boost",
+      "stat": "max_hp",
+      "amount": 12,
+      "heal_amount": 12
+    },
+    "ward_flares": {
+      "display_name": "Ward Flares",
+      "description": "All allies start future battles with 10 barrier.",
+      "cost": 1,
+      "effect_type": "campaign_counter_boost",
+      "counter": "prebattle_barrier",
+      "amount": 10
+    },
+    "bellbreaker_oil": {
+      "display_name": "Bellbreaker Oil",
+      "description": "Bosses start with 25 less guard.",
+      "cost": 2,
+      "effect_type": "campaign_counter_boost",
+      "counter": "boss_guard_penalty",
+      "amount": 25
+    },
+    "steady_chimes": {
+      "display_name": "Steady Chimes",
+      "description": "+10 max break to all allies.",
+      "effect_type": "party_stat_boost",
+      "stat": "max_break",
+      "amount": 10,
+      "refill_to_max": true
+    },
+    "maintenance_harness_kit": {
+      "display_name": "Maintenance Harness",
+      "description": "Grant the Maintenance Harness relic to the current party.",
+      "cost": 2,
+      "effect_type": "grant_relic",
+      "relic_id": "maintenance_harness"
+    },
+    "floodgate_loop_kit": {
+      "display_name": "Floodgate Loop",
+      "description": "Grant the Floodgate Loop relic to the current party.",
+      "effect_type": "grant_relic",
+      "relic_id": "floodgate_loop"
+    },
+    "slip_ledger_kit": {
+      "display_name": "Slip Ledger",
+      "description": "Grant the Slip Ledger relic to the current party.",
+      "cost": 2,
+      "effect_type": "grant_relic",
+      "relic_id": "slip_ledger"
+    },
+    "bellglass_notch_kit": {
+      "display_name": "Bellglass Notch",
+      "description": "Grant the Bellglass Notch relic to the current party.",
+      "cost": 2,
+      "effect_type": "grant_relic",
+      "relic_id": "bellglass_notch"
+    },
+    "choir_hook_kit": {
+      "display_name": "Choir Hook",
+      "description": "Grant the Choir Hook relic to the current party.",
+      "effect_type": "grant_relic",
+      "relic_id": "choir_hook"
+    },
+    "applause_knot_kit": {
+      "display_name": "Applause Knot",
+      "description": "Grant the Applause Knot relic to the current party.",
+      "cost": 2,
+      "effect_type": "grant_relic",
+      "relic_id": "applause_knot"
+    },
+    "potion_capacity_plus_one": {
+      "display_name": "Potion Capacity +1",
+      "description": "Max healing potions per run +1, and gain 1 potion now.",
+      "cost": 2,
+      "effect_type": "grant_potion_upgrade",
+      "upgrade_id": "potion_capacity_plus_one"
+    },
+    "stronger_potions": {
+      "display_name": "Stronger Potions",
+      "description": "Healing potions restore 20% more HP.",
+      "cost": 2,
+      "effect_type": "grant_potion_upgrade",
+      "upgrade_id": "stronger_potions"
+    },
+    "boss_refill": {
+      "display_name": "Boss Refill",
+      "description": "Before a boss battle, restore 1 potion if the party has none left.",
+      "cost": 2,
+      "effect_type": "grant_potion_upgrade",
+      "upgrade_id": "boss_refill"
+    },
+    "guarding_draught": {
+      "display_name": "Guarding Draught",
+      "description": "Potion use now restores some Guard as well as HP.",
+      "cost": 1,
+      "effect_type": "grant_potion_upgrade",
+      "upgrade_id": "guarding_draught"
+    },
+    "spotlight_tonic": {
+      "display_name": "Spotlight Tonic",
+      "description": "Potion use now grants +1 Spotlight.",
+      "cost": 2,
+      "effect_type": "grant_potion_upgrade",
+      "upgrade_id": "spotlight_tonic"
+    },
+    "chalice_tolerance": {
+      "display_name": "Chalice Tolerance",
+      "description": "Poisoned Chalice penalties are reduced by half.",
+      "cost": 1,
+      "effect_type": "grant_potion_upgrade",
+      "upgrade_id": "chalice_tolerance"
+    },
+    "kings_wager_kit": {
+      "display_name": "King's Wager",
+      "description": "Grant the King's Wager relic to the current party.",
+      "cost": 2,
+      "effect_type": "grant_relic",
+      "relic_id": "kings_wager"
+    },
+    "black_vial_cord_kit": {
+      "display_name": "Black Vial Cord",
+      "description": "Grant the Black Vial Cord relic to the current party.",
+      "cost": 2,
+      "effect_type": "grant_relic",
+      "relic_id": "black_vial_cord"
+    },
+    "anklet_bell_in_rain_kit": {
+      "display_name": "Anklet Bell in Rain",
+      "description": "Grant the Anklet Bell in Rain relic to the current party.",
+      "cost": 3,
+      "effect_type": "grant_relic",
+      "relic_id": "anklet_bell_in_rain"
+    }
+  },
+  "tables": {
+    "overpass_watch_rewards": {
+      "display_name": "Overpass Watch Rewards",
+      "pick_count": 1,
+      "identity_tags": [
+        "guard",
+        "spotlight",
+        "recovery"
+      ],
+      "preview_text": "Early stabilization: guard, Spotlight, or healing.",
+      "options": [
+        "iron_mesh",
+        "stage_light",
+        "field_dressing"
+      ]
+    },
+    "flooded_arcade_rewards": {
+      "display_name": "Flooded Arcade Rewards",
+      "pick_count": 1,
+      "identity_tags": [
+        "sustain",
+        "barrier",
+        "dodge"
+      ],
+      "preview_text": "Maintenance rewards lean toward guard sustain and safer dodges.",
+      "options": [
+        "maintenance_harness_kit",
+        "floodgate_loop_kit",
+        "supply_cache"
+      ]
+    },
+    "service_niche_rewards": {
+      "display_name": "Service Niche Bench",
+      "pick_count": 1,
+      "table_type": "shop",
+      "max_purchases": 1,
+      "identity_tags": [
+        "sustain",
+        "barrier",
+        "recovery"
+      ],
+      "preview_text": "Maintenance consolidation for recovery and safer entry.",
+      "options": [
+        "maintenance_harness_kit",
+        "slip_ledger_kit",
+        "ward_flares",
+        "potion_capacity_plus_one",
+        "stronger_potions",
+        "guarding_draught"
+      ]
+    },
+    "sluice_jury_rewards": {
+      "display_name": "Sluice Jury Spoils",
+      "pick_count": 1,
+      "identity_tags": [
+        "elite",
+        "break",
+        "boss_prep"
+      ],
+      "preview_text": "Elite payoff: break, barrier, or direct boss pressure.",
+      "options": [
+        "steady_chimes",
+        "ward_flares",
+        "bellbreaker_oil"
+      ]
+    },
+    "drainage_switchback_rewards": {
+      "display_name": "Drainage Switchback Rewards",
+      "pick_count": 1,
+      "identity_tags": [
+        "dodge",
+        "guard",
+        "recovery"
+      ],
+      "preview_text": "Maintenance follow-through: safer dodges, sturdier guard, or healing.",
+      "options": [
+        "floodgate_loop_kit",
+        "steady_chimes",
+        "field_dressing"
+      ]
+    },
+    "witness_chapel_rewards": {
+      "display_name": "Witness Chapel Rewards",
+      "pick_count": 1,
+      "identity_tags": [
+        "parry",
+        "reveal",
+        "break"
+      ],
+      "preview_text": "Chapel rewards favor parry punishment and reveal windows.",
+      "options": [
+        "choir_hook_kit",
+        "applause_knot_kit",
+        "red_salt"
+      ]
+    },
+    "signal_vestry_rewards": {
+      "display_name": "Signal Vestry Tuning",
+      "pick_count": 1,
+      "table_type": "shop",
+      "max_purchases": 1,
+      "identity_tags": [
+        "parry",
+        "spotlight",
+        "reveal"
+      ],
+      "preview_text": "Chapel tuning converts clean reads into tempo and setup.",
+      "options": [
+        "bellglass_notch_kit",
+        "applause_knot_kit",
+        "stage_light",
+        "spotlight_tonic",
+        "anklet_bell_in_rain_kit"
+      ]
+    },
+    "archive_balcony_rewards": {
+      "display_name": "Archive Balcony Spoils",
+      "pick_count": 1,
+      "identity_tags": [
+        "elite",
+        "parry",
+        "boss_prep"
+      ],
+      "preview_text": "Elite payoff: parry tools, speed, or boss guard pressure.",
+      "options": [
+        "bellglass_notch_kit",
+        "keen_wires",
+        "bellbreaker_oil"
+      ]
+    },
+    "glass_choir_loft_rewards": {
+      "display_name": "Glass Choir Loft Rewards",
+      "pick_count": 1,
+      "identity_tags": [
+        "parry",
+        "break",
+        "tempo"
+      ],
+      "preview_text": "Chapel follow-through: parry hooks, faster tempo, or break pressure.",
+      "options": [
+        "choir_hook_kit",
+        "keen_wires",
+        "steady_chimes"
+      ]
+    },
+    "toll_plaza_rewards": {
+      "display_name": "Toll Plaza Preparations",
+      "pick_count": 1,
+      "table_type": "shop",
+      "max_purchases": 2,
+      "identity_tags": [
+        "recovery",
+        "break",
+        "boss_prep"
+      ],
+      "preview_text": "Shared boss-prep rewards for recovery, break, or bell pressure.",
+      "options": [
+        "field_dressing",
+        "bellbreaker_oil",
+        "bellglass_notch_kit",
+        "boss_refill",
+        "chalice_tolerance",
+        "black_vial_cord_kit",
+        "kings_wager_kit"
+      ]
+    },
+    "undertone_landing_rewards": {
+      "display_name": "Undertone Landing Preparations",
+      "pick_count": 2,
+      "identity_tags": [
+        "recovery",
+        "break",
+        "boss_prep"
+      ],
+      "preview_text": "Choose two final preparations before Orison.",
+      "options": [
+        "ward_flares",
+        "steady_chimes",
+        "field_dressing",
+        "bellbreaker_oil"
+      ]
+    },
+    "tollgate_surge_rewards": {
+      "display_name": "Tollgate Surge Payoff",
+      "pick_count": 1,
+      "identity_tags": [
+        "risk",
+        "shards",
+        "boss_prep"
+      ],
+      "preview_text": "Risk payoff for the boss: oil, barrier, or extra Spotlight.",
+      "options": [
+        "bellbreaker_oil",
+        "ward_flares",
+        "stage_light"
+      ]
+    }
+  }
+}

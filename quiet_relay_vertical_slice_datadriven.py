@@ -68,6 +68,21 @@ UI_ICONS = {
     "barrier": "🛡️",
     "spotlight": "☀️",
     "relic": "🧿",
+    "power": "💥",
+    "precision": "🎯",
+    "composure": "🧘",
+    "turn_axis": "🎛️",
+    "flow": "🌊",
+    "ravage": "🔥",
+    "focus": "🎯",
+    "bastion": "🛡️",
+    "guard": "🛡️",
+    "break": "⚡",
+    "hp": "❤",
+    "player_turn": "▶️",
+    "enemy_turn": "⚠️",
+    "victory": "🏆",
+    "defeat": "💀",
     "maintenance": "🔧",
     "chapel": "🕯️",
     "shared": "◈",
@@ -608,7 +623,8 @@ def prompt_node_axis_scores(
         return dict(DEFAULT_AXIS_SCORES)
 
     defaults = previous_axis_scores(campaign)
-    print(f"\nNode calibration for {node.title}")
+    print(f"\n{emoji_label('route', f'Route baseline calibration for {node.title}')}")
+    print("This sets route/node metadata and deterministic fallback values. Manual battle turns still ask for Turn Axis input.")
     power = qr.prompt_int("Power", default=defaults["power"], low=0, high=100)
     precision = qr.prompt_int("Precision", default=defaults["precision"], low=0, high=100)
     composure = qr.prompt_int("Composure", default=defaults["composure"], low=0, high=100)
@@ -1193,7 +1209,7 @@ def render_party(campaign: CampaignState) -> None:
     if campaign.expedition_active:
         axes = normalize_axis_scores(campaign.current_node_axis_scores)
         print(
-            f"Current Node Axis: Power {axes['power']}, "
+            f"{emoji_label('route', 'Current Route Baseline Axis')}: Power {axes['power']}, "
             f"Precision {axes['precision']}, Composure {axes['composure']}"
         )
     print(f"{emoji_label('load', 'Content Pack')}: {qr.CONTENT.base_dir}")
@@ -1948,7 +1964,7 @@ def resolve_battle_node(
         state.initialize_enemy_balance()
         print(f"Battle setup: starting Spotlight {campaign.starting_spotlight}, prebattle barrier {campaign.prebattle_barrier}.")
         print(
-            f"Node axis scores: Power {axis_scores['power']}, "
+            f"{emoji_label('route', 'Route baseline axis scores')}: Power {axis_scores['power']}, "
             f"Precision {axis_scores['precision']}, Composure {axis_scores['composure']}."
         )
         if str(encounter_info.get("variant_id", "fixed")) != "fixed":
@@ -2249,12 +2265,12 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
         nargs=3,
         type=int,
         metavar=("POWER", "PRECISION", "COMPOSURE"),
-        help="Use fixed node-axis scores for every node.",
+        help="Use fixed route/node baseline axis scores for every node.",
     )
     parser.add_argument(
         "--axis-file",
         default=None,
-        help="JSON file containing default and per-node axis scores.",
+        help="JSON file containing default and per-node route baseline axis scores.",
     )
     parser.add_argument(
         "--auto-route",

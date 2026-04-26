@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Quiet Relay</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xterm/xterm@5.5.0/css/xterm.min.css" />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #101114;
+        --panel: #181a20;
+        --panel-strong: #20232b;
+        --text: #f3f0e8;
+        --muted: #aaa49a;
+        --accent: #78d2ba;
+        --border: #343844;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        background: var(--bg);
+        color: var(--text);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      body {
+        min-height: 100dvh;
+        max-width: 100vw;
+        touch-action: manipulation;
+      }
+
+      .app {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100dvh;
+        overflow: hidden;
+        padding:
+          max(10px, env(safe-area-inset-top))
+          max(10px, env(safe-area-inset-right))
+          max(10px, env(safe-area-inset-bottom))
+          max(10px, env(safe-area-inset-left));
+        gap: 8px;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        min-height: 36px;
+        flex: 0 0 auto;
+      }
+
+      .title {
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0;
+      }
+
+      .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        flex: 0 0 auto;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 999px;
+        background: #8b909b;
+      }
+
+      .dot.connected {
+        background: var(--accent);
+      }
+
+      .terminal-wrap {
+        flex: 1 1 auto;
+        min-height: 0;
+        width: 100%;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        background: #07080a;
+      }
+
+      #terminal {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .keys {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 8px;
+        flex: 0 0 auto;
+      }
+
+      button {
+        min-width: 0;
+        min-height: 48px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--panel);
+        color: var(--text);
+        font: inherit;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      button:active {
+        background: var(--panel-strong);
+        transform: translateY(1px);
+      }
+
+      .wide {
+        grid-column: span 2;
+      }
+
+      .xterm {
+        height: 100%;
+        padding: 8px;
+      }
+
+      .xterm-viewport {
+        overflow-x: hidden !important;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="app">
+      <div class="topbar">
+        <div class="title">Quiet Relay</div>
+        <div class="status"><span id="dot" class="dot"></span><span id="status">connecting</span></div>
+      </div>
+      <section class="terminal-wrap" aria-label="Quiet Relay terminal">
+        <div id="terminal"></div>
+      </section>
+      <nav class="keys" aria-label="Terminal quick keys">
+        <button type="button" data-send="1">1</button>
+        <button type="button" data-send="2">2</button>
+        <button type="button" data-send="3">3</button>
+        <button type="button" data-send="4">4</button>
+        <button type="button" data-send="5">5</button>
+        <button type="button" class="wide" data-send="\r">Enter</button>
+        <button type="button" class="wide" data-send="\u007f">Backspace</button>
+        <button type="button" id="reconnect">Reconnect</button>
+      </nav>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@xterm/xterm@5.5.0/lib/xterm.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@xterm/addon-fit@0.10.0/lib/addon-fit.min.js"></script>
+    <script>
+      const term = new Terminal({
+        convertEol: true,
+        cursorBlink: true,
+        fontFamily: 'Menlo, Monaco, "SFMono-Regular", Consolas, monospace',
+        fontSize: 14,
+        scrollback: 4000,
+        theme: {
+          background: '#07080a',
+          foreground: '#f3f0e8',
+          cursor: '#78d2ba',
+          selectionBackground: '#33413f'
+        }
+      });
+      const fitAddon = new FitAddon.FitAddon();
+      term.loadAddon(fitAddon);
+      term.open(document.getElementById('terminal'));
+
+      const dot = document.getElementById('dot');
+      const statusText = document.getElementById('status');
+      let socket = null;
+
+      function setStatus(label, connected) {
+        statusText.textContent = label;
+        dot.classList.toggle('connected', connected);
+      }
+
+      function fitTerminal() {
+        try {
+          fitAddon.fit();
+        } catch (error) {
+          // The terminal may not be measurable during early mobile viewport changes.
+        }
+      }
+
+      function send(data) {
+        if (socket && socket.readyState === WebSocket.OPEN) {
+          socket.send(data);
+          term.focus();
+        }
+      }
+
+      function connect() {
+        if (socket && socket.readyState === WebSocket.OPEN) {
+          socket.close();
+        }
+        setStatus('connecting', false);
+        const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+        socket = new WebSocket(`${protocol}//${window.location.host}/ws/play`);
+        socket.addEventListener('open', () => {
+          setStatus('connected', true);
+          term.focus();
+        });
+        socket.addEventListener('message', (event) => {
+          term.write(event.data);
+        });
+        socket.addEventListener('close', () => {
+          setStatus('closed', false);
+        });
+        socket.addEventListener('error', () => {
+          setStatus('error', false);
+        });
+      }
+
+      term.onData(send);
+
+      document.querySelectorAll('[data-send]').forEach((button) => {
+        button.addEventListener('click', () => {
+          send(JSON.parse(`"${button.dataset.send}"`));
+        });
+      });
+
+      document.getElementById('reconnect').addEventListener('click', connect);
+      window.addEventListener('resize', fitTerminal);
+      window.addEventListener('orientationchange', () => setTimeout(fitTerminal, 250));
+
+      fitTerminal();
+      connect();
+    </script>
+  </body>
+</html>
